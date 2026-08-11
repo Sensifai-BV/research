@@ -29,20 +29,6 @@ authors:
     affiliation: "Ferdowsi University of Mashhad"
     isLead: false
     is_external: true
-latexMathSample: |
-  ### State Estimation & Fuzzy Covariance Resetting
-
-  The state-space model augmented with target acceleration vector \( \mathbf{u}(n) = [u_x(n), u_y(n)]^T \):
-
-  $$ \mathbf{x}(n+1) = \mathbf{F}(n)\mathbf{x}(n) + \mathbf{C}(n)\mathbf{u}(n) + \mathbf{G}(n)\mathbf{w}(n) $$
-
-  Fuzzy self-tuning error covariance matrix update equation:
-
-  $$ \mathbf{P}_{\text{Aug}}^{\text{New}}(n+1|n+1) = \frac{1}{\lambda(n+1)} \times \mathbf{P}_{\text{Aug}}(n+1|n+1) $$
-
-  where the Gaussian membership grade \( g_i^j(x_i) \) for the \( i \)-th input of the \( j \)-th rule is formulated as:
-
-  $$ g_i^j(x_i) = \exp\left[ -\frac{1}{2}\left( \frac{x_i - c_i^j}{\sigma_i^j} \right)^2 \right] $$
 bibtex: |
   @article{bahari2009high,
     title={High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor},
@@ -59,19 +45,3 @@ bibtex: |
 ### Abstract
 
 In this paper, a new fuzzy forgetting factor (FFF) is developed in order to aid a modified input estimation (MIE) technique and enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and succeeds in presenting reasonably accurate target trajectory, velocity and acceleration estimation in low and mild maneuvering situations. However, after some iteration its steps become small. Due to small steps, the accuracy of target tracking may be seriously degraded in the presence of high maneuvers. In this study we present an intelligent self-tuning approach based on a fuzzy forgetting factor in order to enjoy satisfactory tracking performance in low, Medium and high maneuvering target cases. Simulations visualize the efficiency of the proposed method and emphasize on its accuracy in tracking high maneuvering targets. Furthermore, simulation results illustrate that proposed method is not sensitive to the sampling time.
-
----
-
-### Key Contributions & Technical Overview
-
-1. **Modified Input Estimation (MIE) Limitations**:
-   - In traditional MIE systems, the acceleration is modeled as an additive input in the state space equations.
-   - After several iterations, the Kalman gain and error covariance matrix step sizes shrink, leading to response delays when a target performs high-acceleration maneuvers.
-
-2. **Fuzzy Self-Tuning Mechanism**:
-   - Computes target acceleration magnitude \( \|\mathbf{u}(n)\|_2 = \sqrt{u_x(n)^2 + u_y(n)^2} \) and trace norm \( \text{Trace}[\mathbf{P}_{\text{Aug}}(n+1|n+1)] \).
-   - Intelligently calculates an optimal variable forgetting factor \( \lambda(n+1) \) using Gaussian fuzzy rules to reset covariance without manual parameter tuning (\( \delta \)).
-
-3. **Performance & Robustness**:
-   - Demonstrates up to 55% improvement in acceleration estimation RMSE under high maneuvers.
-   - Maintains high estimation accuracy across varying sampling intervals \( T = 0.1\,\text{s} \text{ to } 10\,\text{s} \).
