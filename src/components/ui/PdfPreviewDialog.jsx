@@ -29,9 +29,9 @@ export function PdfPreviewDialog({ paper, isOpen, onClose }) {
 
           <div className="flex items-center gap-3">
             <a href={paper.pdfUrl} target="_blank" rel="noreferrer">
-              <Button size="sm" className="gap-1.5 bg-zinc-950 text-white hover:bg-zinc-800 shadow-2xs">
+              <Button size="sm" className="gap-1.5 bg-zinc-950 text-white hover:bg-zinc-800 shadow-2xs font-bold text-xs">
                 <Download className="h-3.5 w-3.5" />
-                Download PDF
+                Download
               </Button>
             </a>
             <button

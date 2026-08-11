@@ -107,7 +107,7 @@ export function ResearcherDetailPage() {
                 </div>
 
                 {/* Metrics Row */}
-                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-zinc-100">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-100">
                   <div className="space-y-0.5">
                     <div className="text-2xl font-black text-zinc-950">
                       <NumberTicker value={authoredPublications.length} />
@@ -117,16 +117,23 @@ export function ResearcherDetailPage() {
 
                   <div className="space-y-0.5 border-l border-zinc-100 pl-4">
                     <div className="text-2xl font-black text-indigo-600">
-                      <NumberTicker value={totalCitations} />
+                      <NumberTicker value={researcher.citations || totalCitations} />
                     </div>
                     <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Citations</div>
                   </div>
 
                   <div className="space-y-0.5 border-l border-zinc-100 pl-4">
                     <div className="text-2xl font-black text-[#5c8a00]">
-                      <NumberTicker value={researcher.pubCount || authoredPublications.length} />
+                      <NumberTicker value={researcher.hIndex || 0} />
                     </div>
-                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Lead Papers</div>
+                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">h-index</div>
+                  </div>
+
+                  <div className="space-y-0.5 border-l border-zinc-100 pl-4">
+                    <div className="text-2xl font-black text-purple-600">
+                      <NumberTicker value={researcher.i10Index || 0} />
+                    </div>
+                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">i10-index</div>
                   </div>
                 </div>
 

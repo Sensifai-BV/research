@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useParams } from 'react-router-dom';
 import { Search, LayoutGrid, List, FileText, Quote, Eye, CheckCircle2, Tag, FileCode } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PAPERS, RESEARCH_AREAS, CONTENT_STATS } from '../data/papersData';
@@ -14,10 +14,16 @@ import { MagicCard } from '../components/magicui/MagicCard';
 import { BlurFade } from '../components/magicui/BlurFade';
 import { ProgressiveBlur } from '../components/magicui/ProgressiveBlur';
 
+export function getTagSlug(tag) {
+  if (!tag) return '';
+  return tag.toLowerCase().trim().replace(/\s+/g, '-');
+}
+
 export function PublicationsPage() {
+  const { tagParam } = useParams();
   const [searchParams] = useSearchParams();
   const initialArea = searchParams.get('area') || 'all';
-  const initialTag = searchParams.get('tag') || '';
+  const initialTag = tagParam ? decodeURIComponent(tagParam).replace(/-/g, ' ') : (searchParams.get('tag') || '');
 
   const [searchQuery, setSearchQuery] = useState(initialTag ? initialTag : '');
   const [selectedArea, setSelectedArea] = useState(initialArea);
@@ -27,10 +33,12 @@ export function PublicationsPage() {
   const [selectedPaperForPdf, setSelectedPaperForPdf] = useState(null);
 
   useEffect(() => {
-    if (initialTag) {
-      setSearchQuery(initialTag);
+    if (tagParam) {
+      setSearchQuery(decodeURIComponent(tagParam).replace(/-/g, ' '));
+    } else if (searchParams.get('tag')) {
+      setSearchQuery(searchParams.get('tag'));
     }
-  }, [initialTag]);
+  }, [tagParam, searchParams]);
 
   const availableYears = Array.from(new Set((PAPERS || []).map(p => p?.year).filter(Boolean))).sort((a, b) => b - a);
 
@@ -216,14 +224,14 @@ export function PublicationsPage() {
                       {paper.tags && Array.isArray(paper.tags) && (
                         <div className="flex flex-wrap gap-1.5 mt-4">
                           {paper.tags.map(t => (
-                            <button
+                            <Link
                               key={t}
-                              onClick={() => setSearchQuery(t)}
+                              to={`/tag/${getTagSlug(t)}`}
                               className="inline-flex items-center gap-0.5 text-[10px] py-0.5 px-2 font-semibold bg-zinc-100 text-zinc-700 rounded-full hover:bg-indigo-50 hover:text-indigo-600 transition-colors cursor-pointer"
                             >
                               <Tag className="h-2.5 w-2.5 text-zinc-400" />
                               {t}
-                            </button>
+                            </Link>
                           ))}
                         </div>
                       )}

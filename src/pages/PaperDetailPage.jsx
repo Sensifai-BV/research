@@ -81,7 +81,7 @@ export function PaperDetailPage() {
             {/* Tags directly under Title (No "Linkable Tags:" label) */}
             <div className="flex flex-wrap items-center gap-2">
               {paper.tags.map(t => (
-                <Link key={t} to={`/publications?tag=${encodeURIComponent(t)}`}>
+                <Link key={t} to={`/tag/${encodeURIComponent(t.toLowerCase().trim().replace(/\s+/g, '-'))}`}>
                   <Badge variant="secondary" className="text-xs font-bold hover:bg-indigo-50 hover:text-indigo-600 cursor-pointer">
                     {t}
                   </Badge>
@@ -155,7 +155,7 @@ export function PaperDetailPage() {
                 <a href={paper.pdfUrl} download target="_blank" rel="noreferrer">
                   <Button variant="outline" size="lg" className="gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                     <Download className="h-4 w-4 text-indigo-600" />
-                    Download PDF
+                    Download
                   </Button>
                 </a>
               )}

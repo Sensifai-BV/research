@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ai-ml",
+    "name": "Artificial Intelligence & ML",
+    "badge": "AI / ML",
+    "description": "Multimodal foundation models, video understanding, audio processing, and zero-shot neural reasoning."
+  },
+  {
+    "id": "computer-vision",
+    "name": "Computer Vision & Video AI",
+    "badge": "Vision AI",
+    "description": "Real-time spatio-temporal video recognition, scene graph parsing, and action detection."
+  },
+  {
+    "id": "audio-speech",
+    "name": "Audio & Speech Intelligence",
+    "badge": "Audio AI",
+    "description": "Neural acoustic modeling, multi-speaker diarization, and sound event localization."
+  },
+  {
+    "id": "health-bio",
+    "name": "Medical AI & Healthcare",
+    "badge": "Health AI",
+    "description": "Deep diagnostic imaging transformers, ECG anomaly detection, and computational pathology."
+  },
+  {
+    "id": "edge-systems",
+    "name": "Efficient AI & Edge Computing",
+    "badge": "Edge AI",
+    "description": "Ultra-low power quantization, mobile neural compilation, and real-time video stream analytics."
+  }
+]

@@ -58,27 +58,37 @@ function parseYaml(yamlStr) {
       }
     }
 
+    const trimmed = line.trim();
+    const isArrayItem = trimmed.startsWith('-');
     const colonIdx = line.indexOf(':');
-    const isArrayItem = line.trim().startsWith('-');
 
+    // Case 1: Start of array item (- key: val or - val)
     if (isArrayItem && currentArrayKey) {
-      const itemContent = line.trim().substring(1).trim();
+      const itemContent = trimmed.substring(1).trim();
       if (itemContent.includes(':')) {
         const [subK, ...subValParts] = itemContent.split(':');
         const subVal = subValParts.join(':').trim();
         currentObjectInArray = {};
         currentObjectInArray[subK.trim()] = parseYamlValue(subVal);
         result[currentArrayKey].push(currentObjectInArray);
-      } else if (currentObjectInArray && rawLine.startsWith('    ')) {
-        const [subK, ...subValParts] = line.trim().split(':');
-        const subVal = subValParts.join(':').trim();
-        currentObjectInArray[subK.trim()] = parseYamlValue(subVal);
       } else {
+        currentObjectInArray = null;
         result[currentArrayKey].push(parseYamlValue(itemContent));
       }
       continue;
     }
 
+    // Case 2: Continuation property of an object in array
+    if (currentArrayKey && currentObjectInArray && (rawLine.startsWith('    ') || rawLine.startsWith('\t\t') || (rawLine.startsWith('  ') && !isArrayItem))) {
+      if (colonIdx !== -1) {
+        const subK = line.substring(0, colonIdx).trim();
+        const subVal = line.substring(colonIdx + 1).trim();
+        currentObjectInArray[subK] = parseYamlValue(subVal);
+        continue;
+      }
+    }
+
+    // Case 3: Top-level key: value or start of new section
     if (colonIdx !== -1) {
       const key = line.substring(0, colonIdx).trim();
       const valStr = line.substring(colonIdx + 1).trim();
@@ -88,12 +98,15 @@ function parseYaml(yamlStr) {
         isMultiline = true;
         multilineBuffer = [];
         currentArrayKey = null;
+        currentObjectInArray = null;
       } else if (valStr === '' && i + 1 < lines.length && lines[i + 1].trim().startsWith('-')) {
         currentArrayKey = key;
+        currentObjectInArray = null;
         result[key] = [];
       } else {
         result[key] = parseYamlValue(valStr);
         currentArrayKey = null;
+        currentObjectInArray = null;
       }
     }
   }
@@ -297,6 +310,9 @@ function buildContentData() {
       github_url TEXT,
       twitter_url TEXT,
       pub_count INTEGER,
+      citations INTEGER,
+      h_index INTEGER,
+      i10_index INTEGER,
       source_file TEXT
     );
 
@@ -361,8 +377,8 @@ function buildContentData() {
 
   // Insert Authors into SQLite
   const insertAuthor = db.prepare(`
-    INSERT INTO authors (id, name, role, affiliation, bio, avatar, orcid_id, scholar_url, github_url, twitter_url, pub_count, source_file)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO authors (id, name, role, affiliation, bio, avatar, orcid_id, scholar_url, github_url, twitter_url, pub_count, citations, h_index, i10_index, source_file)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `);
 
   authors.forEach(a => {
@@ -378,6 +394,9 @@ function buildContentData() {
       a.githubUrl || '',
       a.twitterUrl || '',
       a.pubCount || 0,
+      a.citations || 0,
+      a.hIndex || 0,
+      a.i10Index || 0,
       a.sourceFile || ''
     );
   });

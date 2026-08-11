@@ -52,6 +52,23 @@ function runPrerender() {
     if (author.orcidId && author.orcidId !== author.id) routes.push({ url: `/researcher/${author.orcidId}`, title: authorTitle, description: authorDesc });
   });
 
+  // Add individual tag routes
+  const allTags = new Set();
+  (contentData.publications || []).forEach(paper => {
+    if (paper.tags && Array.isArray(paper.tags)) {
+      paper.tags.forEach(tag => allTags.add(tag));
+    }
+  });
+
+  allTags.forEach(tag => {
+    const slug = encodeURIComponent(tag.toLowerCase().trim().replace(/\s+/g, '-'));
+    const tagTitle = `Publications tagged "${tag}" | Sensifai Research`;
+    const tagDesc = `Browse all peer-reviewed research papers and publications tagged with ${tag} at Sensifai Labs.`;
+    routes.push({ url: `/tag/${slug}`, title: tagTitle, description: tagDesc });
+    routes.push({ url: `/tags/${slug}`, title: tagTitle, description: tagDesc });
+    routes.push({ url: `/publications/tag/${slug}`, title: tagTitle, description: tagDesc });
+  });
+
   console.log(`📄 Generating static HTML pages for ${routes.length} SSG routes...`);
 
   let generatedCount = 0;

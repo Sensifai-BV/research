@@ -26,6 +26,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/publications" element={<PublicationsPage />} />
+            <Route path="/tag/:tagParam" element={<PublicationsPage />} />
+            <Route path="/tags/:tagParam" element={<PublicationsPage />} />
+            <Route path="/publications/tag/:tagParam" element={<PublicationsPage />} />
             <Route path="/publication/:id" element={<PaperDetailPage />} />
             <Route path="/paper/:id" element={<PaperDetailPage />} />
             <Route path="/researchers" element={<PeoplePage />} />

@@ -71,14 +71,20 @@ export function PeoplePage() {
                   </p>
                 </div>
 
-                <div className="mt-6 border-t border-zinc-100 pt-4 flex items-center justify-between text-xs">
-                  <span className="font-extrabold text-[#5c8a00]">
-                    {member.pubCount} Publications
-                  </span>
-                  
-                  <Link to={`/researcher/${member.orcidId || member.id}`} className="font-bold text-zinc-900 hover:text-indigo-600 transition-colors">
-                    Profile &rarr;
-                  </Link>
+                <div className="mt-6 border-t border-zinc-100 pt-4 flex flex-col gap-2.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-extrabold text-[#5c8a00]">
+                      {member.pubCount} Publications
+                    </span>
+                    <span className="font-bold text-indigo-600">
+                      {member.citations || 0} Citations
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between text-[11px] font-semibold text-zinc-600 bg-zinc-50 px-2.5 py-1 rounded-md border border-zinc-100">
+                    <span>h-index: <strong className="text-zinc-950 font-extrabold">{member.hIndex || 0}</strong></span>
+                    <span>i10-index: <strong className="text-zinc-950 font-extrabold">{member.i10Index || 0}</strong></span>
+                  </div>
                 </div>
 
               </MagicCard>
