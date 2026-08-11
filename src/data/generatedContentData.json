@@ -1,0 +1,983 @@
+{
+  "stats": {
+    "totalPublicationsCount": 6,
+    "totalAuthorsCount": 6,
+    "totalCitations": 1961,
+    "totalResearchAreasCount": 5,
+    "averageCitationsPerPaper": 327,
+    "authorPaperCounts": {
+      "alexanderchen": 0,
+      "elenarostova": 0,
+      "javadzolfaghari": 2,
+      "marcusvance": 1,
+      "priyasharma": 1,
+      "sarahjenkins": 2
+    }
+  },
+  "meta": {
+    "generatedAt": "2026-08-11T21:20:41.127Z",
+    "generator": "SQLite Production Store & MiniSearch Content Engine",
+    "sqliteFile": "src/data/content.db"
+  },
+  "researchAreas": [
+    {
+      "id": "ai-ml",
+      "name": "Artificial Intelligence & ML",
+      "badge": "AI / ML",
+      "description": "Multimodal foundation models, video understanding, audio processing, and zero-shot neural reasoning.",
+      "count": 1,
+      "totalCitations": 410
+    },
+    {
+      "id": "computer-vision",
+      "name": "Computer Vision & Video AI",
+      "badge": "Vision AI",
+      "description": "Real-time spatio-temporal video recognition, scene graph parsing, and action detection.",
+      "count": 1,
+      "totalCitations": 512
+    },
+    {
+      "id": "audio-speech",
+      "name": "Audio & Speech Intelligence",
+      "badge": "Audio AI",
+      "description": "Neural acoustic modeling, multi-speaker diarization, and sound event localization.",
+      "count": 2,
+      "totalCitations": 555
+    },
+    {
+      "id": "health-bio",
+      "name": "Medical AI & Healthcare",
+      "badge": "Health AI",
+      "description": "Deep diagnostic imaging transformers, ECG anomaly detection, and computational pathology.",
+      "count": 1,
+      "totalCitations": 195
+    },
+    {
+      "id": "edge-systems",
+      "name": "Efficient AI & Edge Computing",
+      "badge": "Edge AI",
+      "description": "Ultra-low power quantization, mobile neural compilation, and real-time video stream analytics.",
+      "count": 1,
+      "totalCitations": 289
+    }
+  ],
+  "publications": [
+    {
+      "id": "7721034",
+      "title": "Zero-Shot Spatial Reasoning in Large Multimodal Foundation Models for Dynamic Robotics",
+      "year": 2026,
+      "month": "February",
+      "venue": "ICLR 2026",
+      "isPublished": true,
+      "publishedBadge": "ICLR 2026",
+      "areaId": "ai-ml",
+      "areaName": "Artificial Intelligence & ML",
+      "areaBadge": "AI / ML",
+      "tags": [
+        "AI / ML",
+        "Multimodal",
+        "Robotics",
+        "Zero-Shot Reasoning"
+      ],
+      "citations": 410,
+      "featured": true,
+      "doi": "10.48550/arXiv.2602.01192",
+      "zenodoDoi": "10.5281/zenodo.21886608",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886608.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886608",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00005.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/spatial-vlm",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://iclr.cc",
+      "sourceFile": "content/publications/multimodal-llm-edge.md",
+      "authors": [
+        {
+          "id": "javadzolfaghari",
+          "orcidId": "0000-0002-1825-0097",
+          "name": "Javad Zolfaghari",
+          "avatar": "/sensifai-logo.png",
+          "role": "Founder & Lead AI Scientist"
+        }
+      ],
+      "name": "Dr. Marcus Vance",
+      "affiliation": "Sensifai Labs / MIT",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0001-9283-1122",
+      "- id": "0000-0001-9283-1122",
+      "is_external": true,
+      "latexMathSample": "$$\\mathbf{P}_{\\text{camera}} = \\mathbf{K} [\\mathbf{R} | \\mathbf{t}] \\mathbf{P}_{\\text{world}}$$",
+      "figures": [
+        {
+          "title": "Robotic Spatial Perception & Manipulation"
+        }
+      ],
+      "caption": "Figure 1: Real-time 3D bounding box prediction for zero-shot robotic manipulation tasks.",
+      "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+      "bibtex": "@inproceedings{zolfaghari2026spatial,\n  title={Zero-Shot Spatial Reasoning in Large Multimodal Foundation Models for Dynamic Robotics},\n  author={Zolfaghari, Javad and Rostova, Elena and Vance, Marcus},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+      "abstract": "### Abstract\n\nWe present a unified multimodal foundation model capable of zero-shot 3D spatial grounding from monocular video feed. By embedding physical spatial priors directly into self-attention heads, our model predicts 6-DoF object poses at 60 FPS on edge accelerators."
+    },
+    {
+      "id": "8492015",
+      "title": "Sensifai-VLM: Real-Time Multimodal Video Understanding via Spatio-Temporal Token Selection",
+      "year": 2026,
+      "month": "January",
+      "venue": "IEEE TPAMI",
+      "isPublished": true,
+      "publishedBadge": "IEEE TPAMI",
+      "areaId": "computer-vision",
+      "areaName": "Computer Vision & Video AI",
+      "areaBadge": "Vision AI",
+      "tags": [
+        "Video AI",
+        "Multimodal",
+        "Vision Transformers",
+        "Real-Time"
+      ],
+      "citations": 512,
+      "featured": true,
+      "doi": "10.1109/TPAMI.2026.09102",
+      "zenodoDoi": "10.5281/zenodo.21886604",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886604.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886604",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00001.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/sensifai-vlm",
+      "datasetUrl": "https://huggingface.co/datasets/sensifai/video-bench",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://ieeexplore.ieee.org",
+      "sourceFile": "content/publications/sensifai-vlm.md",
+      "authors": [
+        {
+          "id": "javadzolfaghari",
+          "orcidId": "0000-0002-1825-0097",
+          "name": "Javad Zolfaghari",
+          "avatar": "/sensifai-logo.png",
+          "role": "Founder & Lead AI Scientist"
+        }
+      ],
+      "name": "Elena Rostova",
+      "affiliation": "Sensifai Vision Group",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0003-4451-2288",
+      "- id": "0000-0003-4451-2288",
+      "is_external": true,
+      "latexMathSample": "Our spatio-temporal token selector minimizes total video energy consumption while preserving multi-frame attention accuracy:\n$$ \\mathcal{L}_{\\text{total}} = \\mathcal{L}_{\\text{CE}}(\\hat{y}, y) + \\lambda_1 \\cdot \\sum_{l=1}^L \\| M_l \\|_1 + \\lambda_2 \\cdot \\int_{0}^T \\| \\nabla \\mathbf{z}(t) \\|^2 dt $$\nwhere cross-modal attention weights \\( A_{ij} \\) are computed dynamically across spatio-temporal video grids:\n$$ A_{ij} = \\frac{\\exp\\left( \\frac{\\mathbf{q}_i^T \\mathbf{k}_j}{\\sqrt{d_k}} + \\gamma \\cdot S(i,j) \\right)}{\\sum_{k} \\exp\\left( \\frac{\\mathbf{q}_i^T \\mathbf{k}_k}{\\sqrt{d_k}} + \\gamma \\cdot S(i,k) \\right)} $$",
+      "figures": [
+        {
+          "title": "Architecture & Token Selection Pipeline"
+        }
+      ],
+      "caption": "Figure 4: Real-time power draw and FLOPs reduction on Jetson Orin vs Raspberry Pi 5.",
+      "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "- title": "Edge Hardware Energy Consumption",
+      "bibtex": "@article{zolfaghari2026sensifai,\n  title={Sensifai-VLM: Real-Time Multimodal Video Understanding via Spatio-Temporal Token Selection},\n  author={Zolfaghari, Javad and Vance, Marcus and Rostova, Elena},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},\n  year={2026},\n  doi={10.1109/TPAMI.2026.09102}\n}",
+      "abstract": "### Abstract\n\nSpatio-temporal redundancy in high-framerate video streams imposes intense computational barriers for video large language models. We introduce Sensifai-VLM, an architecture employing dynamic token selection over loss function \\(\\mathcal{L}_{\\text{selection}} = \\mathbb{E}_{v \\sim \\mathcal{V}}[\\|f(v) - y\\|^2 + \\lambda \\cdot \\Omega(\\theta)]\\). Across Ego4D, Kinetics-700, and ActivityNet, Sensifai-VLM reduces latency by 3.8x while achieving state-of-the-art 88.4% top-1 accuracy."
+    },
+    {
+      "id": "3029104",
+      "title": "EdgeNet: 1-Bit Quantized Vision Backbones for Ultra-Low-Power Embedded Microcontrollers",
+      "year": 2025,
+      "month": "June",
+      "venue": "CVPR 2025",
+      "isPublished": true,
+      "publishedBadge": "CVPR 2025",
+      "areaId": "edge-systems",
+      "areaName": "Efficient AI & Edge Computing",
+      "areaBadge": "Edge AI",
+      "tags": [
+        "Quantization",
+        "1-Bit AI",
+        "Embedded AI",
+        "Edge Computing"
+      ],
+      "citations": 289,
+      "featured": true,
+      "doi": "10.1109/CVPR.2025.10928",
+      "zenodoDoi": "10.5281/zenodo.21886606",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886606.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886606",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00003.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/edgenet",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://cvpr2025.thecvf.com",
+      "sourceFile": "content/publications/edgenet.md",
+      "authors": [
+        {
+          "id": "marcusvance",
+          "orcidId": "0000-0001-9283-1122",
+          "name": "Dr. Marcus Vance",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+          "role": "Principal Research Scientist"
+        }
+      ],
+      "name": "Elena Rostova",
+      "affiliation": "Sensifai Vision Group",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0003-4451-2288",
+      "- id": "0000-0003-4451-2288",
+      "latexMathSample": "$$\\mathbf{W}_b = \\text{sign}(\\mathbf{W}) \\cdot \\alpha, \\quad \\text{where } \\alpha = \\frac{1}{n}\\|\\mathbf{W}\\|_1$$",
+      "figures": [
+        {
+          "title": "1-Bit Quantization Topology"
+        }
+      ],
+      "caption": "Figure 2: Memory footprint comparison across FP32, INT8, and EdgeNet 1-bit weights.",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "- title": "SRAM Memory Footprint Reduction",
+      "bibtex": "@inproceedings{vance2025edgenet,\n  title={EdgeNet: 1-Bit Quantized Vision Backbones for Ultra-Low-Power Embedded Microcontrollers},\n  author={Vance, Marcus and Chen, Alexander and Rostova, Elena},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2025}\n}",
+      "abstract": "### Abstract\n\nDeploying vision transformers to low-power embedded microcontrollers requires extreme quantization. EdgeNet demonstrates ternary and 1-bit weight quantization routines that retain 94.2% of FP32 ImageNet accuracy while reducing SRAM requirements to under 256KB."
+    },
+    {
+      "id": "4481029",
+      "title": "BioVision: Deep Spatio-Temporal Transformers for Automated Radiograph and ECG Diagnostic Anomaly Detection",
+      "year": 2025,
+      "month": "September",
+      "venue": "MICCAI 2025",
+      "isPublished": true,
+      "publishedBadge": "MICCAI 2025",
+      "areaId": "health-bio",
+      "areaName": "Medical AI & Healthcare",
+      "areaBadge": "Health AI",
+      "tags": [
+        "Health AI",
+        "Medical Vision",
+        "Diagnostic AI",
+        "ECG Analysis"
+      ],
+      "citations": 195,
+      "featured": true,
+      "doi": "10.1007/978-3-031-43210-9",
+      "zenodoDoi": "10.5281/zenodo.21886607",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886607.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886607",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00004.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/biovision",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://miccai2025.org",
+      "sourceFile": "content/publications/health-transformer.md",
+      "authors": [
+        {
+          "id": "priyasharma",
+          "orcidId": "0000-0005-2234-8899",
+          "name": "Dr. Priya Sharma",
+          "avatar": "https://images.unsplash.com/photo-1594824813572-5985e50529d3?auto=format&fit=crop&w=400&q=80",
+          "role": "Lead Medical AI Scientist"
+        }
+      ],
+      "name": "Javad Zolfaghari",
+      "affiliation": "Sensifai Labs",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "- id": "0000-0002-1825-0097",
+      "latexMathSample": "$$\\mathcal{L}_{\\text{InfoNCE}} = -\\log \\frac{\\exp(\\text{sim}(z_i, z_j)/\\tau)}{\\sum_{k=1}^{2N} \\exp(\\text{sim}(z_i, z_k)/\\tau)}$$",
+      "figures": [
+        {
+          "title": "Chest X-Ray Anomaly Heatmap"
+        }
+      ],
+      "caption": "Figure 1: Attention heatmaps identifying focal pulmonary opacities in high-resolution chest radiographs.",
+      "url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      "bibtex": "@inproceedings{sharma2025biovision,\n  title={BioVision: Deep Spatio-Temporal Transformers for Automated Radiograph and ECG Diagnostic Anomaly Detection},\n  author={Sharma, Priya and Zolfaghari, Javad},\n  booktitle={Medical Image Computing and Computer Assisted Intervention (MICCAI)},\n  year={2025}\n}",
+      "abstract": "### Abstract\n\nClinical diagnostic workflows require high interpretability alongside state-of-the-art diagnostic sensitivity. BioVision combines multi-modal radiograph embeddings with temporal 12-lead ECG signal representations, achieving a 0.963 AUROC score across MIMIC-CXR and PhysioNet benchmarks."
+    },
+    {
+      "id": "5930214",
+      "title": "NeuroAudio: End-to-End Neural Diarization and Source Separation in Noisy Environments",
+      "year": 2025,
+      "month": "November",
+      "venue": "NeurIPS 2025",
+      "isPublished": true,
+      "publishedBadge": "NeurIPS 2025",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Audio AI",
+        "Speech Recognition",
+        "Source Separation"
+      ],
+      "citations": 340,
+      "featured": true,
+      "doi": "10.48550/arXiv.2511.08912",
+      "zenodoDoi": "10.5281/zenodo.21886605",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886605.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886605",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00002.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/neuro-audio",
+      "datasetUrl": "https://huggingface.co/datasets/sensifai/audio-clean",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://nips.cc",
+      "sourceFile": "content/publications/neuro-audio.md",
+      "authors": [
+        {
+          "id": "sarahjenkins",
+          "orcidId": "0000-0002-8812-4411",
+          "name": "Dr. Sarah Jenkins",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+          "role": "Lead Audio AI Researcher"
+        }
+      ],
+      "name": "Javad Zolfaghari",
+      "affiliation": "Sensifai Labs",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "- id": "0000-0002-1825-0097",
+      "latexMathSample": "Complex-valued spectrogram reconstruction is governed by:\n$$ \\hat{S}(f,t) = M(f,t) \\odot Y(f,t), \\quad \\text{where } M(f,t) \\in [0, 1] + i [0, 1] $$",
+      "figures": [
+        {
+          "title": "Spectrogram De-noising & Separation"
+        }
+      ],
+      "caption": "Figure 4: Full neural network architecture diagram for dual-path RNN attention.",
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "- title": "Acoustic Transformer Encoder Architecture",
+      "bibtex": "@inproceedings{jenkins2025neuroaudio,\n  title={NeuroAudio: End-to-End Neural Diarization and Source Separation in Noisy Environments},\n  author={Jenkins, Sarah and Zolfaghari, Javad},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2025}\n}",
+      "abstract": "### Abstract\n\nMulti-speaker overlap in reverberant industrial environments creates severe degradation for automated speech recognition. NeuroAudio introduces complex time-frequency masking transformers that untangle multi-talker audio at sub-10ms latencies."
+    },
+    {
+      "id": "6610992",
+      "title": "Spatial-AudioNet: Multi-Microphone Spherical Harmonic Beamforming for Noise-Robust Diarization",
+      "year": 2025,
+      "month": "August",
+      "venue": "IEEE ICASSP 2025",
+      "isPublished": true,
+      "publishedBadge": "ICASSP 2025",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Audio AI",
+        "Spherical Harmonics",
+        "Beamforming",
+        "Diarization"
+      ],
+      "citations": 215,
+      "featured": false,
+      "doi": "10.1109/ICASSP.2025.99120",
+      "zenodoDoi": "10.5281/zenodo.21886609",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886609.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886609",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00006.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/spatial-audionet",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://2025.ieeeicassp.org",
+      "sourceFile": "content/publications/spatial-audio-diarization.md",
+      "authors": [
+        {
+          "id": "sarahjenkins",
+          "orcidId": "0000-0002-8812-4411",
+          "name": "Dr. Sarah Jenkins",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+          "role": "Lead Audio AI Researcher"
+        }
+      ],
+      "name": "Alexander Chen",
+      "affiliation": "Sensifai Edge Lab",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0004-9912-3344",
+      "- id": "0000-0004-9912-3344",
+      "figures": [
+        {
+          "title": "Spherical Harmonic Acoustic Beamforming"
+        }
+      ],
+      "caption": "Figure 1: 3D spatial directivity pattern of spherical microphone array.",
+      "url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+      "bibtex": "@inproceedings{jenkins2025spatialaudio,\n  title={Spatial-AudioNet: Multi-Microphone Spherical Harmonic Beamforming for Noise-Robust Diarization},\n  author={Jenkins, Sarah and Chen, Alexander},\n  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year={2025}\n}",
+      "abstract": "Spherical microphone arrays allow spatial filtering of ambient acoustic noise. Spatial-AudioNet processes multi-channel HOA signals to isolate overlapping speakers with less than 2.1% diarization error rate in reverberant meeting rooms.\n\n\n  $$Y_n^m(\\theta, \\phi) = \\sqrt{\\frac{(2n+1)(n-m)!}{4\\pi(n+m)!}} P_n^m(\\cos\\theta) e^{im\\phi}$$"
+    }
+  ],
+  "authors": [
+    {
+      "id": "javadzolfaghari",
+      "orcidId": "0000-0002-1825-0097",
+      "name": "Javad Zolfaghari",
+      "role": "Founder & Lead AI Scientist",
+      "area": "Video AI & Multimodal Intelligence",
+      "avatar": "/sensifai-logo.png",
+      "headline": "Founder & Lead AI Scientist at Sensifai Labs. Leading commercial and scientific innovations in real-time video, audio, and multimodal artificial intelligence.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com/Sensifai-BV",
+      "linkedin": "https://www.linkedin.com/company/17888541/",
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "citations": 1420,
+      "hIndex": 18,
+      "i10Index": 24,
+      "sourceFile": "content/authors/javad-zolfaghari.md",
+      "bio": "Javad Zolfaghari is the Founder and CTO of Sensifai. His research focuses on real-time video understanding, spatio-temporal token selection for VLMs, and zero-shot neural audio processing. Under his leadership, Sensifai has pioneered ultra-low latency vision and perception systems deployed worldwide across cloud, edge, and mobile platforms.",
+      "githubUrl": "https://github.com/Sensifai-BV",
+      "linkedinUrl": "https://www.linkedin.com/company/17888541/",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 2
+    },
+    {
+      "id": "sarahjenkins",
+      "orcidId": "0000-0002-8812-4411",
+      "name": "Dr. Sarah Jenkins",
+      "role": "Lead Audio AI Researcher",
+      "area": "Acoustic AI & Diarization",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+      "headline": "Pioneering neural speech separation, multi-talker diarization, and noisy acoustic signal processing.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0002-8812-4411",
+      "citations": 780,
+      "hIndex": 14,
+      "i10Index": 16,
+      "sourceFile": "content/authors/sarah-jenkins.md",
+      "bio": "Dr. Sarah Jenkins received her PhD from Stanford. At Sensifai, she leads the Audio AI lab developing NeuroAudio for real-time industrial noise cancellation, acoustic beamforming, and multi-channel speaker diarization.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 2
+    },
+    {
+      "id": "marcusvance",
+      "orcidId": "0000-0001-9283-1122",
+      "name": "Dr. Marcus Vance",
+      "role": "Principal Research Scientist",
+      "area": "Distributed AI & Vision",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      "headline": "Senior Principal Researcher directing edge AI optimization, neural quantization, and zero-shot vision models.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0001-9283-1122",
+      "citations": 980,
+      "hIndex": 15,
+      "i10Index": 19,
+      "sourceFile": "content/authors/marcus-vance.md",
+      "bio": "Dr. Marcus Vance holds a PhD from MIT in Computer Science. His research interests encompass 1-bit quantization, embedded vision systems, and distributed multi-GPU training algorithms. He has published over 25 papers in top-tier conferences including CVPR, ICCV, and NeurIPS.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 1
+    },
+    {
+      "id": "priyasharma",
+      "orcidId": "0000-0005-2234-8899",
+      "name": "Dr. Priya Sharma",
+      "role": "Lead Medical AI Scientist",
+      "area": "Medical AI & Healthcare",
+      "avatar": "https://images.unsplash.com/photo-1594824813572-5985e50529d3?auto=format&fit=crop&w=400&q=80",
+      "headline": "Advancing clinical computer vision, ECG anomaly detection, and automated radiograph interpretation.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0005-2234-8899",
+      "citations": 820,
+      "hIndex": 16,
+      "i10Index": 21,
+      "sourceFile": "content/authors/priya-sharma.md",
+      "bio": "Dr. Priya Sharma leads the Medical AI & Healthcare division at Sensifai. She earned her PhD from Johns Hopkins University and has worked extensively on deep learning for radiological image analysis, real-time diagnostic decision support systems, and medical signal processing.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 1
+    },
+    {
+      "id": "alexanderchen",
+      "orcidId": "0000-0004-9912-3344",
+      "name": "Alexander Chen",
+      "role": "Principal Edge AI Engineer",
+      "area": "Efficient AI & Edge Computing",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      "headline": "Specialist in hardware acceleration, TensorRT compilation, and micro-controller neural networks.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0004-9912-3344",
+      "citations": 450,
+      "hIndex": 10,
+      "i10Index": 12,
+      "sourceFile": "content/authors/alexander-chen.md",
+      "bio": "Alexander Chen focuses on optimizing state-of-the-art vision models for ultra-constrained embedded hardware. His work includes compiler-level graph optimizations, weight quantization, and custom kernel development for NPU and RISC-V targets.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 0
+    },
+    {
+      "id": "elenarostova",
+      "orcidId": "0000-0003-4451-2288",
+      "name": "Elena Rostova",
+      "role": "Senior AI Research Engineer",
+      "area": "Multimodal Foundation Models",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+      "headline": "Core contributor to Sensifai-VLM architecture and multi-camera spatial video reasoning.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0003-4451-2288",
+      "citations": 640,
+      "hIndex": 12,
+      "i10Index": 14,
+      "sourceFile": "content/authors/elena-rostova.md",
+      "bio": "Elena specializes in vision-language cross-attention mechanisms, spatio-temporal video Transformers, and dataset curation for large-scale video benchmark evaluation. Her recent focus is on self-supervised representation learning from untrimmed web video streams.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 0
+    }
+  ],
+  "publicationMap": {
+    "3029104": {
+      "id": "3029104",
+      "title": "EdgeNet: 1-Bit Quantized Vision Backbones for Ultra-Low-Power Embedded Microcontrollers",
+      "year": 2025,
+      "month": "June",
+      "venue": "CVPR 2025",
+      "isPublished": true,
+      "publishedBadge": "CVPR 2025",
+      "areaId": "edge-systems",
+      "areaName": "Efficient AI & Edge Computing",
+      "areaBadge": "Edge AI",
+      "tags": [
+        "Quantization",
+        "1-Bit AI",
+        "Embedded AI",
+        "Edge Computing"
+      ],
+      "citations": 289,
+      "featured": true,
+      "doi": "10.1109/CVPR.2025.10928",
+      "zenodoDoi": "10.5281/zenodo.21886606",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886606.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886606",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00003.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/edgenet",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://cvpr2025.thecvf.com",
+      "sourceFile": "content/publications/edgenet.md",
+      "authors": [
+        {
+          "id": "marcusvance",
+          "orcidId": "0000-0001-9283-1122",
+          "name": "Dr. Marcus Vance",
+          "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+          "role": "Principal Research Scientist"
+        }
+      ],
+      "name": "Elena Rostova",
+      "affiliation": "Sensifai Vision Group",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0003-4451-2288",
+      "- id": "0000-0003-4451-2288",
+      "latexMathSample": "$$\\mathbf{W}_b = \\text{sign}(\\mathbf{W}) \\cdot \\alpha, \\quad \\text{where } \\alpha = \\frac{1}{n}\\|\\mathbf{W}\\|_1$$",
+      "figures": [
+        {
+          "title": "1-Bit Quantization Topology"
+        }
+      ],
+      "caption": "Figure 2: Memory footprint comparison across FP32, INT8, and EdgeNet 1-bit weights.",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      "- title": "SRAM Memory Footprint Reduction",
+      "bibtex": "@inproceedings{vance2025edgenet,\n  title={EdgeNet: 1-Bit Quantized Vision Backbones for Ultra-Low-Power Embedded Microcontrollers},\n  author={Vance, Marcus and Chen, Alexander and Rostova, Elena},\n  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},\n  year={2025}\n}",
+      "abstract": "### Abstract\n\nDeploying vision transformers to low-power embedded microcontrollers requires extreme quantization. EdgeNet demonstrates ternary and 1-bit weight quantization routines that retain 94.2% of FP32 ImageNet accuracy while reducing SRAM requirements to under 256KB."
+    },
+    "4481029": {
+      "id": "4481029",
+      "title": "BioVision: Deep Spatio-Temporal Transformers for Automated Radiograph and ECG Diagnostic Anomaly Detection",
+      "year": 2025,
+      "month": "September",
+      "venue": "MICCAI 2025",
+      "isPublished": true,
+      "publishedBadge": "MICCAI 2025",
+      "areaId": "health-bio",
+      "areaName": "Medical AI & Healthcare",
+      "areaBadge": "Health AI",
+      "tags": [
+        "Health AI",
+        "Medical Vision",
+        "Diagnostic AI",
+        "ECG Analysis"
+      ],
+      "citations": 195,
+      "featured": true,
+      "doi": "10.1007/978-3-031-43210-9",
+      "zenodoDoi": "10.5281/zenodo.21886607",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886607.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886607",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00004.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/biovision",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://miccai2025.org",
+      "sourceFile": "content/publications/health-transformer.md",
+      "authors": [
+        {
+          "id": "priyasharma",
+          "orcidId": "0000-0005-2234-8899",
+          "name": "Dr. Priya Sharma",
+          "avatar": "https://images.unsplash.com/photo-1594824813572-5985e50529d3?auto=format&fit=crop&w=400&q=80",
+          "role": "Lead Medical AI Scientist"
+        }
+      ],
+      "name": "Javad Zolfaghari",
+      "affiliation": "Sensifai Labs",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "- id": "0000-0002-1825-0097",
+      "latexMathSample": "$$\\mathcal{L}_{\\text{InfoNCE}} = -\\log \\frac{\\exp(\\text{sim}(z_i, z_j)/\\tau)}{\\sum_{k=1}^{2N} \\exp(\\text{sim}(z_i, z_k)/\\tau)}$$",
+      "figures": [
+        {
+          "title": "Chest X-Ray Anomaly Heatmap"
+        }
+      ],
+      "caption": "Figure 1: Attention heatmaps identifying focal pulmonary opacities in high-resolution chest radiographs.",
+      "url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80",
+      "bibtex": "@inproceedings{sharma2025biovision,\n  title={BioVision: Deep Spatio-Temporal Transformers for Automated Radiograph and ECG Diagnostic Anomaly Detection},\n  author={Sharma, Priya and Zolfaghari, Javad},\n  booktitle={Medical Image Computing and Computer Assisted Intervention (MICCAI)},\n  year={2025}\n}",
+      "abstract": "### Abstract\n\nClinical diagnostic workflows require high interpretability alongside state-of-the-art diagnostic sensitivity. BioVision combines multi-modal radiograph embeddings with temporal 12-lead ECG signal representations, achieving a 0.963 AUROC score across MIMIC-CXR and PhysioNet benchmarks."
+    },
+    "5930214": {
+      "id": "5930214",
+      "title": "NeuroAudio: End-to-End Neural Diarization and Source Separation in Noisy Environments",
+      "year": 2025,
+      "month": "November",
+      "venue": "NeurIPS 2025",
+      "isPublished": true,
+      "publishedBadge": "NeurIPS 2025",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Audio AI",
+        "Speech Recognition",
+        "Source Separation"
+      ],
+      "citations": 340,
+      "featured": true,
+      "doi": "10.48550/arXiv.2511.08912",
+      "zenodoDoi": "10.5281/zenodo.21886605",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886605.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886605",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00002.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/neuro-audio",
+      "datasetUrl": "https://huggingface.co/datasets/sensifai/audio-clean",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://nips.cc",
+      "sourceFile": "content/publications/neuro-audio.md",
+      "authors": [
+        {
+          "id": "sarahjenkins",
+          "orcidId": "0000-0002-8812-4411",
+          "name": "Dr. Sarah Jenkins",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+          "role": "Lead Audio AI Researcher"
+        }
+      ],
+      "name": "Javad Zolfaghari",
+      "affiliation": "Sensifai Labs",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "- id": "0000-0002-1825-0097",
+      "latexMathSample": "Complex-valued spectrogram reconstruction is governed by:\n$$ \\hat{S}(f,t) = M(f,t) \\odot Y(f,t), \\quad \\text{where } M(f,t) \\in [0, 1] + i [0, 1] $$",
+      "figures": [
+        {
+          "title": "Spectrogram De-noising & Separation"
+        }
+      ],
+      "caption": "Figure 4: Full neural network architecture diagram for dual-path RNN attention.",
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+      "- title": "Acoustic Transformer Encoder Architecture",
+      "bibtex": "@inproceedings{jenkins2025neuroaudio,\n  title={NeuroAudio: End-to-End Neural Diarization and Source Separation in Noisy Environments},\n  author={Jenkins, Sarah and Zolfaghari, Javad},\n  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},\n  year={2025}\n}",
+      "abstract": "### Abstract\n\nMulti-speaker overlap in reverberant industrial environments creates severe degradation for automated speech recognition. NeuroAudio introduces complex time-frequency masking transformers that untangle multi-talker audio at sub-10ms latencies."
+    },
+    "6610992": {
+      "id": "6610992",
+      "title": "Spatial-AudioNet: Multi-Microphone Spherical Harmonic Beamforming for Noise-Robust Diarization",
+      "year": 2025,
+      "month": "August",
+      "venue": "IEEE ICASSP 2025",
+      "isPublished": true,
+      "publishedBadge": "ICASSP 2025",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Audio AI",
+        "Spherical Harmonics",
+        "Beamforming",
+        "Diarization"
+      ],
+      "citations": 215,
+      "featured": false,
+      "doi": "10.1109/ICASSP.2025.99120",
+      "zenodoDoi": "10.5281/zenodo.21886609",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886609.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886609",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00006.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/spatial-audionet",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://2025.ieeeicassp.org",
+      "sourceFile": "content/publications/spatial-audio-diarization.md",
+      "authors": [
+        {
+          "id": "sarahjenkins",
+          "orcidId": "0000-0002-8812-4411",
+          "name": "Dr. Sarah Jenkins",
+          "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+          "role": "Lead Audio AI Researcher"
+        }
+      ],
+      "name": "Alexander Chen",
+      "affiliation": "Sensifai Edge Lab",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0004-9912-3344",
+      "- id": "0000-0004-9912-3344",
+      "figures": [
+        {
+          "title": "Spherical Harmonic Acoustic Beamforming"
+        }
+      ],
+      "caption": "Figure 1: 3D spatial directivity pattern of spherical microphone array.",
+      "url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80",
+      "bibtex": "@inproceedings{jenkins2025spatialaudio,\n  title={Spatial-AudioNet: Multi-Microphone Spherical Harmonic Beamforming for Noise-Robust Diarization},\n  author={Jenkins, Sarah and Chen, Alexander},\n  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year={2025}\n}",
+      "abstract": "Spherical microphone arrays allow spatial filtering of ambient acoustic noise. Spatial-AudioNet processes multi-channel HOA signals to isolate overlapping speakers with less than 2.1% diarization error rate in reverberant meeting rooms.\n\n\n  $$Y_n^m(\\theta, \\phi) = \\sqrt{\\frac{(2n+1)(n-m)!}{4\\pi(n+m)!}} P_n^m(\\cos\\theta) e^{im\\phi}$$"
+    },
+    "7721034": {
+      "id": "7721034",
+      "title": "Zero-Shot Spatial Reasoning in Large Multimodal Foundation Models for Dynamic Robotics",
+      "year": 2026,
+      "month": "February",
+      "venue": "ICLR 2026",
+      "isPublished": true,
+      "publishedBadge": "ICLR 2026",
+      "areaId": "ai-ml",
+      "areaName": "Artificial Intelligence & ML",
+      "areaBadge": "AI / ML",
+      "tags": [
+        "AI / ML",
+        "Multimodal",
+        "Robotics",
+        "Zero-Shot Reasoning"
+      ],
+      "citations": 410,
+      "featured": true,
+      "doi": "10.48550/arXiv.2602.01192",
+      "zenodoDoi": "10.5281/zenodo.21886608",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886608.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886608",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00005.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/spatial-vlm",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://iclr.cc",
+      "sourceFile": "content/publications/multimodal-llm-edge.md",
+      "authors": [
+        {
+          "id": "javadzolfaghari",
+          "orcidId": "0000-0002-1825-0097",
+          "name": "Javad Zolfaghari",
+          "avatar": "/sensifai-logo.png",
+          "role": "Founder & Lead AI Scientist"
+        }
+      ],
+      "name": "Dr. Marcus Vance",
+      "affiliation": "Sensifai Labs / MIT",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0001-9283-1122",
+      "- id": "0000-0001-9283-1122",
+      "is_external": true,
+      "latexMathSample": "$$\\mathbf{P}_{\\text{camera}} = \\mathbf{K} [\\mathbf{R} | \\mathbf{t}] \\mathbf{P}_{\\text{world}}$$",
+      "figures": [
+        {
+          "title": "Robotic Spatial Perception & Manipulation"
+        }
+      ],
+      "caption": "Figure 1: Real-time 3D bounding box prediction for zero-shot robotic manipulation tasks.",
+      "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80",
+      "bibtex": "@inproceedings{zolfaghari2026spatial,\n  title={Zero-Shot Spatial Reasoning in Large Multimodal Foundation Models for Dynamic Robotics},\n  author={Zolfaghari, Javad and Rostova, Elena and Vance, Marcus},\n  booktitle={International Conference on Learning Representations (ICLR)},\n  year={2026}\n}",
+      "abstract": "### Abstract\n\nWe present a unified multimodal foundation model capable of zero-shot 3D spatial grounding from monocular video feed. By embedding physical spatial priors directly into self-attention heads, our model predicts 6-DoF object poses at 60 FPS on edge accelerators."
+    },
+    "8492015": {
+      "id": "8492015",
+      "title": "Sensifai-VLM: Real-Time Multimodal Video Understanding via Spatio-Temporal Token Selection",
+      "year": 2026,
+      "month": "January",
+      "venue": "IEEE TPAMI",
+      "isPublished": true,
+      "publishedBadge": "IEEE TPAMI",
+      "areaId": "computer-vision",
+      "areaName": "Computer Vision & Video AI",
+      "areaBadge": "Vision AI",
+      "tags": [
+        "Video AI",
+        "Multimodal",
+        "Vision Transformers",
+        "Real-Time"
+      ],
+      "citations": 512,
+      "featured": true,
+      "doi": "10.1109/TPAMI.2026.09102",
+      "zenodoDoi": "10.5281/zenodo.21886604",
+      "zenodoBadgeUrl": "https://zenodo.org/badge/DOI/10.5281/zenodo.21886604.svg",
+      "zenodoUrl": "https://doi.org/10.5281/zenodo.21886604",
+      "pdfUrl": "https://arxiv.org/pdf/2401.00001.pdf",
+      "codeUrl": "https://github.com/Sensifai-BV/sensifai-vlm",
+      "datasetUrl": "https://huggingface.co/datasets/sensifai/video-bench",
+      "scholarUrl": "https://scholar.google.com",
+      "journalUrl": "https://ieeexplore.ieee.org",
+      "sourceFile": "content/publications/sensifai-vlm.md",
+      "authors": [
+        {
+          "id": "javadzolfaghari",
+          "orcidId": "0000-0002-1825-0097",
+          "name": "Javad Zolfaghari",
+          "avatar": "/sensifai-logo.png",
+          "role": "Founder & Lead AI Scientist"
+        }
+      ],
+      "name": "Elena Rostova",
+      "affiliation": "Sensifai Vision Group",
+      "isLead": false,
+      "orcid": "https://orcid.org/0000-0003-4451-2288",
+      "- id": "0000-0003-4451-2288",
+      "is_external": true,
+      "latexMathSample": "Our spatio-temporal token selector minimizes total video energy consumption while preserving multi-frame attention accuracy:\n$$ \\mathcal{L}_{\\text{total}} = \\mathcal{L}_{\\text{CE}}(\\hat{y}, y) + \\lambda_1 \\cdot \\sum_{l=1}^L \\| M_l \\|_1 + \\lambda_2 \\cdot \\int_{0}^T \\| \\nabla \\mathbf{z}(t) \\|^2 dt $$\nwhere cross-modal attention weights \\( A_{ij} \\) are computed dynamically across spatio-temporal video grids:\n$$ A_{ij} = \\frac{\\exp\\left( \\frac{\\mathbf{q}_i^T \\mathbf{k}_j}{\\sqrt{d_k}} + \\gamma \\cdot S(i,j) \\right)}{\\sum_{k} \\exp\\left( \\frac{\\mathbf{q}_i^T \\mathbf{k}_k}{\\sqrt{d_k}} + \\gamma \\cdot S(i,k) \\right)} $$",
+      "figures": [
+        {
+          "title": "Architecture & Token Selection Pipeline"
+        }
+      ],
+      "caption": "Figure 4: Real-time power draw and FLOPs reduction on Jetson Orin vs Raspberry Pi 5.",
+      "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+      "- title": "Edge Hardware Energy Consumption",
+      "bibtex": "@article{zolfaghari2026sensifai,\n  title={Sensifai-VLM: Real-Time Multimodal Video Understanding via Spatio-Temporal Token Selection},\n  author={Zolfaghari, Javad and Vance, Marcus and Rostova, Elena},\n  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},\n  year={2026},\n  doi={10.1109/TPAMI.2026.09102}\n}",
+      "abstract": "### Abstract\n\nSpatio-temporal redundancy in high-framerate video streams imposes intense computational barriers for video large language models. We introduce Sensifai-VLM, an architecture employing dynamic token selection over loss function \\(\\mathcal{L}_{\\text{selection}} = \\mathbb{E}_{v \\sim \\mathcal{V}}[\\|f(v) - y\\|^2 + \\lambda \\cdot \\Omega(\\theta)]\\). Across Ego4D, Kinetics-700, and ActivityNet, Sensifai-VLM reduces latency by 3.8x while achieving state-of-the-art 88.4% top-1 accuracy."
+    }
+  },
+  "authorMap": {
+    "javadzolfaghari": {
+      "id": "javadzolfaghari",
+      "orcidId": "0000-0002-1825-0097",
+      "name": "Javad Zolfaghari",
+      "role": "Founder & Lead AI Scientist",
+      "area": "Video AI & Multimodal Intelligence",
+      "avatar": "/sensifai-logo.png",
+      "headline": "Founder & Lead AI Scientist at Sensifai Labs. Leading commercial and scientific innovations in real-time video, audio, and multimodal artificial intelligence.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com/Sensifai-BV",
+      "linkedin": "https://www.linkedin.com/company/17888541/",
+      "orcid": "https://orcid.org/0000-0002-1825-0097",
+      "citations": 1420,
+      "hIndex": 18,
+      "i10Index": 24,
+      "sourceFile": "content/authors/javad-zolfaghari.md",
+      "bio": "Javad Zolfaghari is the Founder and CTO of Sensifai. His research focuses on real-time video understanding, spatio-temporal token selection for VLMs, and zero-shot neural audio processing. Under his leadership, Sensifai has pioneered ultra-low latency vision and perception systems deployed worldwide across cloud, edge, and mobile platforms.",
+      "githubUrl": "https://github.com/Sensifai-BV",
+      "linkedinUrl": "https://www.linkedin.com/company/17888541/",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 2
+    },
+    "sarahjenkins": {
+      "id": "sarahjenkins",
+      "orcidId": "0000-0002-8812-4411",
+      "name": "Dr. Sarah Jenkins",
+      "role": "Lead Audio AI Researcher",
+      "area": "Acoustic AI & Diarization",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
+      "headline": "Pioneering neural speech separation, multi-talker diarization, and noisy acoustic signal processing.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0002-8812-4411",
+      "citations": 780,
+      "hIndex": 14,
+      "i10Index": 16,
+      "sourceFile": "content/authors/sarah-jenkins.md",
+      "bio": "Dr. Sarah Jenkins received her PhD from Stanford. At Sensifai, she leads the Audio AI lab developing NeuroAudio for real-time industrial noise cancellation, acoustic beamforming, and multi-channel speaker diarization.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 2
+    },
+    "marcusvance": {
+      "id": "marcusvance",
+      "orcidId": "0000-0001-9283-1122",
+      "name": "Dr. Marcus Vance",
+      "role": "Principal Research Scientist",
+      "area": "Distributed AI & Vision",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      "headline": "Senior Principal Researcher directing edge AI optimization, neural quantization, and zero-shot vision models.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0001-9283-1122",
+      "citations": 980,
+      "hIndex": 15,
+      "i10Index": 19,
+      "sourceFile": "content/authors/marcus-vance.md",
+      "bio": "Dr. Marcus Vance holds a PhD from MIT in Computer Science. His research interests encompass 1-bit quantization, embedded vision systems, and distributed multi-GPU training algorithms. He has published over 25 papers in top-tier conferences including CVPR, ICCV, and NeurIPS.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 1
+    },
+    "priyasharma": {
+      "id": "priyasharma",
+      "orcidId": "0000-0005-2234-8899",
+      "name": "Dr. Priya Sharma",
+      "role": "Lead Medical AI Scientist",
+      "area": "Medical AI & Healthcare",
+      "avatar": "https://images.unsplash.com/photo-1594824813572-5985e50529d3?auto=format&fit=crop&w=400&q=80",
+      "headline": "Advancing clinical computer vision, ECG anomaly detection, and automated radiograph interpretation.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0005-2234-8899",
+      "citations": 820,
+      "hIndex": 16,
+      "i10Index": 21,
+      "sourceFile": "content/authors/priya-sharma.md",
+      "bio": "Dr. Priya Sharma leads the Medical AI & Healthcare division at Sensifai. She earned her PhD from Johns Hopkins University and has worked extensively on deep learning for radiological image analysis, real-time diagnostic decision support systems, and medical signal processing.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 1
+    },
+    "alexanderchen": {
+      "id": "alexanderchen",
+      "orcidId": "0000-0004-9912-3344",
+      "name": "Alexander Chen",
+      "role": "Principal Edge AI Engineer",
+      "area": "Efficient AI & Edge Computing",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+      "headline": "Specialist in hardware acceleration, TensorRT compilation, and micro-controller neural networks.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0004-9912-3344",
+      "citations": 450,
+      "hIndex": 10,
+      "i10Index": 12,
+      "sourceFile": "content/authors/alexander-chen.md",
+      "bio": "Alexander Chen focuses on optimizing state-of-the-art vision models for ultra-constrained embedded hardware. His work includes compiler-level graph optimizations, weight quantization, and custom kernel development for NPU and RISC-V targets.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 0
+    },
+    "elenarostova": {
+      "id": "elenarostova",
+      "orcidId": "0000-0003-4451-2288",
+      "name": "Elena Rostova",
+      "role": "Senior AI Research Engineer",
+      "area": "Multimodal Foundation Models",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+      "headline": "Core contributor to Sensifai-VLM architecture and multi-camera spatial video reasoning.",
+      "scholar": "https://scholar.google.com",
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "orcid": "https://orcid.org/0000-0003-4451-2288",
+      "citations": 640,
+      "hIndex": 12,
+      "i10Index": 14,
+      "sourceFile": "content/authors/elena-rostova.md",
+      "bio": "Elena specializes in vision-language cross-attention mechanisms, spatio-temporal video Transformers, and dataset curation for large-scale video benchmark evaluation. Her recent focus is on self-supervised representation learning from untrimmed web video streams.",
+      "githubUrl": "https://github.com",
+      "linkedinUrl": "https://linkedin.com",
+      "scholarUrl": "https://scholar.google.com",
+      "pubCount": 0
+    }
+  },
+  "searchIndex": "{\"documentCount\":6,\"nextId\":6,\"documentIds\":{\"0\":\"7721034\",\"1\":\"8492015\",\"2\":\"3029104\",\"3\":\"4481029\",\"4\":\"5930214\",\"5\":\"6610992\"},\"fieldIds\":{\"title\":0,\"abstract\":1,\"authorsText\":2,\"tagsText\":3,\"venue\":4},\"fieldLength\":{\"0\":[12,41,2,7,2],\"1\":[12,70,2,7,2],\"2\":[12,35,3,7,2],\"3\":[13,39,3,7,2],\"4\":[11,32,3,6,2],\"5\":[11,51,3,6,3]},\"averageFieldLength\":[11.833333333333334,44.666666666666664,2.6666666666666665,6.666666666666667,2.1666666666666665],\"storedFields\":{\"0\":{\"id\":\"7721034\",\"title\":\"Zero-Shot Spatial Reasoning in Large Multimodal Foundation Models for Dynamic Robotics\",\"areaId\":\"ai-ml\",\"year\":2026},\"1\":{\"id\":\"8492015\",\"title\":\"Sensifai-VLM: Real-Time Multimodal Video Understanding via Spatio-Temporal Token Selection\",\"areaId\":\"computer-vision\",\"year\":2026},\"2\":{\"id\":\"3029104\",\"title\":\"EdgeNet: 1-Bit Quantized Vision Backbones for Ultra-Low-Power Embedded Microcontrollers\",\"areaId\":\"edge-systems\",\"year\":2025},\"3\":{\"id\":\"4481029\",\"title\":\"BioVision: Deep Spatio-Temporal Transformers for Automated Radiograph and ECG Diagnostic Anomaly Detection\",\"areaId\":\"health-bio\",\"year\":2025},\"4\":{\"id\":\"5930214\",\"title\":\"NeuroAudio: End-to-End Neural Diarization and Source Separation in Noisy Environments\",\"areaId\":\"audio-speech\",\"year\":2025},\"5\":{\"id\":\"6610992\",\"title\":\"Spatial-AudioNet: Multi-Microphone Spherical Harmonic Beamforming for Noise-Robust Diarization\",\"areaId\":\"audio-speech\",\"year\":2025}},\"dirtCount\":0,\"index\":[[\"$$\",{\"1\":{\"5\":1}}],[\"$$y\",{\"1\":{\"5\":1}}],[\"jenkins\",{\"2\":{\"4\":1,\"5\":1}}],[\"javad\",{\"2\":{\"0\":1,\"1\":1}}],[\"n+m\",{\"1\":{\"5\":1}}],[\"n\",{\"1\":{\"5\":1}}],[\"n^m\",{\"1\":{\"5\":2}}],[\"noise\",{\"0\":{\"5\":1},\"1\":{\"5\":1}}],[\"noisy\",{\"0\":{\"4\":1}}],[\"neurips\",{\"4\":{\"4\":1}}],[\"neural\",{\"0\":{\"4\":1}}],[\"neuroaudio\",{\"0\":{\"4\":1},\"1\":{\"4\":1}}],[\"963\",{\"1\":{\"3\":1}}],[\"94\",{\"1\":{\"2\":1}}],[\"0\",{\"1\":{\"3\":1}}],[\"2n+1\",{\"1\":{\"5\":1}}],[\"2025\",{\"4\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"2026\",{\"4\":{\"0\":1}}],[\"256kb\",{\"1\":{\"2\":1}}],[\"2\",{\"1\":{\"2\":1,\"5\":1}}],[\"quantization\",{\"1\":{\"2\":2},\"3\":{\"2\":1}}],[\"quantized\",{\"0\":{\"2\":1}}],[\"ultra\",{\"0\":{\"2\":1}}],[\"untangle\",{\"1\":{\"4\":1}}],[\"under\",{\"1\":{\"2\":1}}],[\"understanding\",{\"0\":{\"1\":1}}],[\"unified\",{\"1\":{\"0\":1}}],[\"10ms\",{\"1\":{\"4\":1}}],[\"12\",{\"1\":{\"3\":1}}],[\"1\",{\"0\":{\"2\":1},\"1\":{\"1\":1,\"2\":1,\"5\":1},\"3\":{\"2\":1}}],[\"4\",{\"1\":{\"1\":1,\"5\":1}}],[\"88\",{\"1\":{\"1\":1}}],[\"8x\",{\"1\":{\"1\":1}}],[\"with\",{\"1\":{\"3\":1,\"5\":1}}],[\"workflows\",{\"1\":{\"3\":1}}],[\"while\",{\"1\":{\"1\":1,\"2\":1}}],[\"weight\",{\"1\":{\"2\":1}}],[\"we\",{\"1\":{\"0\":1,\"1\":1}}],[\"3\",{\"1\":{\"1\":1}}],[\"3d\",{\"1\":{\"0\":1}}],[\"700\",{\"1\":{\"1\":1}}],[\"kinetics\",{\"1\":{\"1\":1}}],[\"+\",{\"1\":{\"1\":1}}],[\"|^2\",{\"1\":{\"1\":1}}],[\"|f\",{\"1\":{\"1\":1}}],[\"y\",{\"1\":{\"1\":1}}],[\"=\",{\"1\":{\"1\":1,\"5\":1}}],[\"less\",{\"1\":{\"5\":1}}],[\"lead\",{\"1\":{\"3\":1}}],[\"low\",{\"0\":{\"2\":1},\"1\":{\"2\":1}}],[\"loss\",{\"1\":{\"1\":1}}],[\"l\",{\"1\":{\"1\":1}}],[\"latencies\",{\"1\":{\"4\":1}}],[\"latency\",{\"1\":{\"1\":1}}],[\"lambda\",{\"1\":{\"1\":1}}],[\"language\",{\"1\":{\"1\":1}}],[\"large\",{\"0\":{\"0\":1},\"1\":{\"1\":1}}],[\"beamforming\",{\"0\":{\"5\":1},\"3\":{\"5\":1}}],[\"benchmarks\",{\"1\":{\"3\":1}}],[\"biovision\",{\"0\":{\"3\":1},\"1\":{\"3\":1}}],[\"bit\",{\"0\":{\"2\":1},\"1\":{\"2\":1},\"3\":{\"2\":1}}],[\"backbones\",{\"0\":{\"2\":1}}],[\"barriers\",{\"1\":{\"1\":1}}],[\"by\",{\"1\":{\"0\":1,\"1\":1}}],[\"cos\",{\"1\":{\"5\":1}}],[\"complex\",{\"1\":{\"4\":1}}],[\"computing\",{\"3\":{\"2\":1}}],[\"computational\",{\"1\":{\"1\":1}}],[\"combines\",{\"1\":{\"3\":1}}],[\"channel\",{\"1\":{\"5\":1}}],[\"creates\",{\"1\":{\"4\":1}}],[\"cxr\",{\"1\":{\"3\":1}}],[\"clinical\",{\"1\":{\"3\":1}}],[\"cvpr\",{\"4\":{\"2\":1}}],[\"cdot\",{\"1\":{\"1\":1}}],[\"capable\",{\"1\":{\"0\":1}}],[\"hoa\",{\"1\":{\"5\":1}}],[\"harmonics\",{\"3\":{\"5\":1}}],[\"harmonic\",{\"0\":{\"5\":1}}],[\"health\",{\"3\":{\"3\":1}}],[\"heads\",{\"1\":{\"0\":1}}],[\"high\",{\"1\":{\"1\":1,\"3\":1}}],[\"talker\",{\"1\":{\"4\":1}}],[\"than\",{\"1\":{\"5\":1}}],[\"that\",{\"1\":{\"2\":1,\"4\":1}}],[\"the\",{\"1\":{\"1\":1,\"3\":1}}],[\"theta\",{\"1\":{\"1\":1,\"5\":2}}],[\"tpami\",{\"4\":{\"1\":1}}],[\"transformers\",{\"0\":{\"3\":1},\"1\":{\"2\":1,\"4\":1},\"3\":{\"1\":1}}],[\"to\",{\"0\":{\"4\":1},\"1\":{\"2\":2,\"5\":1}}],[\"top\",{\"1\":{\"1\":1}}],[\"token\",{\"0\":{\"1\":1},\"1\":{\"1\":1}}],[\"ternary\",{\"1\":{\"2\":1}}],[\"text\",{\"1\":{\"1\":1}}],[\"temporal\",{\"0\":{\"1\":1,\"3\":1},\"1\":{\"1\":1,\"3\":1}}],[\"time\",{\"0\":{\"1\":1},\"1\":{\"4\":1},\"3\":{\"1\":1}}],[\"vance\",{\"2\":{\"2\":1}}],[\"v\",{\"1\":{\"1\":3}}],[\"vision\",{\"0\":{\"2\":1},\"1\":{\"2\":1},\"3\":{\"1\":1,\"3\":1}}],[\"via\",{\"0\":{\"1\":1}}],[\"video\",{\"0\":{\"1\":1},\"1\":{\"0\":1,\"1\":2},\"3\":{\"1\":1}}],[\"vlm\",{\"0\":{\"1\":1},\"1\":{\"1\":2}}],[\"icassp\",{\"4\":{\"5\":1}}],[\"iclr\",{\"4\":{\"0\":1}}],[\"isolate\",{\"1\":{\"5\":1}}],[\"im\",{\"1\":{\"5\":1}}],[\"imagenet\",{\"1\":{\"2\":1}}],[\"imposes\",{\"1\":{\"1\":1}}],[\"ieee\",{\"4\":{\"1\":1,\"5\":1}}],[\"industrial\",{\"1\":{\"4\":1}}],[\"interpretability\",{\"1\":{\"3\":1}}],[\"intense\",{\"1\":{\"1\":1}}],[\"introduces\",{\"1\":{\"4\":1}}],[\"introduce\",{\"1\":{\"1\":1}}],[\"into\",{\"1\":{\"0\":1}}],[\"in\",{\"0\":{\"0\":1,\"4\":1},\"1\":{\"1\":1,\"4\":1,\"5\":1}}],[\"zolfaghari\",{\"2\":{\"0\":1,\"1\":1}}],[\"zero\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"e^\",{\"1\":{\"5\":1}}],[\"error\",{\"1\":{\"5\":1}}],[\"environments\",{\"0\":{\"4\":1},\"1\":{\"4\":1}}],[\"end\",{\"0\":{\"4\":2}}],[\"ecg\",{\"0\":{\"3\":1},\"1\":{\"3\":1},\"3\":{\"3\":1}}],[\"extreme\",{\"1\":{\"2\":1}}],[\"ego4d\",{\"1\":{\"1\":1}}],[\"e\",{\"1\":{\"1\":1}}],[\"embedded\",{\"0\":{\"2\":1},\"1\":{\"2\":1},\"3\":{\"2\":1}}],[\"embeddings\",{\"1\":{\"3\":1}}],[\"embedding\",{\"1\":{\"0\":1}}],[\"employing\",{\"1\":{\"1\":1}}],[\"edgenet\",{\"0\":{\"2\":1},\"1\":{\"2\":1}}],[\"edge\",{\"1\":{\"0\":1},\"3\":{\"2\":1}}],[\"60\",{\"1\":{\"0\":1}}],[\"6\",{\"1\":{\"0\":1}}],[\"omega\",{\"1\":{\"1\":1}}],[\"overlapping\",{\"1\":{\"5\":1}}],[\"overlap\",{\"1\":{\"4\":1}}],[\"over\",{\"1\":{\"1\":1}}],[\"on\",{\"1\":{\"0\":1}}],[\"object\",{\"1\":{\"0\":1}}],[\"our\",{\"1\":{\"0\":1}}],[\"of\",{\"1\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"5\":1}}],[\"diarization\",{\"0\":{\"4\":1,\"5\":1},\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"diagnostic\",{\"0\":{\"3\":1},\"1\":{\"3\":2},\"3\":{\"3\":1}}],[\"directly\",{\"1\":{\"0\":1}}],[\"dr\",{\"2\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"degradation\",{\"1\":{\"4\":1}}],[\"detection\",{\"0\":{\"3\":1}}],[\"deep\",{\"0\":{\"3\":1}}],[\"demonstrates\",{\"1\":{\"2\":1}}],[\"deploying\",{\"1\":{\"2\":1}}],[\"dof\",{\"1\":{\"0\":1}}],[\"dynamic\",{\"0\":{\"0\":1},\"1\":{\"1\":1}}],[\"p\",{\"1\":{\"5\":1}}],[\"pi\",{\"1\":{\"5\":1}}],[\"phi\",{\"1\":{\"5\":2}}],[\"physionet\",{\"1\":{\"3\":1}}],[\"physical\",{\"1\":{\"0\":1}}],[\"power\",{\"0\":{\"2\":1},\"1\":{\"2\":1}}],[\"poses\",{\"1\":{\"0\":1}}],[\"processes\",{\"1\":{\"5\":1}}],[\"priya\",{\"2\":{\"3\":1}}],[\"priors\",{\"1\":{\"0\":1}}],[\"predicts\",{\"1\":{\"0\":1}}],[\"present\",{\"1\":{\"0\":1}}],[\"filtering\",{\"1\":{\"5\":1}}],[\"fp32\",{\"1\":{\"2\":1}}],[\"fps\",{\"1\":{\"0\":1}}],[\"function\",{\"1\":{\"1\":1}}],[\"frac\",{\"1\":{\"5\":1}}],[\"framerate\",{\"1\":{\"1\":1}}],[\"frequency\",{\"1\":{\"4\":1}}],[\"from\",{\"1\":{\"0\":1}}],[\"feed\",{\"1\":{\"0\":1}}],[\"for\",{\"0\":{\"0\":1,\"2\":1,\"3\":1,\"5\":1},\"1\":{\"1\":1,\"4\":1}}],[\"foundation\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}],[\"grounding\",{\"1\":{\"0\":1}}],[\"ambient\",{\"1\":{\"5\":1}}],[\"allow\",{\"1\":{\"5\":1}}],[\"alongside\",{\"1\":{\"3\":1}}],[\"audionet\",{\"0\":{\"5\":1},\"1\":{\"5\":1}}],[\"audio\",{\"1\":{\"4\":1},\"3\":{\"4\":1,\"5\":1}}],[\"auroc\",{\"1\":{\"3\":1}}],[\"automated\",{\"0\":{\"3\":1},\"1\":{\"4\":1}}],[\"arrays\",{\"1\":{\"5\":1}}],[\"art\",{\"1\":{\"1\":1,\"3\":1}}],[\"architecture\",{\"1\":{\"1\":1}}],[\"acoustic\",{\"1\":{\"5\":1}}],[\"accuracy\",{\"1\":{\"1\":1,\"2\":1}}],[\"accelerators\",{\"1\":{\"0\":1}}],[\"achieving\",{\"1\":{\"1\":1,\"3\":1}}],[\"activitynet\",{\"1\":{\"1\":1}}],[\"across\",{\"1\":{\"1\":1,\"3\":1}}],[\"analysis\",{\"3\":{\"3\":1}}],[\"anomaly\",{\"0\":{\"3\":1}}],[\"and\",{\"0\":{\"3\":1,\"4\":1},\"1\":{\"1\":1,\"2\":1,\"3\":1}}],[\"an\",{\"1\":{\"1\":1}}],[\"ai\",{\"3\":{\"0\":1,\"1\":1,\"2\":2,\"3\":2,\"4\":1,\"5\":1}}],[\"at\",{\"1\":{\"0\":1,\"4\":1}}],[\"attention\",{\"1\":{\"0\":1}}],[\"a\",{\"1\":{\"0\":1,\"3\":1}}],[\"abstract\",{\"1\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1}}],[\"rate\",{\"1\":{\"5\":1}}],[\"radiograph\",{\"0\":{\"3\":1},\"1\":{\"3\":1}}],[\"rooms\",{\"1\":{\"5\":1}}],[\"robust\",{\"0\":{\"5\":1}}],[\"robotics\",{\"0\":{\"0\":1},\"3\":{\"0\":1}}],[\"routines\",{\"1\":{\"2\":1}}],[\"recognition\",{\"1\":{\"4\":1},\"3\":{\"4\":1}}],[\"reverberant\",{\"1\":{\"4\":1,\"5\":1}}],[\"representations\",{\"1\":{\"3\":1}}],[\"require\",{\"1\":{\"3\":1}}],[\"requirements\",{\"1\":{\"2\":1}}],[\"requires\",{\"1\":{\"2\":1}}],[\"retain\",{\"1\":{\"2\":1}}],[\"reducing\",{\"1\":{\"2\":1}}],[\"reduces\",{\"1\":{\"1\":1}}],[\"redundancy\",{\"1\":{\"1\":1}}],[\"real\",{\"0\":{\"1\":1},\"3\":{\"1\":1}}],[\"reasoning\",{\"0\":{\"0\":1},\"3\":{\"0\":1}}],[\"m\",{\"1\":{\"5\":1}}],[\"meeting\",{\"1\":{\"5\":1}}],[\"medical\",{\"3\":{\"3\":1}}],[\"microphone\",{\"0\":{\"5\":1},\"1\":{\"5\":1}}],[\"microcontrollers\",{\"0\":{\"2\":1},\"1\":{\"2\":1}}],[\"miccai\",{\"4\":{\"3\":1}}],[\"mimic\",{\"1\":{\"3\":1}}],[\"multi\",{\"0\":{\"5\":1},\"1\":{\"3\":1,\"4\":2,\"5\":1}}],[\"multimodal\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":1},\"3\":{\"0\":1,\"1\":1}}],[\"masking\",{\"1\":{\"4\":1}}],[\"marcus\",{\"2\":{\"2\":1}}],[\"mathbb\",{\"1\":{\"1\":1}}],[\"mathcal\",{\"1\":{\"1\":2}}],[\"ml\",{\"3\":{\"0\":1}}],[\"modal\",{\"1\":{\"3\":1}}],[\"model\",{\"1\":{\"0\":2}}],[\"models\",{\"0\":{\"0\":1},\"1\":{\"1\":1}}],[\"monocular\",{\"1\":{\"0\":1}}],[\"sqrt\",{\"1\":{\"5\":1}}],[\"sarah\",{\"2\":{\"4\":1,\"5\":1}}],[\"sub\",{\"1\":{\"4\":1}}],[\"spherical\",{\"0\":{\"5\":1},\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"speech\",{\"1\":{\"4\":1},\"3\":{\"4\":1}}],[\"speakers\",{\"1\":{\"5\":1}}],[\"speaker\",{\"1\":{\"4\":1}}],[\"spatio\",{\"0\":{\"1\":1,\"3\":1},\"1\":{\"1\":1}}],[\"spatial\",{\"0\":{\"0\":1,\"5\":1},\"1\":{\"0\":2,\"5\":2}}],[\"source\",{\"0\":{\"4\":1},\"3\":{\"4\":1}}],[\"sharma\",{\"2\":{\"3\":1}}],[\"shot\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"score\",{\"1\":{\"3\":1}}],[\"signals\",{\"1\":{\"5\":1}}],[\"signal\",{\"1\":{\"3\":1}}],[\"sim\",{\"1\":{\"1\":1}}],[\"sram\",{\"1\":{\"2\":1}}],[\"state\",{\"1\":{\"1\":1,\"3\":1}}],[\"streams\",{\"1\":{\"1\":1}}],[\"severe\",{\"1\":{\"4\":1}}],[\"separation\",{\"0\":{\"4\":1},\"3\":{\"4\":1}}],[\"sensitivity\",{\"1\":{\"3\":1}}],[\"sensifai\",{\"0\":{\"1\":1},\"1\":{\"1\":2}}],[\"selection\",{\"0\":{\"1\":1},\"1\":{\"1\":2}}],[\"self\",{\"1\":{\"0\":1}}]],\"serializationVersion\":2}"
+}
