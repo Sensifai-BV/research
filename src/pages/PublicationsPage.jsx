@@ -7,6 +7,7 @@ import { Badge } from '../components/ui/Badge';
 import { CitationDialog } from '../components/ui/CitationDialog';
 import { PdfPreviewDialog } from '../components/ui/PdfPreviewDialog';
 import { LatexRenderer } from '../components/ui/LatexRenderer';
+import { ScholarIcon } from '../components/ui/SocialIcons';
 
 // Magic UI Components
 import { MagicCard } from '../components/magicui/MagicCard';
@@ -200,6 +201,18 @@ export function PublicationsPage() {
                             {paper.publishedBadge}
                           </Badge>
                         )}
+                        {paper.citations !== undefined && paper.citations !== null && (
+                          <a
+                            href={paper.scholarUrl || '#'}
+                            target={paper.scholarUrl ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            title={`Cited by ${paper.citations} on Google Scholar`}
+                            className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 px-2 py-0.5 text-[10px] font-bold text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-colors"
+                          >
+                            <ScholarIcon className="h-2.5 w-2.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                            <span>Cited by {paper.citations}</span>
+                          </a>
+                        )}
                         <span className="text-xs text-zinc-400 dark:text-zinc-500 font-medium ml-auto">{paper.month} {paper.year}</span>
                       </div>
                       
@@ -265,6 +278,21 @@ export function PublicationsPage() {
                         <span className="font-bold text-zinc-700 dark:text-zinc-300">{paper.venue}</span>
                         <span className="text-zinc-300 dark:text-zinc-700">•</span>
                         <span className="text-zinc-500 dark:text-zinc-400 font-medium">{paper.month} {paper.year}</span>
+                        {paper.citations !== undefined && paper.citations !== null && (
+                          <>
+                            <span className="text-zinc-300 dark:text-zinc-700">•</span>
+                            <a
+                              href={paper.scholarUrl || '#'}
+                              target={paper.scholarUrl ? "_blank" : "_self"}
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 font-bold text-blue-600 dark:text-blue-400 hover:underline"
+                              title={`Cited by ${paper.citations} on Google Scholar`}
+                            >
+                              <ScholarIcon className="h-3 w-3 text-blue-600 dark:text-blue-400 shrink-0" />
+                              <span>Cited by {paper.citations}</span>
+                            </a>
+                          </>
+                        )}
                       </div>
                       
                       <Link to={`/publication/${paper.id}`} className="font-bold text-zinc-950 dark:text-zinc-50 hover:text-indigo-600 text-base leading-snug block transition-colors">

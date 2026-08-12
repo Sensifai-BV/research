@@ -189,6 +189,18 @@ export function HomePage() {
                           <CheckCircle2 className="h-3 w-3 text-emerald-600" /> {paper.year}
                         </Badge>
                       )}
+                      {paper.citations !== undefined && paper.citations !== null && (
+                        <a
+                          href={paper.scholarUrl || '#'}
+                          target={paper.scholarUrl ? "_blank" : "_self"}
+                          rel="noopener noreferrer"
+                          title={`Cited by ${paper.citations} on Google Scholar`}
+                          className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 px-1.5 py-0.5 text-[9px] font-bold text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-colors"
+                        >
+                          <ScholarIcon className="h-2.5 w-2.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                          <span>{paper.citations}</span>
+                        </a>
+                      )}
                     </div>
 
                     <Link to={`/publication/${paper.id}`} className="hover:text-indigo-600 transition-colors">

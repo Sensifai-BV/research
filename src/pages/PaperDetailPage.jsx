@@ -70,6 +70,19 @@ export function PaperDetailPage() {
                   <span>Published in {paper.publishedBadge || paper.venue}</span>
                 </Badge>
               )}
+              {paper.citations !== undefined && paper.citations !== null && (
+                <a
+                  href={paper.scholarUrl || '#'}
+                  target={paper.scholarUrl ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  title={`Cited by ${paper.citations} on Google Scholar`}
+                >
+                  <Badge variant="secondary" className="inline-flex items-center gap-1.5 font-bold text-xs bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-colors cursor-pointer">
+                    <ScholarIcon className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                    <span>Cited by {paper.citations}</span>
+                  </Badge>
+                </a>
+              )}
               <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 sm:ml-auto">{paper.month} {paper.year}</span>
             </div>
 
@@ -184,7 +197,7 @@ export function PaperDetailPage() {
                 <a href={paper.scholarUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto block">
                   <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 dark:border-zinc-700 text-zinc-800 dark:text-zinc-200 font-bold text-xs bg-white dark:bg-zinc-950 shadow-2xs dark:shadow-none">
                     <ScholarIcon className="h-4 w-4 text-blue-600" />
-                    Google Scholar
+                    Google Scholar {paper.citations ? `(${paper.citations} citations)` : ''}
                   </Button>
                 </a>
               )}
