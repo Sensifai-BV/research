@@ -24,7 +24,7 @@ export function PeoplePage() {
   }).sort((a, b) => (b.pubCount || 0) - (a.pubCount || 0));
 
   return (
-    <div className="min-h-screen bg-zinc-50/50 py-12">
+    <div className="min-h-screen bg-zinc-50/50 dark:bg-zinc-900/50 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         
         {/* Header */}
@@ -34,10 +34,10 @@ export function PeoplePage() {
               <FileCode className="h-3.5 w-3.5 text-emerald-600" />
               Research Team ({CONTENT_STATS?.totalAuthorsCount || TEAM.length} Authors)
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-950">
+            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-zinc-950 dark:text-zinc-50">
               Sensifai Researchers & Authors
             </h1>
-            <p className="text-sm text-zinc-500">
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
               Leading scientists and research engineers shaping real-time video, audio, and edge AI breakthroughs.
             </p>
           </div>
@@ -53,25 +53,25 @@ export function PeoplePage() {
                     <img
                       src={member.avatar}
                       alt={member.name}
-                      className="h-24 w-24 rounded-full mx-auto object-cover border-2 border-zinc-950 shadow-sm group-hover:scale-105 transition-transform"
+                      className="h-24 w-24 rounded-full mx-auto object-cover border-2 border-zinc-950 dark:border-zinc-50 shadow-sm dark:shadow-none group-hover:scale-105 transition-transform"
                     />
                   </Link>
 
-                  <h3 className="mt-4 font-black text-zinc-950 text-lg group-hover:text-indigo-600 transition-colors">
+                  <h3 className="mt-4 font-black text-zinc-950 dark:text-zinc-50 text-lg group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     <Link to={`/researcher/${member.orcidId || member.id}`}>
                       {member.name}
                     </Link>
                   </h3>
                   
                   <div className="text-xs font-semibold text-indigo-600 mt-0.5">{member.role}</div>
-                  <div className="text-[11px] font-medium text-zinc-400">{member.affiliation}</div>
+                  <div className="text-[11px] font-medium text-zinc-400 dark:text-zinc-500">{member.affiliation}</div>
 
-                  <p className="mt-3 text-xs text-zinc-600 leading-relaxed line-clamp-3">
+                  <p className="mt-3 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-3">
                     {member.bio}
                   </p>
                 </div>
 
-                <div className="mt-6 border-t border-zinc-100 pt-4 flex flex-col gap-2.5">
+                <div className="mt-6 border-t border-zinc-100 dark:border-zinc-800 pt-4 flex flex-col gap-2.5">
                   <div className="flex items-center justify-between text-xs">
                     <span className="font-extrabold text-[#5c8a00]">
                       {member.pubCount} Publications
@@ -81,9 +81,9 @@ export function PeoplePage() {
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between text-[11px] font-semibold text-zinc-600 bg-zinc-50 px-2.5 py-1 rounded-md border border-zinc-100">
-                    <span>h-index: <strong className="text-zinc-950 font-extrabold">{member.hIndex || 0}</strong></span>
-                    <span>i10-index: <strong className="text-zinc-950 font-extrabold">{member.i10Index || 0}</strong></span>
+                  <div className="flex items-center justify-between text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 bg-zinc-50 dark:bg-zinc-900 px-2.5 py-1 rounded-md border border-zinc-100 dark:border-zinc-800">
+                    <span>h-index: <strong className="text-zinc-950 dark:text-zinc-50 font-extrabold">{member.hIndex || 0}</strong></span>
+                    <span>i10-index: <strong className="text-zinc-950 dark:text-zinc-50 font-extrabold">{member.i10Index || 0}</strong></span>
                   </div>
                 </div>
 

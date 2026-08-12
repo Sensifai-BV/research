@@ -1,11 +1,25 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  :root {
+    --bg-color: #fafafa;
+    --text-color: #090d16;
+    --magic-card-bg: #ffffff;
+    --magic-card-border: rgba(228, 228, 231, 0.8);
+  }
+  :root.dark {
+    --bg-color: #090d16;
+    --text-color: #fafafa;
+    --magic-card-bg: #090d16;
+    --magic-card-border: rgba(39, 39, 42, 0.8);
+  }
+  
   body {
     font-family: 'Roboto', system-ui, -apple-system, sans-serif;
-    background-color: #fafafa;
-    color: #090d16;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -27,10 +41,21 @@
 ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border-radius: 9999px;
 }
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
@@ -102,5 +127,16 @@
 
 .animate-shimmer-slide {
   animation: shimmer-slide var(--speed, 3s) ease-in-out infinite alternate;
+}
+
+/* Theme Toggle View Transitions */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-magicui-theme-vt="active"]::view-transition-group(root) {
+  animation-duration: var(--magicui-theme-toggle-vt-duration);
 }
 

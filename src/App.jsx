@@ -21,10 +21,10 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex min-h-screen flex-col font-sans antialiased text-zinc-900 bg-zinc-50/50">
+      <div className="flex min-h-screen flex-col font-sans antialiased text-zinc-900 dark:text-zinc-100 bg-zinc-50/50 dark:bg-zinc-900/50">
         <Navbar />
         <main className="flex-1">
-          <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-zinc-500">Loading...</div>}>
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen text-zinc-500 dark:text-zinc-400">Loading...</div>}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/publications" element={<PublicationsPage />} />

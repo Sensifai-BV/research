@@ -32,7 +32,7 @@ export function TypingAnimation({
   }, [text, duration, delay]);
 
   return (
-    <p className={cn("text-zinc-600 font-normal leading-relaxed", className)}>
+    <p className={cn("text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed", className)}>
       {displayedText}
       {index < text.length && (
         <span className="inline-block w-0.5 h-4 ml-0.5 bg-[#93d500] animate-pulse align-middle" />

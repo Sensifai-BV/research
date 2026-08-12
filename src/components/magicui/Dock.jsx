@@ -16,7 +16,7 @@ export function Dock({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "supports-backdrop-blur:bg-white/20 mx-auto flex h-14 items-end gap-3 rounded-2xl border border-zinc-200/80 bg-white/70 px-4 pb-2.5 backdrop-blur-md shadow-sm w-fit",
+        "supports-backdrop-blur:bg-white/20 mx-auto flex h-14 items-end gap-3 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white/70 dark:bg-zinc-950/70 px-4 pb-2.5 backdrop-blur-md shadow-sm dark:shadow-none w-fit",
         className
       )}
       {...props}
@@ -71,7 +71,7 @@ export function DockIcon({
       ref={ref}
       style={{ width, height: width }}
       className={cn(
-        "relative flex items-center justify-center rounded-full border border-zinc-200/80 bg-white shadow-2xs transition-colors hover:border-[#93d500] hover:bg-zinc-50 group cursor-pointer",
+        "relative flex items-center justify-center rounded-full border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 shadow-2xs dark:shadow-none transition-colors hover:border-[#93d500] hover:bg-zinc-50 dark:hover:bg-zinc-900 group cursor-pointer",
         className
       )}
       {...props}
@@ -80,7 +80,7 @@ export function DockIcon({
 
       {/* Tooltip on hover */}
       {title && (
-        <span className="pointer-events-none absolute -top-8 rounded-md bg-zinc-950 px-2 py-0.5 text-[10px] font-bold text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100 whitespace-nowrap">
+        <span className="pointer-events-none absolute -top-8 rounded-md bg-zinc-950 dark:bg-zinc-50 px-2 py-0.5 text-[10px] font-bold text-white dark:text-zinc-900 opacity-0 shadow-md dark:shadow-none transition-opacity group-hover:opacity-100 whitespace-nowrap">
           {title}
         </span>
       )}

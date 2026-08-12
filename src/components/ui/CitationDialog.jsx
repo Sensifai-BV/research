@@ -82,42 +82,42 @@ export function CitationDialog({ paper, isOpen, onClose }) {
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 shadow-xl transition-all cursor-default"
+        className="relative w-full max-w-2xl rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-6 shadow-xl dark:shadow-none transition-all cursor-default"
         onClick={(e) => e.stopPropagation()}
       >
         
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-zinc-100 pb-4">
-          <div className="flex items-center gap-2 text-zinc-950 font-extrabold text-base">
+        <div className="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 pb-4">
+          <div className="flex items-center gap-2 text-zinc-950 dark:text-zinc-50 font-extrabold text-base">
             <Quote className="h-4 w-4 text-indigo-600" />
             Cite Publication
           </div>
           <button
             onClick={onClose}
-            className="rounded-lg p-1 text-zinc-400 hover:bg-zinc-100 hover:text-zinc-950 transition-colors"
+            className="rounded-lg p-1 text-zinc-400 dark:text-zinc-500 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-50 transition-colors"
           >
             <X className="h-5 w-5" />
           </button>
         </div>
 
         {/* Paper Title Summary */}
-        <div className="mt-4 rounded-lg bg-zinc-50 p-3.5 border border-zinc-200/70">
-          <div className="text-xs font-bold text-zinc-950 leading-snug">{paper.title}</div>
-          <div className="text-[11px] text-zinc-500 mt-1 font-medium">
+        <div className="mt-4 rounded-lg bg-zinc-50 dark:bg-zinc-900 p-3.5 border border-zinc-200/70 dark:border-zinc-800/70">
+          <div className="text-xs font-bold text-zinc-950 dark:text-zinc-50 leading-snug">{paper.title}</div>
+          <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1 font-medium">
             {paper.authors.map(a => a.name).join(', ')} ({paper.year}) • {paper.venue}
           </div>
         </div>
 
         {/* Format Selector Tabs */}
-        <div className="flex items-center gap-1 mt-5 border-b border-zinc-100 pb-2">
+        <div className="flex items-center gap-1 mt-5 border-b border-zinc-100 dark:border-zinc-800 pb-2">
           {formats.map((f) => (
             <button
               key={f.id}
               onClick={() => setActiveFormat(f.id)}
               className={`rounded-md px-3 py-1.5 text-xs font-bold transition-colors ${
                 activeFormat === f.id
-                  ? 'bg-zinc-950 text-white shadow-2xs'
-                  : 'text-zinc-500 hover:bg-zinc-100 hover:text-zinc-950'
+                  ? 'bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-900 shadow-2xs dark:shadow-none'
+                  : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-950 dark:hover:text-zinc-50'
               }`}
             >
               {f.label}
@@ -127,13 +127,13 @@ export function CitationDialog({ paper, isOpen, onClose }) {
 
         {/* Citation Box */}
         <div className="relative mt-4">
-          <pre className="max-h-48 overflow-x-auto rounded-lg bg-zinc-900 p-4 text-xs text-zinc-100 font-mono leading-relaxed whitespace-pre-wrap">
+          <pre className="max-h-48 overflow-x-auto rounded-lg bg-zinc-900 dark:bg-zinc-100 p-4 text-xs text-zinc-100 dark:text-zinc-900 font-mono leading-relaxed whitespace-pre-wrap">
             {getCitationText()}
           </pre>
           
           <button
             onClick={handleCopy}
-            className="absolute right-3 top-3 rounded-md bg-zinc-800/90 hover:bg-zinc-700 p-1.5 text-xs font-bold text-zinc-200 transition-colors flex items-center gap-1 border border-zinc-700"
+            className="absolute right-3 top-3 rounded-md bg-zinc-800/90 dark:bg-zinc-200/90 hover:bg-zinc-700 p-1.5 text-xs font-bold text-zinc-200 dark:text-zinc-800 transition-colors flex items-center gap-1 border border-zinc-700"
           >
             {copied ? (
               <>
@@ -150,12 +150,12 @@ export function CitationDialog({ paper, isOpen, onClose }) {
         </div>
 
         {/* Footer Actions */}
-        <div className="flex items-center justify-between mt-6 pt-4 border-t border-zinc-100">
+        <div className="flex items-center justify-between mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
           <Button
             variant="outline"
             size="sm"
             onClick={handleDownloadBib}
-            className="gap-1.5 border-zinc-300 text-xs font-bold text-zinc-800"
+            className="gap-1.5 border-zinc-300 dark:border-zinc-700 text-xs font-bold text-zinc-800 dark:text-zinc-200"
           >
             <Download className="h-3.5 w-3.5 text-indigo-600" />
             Download .BIB
@@ -165,7 +165,7 @@ export function CitationDialog({ paper, isOpen, onClose }) {
             variant="default"
             size="sm"
             onClick={onClose}
-            className="bg-zinc-950 text-white rounded-full font-bold text-xs px-5"
+            className="bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-900 rounded-full font-bold text-xs px-5"
           >
             Done
           </Button>

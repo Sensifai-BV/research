@@ -12,11 +12,11 @@ export function Button({
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 cursor-pointer rounded-md';
 
   const variants = {
-    default: 'bg-zinc-900 text-zinc-50 hover:bg-zinc-800 shadow-sm',
-    outline: 'border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-100 hover:text-zinc-900 shadow-2xs',
-    secondary: 'bg-zinc-100 text-zinc-900 hover:bg-zinc-200/80',
-    ghost: 'hover:bg-zinc-100 hover:text-zinc-900',
-    link: 'text-zinc-900 underline-offset-4 hover:underline'
+    default: 'bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-sm dark:shadow-none',
+    outline: 'border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100 shadow-2xs dark:shadow-none',
+    secondary: 'bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 hover:bg-zinc-200/80',
+    ghost: 'hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-100',
+    link: 'text-zinc-900 dark:text-zinc-100 underline-offset-4 hover:underline'
   };
 
   const sizes = {

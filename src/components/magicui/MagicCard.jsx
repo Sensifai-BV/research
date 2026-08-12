@@ -53,7 +53,7 @@ export function MagicCard({
   return (
     <motion.div
       className={cn(
-        "group relative isolate overflow-hidden rounded-xl border border-zinc-200/80 bg-white p-6 shadow-xs transition-all duration-300 hover:shadow-md h-full flex flex-col justify-between",
+        "group relative isolate overflow-hidden rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 p-6 shadow-xs dark:shadow-none transition-all duration-300 hover:shadow-md h-full flex flex-col justify-between",
         className
       )}
       onPointerMove={handlePointerMove}
@@ -63,11 +63,11 @@ export function MagicCard({
       }}
       style={{
         background: useMotionTemplate`
-          linear-gradient(#ffffff 0 0) padding-box,
+          linear-gradient(var(--magic-card-bg, #ffffff) 0 0) padding-box,
           radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px,
             ${gradientFrom},
             ${gradientTo},
-            rgba(228, 228, 231, 0.8) 100%
+            var(--magic-card-border, rgba(228, 228, 231, 0.8)) 100%
           ) border-box
         `,
       }}
@@ -75,7 +75,7 @@ export function MagicCard({
     >
       {shine && <ShineBorder borderWidth={1.5} shineColor={shineColor} duration={10} className="z-10" />}
 
-      <div className="absolute inset-px z-10 rounded-[inherit] bg-white" />
+      <div className="absolute inset-px z-10 rounded-[inherit] bg-white dark:bg-zinc-950" />
 
       {mode === "gradient" && (
         <motion.div

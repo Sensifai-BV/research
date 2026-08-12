@@ -59,10 +59,10 @@ export function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-50/50">
+    <div className="min-h-screen bg-zinc-50/50 dark:bg-zinc-900/50">
       
       {/* Magic UI Hero Section */}
-      <section className="relative border-b border-zinc-200/80 bg-white py-14 lg:py-20 overflow-hidden">
+      <section className="relative border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-14 lg:py-20 overflow-hidden">
         {/* Magic UI Particles background */}
         <Particles className="hidden lg:block absolute inset-0 z-0 opacity-60" quantity={65} color="#6366f1" size={0.7} />
         
@@ -75,14 +75,14 @@ export function HomePage() {
               
               {/* Sparkles Headline */}
               <BlurFade delay={0.15}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.1] text-center lg:text-left">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 dark:text-zinc-50 leading-[1.1] text-center lg:text-left">
                   <SparklesText text="Sensifai Research Labs" colors={{ first: "#93d500", second: "#6366f1" }} className="inline-block" />
                 </h1>
               </BlurFade>
 
               {/* Typing Animation Subhead */}
               <BlurFade delay={0.2}>
-                <div className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+                <div className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
                   <TypingAnimation
                     text="Our mission is to drive breakthroughs in multimodal AI that benefit society, industry, and Sensifai products."
                     duration={20}
@@ -94,7 +94,7 @@ export function HomePage() {
               <BlurFade delay={0.25}>
                 <div className="pt-2 flex flex-wrap justify-center lg:justify-start items-center gap-4">
                   <Link to="/publications">
-                    <ShimmerButton className="font-extrabold text-xs px-6 py-3 shadow-md">
+                    <ShimmerButton className="font-extrabold text-xs px-6 py-3 shadow-md dark:shadow-none">
                       Explore {CONTENT_STATS?.totalPublicationsCount || PAPERS.length} Publications Library &rarr;
                     </ShimmerButton>
                   </Link>
@@ -109,14 +109,14 @@ export function HomePage() {
 
               {/* Metrics Stats Grid directly under Call to Actions */}
               <BlurFade delay={0.3}>
-                <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 border-t border-zinc-100/80 mt-6 text-center lg:text-left">
+                <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 border-t border-zinc-100/80 dark:border-zinc-800/80 mt-6 text-center lg:text-left">
                   
                   <div className="space-y-0.5">
-                    <div className="text-xl font-black tracking-tight text-zinc-950 flex justify-center lg:justify-start items-center gap-0.5">
-                      <NumberTicker value={CONTENT_STATS?.totalPublicationsCount || 6} className="text-zinc-950" />
+                    <div className="text-xl font-black tracking-tight text-zinc-950 dark:text-zinc-50 flex justify-center lg:justify-start items-center gap-0.5">
+                      <NumberTicker value={CONTENT_STATS?.totalPublicationsCount || 6} className="text-zinc-950 dark:text-zinc-50" />
                       <span>+</span>
                     </div>
-                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">Publications</div>
+                    <div className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider whitespace-nowrap">Publications</div>
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-200/60 sm:pl-3">
@@ -124,21 +124,21 @@ export function HomePage() {
                       <NumberTicker value={CONTENT_STATS?.totalCitations || 1961} className="text-indigo-600" />
                       <span>+</span>
                     </div>
-                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">Total Citations</div>
+                    <div className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider whitespace-nowrap">Total Citations</div>
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-200/60 sm:pl-3">
                     <div className="text-xl font-black tracking-tight text-emerald-600 flex justify-center lg:justify-start items-center">
                       <NumberTicker value={CONTENT_STATS?.averageCitationsPerPaper || 327} className="text-emerald-600" />
                     </div>
-                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">Avg Citations</div>
+                    <div className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider whitespace-nowrap">Avg Citations</div>
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-200/60 sm:pl-3">
                     <div className="text-xl font-black tracking-tight text-sky-600 flex justify-center lg:justify-start items-center">
                       <NumberTicker value={CONTENT_STATS?.totalResearchAreasCount || 5} className="text-sky-600" />
                     </div>
-                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">Domains</div>
+                    <div className="text-[10px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider whitespace-nowrap">Domains</div>
                   </div>
 
                 </div>
@@ -165,10 +165,10 @@ export function HomePage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <span className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Latest Research</span>
-              <h2 className="text-3xl font-extrabold text-zinc-950 mt-0.5">5 Recent Publications</h2>
+              <h2 className="text-3xl font-extrabold text-zinc-950 dark:text-zinc-50 mt-0.5">5 Recent Publications</h2>
             </div>
             
-            <Link to="/publications" className="group text-xs font-bold text-white bg-zinc-950 hover:bg-zinc-800 px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow-sm">
+            <Link to="/publications" className="group text-xs font-bold text-white dark:text-zinc-900 bg-zinc-950 dark:bg-zinc-50 hover:bg-zinc-800 dark:hover:bg-zinc-200 px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow-sm dark:shadow-none">
               View Full Library <ArrowRight className="h-3.5 w-3.5 text-[#93d500] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -192,28 +192,28 @@ export function HomePage() {
                     </div>
 
                     <Link to={`/publication/${paper.id}`} className="hover:text-indigo-600 transition-colors">
-                      <h3 className="text-sm leading-snug font-bold text-zinc-950 group-hover:text-indigo-600 transition-colors line-clamp-2">
+                      <h3 className="text-sm leading-snug font-bold text-zinc-950 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
                         {paper.title}
                       </h3>
                     </Link>
 
-                    <div className="text-[11px] text-zinc-500 mt-2 font-medium line-clamp-1">
+                    <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-2 font-medium line-clamp-1">
                       By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
                     </div>
 
-                    <p className="mt-3 text-[11px] leading-relaxed text-zinc-600 line-clamp-3">
+                    <p className="mt-3 text-[11px] leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
                       {paper.abstract}
                     </p>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex items-center justify-between gap-1.5 border-t border-zinc-100 pt-3 mt-4">
+                  <div className="flex items-center justify-between gap-1.5 border-t border-zinc-100 dark:border-zinc-800 pt-3 mt-4">
                     {paper.pdfUrl ? (
                       <Button
                         variant="outline"
                         size="sm"
                         onClick={() => setSelectedPaperForPdf(paper)}
-                        className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                        className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
                       >
                         <Eye className="h-3 w-3 text-indigo-600" />
                         Show
@@ -223,7 +223,7 @@ export function HomePage() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                          className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
                         >
                           <ExternalLink className="h-3 w-3 text-emerald-600" />
                           Publisher
@@ -237,7 +237,7 @@ export function HomePage() {
                       variant="ghost"
                       size="sm"
                       onClick={() => triggerCiteConfetti(paper)}
-                      className="h-6 px-1.5 text-[10px] text-zinc-500 gap-1 hover:text-zinc-900"
+                      className="h-6 px-1.5 text-[10px] text-zinc-500 dark:text-zinc-400 gap-1 hover:text-zinc-900 dark:hover:text-zinc-100"
                     >
                       <Quote className="h-3 w-3" />
                       Cite
@@ -252,18 +252,18 @@ export function HomePage() {
       </section>
 
       {/* Top 5 Researchers Showcase Section */}
-      <section className="border-t border-b border-zinc-200/80 bg-white py-20">
+      <section className="border-t border-b border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
             <div>
               <span className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Top Authors & Scientists</span>
-              <h2 className="text-3xl font-extrabold text-zinc-950 mt-0.5">Top 5 Researchers</h2>
+              <h2 className="text-3xl font-extrabold text-zinc-950 dark:text-zinc-50 mt-0.5">Top 5 Researchers</h2>
             </div>
             
             {/* AvatarCircles preview */}
             <div className="flex items-center gap-3">
               <AvatarCircles avatarUrls={teamAvatars} numPeople={TEAM.length} />
-              <Link to="/researchers" className="group text-xs font-bold text-white bg-zinc-950 hover:bg-zinc-800 px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow-sm">
+              <Link to="/researchers" className="group text-xs font-bold text-white dark:text-zinc-900 bg-zinc-950 dark:bg-zinc-50 hover:bg-zinc-800 dark:hover:bg-zinc-200 px-4 py-2 rounded-full flex items-center gap-1.5 transition-all shadow-sm dark:shadow-none">
                 View Directory <ArrowRight className="h-3.5 w-3.5 text-[#93d500] group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -282,25 +282,25 @@ export function HomePage() {
                         height="64"
                         loading="lazy"
                         decoding="async"
-                        className="h-16 w-16 rounded-full mx-auto object-cover border-2 border-zinc-950 shadow-xs group-hover:scale-105 transition-transform"
+                        className="h-16 w-16 rounded-full mx-auto object-cover border-2 border-zinc-950 dark:border-zinc-50 shadow-xs dark:shadow-none group-hover:scale-105 transition-transform"
                       />
                     </Link>
                     
                     <Link to={`/researcher/${member.orcidId || member.id}`}>
-                      <div className="font-extrabold text-zinc-950 text-sm group-hover:text-indigo-600 transition-colors line-clamp-1">
+                      <div className="font-extrabold text-zinc-950 dark:text-zinc-50 text-sm group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-1">
                         {member.name}
                       </div>
                     </Link>
                     <div className="text-[10px] font-semibold text-indigo-600 mt-0.5 line-clamp-1">{member.area}</div>
                     
-                    <p className="text-[11px] text-zinc-500 line-clamp-2 mt-2 leading-relaxed">
+                    <p className="text-[11px] text-zinc-500 dark:text-zinc-400 line-clamp-2 mt-2 leading-relaxed">
                       {member.headline}
                     </p>
                   </div>
 
-                    <div className="mt-3 pt-2.5 border-t border-zinc-100 flex items-center justify-between text-[11px] text-zinc-500">
+                    <div className="mt-3 pt-2.5 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-400">
                       <span className="font-bold text-[#5c8a00]">{member.pubCount} Papers</span>
-                      <Link to={`/researcher/${member.orcidId || member.id}`} className="font-bold text-zinc-900 hover:text-indigo-600 transition-colors">
+                      <Link to={`/researcher/${member.orcidId || member.id}`} className="font-bold text-zinc-900 dark:text-zinc-100 hover:text-indigo-600 transition-colors">
                         Profile &rarr;
                       </Link>
                     </div>

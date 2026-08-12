@@ -71,7 +71,7 @@ export function PublicationsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-50/50 py-12 relative">
+    <div className="min-h-screen bg-zinc-50/50 dark:bg-zinc-900/50 py-12 relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         
         {/* Header */}
@@ -84,47 +84,47 @@ export function PublicationsPage() {
                   Publications Library ({CONTENT_STATS?.totalPublicationsCount || PAPERS.length} Papers)
                 </span>
               </div>
-              <h1 className="text-3xl font-extrabold tracking-tight text-zinc-950">
+              <h1 className="text-3xl font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50">
                 Sensifai Publications Library
               </h1>
-              <p className="text-sm text-zinc-500 mt-1">
+              <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
                 Browse, filter, and export academic references across our open research repository.
               </p>
             </div>
 
-            <div className="flex items-center gap-3 text-xs font-semibold text-zinc-500 bg-white px-3 py-2 rounded-lg border border-zinc-200 shadow-2xs">
-              <div>Total Citations: <span className="font-extrabold text-zinc-950">{CONTENT_STATS?.totalCitations || 1961}</span></div>
-              <div className="h-3 w-px bg-zinc-200" />
-              <div>Domains: <span className="font-extrabold text-zinc-950">{RESEARCH_AREAS.length}</span></div>
+            <div className="flex items-center gap-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 bg-white dark:bg-zinc-950 px-3 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 shadow-2xs dark:shadow-none">
+              <div>Total Citations: <span className="font-extrabold text-zinc-950 dark:text-zinc-50">{CONTENT_STATS?.totalCitations || 1961}</span></div>
+              <div className="h-3 w-px bg-zinc-200 dark:bg-zinc-700" />
+              <div>Domains: <span className="font-extrabold text-zinc-950 dark:text-zinc-50">{RESEARCH_AREAS.length}</span></div>
             </div>
           </div>
         </BlurFade>
 
         {/* Search & Filter Toolbar */}
         <BlurFade delay={0.2}>
-          <div className="rounded-xl border border-zinc-200/80 bg-white p-4 shadow-2xs mb-8 space-y-4">
+          <div className="rounded-xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 p-4 shadow-2xs dark:shadow-none mb-8 space-y-4">
             <div className="relative">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400 dark:text-zinc-500" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search publications by title, abstract keyword, author, or research tags..."
-                className="w-full pl-10 pr-4 py-2.5 text-sm rounded-lg border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium text-zinc-900 placeholder:text-zinc-400"
+                className="w-full pl-10 pr-4 py-2.5 text-sm rounded-lg border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all font-medium text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-zinc-400 hover:text-zinc-600 bg-zinc-100 hover:bg-zinc-200 rounded-full h-5 w-5 flex items-center justify-center cursor-pointer"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-bold text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-400 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-full h-5 w-5 flex items-center justify-center cursor-pointer"
                 >
                   ✕
                 </button>
               )}
             </div>
-            <div className="flex items-center justify-between gap-3 pt-2 border-t border-zinc-100">
+            <div className="flex items-center justify-between gap-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
               {/* Scrollable Domain Filters */}
               <div className="flex items-center gap-1.5 min-w-0 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-0.5 pr-2">
-                <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider shrink-0 mr-1">Domain:</span>
+                <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0 mr-1">Domain:</span>
                 <Button
                   variant={selectedArea === 'all' ? 'indigo' : 'ghost'}
                   size="sm"
@@ -147,13 +147,13 @@ export function PublicationsPage() {
               </div>
 
               {/* Year Select & View Mode Toggle */}
-              <div className="flex items-center gap-3 shrink-0 ml-auto pl-3 border-l border-zinc-200">
+              <div className="flex items-center gap-3 shrink-0 ml-auto pl-3 border-l border-zinc-200 dark:border-zinc-800">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Year:</span>
+                  <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Year:</span>
                   <select
                     value={selectedYear}
                     onChange={(e) => setSelectedYear(e.target.value)}
-                    className="text-xs font-bold text-zinc-800 bg-zinc-100 border border-zinc-200 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                    className="text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
                   >
                     <option value="all">All Years</option>
                     {availableYears.map(yr => (
@@ -162,19 +162,19 @@ export function PublicationsPage() {
                   </select>
                 </div>
 
-                <div className="h-4 w-px bg-zinc-200" />
+                <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-700" />
 
-                <div className="flex items-center gap-1 bg-zinc-100 p-0.5 rounded-lg border border-zinc-200">
+                <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 p-0.5 rounded-lg border border-zinc-200 dark:border-zinc-800">
                   <button
                     onClick={() => setViewMode('grid')}
-                    className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === 'grid' ? 'bg-white text-indigo-600 shadow-2xs' : 'text-zinc-400 hover:text-zinc-600'}`}
+                    className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === 'grid' ? 'bg-white dark:bg-zinc-950 text-indigo-600 shadow-2xs dark:shadow-none' : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-400'}`}
                     title="Grid View"
                   >
                     <LayoutGrid className="h-3.5 w-3.5" />
                   </button>
                   <button
                     onClick={() => setViewMode('list')}
-                    className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === 'list' ? 'bg-white text-indigo-600 shadow-2xs' : 'text-zinc-400 hover:text-zinc-600'}`}
+                    className={`p-1.5 rounded-md transition-all cursor-pointer ${viewMode === 'list' ? 'bg-white dark:bg-zinc-950 text-indigo-600 shadow-2xs dark:shadow-none' : 'text-zinc-400 dark:text-zinc-500 hover:text-zinc-600 dark:hover:text-zinc-400'}`}
                     title="List View"
                   >
                     <List className="h-3.5 w-3.5" />
@@ -205,20 +205,20 @@ export function PublicationsPage() {
                             {paper.publishedBadge}
                           </Badge>
                         )}
-                        <span className="text-xs text-zinc-400 font-medium ml-auto">{paper.month} {paper.year}</span>
+                        <span className="text-xs text-zinc-400 dark:text-zinc-500 font-medium ml-auto">{paper.month} {paper.year}</span>
                       </div>
                       
                       <Link to={`/publication/${paper.id}`} className="hover:text-indigo-600 transition-colors">
-                        <h3 className="text-base font-bold leading-snug text-zinc-950 group-hover:text-indigo-600 transition-colors">
+                        <h3 className="text-base font-bold leading-snug text-zinc-950 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                           {paper.title}
                         </h3>
                       </Link>
 
-                      <div className="text-xs text-zinc-600 font-medium mt-2">
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 font-medium mt-2">
                         By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Research'}
                       </div>
 
-                      <div className="mt-3 text-xs text-zinc-500 line-clamp-3 leading-relaxed">
+                      <div className="mt-3 text-xs text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">
                         <LatexRenderer content={paper.abstract || ''} />
                       </div>
                       
@@ -229,9 +229,9 @@ export function PublicationsPage() {
                             <Link
                               key={t}
                               to={`/tag/${getTagSlug(t)}`}
-                              className="inline-flex items-center gap-0.5 text-[10px] py-0.5 px-2 font-semibold bg-zinc-100 text-zinc-700 rounded-full hover:bg-indigo-50 hover:text-indigo-600 transition-colors cursor-pointer"
+                              className="inline-flex items-center gap-0.5 text-[10px] py-0.5 px-2 font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-full hover:bg-indigo-50 hover:text-indigo-600 transition-colors cursor-pointer"
                             >
-                              <Tag className="h-2.5 w-2.5 text-zinc-400" />
+                              <Tag className="h-2.5 w-2.5 text-zinc-400 dark:text-zinc-500" />
                               {t}
                             </Link>
                           ))}
@@ -239,13 +239,13 @@ export function PublicationsPage() {
                       )}
                     </div>
 
-                    <div className="flex items-center justify-between border-t border-zinc-100 pt-4 mt-6">
-                      <Button variant="outline" size="sm" onClick={() => setSelectedPaperForPdf(paper)} className="h-7 px-2.5 text-xs font-bold gap-1 text-zinc-800 border-zinc-300">
+                    <div className="flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800 pt-4 mt-6">
+                      <Button variant="outline" size="sm" onClick={() => setSelectedPaperForPdf(paper)} className="h-7 px-2.5 text-xs font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700">
                         <Eye className="h-3 w-3 text-indigo-600" />
                         Show Publication
                       </Button>
 
-                      <Button variant="ghost" size="sm" onClick={() => triggerCiteConfetti(paper)} className="h-7 px-2 text-xs text-zinc-500 gap-1 hover:text-zinc-950">
+                      <Button variant="ghost" size="sm" onClick={() => triggerCiteConfetti(paper)} className="h-7 px-2 text-xs text-zinc-500 dark:text-zinc-400 gap-1 hover:text-zinc-950 dark:hover:text-zinc-50">
                         <Quote className="h-3 w-3" />
                         Cite
                       </Button>
@@ -267,31 +267,31 @@ export function PublicationsPage() {
                     <div className="space-y-2 min-w-0 flex-1 sm:pr-6">
                       <div className="flex flex-wrap items-center gap-2 text-xs">
                         <Badge variant="indigo">{paper.areaBadge || paper.areaName}</Badge>
-                        <span className="font-bold text-zinc-700">{paper.venue}</span>
-                        <span className="text-zinc-300">•</span>
-                        <span className="text-zinc-500 font-medium">{paper.month} {paper.year}</span>
+                        <span className="font-bold text-zinc-700 dark:text-zinc-300">{paper.venue}</span>
+                        <span className="text-zinc-300 dark:text-zinc-700">•</span>
+                        <span className="text-zinc-500 dark:text-zinc-400 font-medium">{paper.month} {paper.year}</span>
                       </div>
                       
-                      <Link to={`/publication/${paper.id}`} className="font-bold text-zinc-950 hover:text-indigo-600 text-base leading-snug block transition-colors">
+                      <Link to={`/publication/${paper.id}`} className="font-bold text-zinc-950 dark:text-zinc-50 hover:text-indigo-600 text-base leading-snug block transition-colors">
                         {paper.title}
                       </Link>
                       
-                      <div className="text-xs text-zinc-500 font-medium">
+                      <div className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">
                         By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Research'}
                       </div>
 
-                      <div className="text-xs text-zinc-600 line-clamp-2 leading-relaxed pt-1">
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2 leading-relaxed pt-1">
                         <LatexRenderer content={paper.abstract || ''} />
                       </div>
                     </div>
 
                     {/* Right side: Vertically centered buttons stack (right center) */}
-                    <div className="flex sm:flex-col items-center justify-center gap-2 shrink-0 self-start sm:self-center w-full sm:w-auto border-t sm:border-t-0 border-zinc-100 pt-3 sm:pt-0">
+                    <div className="flex sm:flex-col items-center justify-center gap-2 shrink-0 self-start sm:self-center w-full sm:w-auto border-t sm:border-t-0 border-zinc-100 dark:border-zinc-800 pt-3 sm:pt-0">
                       <Button
                         variant="outline"
                         size="sm"
                         onClick={() => setSelectedPaperForPdf(paper)}
-                        className="h-8 px-3.5 text-xs font-bold gap-1.5 border-zinc-300 bg-white hover:border-indigo-300 text-zinc-900 w-full sm:w-auto justify-center"
+                        className="h-8 px-3.5 text-xs font-bold gap-1.5 border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-950 hover:border-indigo-300 text-zinc-900 dark:text-zinc-100 w-full sm:w-auto justify-center"
                       >
                         <Eye className="h-3.5 w-3.5 text-indigo-600" />
                         Show Publication
@@ -301,7 +301,7 @@ export function PublicationsPage() {
                         variant="ghost"
                         size="sm"
                         onClick={() => triggerCiteConfetti(paper)}
-                        className="h-8 px-3.5 text-xs text-zinc-500 gap-1.5 hover:text-zinc-950 w-full sm:w-auto justify-center"
+                        className="h-8 px-3.5 text-xs text-zinc-500 dark:text-zinc-400 gap-1.5 hover:text-zinc-950 dark:hover:text-zinc-50 w-full sm:w-auto justify-center"
                       >
                         <Quote className="h-3.5 w-3.5" />
                         Cite Paper
@@ -313,10 +313,10 @@ export function PublicationsPage() {
             </div>
           )
         ) : (
-          <div className="text-center py-16 bg-white rounded-2xl border border-zinc-200/80 shadow-2xs">
-            <FileText className="h-10 w-10 text-zinc-300 mx-auto mb-3" />
-            <h3 className="text-base font-bold text-zinc-900">No matching publications found</h3>
-            <p className="text-xs text-zinc-500 mt-1 max-w-sm mx-auto">
+          <div className="text-center py-16 bg-white dark:bg-zinc-950 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 shadow-2xs dark:shadow-none">
+            <FileText className="h-10 w-10 text-zinc-300 dark:text-zinc-700 mx-auto mb-3" />
+            <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-100">No matching publications found</h3>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 max-w-sm mx-auto">
               Try adjusting your domain filter, year selection, or search query.
             </p>
             <Button

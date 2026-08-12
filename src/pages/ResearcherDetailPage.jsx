@@ -56,9 +56,9 @@ export function ResearcherDetailPage() {
 
   if (!researcher) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-zinc-50">
+      <div className="min-h-screen flex items-center justify-center bg-zinc-50 dark:bg-zinc-900">
         <div className="text-center space-y-4">
-          <h2 className="text-xl font-bold text-zinc-900">Researcher Profile Not Found</h2>
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">Researcher Profile Not Found</h2>
           <Link to="/researchers">
             <Button variant="outline">Back to Researchers Directory</Button>
           </Link>
@@ -68,12 +68,12 @@ export function ResearcherDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-50/30 py-12">
+    <div className="min-h-screen bg-zinc-50/30 dark:bg-zinc-900/30 py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-12">
         
         {/* Navigation Breadcrumb */}
         <BlurFade delay={0.05}>
-          <Link to="/researchers" className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-500 hover:text-indigo-600 transition-colors">
+          <Link to="/researchers" className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 transition-colors">
             <ArrowLeft className="h-3.5 w-3.5" />
             Back to Researchers Directory
           </Link>
@@ -81,7 +81,7 @@ export function ResearcherDetailPage() {
 
         {/* Researcher Hero Profile Header Card */}
         <BlurFade delay={0.1}>
-          <div className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
+          <div className="relative overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 p-8 shadow-sm dark:shadow-none">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               
               {/* Avatar & Info */}
@@ -89,12 +89,12 @@ export function ResearcherDetailPage() {
                 <img
                   src={researcher.avatar}
                   alt={researcher.name}
-                  className="h-36 w-36 rounded-full mx-auto lg:mx-0 object-cover border-4 border-zinc-950 shadow-md"
+                  className="h-36 w-36 rounded-full mx-auto lg:mx-0 object-cover border-4 border-zinc-950 dark:border-zinc-50 shadow-md dark:shadow-none"
                 />
                 <div>
-                  <h1 className="text-2xl font-black text-zinc-950">{researcher.name}</h1>
+                  <h1 className="text-2xl font-black text-zinc-950 dark:text-zinc-50">{researcher.name}</h1>
                   <p className="text-xs font-bold text-indigo-600 mt-1">{researcher.role}</p>
-                  <p className="text-xs text-zinc-500 font-medium">{researcher.affiliation}</p>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">{researcher.affiliation}</p>
                 </div>
               </div>
 
@@ -102,40 +102,40 @@ export function ResearcherDetailPage() {
               <div className="lg:col-span-8 space-y-6 text-center lg:text-left">
                 
                 <div>
-                  <h2 className="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Biography & Research Focus</h2>
-                  <p className="text-sm text-zinc-600 leading-relaxed font-normal">
+                  <h2 className="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-2">Biography & Research Focus</h2>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal">
                     {researcher.bio}
                   </p>
                 </div>
 
                 {/* Metrics Row */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-100 text-center sm:text-left">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-100 dark:border-zinc-800 text-center sm:text-left">
                   <div className="space-y-0.5">
-                    <div className="text-2xl font-black text-zinc-950">
+                    <div className="text-2xl font-black text-zinc-950 dark:text-zinc-50">
                       <NumberTicker value={authoredPublications.length} />
                     </div>
-                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Publications</div>
+                    <div className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Publications</div>
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4">
                     <div className="text-2xl font-black text-indigo-600">
                       <NumberTicker value={researcher.citations || totalCitations} />
                     </div>
-                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Citations</div>
+                    <div className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Citations</div>
                   </div>
 
-                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4 border-t sm:border-t-0 pt-4 sm:pt-0 border-zinc-100 col-span-1">
+                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4 border-t sm:border-t-0 pt-4 sm:pt-0 border-zinc-100 dark:border-zinc-800 col-span-1">
                     <div className="text-2xl font-black text-[#5c8a00]">
                       <NumberTicker value={researcher.hIndex || 0} />
                     </div>
-                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">h-index</div>
+                    <div className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">h-index</div>
                   </div>
 
-                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4 border-t sm:border-t-0 pt-4 sm:pt-0 border-zinc-100 col-span-1">
+                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4 border-t sm:border-t-0 pt-4 sm:pt-0 border-zinc-100 dark:border-zinc-800 col-span-1">
                     <div className="text-2xl font-black text-purple-600">
                       <NumberTicker value={researcher.i10Index || 0} />
                     </div>
-                    <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">i10-index</div>
+                    <div className="text-[11px] font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">i10-index</div>
                   </div>
                 </div>
 
@@ -146,7 +146,7 @@ export function ResearcherDetailPage() {
                       href={researcher.githubUrl || researcher.github}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-2 rounded-full bg-zinc-100 text-zinc-700 hover:bg-zinc-950 hover:text-white transition-all shadow-2xs"
+                      className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-950 dark:hover:bg-zinc-50 hover:text-white transition-all shadow-2xs dark:shadow-none"
                       title="GitHub Profile"
                     >
                       <GithubIcon className="h-4 w-4" />
@@ -157,7 +157,7 @@ export function ResearcherDetailPage() {
                       href={researcher.linkedinUrl || researcher.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-2 rounded-full bg-zinc-100 text-zinc-700 hover:bg-[#0A66C2] hover:text-white transition-all shadow-2xs"
+                      className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-[#0A66C2] hover:text-white transition-all shadow-2xs dark:shadow-none"
                       title="LinkedIn Profile"
                     >
                       <LinkedinIcon className="h-4 w-4" />
@@ -168,7 +168,7 @@ export function ResearcherDetailPage() {
                       href={researcher.scholarUrl || researcher.scholar}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-2 rounded-full bg-zinc-100 text-zinc-700 hover:bg-[#4285F4] hover:text-white transition-all shadow-2xs"
+                      className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-[#4285F4] hover:text-white transition-all shadow-2xs dark:shadow-none"
                       title="Google Scholar Profile"
                     >
                       <ScholarIcon className="h-4 w-4" />
@@ -179,7 +179,7 @@ export function ResearcherDetailPage() {
                       href={researcher.orcid ? researcher.orcid : `https://orcid.org/${researcher.orcidId}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-2 rounded-full bg-zinc-100 text-zinc-700 hover:bg-[#A6CE39] hover:text-zinc-950 transition-all shadow-2xs"
+                      className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-[#A6CE39] hover:text-zinc-950 dark:hover:text-zinc-50 transition-all shadow-2xs dark:shadow-none"
                       title={`ORCID iD: ${researcher.orcidId || ''}`}
                     >
                       <OrcidIcon className="h-4 w-4" />
@@ -190,7 +190,7 @@ export function ResearcherDetailPage() {
                       href={researcher.twitterUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="p-2 rounded-full bg-zinc-100 text-zinc-700 hover:bg-[#1DA1F2] hover:text-white transition-all shadow-2xs"
+                      className="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-[#1DA1F2] hover:text-white transition-all shadow-2xs dark:shadow-none"
                       title="Twitter / X"
                     >
                       <TwitterIcon className="h-4 w-4" />
@@ -207,10 +207,10 @@ export function ResearcherDetailPage() {
         {/* Authored Publications Grid */}
         <BlurFade delay={0.2}>
           <div className="space-y-6">
-            <div className="flex items-center justify-between border-b border-zinc-200/80 pb-4">
+            <div className="flex items-center justify-between border-b border-zinc-200/80 dark:border-zinc-800/80 pb-4">
               <div>
                 <span className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Bibliography</span>
-                <h2 className="text-2xl font-extrabold text-zinc-950 mt-0.5">
+                <h2 className="text-2xl font-extrabold text-zinc-950 dark:text-zinc-50 mt-0.5">
                   Authored Publications ({authoredPublications.length})
                 </h2>
               </div>
@@ -231,27 +231,27 @@ export function ResearcherDetailPage() {
                       </div>
 
                       <Link to={`/publication/${paper.id}`} className="hover:text-indigo-600 transition-colors">
-                        <h3 className="text-base leading-snug font-bold text-zinc-950 group-hover:text-indigo-600 transition-colors">
+                        <h3 className="text-base leading-snug font-bold text-zinc-950 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                           {paper.title}
                         </h3>
                       </Link>
 
-                      <div className="text-xs text-zinc-500 mt-2 font-medium">
+                      <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 font-medium">
                         By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
                       </div>
 
-                      <p className="mt-4 text-xs leading-relaxed text-zinc-600 line-clamp-3">
+                      <p className="mt-4 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
                         {paper.abstract}
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between border-t border-zinc-100 pt-4 mt-6">
+                    <div className="flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800 pt-4 mt-6">
                       {paper.pdfUrl ? (
                         <Button
                           variant="outline"
                           size="sm"
                           onClick={() => setSelectedPaperForPdf(paper)}
-                          className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                          className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
                         >
                           <Eye className="h-3 w-3 text-indigo-600" />
                           Show Publication
@@ -261,7 +261,7 @@ export function ResearcherDetailPage() {
                           <Button
                             variant="outline"
                             size="sm"
-                            className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                            className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
                           >
                             <ExternalLink className="h-3 w-3 text-emerald-600" />
                             Publisher
@@ -275,7 +275,7 @@ export function ResearcherDetailPage() {
                         variant="ghost"
                         size="sm"
                         onClick={() => triggerCiteConfetti(paper)}
-                        className="h-7 px-2 text-[11px] text-zinc-500 gap-1 hover:text-zinc-900"
+                        className="h-7 px-2 text-[11px] text-zinc-500 dark:text-zinc-400 gap-1 hover:text-zinc-900 dark:hover:text-zinc-100"
                       >
                         <Quote className="h-3 w-3" />
                         Cite

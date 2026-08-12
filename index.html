@@ -13,6 +13,16 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap">
     </noscript>
+
+    <script>
+      try {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (_) {}
+    </script>
     
     <!-- Primary Meta Tags -->
     <meta name="title" content="Sensifai Research Labs" />

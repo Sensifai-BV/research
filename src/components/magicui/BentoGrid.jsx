@@ -32,8 +32,8 @@ export function BentoCard({
     <div
       key={name}
       className={cn(
-        "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white p-6",
-        "border border-zinc-200/80 shadow-xs transition-all duration-300 hover:shadow-md hover:border-zinc-300",
+        "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl bg-white dark:bg-zinc-950 p-6",
+        "border border-zinc-200/80 dark:border-zinc-800/80 shadow-xs dark:shadow-none transition-all duration-300 hover:shadow-md hover:border-zinc-300 dark:hover:border-zinc-700",
         className
       )}
       {...props}
@@ -44,8 +44,8 @@ export function BentoCard({
 
       <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 transition-all duration-300 group-hover:-translate-y-2">
         {Icon && <Icon className="h-10 w-10 text-indigo-600 transition-transform duration-300 group-hover:scale-110" />}
-        <h3 className="text-lg font-bold text-zinc-950 mt-2">{name}</h3>
-        <p className="max-w-md text-xs text-zinc-500 leading-relaxed">{description}</p>
+        <h3 className="text-lg font-bold text-zinc-950 dark:text-zinc-50 mt-2">{name}</h3>
+        <p className="max-w-md text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{description}</p>
         {children}
       </div>
 

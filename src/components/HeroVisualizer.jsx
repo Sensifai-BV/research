@@ -113,6 +113,8 @@ export function HeroVisualizer() {
       time += 0.015;
       ctx.clearRect(0, 0, width, height);
 
+      const isDark = document.documentElement.classList.contains('dark');
+
       // 0. Render Ambient Background Particles
       bgParticles.forEach((p) => {
         p.x += p.vx;
@@ -123,7 +125,9 @@ export function HeroVisualizer() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
+        ctx.fillStyle = isDark
+          ? p.color.replace('0.25', '0.45')
+          : p.color;
         ctx.fill();
       });
 
@@ -160,7 +164,11 @@ export function HeroVisualizer() {
         ctx.beginPath();
         ctx.moveTo(n1.px, n1.py);
         ctx.lineTo(n2.px, n2.py);
-        ctx.strokeStyle = isHighlighted ? 'rgba(99, 102, 241, 0.5)' : 'rgba(99, 102, 241, 0.12)';
+        if (isDark) {
+          ctx.strokeStyle = isHighlighted ? 'rgba(129, 140, 248, 0.75)' : 'rgba(129, 140, 248, 0.22)';
+        } else {
+          ctx.strokeStyle = isHighlighted ? 'rgba(99, 102, 241, 0.5)' : 'rgba(99, 102, 241, 0.12)';
+        }
         ctx.lineWidth = isHighlighted ? 1.6 : 0.85;
         ctx.stroke();
       });
@@ -190,7 +198,7 @@ export function HeroVisualizer() {
         // Soft Radial Aura
         ctx.beginPath();
         ctx.arc(node.px, node.py, r * 2.2, 0, Math.PI * 2);
-        ctx.fillStyle = `${node.color}25`;
+        ctx.fillStyle = `${node.color}${isDark ? '45' : '25'}`;
         ctx.fill();
 
         // Node Circle Core
@@ -206,7 +214,11 @@ export function HeroVisualizer() {
 
         // Compact Formula Text Label
         ctx.font = `${isHovered ? 'bold' : '500'} ${isHovered ? '12px' : '11px'} 'KaTeX_Math', 'Inter', system-ui, sans-serif`;
-        ctx.fillStyle = isHovered ? '#090d16' : '#334155';
+        if (isDark) {
+          ctx.fillStyle = isHovered ? '#ffffff' : '#cbd5e1';
+        } else {
+          ctx.fillStyle = isHovered ? '#090d16' : '#334155';
+        }
         ctx.fillText(node.formula, textX, node.py + 3.5);
 
         // Domain Tag on Hover
