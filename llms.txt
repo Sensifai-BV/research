@@ -1,0 +1,167 @@
+# Sensifai Research Labs - LLM Context
+
+> This file provides structured information about Sensifai Research Labs publications, researchers, and domains for LLMs and AI crawlers.
+
+## Research Areas
+
+- Artificial Intelligence & ML
+- Computer Vision & Video AI
+- Audio & Speech Intelligence
+- Medical AI & Healthcare
+- Efficient AI & Edge Computing
+
+## Researchers
+
+### Mohamad Hasan Bahari
+- Profile: https://research.sensifai.com/researcher/0009-0002-9777-8881
+- Role: CEO Sensifai
+- Focus: AI & Multimodal Intelligence
+- Headline: CEO at Sensifai Labs. Leading innovations in real-time artificial intelligence, target tracking, and multimodal perception.
+- Bio: Mohamad Hasan Bahari is the CEO of Sensifai. His research encompasses intelligent target tracking, fuzzy adaptive signal processing, real-time video understanding, and edge AI perception systems.
+
+## Publications
+
+### Blind sampling rate offset estimation for wireless acoustic sensor networks through weighted least-squares coherence drift estimation
+- URL: https://research.sensifai.com/publication/blind-sampling-rate-offset-estimation-wasn
+- Authors: Mohamad Hasan Bahari, Alexander Bertrand, Marc Moonen
+- Year: 2017
+- Venue: IEEE/ACM Transactions on Audio, Speech, and Language Processing (Vol. 25, No. 3, pp. 674-686)
+- Area: Audio & Speech Intelligence
+- Abstract: Microphone arrays allow to exploit the spatial coherence between simultaneously recorded microphone signals, e.g., to perform speech enhancement, i.e., to extract a speech signal and reduce background noise. However, in systems where the microphones are not sampled in a synchronous fashion, as it is often the case in wireless acoustic sensor networks, a sampling rate offset (SRO) exists between signals recorded in different nodes, which severely affects the speech enhancement performance. To avoid this performance reduction, the SRO should be estimated and compensated for. In this paper, we propose a new approach to blind SRO estimation for an asynchronous wireless acoustic sensor network, which exploits the phase drift of the coherence between the asynchronous microphones signals. We utilize the fact that the SRO causes a linearly increasing time delay between two signals and hence a phase drift in the frequency domain. Simulation results and real-data evaluations demonstrate the robustness and precision of the proposed weighted least-squares coherence drift estimation technique.
+
+### Multi-Task Wireless Sensor Network for Joint Distributed Node-Specific Signal Enhancement, LCMV Beamforming and DOA Estimation
+- URL: https://research.sensifai.com/publication/multitask-wireless-sensor-network-lcmv-doa
+- Authors: Amin Hassani, Jorge Plata-Chaves, Mohamad Hasan Bahari, Marc Moonen, Alexander Bertrand
+- Year: 2017
+- Venue: IEEE Journal of Selected Topics in Signal Processing (Vol. 11, No. 3, pp. 518-533)
+- Area: Audio & Speech Intelligence
+- Abstract: We consider a multi-task wireless sensor network (WSN) where some of the nodes aim at applying a multi-channel Wiener filter to denoise their local sensor signals, whereas others aim at implementing a linearly constrained minimum variance beamformer to extract node-specific desired signals and cancel interfering signals, and again others aim at estimating the node-specific direction-of-arrival of a set of desired sources. For this multi-task WSN, by relying on distributed signal estimation techniques that incorporate a low-rank approximation of the desired signals correlation matrix, we design a distributed algorithm under which the nodes cooperate with reduced communication resources even though they are solving different signal processing tasks and do not know the tasks of the other nodes. Convergence and optimality results show that the proposed algorithm lets all the nodes achieve the network-wide optimal performance under mild condition on the network topology and task allocation.
+
+### Unsupervised diffusion-based LMS for node-specific parameter estimation over wireless sensor networks
+- URL: https://research.sensifai.com/publication/unsupervised-diffusion-lms-wireless-sensor-networks
+- Authors: Jorge Plata-Chaves, Mohamad Hasan Bahari, Marc Moonen, Alexander Bertrand
+- Year: 2016
+- Venue: 2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 4159-4163
+- Area: Efficient AI & Edge Computing
+- Abstract: We study a distributed node-specific parameter estimation problem where each node in a wireless sensor network is interested in the simultaneous estimation of different vectors of parameters that can be of local interest, of common interest to a subset of nodes, or of global interest to the whole network. We assume a setting where the nodes do not know which other nodes share the same estimation interests. First, we conduct a theoretical analysis on the asymptotic bias that results in case the nodes blindly process all the local estimates of all their neighbors to solve their own node-specific parameter estimation problem. Next, we propose an unsupervised diffusion-based LMS algorithm that allows each node to obtain unbiased estimates of its node-specific vector of parameters by continuously identifying which of the neighboring local estimates correspond to each of its own estimation tasks. Finally, simulation results demonstrate the superiority and effective performance of the proposed unsupervised diffusion LMS scheme.
+
+### Height estimation from speech signals using i-vectors and least-squares support vector regression
+- URL: https://research.sensifai.com/publication/height-estimation-speech-signals-ivectors-lssvr
+- Authors: Amir Hossein Poorjam, Mohamad Hasan Bahari, Vasileios Vasilakakis
+- Year: 2015
+- Venue: 2015 38th International Conference on Telecommunications and Signal Processing (TSP), pp. 1-5
+- Area: Audio & Speech Intelligence
+- Abstract: This paper proposes a novel approach for automatic speaker height estimation based on the i-vector framework. In this method, each utterance is modeled by its corresponding i-vector. Then artificial neural networks (ANNs) and least-squares support vector regression (LSSVR) are employed to estimate the height of a speaker from a given utterance. The proposed method is trained and tested on the telephone speech signals of National Institute of Standards and Technology (NIST) 2008 and 2010 Speaker Recognition Evaluation (SRE) corpora respectively. Evaluation results show the effectiveness of the proposed method in speaker height estimation.
+
+### Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
+- URL: https://research.sensifai.com/publication/automatic-speaker-characterization-gender-age-language-accent
+- Authors: Mohamad Hasan Bahari
+- Year: 2014
+- Venue: Ph.D. Dissertation, KU Leuven
+- Area: Audio & Speech Intelligence
+- Abstract: Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
+
+### Multitask speaker profiling for estimating age, height, weight and smoking habits from spontaneous telephone speech signals
+- URL: https://research.sensifai.com/publication/multitask-speaker-profiling-age-height-weight-smoking
+- Authors: Amir Hossein Poorjam, Mohamad Hasan Bahari
+- Year: 2014
+- Venue: 2014 4th International Conference on Computer and Knowledge Engineering (ICCKE), pp. 7-12
+- Area: Audio & Speech Intelligence
+- Abstract: This paper proposes a novel approach for automatic estimation of four important traits of speakers, namely age, height, weight and smoking habit, from speech signals. In this method, each utterance is modeled using the i-vector framework which is based on the factor analysis on Gaussian Mixture Model (GMM) mean supervectors, and the Non-negative Factor Analysis (NFA) framework which is based on a constrained factor analysis on GMM weights. Then, Artificial Neural Networks (ANNs) and Least Squares Support Vector Regression (LSSVR) are employed to estimate age, height and weight of speakers from given utterances, and ANNs and logistic regression (LR) are utilized to perform smoking habit detection. Since GMM weights provide complementary information to GMM means, a score-level fusion of the i-vector-based and the NFA-based recognizers is considered for age and smoking habit estimation.
+
+### Non-negative Factor Analysis of Gaussian Mixture Model Weight Adaptation for Language and Dialect Recognition
+- URL: https://research.sensifai.com/publication/non-negative-factor-analysis-gmm-weight-adaptation
+- Authors: Mohamad Hasan Bahari, Najim Dehak, Hugo Van hamme, Lukáš Burget, Ahmed Ali, Jim Glass
+- Year: 2014
+- Venue: IEEE/ACM Transactions on Audio, Speech, and Language Processing (Vol. 22, No. 7, pp. 1117-1129)
+- Area: Audio & Speech Intelligence
+- Abstract: Recent studies show that Gaussian mixture model (GMM) weights carry less, yet complimentary, information to GMM means for language and dialect recognition. However, state-of-the-art language recognition systems usually do not use this information. In this research, a non-negative factor analysis (NFA) approach is developed for GMM weight decomposition and adaptation. This modeling, which is conceptually simple and computationally inexpensive, suggests a new low-dimensional utterance representation method using a factor analysis similar to that of the i-vector framework. The obtained subspace vectors are then applied in conjunction with i-vectors to the language/dialect recognition problem. The suggested approach is evaluated on the NIST 2011 and RATS language recognition evaluation (LRE) corpora and on the QCRI Arabic dialect recognition evaluation (DRE) corpus. The assessment results show that fusing i-vectors with the proposed NFA subspace vectors leads to improvements over the standard i-vector system, particularly for short utterances.
+
+### Speaker age estimation using i-vectors
+- URL: https://research.sensifai.com/publication/speaker-age-estimation-using-ivectors
+- Authors: Mohamad Hasan Bahari, Mitchell McLaren, Hugo Van hamme, David A. van Leeuwen
+- Year: 2014
+- Venue: Engineering Applications of Artificial Intelligence (Vol. 34, pp. 99-108)
+- Area: Audio & Speech Intelligence
+- Abstract: In this paper, a new approach for age estimation from speech signals based on i-vectors is proposed. In this method, each utterance is modeled by its corresponding i-vector. Then, a Within-Class Covariance Normalization technique is used for session variability compensation. Finally, a least squares support vector regression (LSSVR) is applied to estimate the age of speakers. The proposed method is trained and tested on telephone conversations of the National Institute for Standard and Technology (NIST) 2010 and 2008 speaker recognition evaluation databases. Evaluation results show that the proposed method yields significantly lower mean absolute error and higher Pearson correlation coefficient between chronological speaker age and estimated speaker age compared to different conventional schemes.
+
+### Accent recognition using i-vector, gaussian mean supervector and gaussian posterior probability supervector for spontaneous telephone speech
+- URL: https://research.sensifai.com/publication/accent-recognition-ivector-supervector-telephone-speech
+- Authors: Mohamad Hasan Bahari, Rahim Saeidi, Hugo Van hamme, David A. van Leeuwen
+- Year: 2013
+- Venue: 2013 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 7344-7348
+- Area: Audio & Speech Intelligence
+- Abstract: In this paper, three utterance modelling approaches, namely Gaussian Mean Supervector (GMS), i-vector and Gaussian Posterior Probability Supervector (GPPS), are applied to the accent recognition problem. For each utterance modeling method, three different classifiers, namely the Support Vector Machine (SVM), the Naive Bayesian Classifier (NBC) and the Sparse Representation Classifier (SRC), are employed to find out suitable matches between the utterance modelling schemes and the classifiers. The evaluation database is formed by using English utterances of speakers whose native languages are Russian, Hindi, American English, Thai, Vietnamese and Cantonese. These utterances are drawn from the National Institute of Standards and Technology (NIST) 2008 Speaker Recognition Evaluation (SRE) database. The study results show that GPPS and i-vector are more effective than GMS in this accent recognition task.
+
+### Age Estimation from Telephone Speech using i-vectors
+- URL: https://research.sensifai.com/publication/age-estimation-telephone-speech-ivectors
+- Authors: Mohamad Hasan Bahari, Mitchell McLaren, Hugo Van hamme, David A. van Leeuwen
+- Year: 2012
+- Venue: Proceedings of the 13th Annual Conference of the International Speech Communication Association (Interspeech 2012), pp. 506-509
+- Area: Audio & Speech Intelligence
+- Abstract: Motivated by the success of i-vectors in the field of speaker recognition, this paper proposes a new approach for age estimation from telephone speech patterns based on i-vectors. In this method, each utterance is modeled by its corresponding i-vector. Then, Support Vector Regression (SVR) is applied to estimate the age of speakers. The proposed method is trained and tested on telephone conversations of the National Institute for Standard in Technology (NIST) 2010 and 2008 Speaker Recognition Evaluation databases. Evaluation results show that the proposed method outperforms different conventional methods in speaker age estimation.
+
+### Speaker age estimation using Hidden Markov Model weight supervectors
+- URL: https://research.sensifai.com/publication/speaker-age-estimation-hmm-weight-supervectors
+- Authors: Mohamad Hasan Bahari, Hugo Van hamme
+- Year: 2012
+- Venue: 2012 11th International Conference on Information Science, Signal Processing and their Applications (ISSPA), pp. 517-521
+- Area: Audio & Speech Intelligence
+- Abstract: This paper proposes a new approach for speaker age estimation. In this method, speakers are modeled by their corresponding Hidden Markov Model (HMM) weight supervectors. Then, Weighted Supervised Non-Negative Matrix Factorization (WSNMF) is applied to reduce the dimension of the input space. Finally, a Least Squares Support Vector Regressor (LS-SVR) is employed to estimate the age of speakers using the obtained low-dimensional vectors. Evaluation results on a corpus of read and spontaneous speech in Dutch confirms the effectiveness of the proposed scheme.
+
+### High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture
+- URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic
+- Authors: Mohamad Hasan Bahari, Ali Karsaz, Naser Pariz
+- Year: 2011
+- Venue: International Journal of Innovative Computing, Information and Control (Vol. 7, No. 2, pp. 501-510)
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a fast target maneuver detection technique and high accurate tracking scheme is proposed with the use of a new hybrid Kalman filter-fuzzy logic architecture. Due to the stressful environment of target tracking problem such as inaccurate detection and target maneuver, most of existing trackers do not represent desired performance in different situations. In practice, while the conventional Kalman filters (KF) perform well in tracking a target with constant velocity, their performance may be seriously degraded in the presence of maneuver. To reach an accurate target tracking system in such a stressful environment, fuzzy logic-based algorithms with intelligent adaptation capabilities have recently been issued. Although these methods yield reasonable performance in tracking maneuvering targets, their accuracy in non-maneuvering mode was not satisfactory. In this research, based on information about the target maneuver dynamics, a new hybrid tracker (HT) is introduced. The proposed algorithm combines two methodologies into one architecture synergistically. In other words, the KF is used when the target velocity is approximately constant, whereas fuzzy estimator is used when the target maneuvers. Simulation results show that the proposed method is superior to some conventional approaches in tracking accuracy.
+
+### Speaker age estimation and gender detection based on supervised non-negative matrix factorization
+- URL: https://research.sensifai.com/publication/speaker-age-estimation-gender-detection-wsnmf
+- Authors: Mohamad Hasan Bahari, Hugo Van hamme
+- Year: 2011
+- Venue: 2011 IEEE Workshop on Biometric Measurements and Systems for Security and Medical Applications (BIOMS), pp. 1-6
+- Area: Audio & Speech Intelligence
+- Abstract: In many criminal cases, evidence might be in the form of telephone conversations or tape recordings. Therefore, law enforcement agencies have been concerned about accurate methods to profile different characteristics of a speaker from recorded voice patterns, which facilitate the identification of a criminal. This paper proposes a new approach for speaker gender detection and age estimation, based on a hybrid architecture of Weighted Supervised Non-Negative Matrix Factorization (WSNMF) and General Regression Neural Network (GRNN). Evaluation results on a corpus of read and spontaneous speech in Dutch confirms the effectiveness of the proposed scheme.
+
+### Drilling rate prediction using an innovative soft computing approach
+- URL: https://research.sensifai.com/publication/drilling-rate-prediction-innovative-soft-computing
+- Authors: Hamidreza Moradi, Mohamad Hasan Bahari, Mohammad Bagher Naghibi Sistani, Aboozar Bahari
+- Year: 2010
+- Venue: Scientific Research and Essays (Vol. 5, No. 13, pp. 1583-1588)
+- Area: Artificial Intelligence & ML
+- Abstract: An accurate approach for drilling rate prediction using a new soft computing approach is introduced in this paper. Drilling rate prediction is an important issue due to its crucial role in minimizing drilling cost. However, a large number of unforeseen factors and events influence the drilling rate and make it a complex and stochastic process and consequently difficult to predict. Many different techniques have been introduced for this task. Among those, Bourgoyne and Young model and its extensions have been widely used in drilling rate prediction during last decades. However, they did not provide satisfactory accuracy. In this research, a new soft computing approach is proposed over this problem and predicts the drilling rate with acceptable accuracy. Our practical data sets are nine wells of an Iranian gas field called “Khangiran”. Simulation results show that the proposed intelligent approach is superior to the conventional methods in drilling rate prediction accuracy.
+
+### High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor
+- URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-fuzzy-forgetting-factor
+- Authors: Mohamad Hasan Bahari, Naser Pariz
+- Year: 2009
+- Venue: Scientific Research and Essay (Vol. 4, No. 10, pp. 936-945)
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a new fuzzy forgetting factor (FFF) is developed in order to aid a modified input estimation (MIE) technique and enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and succeeds in presenting reasonably accurate target trajectory, velocity and acceleration estimation in low and mild maneuvering situations. However, after some iteration its steps become small. Due to small steps, the accuracy of target tracking may be seriously degraded in the presence of high maneuvers. In this study we present an intelligent self-tuning approach based on a fuzzy forgetting factor in order to enjoy satisfactory tracking performance in low, Medium and high maneuvering target cases. Simulations visualize the efficiency of the proposed method and emphasize on its accuracy in tracking high maneuvering targets. Furthermore, simulation results illustrate that proposed method is not sensitive to the sampling time.
+
+### Intelligent fading memory for high maneuvering target tracking
+- URL: https://research.sensifai.com/publication/intelligent-fading-memory-high-maneuvering-target-tracking
+- Authors: Mohamad Hasan Bahari, Mohammad Bagher Naghibi Sistani, Naser Pariz
+- Year: 2009
+- Venue: International Journal of Physical Sciences (Vol. 4, No. 10, pp. 548-554)
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a new fuzzy fading memory (FFM) is developed in order to aid a modified input estimation (MIE) technique and to enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and performs well in tracking low and medium maneuvering targets. However, this method does not represent desirable accuracy in tracking high maneuvering or jerking targets. In fact, this trouble is originated in mismodeling the target acceleration dynamics. An effective approach to cope with different modeling uncertainties is fading memory. However, conventional fading memory method suffers from some deficiencies leading to surplus fading information in non-maneuvering mode or incomplete compensation in high maneuvering situations. To overcome these difficulties, an intelligent fading memory is presented in this paper. Simulation results prove the efficiency of proposed method in tracking high maneuvering targets.
+
+### Determining Bourgoyne and Young Model Coefficients Using Genetic Algorithm to Predict Drilling Rate
+- URL: https://research.sensifai.com/publication/bourgoyne-young-model-genetic-algorithm-drilling-rate
+- Authors: Mohamad Hasan Bahari, Aboozar Bahari, F Nejati Moharrami, Mohammad Bagher Naghibi Sistani
+- Year: 2008
+- Venue: Journal of Applied Sciences (Vol. 8, No. 17, pp. 3050-3054)
+- Area: Artificial Intelligence & ML
+- Abstract: The Bourgoyne and Young model (BYM) is a widely used method for predicting the rate of penetration (ROP) in drilling operations, relying on eight unknown parameters (coefficients) that depend on the specific ground formation. While the original authors proposed using multiple regression to determine these coefficients, this method can sometimes yield physically meaningless results. In this research, a Genetic Algorithm (GA) is employed to determine these coefficients. By applying GA to sensory data collected from nine wells in the Khangiran Iranian gas field, the study demonstrates that this approach provides more accurate ROP predictions and produces physically meaningful coefficients compared to conventional regression methods.
+
+### High maneuver target tracking based on combined Kalman filter and fuzzy logic
+- URL: https://research.sensifai.com/publication/high-maneuver-target-tracking-combined-kalman-fuzzy
+- Authors: Mohamad Hasan Bahari, Ali Karsaz, Hamid Khaloozadeh
+- Year: 2007
+- Venue: 2007 IEEE Information, Decision and Control (IDC), pp. 59-64
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a new combined scheme is presented to overcome some drawbacks of the high maneuvering target tracking problems by using the mixed Fuzzy logic and the standard Kalman filter. This scheme is consist of two important aspects; at first absolute value of difference between last target course and the present observation target course and the second aspect is the absolute value of measurement residual. The results compared with the augmented method and another combined fuzzy logic method which have been reported in existing literature. Simulation results show a high performance of the proposed innovation method and effectiveness of this scheme in high maneuvering targets tracking problems.
+

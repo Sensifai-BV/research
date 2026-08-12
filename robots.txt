@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# LLM context file
+# This file provides a markdown-formatted summary of our site for LLM consumption
+# See: https://research.sensifai.com/llms.txt
+
+Sitemap: https://research.sensifai.com/sitemap.xml
