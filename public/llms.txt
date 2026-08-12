@@ -21,6 +21,14 @@
 
 ## Publications
 
+### Height estimation from speech signals using i-vectors and least-squares support vector regression
+- URL: https://research.sensifai.com/publication/height-estimation-speech-signals-ivectors-lssvr
+- Authors: Amir Hossein Poorjam, Mohamad Hasan Bahari, Vasileios Vasilakakis
+- Year: 2015
+- Venue: 2015 38th International Conference on Telecommunications and Signal Processing (TSP), pp. 1-5
+- Area: Audio & Speech Intelligence
+- Abstract: This paper proposes a novel approach for automatic speaker height estimation based on the i-vector framework. In this method, each utterance is modeled by its corresponding i-vector. Then artificial neural networks (ANNs) and least-squares support vector regression (LSSVR) are employed to estimate the height of a speaker from a given utterance. The proposed method is trained and tested on the telephone speech signals of National Institute of Standards and Technology (NIST) 2008 and 2010 Speaker Recognition Evaluation (SRE) corpora respectively. Evaluation results show the effectiveness of the proposed method in speaker height estimation.
+
 ### Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
 - URL: https://research.sensifai.com/publication/automatic-speaker-characterization-gender-age-language-accent
 - Authors: Mohamad Hasan Bahari
@@ -28,6 +36,14 @@
 - Venue: Ph.D. Dissertation, KU Leuven
 - Area: Audio & Speech Intelligence
 - Abstract: Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
+
+### High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture
+- URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic
+- Authors: Mohamad Hasan Bahari, Ali Karsaz, Naser Pariz
+- Year: 2011
+- Venue: International Journal of Innovative Computing, Information and Control (Vol. 7, No. 2, pp. 501-510)
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a fast target maneuver detection technique and high accurate tracking scheme is proposed with the use of a new hybrid Kalman filter-fuzzy logic architecture. Due to the stressful environment of target tracking problem such as inaccurate detection and target maneuver, most of existing trackers do not represent desired performance in different situations. In practice, while the conventional Kalman filters (KF) perform well in tracking a target with constant velocity, their performance may be seriously degraded in the presence of maneuver. To reach an accurate target tracking system in such a stressful environment, fuzzy logic-based algorithms with intelligent adaptation capabilities have recently been issued. Although these methods yield reasonable performance in tracking maneuvering targets, their accuracy in non-maneuvering mode was not satisfactory. In this research, based on information about the target maneuver dynamics, a new hybrid tracker (HT) is introduced. The proposed algorithm combines two methodologies into one architecture synergistically. In other words, the KF is used when the target velocity is approximately constant, whereas fuzzy estimator is used when the target maneuvers. Simulation results show that the proposed method is superior to some conventional approaches in tracking accuracy.
 
 ### High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor
 - URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-fuzzy-forgetting-factor
@@ -44,4 +60,12 @@
 - Venue: International Journal of Physical Sciences (Vol. 4, No. 10, pp. 548-554)
 - Area: Artificial Intelligence & ML
 - Abstract: In this paper, a new fuzzy fading memory (FFM) is developed in order to aid a modified input estimation (MIE) technique and to enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and performs well in tracking low and medium maneuvering targets. However, this method does not represent desirable accuracy in tracking high maneuvering or jerking targets. In fact, this trouble is originated in mismodeling the target acceleration dynamics. An effective approach to cope with different modeling uncertainties is fading memory. However, conventional fading memory method suffers from some deficiencies leading to surplus fading information in non-maneuvering mode or incomplete compensation in high maneuvering situations. To overcome these difficulties, an intelligent fading memory is presented in this paper. Simulation results prove the efficiency of proposed method in tracking high maneuvering targets.
+
+### High maneuver target tracking based on combined Kalman filter and fuzzy logic
+- URL: https://research.sensifai.com/publication/high-maneuver-target-tracking-combined-kalman-fuzzy
+- Authors: Mohamad Hasan Bahari, Ali Karsaz, Hamid Khaloozadeh
+- Year: 2007
+- Venue: 2007 IEEE Information, Decision and Control (IDC), pp. 59-64
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a new combined scheme is presented to overcome some drawbacks of the high maneuvering target tracking problems by using the mixed Fuzzy logic and the standard Kalman filter. This scheme is consist of two important aspects; at first absolute value of difference between last target course and the present observation target course and the second aspect is the absolute value of measurement residual. The results compared with the augmented method and another combined fuzzy logic method which have been reported in existing literature. Simulation results show a high performance of the proposed innovation method and effectiveness of this scheme in high maneuvering targets tracking problems.
 

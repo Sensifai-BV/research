@@ -1,16 +1,16 @@
 {
   "stats": {
-    "totalPublicationsCount": 3,
+    "totalPublicationsCount": 6,
     "totalAuthorsCount": 1,
-    "totalCitations": 73,
+    "totalCitations": 155,
     "totalResearchAreasCount": 5,
-    "averageCitationsPerPaper": 24,
+    "averageCitationsPerPaper": 26,
     "authorPaperCounts": {
-      "bahari": 3
+      "bahari": 6
     }
   },
   "meta": {
-    "generatedAt": "2026-08-12T07:30:30.072Z",
+    "generatedAt": "2026-08-12T12:42:41.424Z",
     "generator": "SQLite Production Store & MiniSearch Content Engine",
     "sqliteFile": "src/data/content.db"
   },
@@ -20,8 +20,8 @@
       "name": "Artificial Intelligence & ML",
       "badge": "AI / ML",
       "description": "Multimodal foundation models, video understanding, audio processing, and zero-shot neural reasoning.",
-      "count": 2,
-      "totalCitations": 49
+      "count": 4,
+      "totalCitations": 102
     },
     {
       "id": "computer-vision",
@@ -36,8 +36,8 @@
       "name": "Audio & Speech Intelligence",
       "badge": "Audio AI",
       "description": "Neural acoustic modeling, multi-speaker diarization, and sound event localization.",
-      "count": 1,
-      "totalCitations": 24
+      "count": 2,
+      "totalCitations": 53
     },
     {
       "id": "health-bio",
@@ -57,6 +57,56 @@
     }
   ],
   "publications": [
+    {
+      "id": "height-estimation-speech-signals-ivectors-lssvr",
+      "title": "Height estimation from speech signals using i-vectors and least-squares support vector regression",
+      "year": 2015,
+      "month": "July",
+      "venue": "2015 38th International Conference on Telecommunications and Signal Processing (TSP), pp. 1-5",
+      "isPublished": true,
+      "publishedBadge": "IEEE TSP 2015",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Height Estimation",
+        "Speech Processing",
+        "i-vectors",
+        "LSSVR"
+      ],
+      "citations": 29,
+      "featured": true,
+      "pdfUrl": "/pdfs/height-estimation-speech-signals-ivectors-lssvr.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:tuHXwOkdijsC",
+      "journalUrl": "https://ieeexplore.ieee.org/document/7296434",
+      "sourceFile": "content/publications/height-estimation-speech-signals-ivectors-lssvr.md",
+      "authors": [
+        {
+          "id": "amir-hossein-poorjam",
+          "name": "Amir Hossein Poorjam",
+          "affiliation": "KU Leuven",
+          "isLead": true,
+          "is_external": true
+        },
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "vasileios-vasilakakis",
+          "name": "Vasileios Vasilakakis",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{poorjam2015height,\n  title={Height estimation from speech signals using i-vectors and least-squares support vector regression},\n  author={Poorjam, Amir Hossein and Bahari, Mohamad Hasan and Vasilakakis, Vasileios},\n  booktitle={2015 38th International Conference on Telecommunications and Signal Processing (TSP)},\n  pages={1--5},\n  year={2015},\n  organization={IEEE}\n}",
+      "abstract": "This paper proposes a novel approach for automatic speaker height estimation based on the i-vector framework. In this method, each utterance is modeled by its corresponding i-vector. Then artificial neural networks (ANNs) and least-squares support vector regression (LSSVR) are employed to estimate the height of a speaker from a given utterance. The proposed method is trained and tested on the telephone speech signals of National Institute of Standards and Technology (NIST) 2008 and 2010 Speaker Recognition Evaluation (SRE) corpora respectively. Evaluation results show the effectiveness of the proposed method in speaker height estimation."
+    },
     {
       "id": "automatic-speaker-characterization-gender-age-language-accent",
       "title": "Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals",
@@ -91,6 +141,55 @@
       ],
       "bibtex": "@phdthesis{bahari2014automatic,\n  title={Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals},\n  author={Bahari, Mohamad Hasan},\n  year={2014},\n  school={KU Leuven, Faculty of Engineering Science},\n  address={Leuven, Belgium}\n}",
       "abstract": "Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals"
+    },
+    {
+      "id": "high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic",
+      "title": "High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture",
+      "year": 2011,
+      "month": "February",
+      "venue": "International Journal of Innovative Computing, Information and Control (Vol. 7, No. 2, pp. 501-510)",
+      "isPublished": true,
+      "publishedBadge": "IJICIC 2011",
+      "areaId": "ai-ml",
+      "areaName": "Artificial Intelligence & ML",
+      "areaBadge": "AI / ML",
+      "tags": [
+        "Target Tracking",
+        "Kalman Filter",
+        "Fuzzy Logic",
+        "High Maneuver",
+        "Hybrid Architecture"
+      ],
+      "citations": 27,
+      "featured": true,
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:NJ774b8OgUMC",
+      "journalUrl": "http://www.ijicic.org",
+      "sourceFile": "content/publications/high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "ali-karsaz",
+          "name": "Ali Karsaz",
+          "affiliation": "Ferdowsi University of Mashhad",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "naser-pariz",
+          "name": "Naser Pariz",
+          "affiliation": "Ferdowsi University of Mashhad",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{bahari2011high,\n  title={High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture},\n  author={Bahari, Mohamad Hasan and Karsaz, Ali and Pariz, Naser},\n  journal={International Journal of Innovative Computing, Information and Control},\n  volume={7},\n  number={2},\n  pages={501--510},\n  year={2011},\n  publisher={ICIC International}\n}",
+      "abstract": "In this paper, a fast target maneuver detection technique and high accurate tracking scheme is proposed with the use of a new hybrid Kalman filter-fuzzy logic architecture. Due to the stressful environment of target tracking problem such as inaccurate detection and target maneuver, most of existing trackers do not represent desired performance in different situations. In practice, while the conventional Kalman filters (KF) perform well in tracking a target with constant velocity, their performance may be seriously degraded in the presence of maneuver. To reach an accurate target tracking system in such a stressful environment, fuzzy logic-based algorithms with intelligent adaptation capabilities have recently been issued. Although these methods yield reasonable performance in tracking maneuvering targets, their accuracy in non-maneuvering mode was not satisfactory. In this research, based on information about the target maneuver dynamics, a new hybrid tracker (HT) is introduced. The proposed algorithm combines two methodologies into one architecture synergistically. In other words, the KF is used when the target velocity is approximately constant, whereas fuzzy estimator is used when the target maneuvers. Simulation results show that the proposed method is superior to some conventional approaches in tracking accuracy."
     },
     {
       "id": "high-maneuvering-target-tracking-fuzzy-forgetting-factor",
@@ -186,6 +285,56 @@
       ],
       "bibtex": "@article{bahari2009intelligent,\n  title={Intelligent fading memory for high maneuvering target tracking},\n  author={Bahari, Mohamad Hasan and Naghibi Sistani, Mohammad Bagher and Pariz, Naser},\n  journal={International Journal of Physical Sciences},\n  volume={4},\n  number={10},\n  pages={548--554},\n  year={2009},\n  publisher={Academic Journals}\n}",
       "abstract": "In this paper, a new fuzzy fading memory (FFM) is developed in order to aid a modified input estimation (MIE) technique and to enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and performs well in tracking low and medium maneuvering targets. However, this method does not represent desirable accuracy in tracking high maneuvering or jerking targets. In fact, this trouble is originated in mismodeling the target acceleration dynamics. An effective approach to cope with different modeling uncertainties is fading memory. However, conventional fading memory method suffers from some deficiencies leading to surplus fading information in non-maneuvering mode or incomplete compensation in high maneuvering situations. To overcome these difficulties, an intelligent fading memory is presented in this paper. Simulation results prove the efficiency of proposed method in tracking high maneuvering targets."
+    },
+    {
+      "id": "high-maneuver-target-tracking-combined-kalman-fuzzy",
+      "title": "High maneuver target tracking based on combined Kalman filter and fuzzy logic",
+      "year": 2007,
+      "month": "February",
+      "venue": "2007 IEEE Information, Decision and Control (IDC), pp. 59-64",
+      "isPublished": true,
+      "publishedBadge": "IEEE IDC 2007",
+      "areaId": "ai-ml",
+      "areaName": "Artificial Intelligence & ML",
+      "areaBadge": "AI / ML",
+      "tags": [
+        "Target Tracking",
+        "Kalman Filter",
+        "Fuzzy Logic",
+        "High Maneuver",
+        "Signal Processing"
+      ],
+      "citations": 26,
+      "featured": true,
+      "pdfUrl": "/pdfs/high-maneuver-target-tracking-combined-kalman-fuzzy.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:7T2F9Uy0os0C",
+      "journalUrl": "https://ieeexplore.ieee.org/document/4256204",
+      "sourceFile": "content/publications/high-maneuver-target-tracking-combined-kalman-fuzzy.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "ali-karsaz",
+          "name": "Ali Karsaz",
+          "affiliation": "Ferdowsi University of Mashhad",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hamid-khaloozadeh",
+          "name": "Hamid Khaloozadeh",
+          "affiliation": "K. N. Toosi University of Technology",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2007high,\n  title={High maneuver target tracking based on combined Kalman filter and fuzzy logic},\n  author={Bahari, Mohamad Hasan and Karsaz, Ali and Khaloozadeh, Hamid},\n  booktitle={2007 Information, Decision and Control},\n  pages={59--64},\n  year={2007},\n  organization={IEEE}\n}",
+      "abstract": "In this paper, a new combined scheme is presented to overcome some drawbacks of the high maneuvering target tracking problems by using the mixed Fuzzy logic and the standard Kalman filter. This scheme is consist of two important aspects; at first absolute value of difference between last target course and the present observation target course and the second aspect is the absolute value of measurement residual. The results compared with the augmented method and another combined fuzzy logic method which have been reported in existing literature. Simulation results show a high performance of the proposed innovation method and effectiveness of this scheme in high maneuvering targets tracking problems."
     }
   ],
   "authors": [
@@ -209,10 +358,60 @@
       "githubUrl": "https://github.com/bahari-sensifai",
       "linkedinUrl": "https://www.linkedin.com/company/17888541/",
       "scholarUrl": "https://scholar.google.com/citations?user=tYazD-8AAAAJ&hl=en",
-      "pubCount": 3
+      "pubCount": 6
     }
   ],
   "publicationMap": {
+    "height-estimation-speech-signals-ivectors-lssvr": {
+      "id": "height-estimation-speech-signals-ivectors-lssvr",
+      "title": "Height estimation from speech signals using i-vectors and least-squares support vector regression",
+      "year": 2015,
+      "month": "July",
+      "venue": "2015 38th International Conference on Telecommunications and Signal Processing (TSP), pp. 1-5",
+      "isPublished": true,
+      "publishedBadge": "IEEE TSP 2015",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Height Estimation",
+        "Speech Processing",
+        "i-vectors",
+        "LSSVR"
+      ],
+      "citations": 29,
+      "featured": true,
+      "pdfUrl": "/pdfs/height-estimation-speech-signals-ivectors-lssvr.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:tuHXwOkdijsC",
+      "journalUrl": "https://ieeexplore.ieee.org/document/7296434",
+      "sourceFile": "content/publications/height-estimation-speech-signals-ivectors-lssvr.md",
+      "authors": [
+        {
+          "id": "amir-hossein-poorjam",
+          "name": "Amir Hossein Poorjam",
+          "affiliation": "KU Leuven",
+          "isLead": true,
+          "is_external": true
+        },
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "vasileios-vasilakakis",
+          "name": "Vasileios Vasilakakis",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{poorjam2015height,\n  title={Height estimation from speech signals using i-vectors and least-squares support vector regression},\n  author={Poorjam, Amir Hossein and Bahari, Mohamad Hasan and Vasilakakis, Vasileios},\n  booktitle={2015 38th International Conference on Telecommunications and Signal Processing (TSP)},\n  pages={1--5},\n  year={2015},\n  organization={IEEE}\n}",
+      "abstract": "This paper proposes a novel approach for automatic speaker height estimation based on the i-vector framework. In this method, each utterance is modeled by its corresponding i-vector. Then artificial neural networks (ANNs) and least-squares support vector regression (LSSVR) are employed to estimate the height of a speaker from a given utterance. The proposed method is trained and tested on the telephone speech signals of National Institute of Standards and Technology (NIST) 2008 and 2010 Speaker Recognition Evaluation (SRE) corpora respectively. Evaluation results show the effectiveness of the proposed method in speaker height estimation."
+    },
     "automatic-speaker-characterization-gender-age-language-accent": {
       "id": "automatic-speaker-characterization-gender-age-language-accent",
       "title": "Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals",
@@ -247,6 +446,55 @@
       ],
       "bibtex": "@phdthesis{bahari2014automatic,\n  title={Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals},\n  author={Bahari, Mohamad Hasan},\n  year={2014},\n  school={KU Leuven, Faculty of Engineering Science},\n  address={Leuven, Belgium}\n}",
       "abstract": "Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals"
+    },
+    "high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic": {
+      "id": "high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic",
+      "title": "High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture",
+      "year": 2011,
+      "month": "February",
+      "venue": "International Journal of Innovative Computing, Information and Control (Vol. 7, No. 2, pp. 501-510)",
+      "isPublished": true,
+      "publishedBadge": "IJICIC 2011",
+      "areaId": "ai-ml",
+      "areaName": "Artificial Intelligence & ML",
+      "areaBadge": "AI / ML",
+      "tags": [
+        "Target Tracking",
+        "Kalman Filter",
+        "Fuzzy Logic",
+        "High Maneuver",
+        "Hybrid Architecture"
+      ],
+      "citations": 27,
+      "featured": true,
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:NJ774b8OgUMC",
+      "journalUrl": "http://www.ijicic.org",
+      "sourceFile": "content/publications/high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "ali-karsaz",
+          "name": "Ali Karsaz",
+          "affiliation": "Ferdowsi University of Mashhad",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "naser-pariz",
+          "name": "Naser Pariz",
+          "affiliation": "Ferdowsi University of Mashhad",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{bahari2011high,\n  title={High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture},\n  author={Bahari, Mohamad Hasan and Karsaz, Ali and Pariz, Naser},\n  journal={International Journal of Innovative Computing, Information and Control},\n  volume={7},\n  number={2},\n  pages={501--510},\n  year={2011},\n  publisher={ICIC International}\n}",
+      "abstract": "In this paper, a fast target maneuver detection technique and high accurate tracking scheme is proposed with the use of a new hybrid Kalman filter-fuzzy logic architecture. Due to the stressful environment of target tracking problem such as inaccurate detection and target maneuver, most of existing trackers do not represent desired performance in different situations. In practice, while the conventional Kalman filters (KF) perform well in tracking a target with constant velocity, their performance may be seriously degraded in the presence of maneuver. To reach an accurate target tracking system in such a stressful environment, fuzzy logic-based algorithms with intelligent adaptation capabilities have recently been issued. Although these methods yield reasonable performance in tracking maneuvering targets, their accuracy in non-maneuvering mode was not satisfactory. In this research, based on information about the target maneuver dynamics, a new hybrid tracker (HT) is introduced. The proposed algorithm combines two methodologies into one architecture synergistically. In other words, the KF is used when the target velocity is approximately constant, whereas fuzzy estimator is used when the target maneuvers. Simulation results show that the proposed method is superior to some conventional approaches in tracking accuracy."
     },
     "high-maneuvering-target-tracking-fuzzy-forgetting-factor": {
       "id": "high-maneuvering-target-tracking-fuzzy-forgetting-factor",
@@ -342,6 +590,56 @@
       ],
       "bibtex": "@article{bahari2009intelligent,\n  title={Intelligent fading memory for high maneuvering target tracking},\n  author={Bahari, Mohamad Hasan and Naghibi Sistani, Mohammad Bagher and Pariz, Naser},\n  journal={International Journal of Physical Sciences},\n  volume={4},\n  number={10},\n  pages={548--554},\n  year={2009},\n  publisher={Academic Journals}\n}",
       "abstract": "In this paper, a new fuzzy fading memory (FFM) is developed in order to aid a modified input estimation (MIE) technique and to enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and performs well in tracking low and medium maneuvering targets. However, this method does not represent desirable accuracy in tracking high maneuvering or jerking targets. In fact, this trouble is originated in mismodeling the target acceleration dynamics. An effective approach to cope with different modeling uncertainties is fading memory. However, conventional fading memory method suffers from some deficiencies leading to surplus fading information in non-maneuvering mode or incomplete compensation in high maneuvering situations. To overcome these difficulties, an intelligent fading memory is presented in this paper. Simulation results prove the efficiency of proposed method in tracking high maneuvering targets."
+    },
+    "high-maneuver-target-tracking-combined-kalman-fuzzy": {
+      "id": "high-maneuver-target-tracking-combined-kalman-fuzzy",
+      "title": "High maneuver target tracking based on combined Kalman filter and fuzzy logic",
+      "year": 2007,
+      "month": "February",
+      "venue": "2007 IEEE Information, Decision and Control (IDC), pp. 59-64",
+      "isPublished": true,
+      "publishedBadge": "IEEE IDC 2007",
+      "areaId": "ai-ml",
+      "areaName": "Artificial Intelligence & ML",
+      "areaBadge": "AI / ML",
+      "tags": [
+        "Target Tracking",
+        "Kalman Filter",
+        "Fuzzy Logic",
+        "High Maneuver",
+        "Signal Processing"
+      ],
+      "citations": 26,
+      "featured": true,
+      "pdfUrl": "/pdfs/high-maneuver-target-tracking-combined-kalman-fuzzy.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:7T2F9Uy0os0C",
+      "journalUrl": "https://ieeexplore.ieee.org/document/4256204",
+      "sourceFile": "content/publications/high-maneuver-target-tracking-combined-kalman-fuzzy.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "ali-karsaz",
+          "name": "Ali Karsaz",
+          "affiliation": "Ferdowsi University of Mashhad",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hamid-khaloozadeh",
+          "name": "Hamid Khaloozadeh",
+          "affiliation": "K. N. Toosi University of Technology",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2007high,\n  title={High maneuver target tracking based on combined Kalman filter and fuzzy logic},\n  author={Bahari, Mohamad Hasan and Karsaz, Ali and Khaloozadeh, Hamid},\n  booktitle={2007 Information, Decision and Control},\n  pages={59--64},\n  year={2007},\n  organization={IEEE}\n}",
+      "abstract": "In this paper, a new combined scheme is presented to overcome some drawbacks of the high maneuvering target tracking problems by using the mixed Fuzzy logic and the standard Kalman filter. This scheme is consist of two important aspects; at first absolute value of difference between last target course and the present observation target course and the second aspect is the absolute value of measurement residual. The results compared with the augmented method and another combined fuzzy logic method which have been reported in existing literature. Simulation results show a high performance of the proposed innovation method and effectiveness of this scheme in high maneuvering targets tracking problems."
     }
   },
   "authorMap": {
@@ -365,8 +663,8 @@
       "githubUrl": "https://github.com/bahari-sensifai",
       "linkedinUrl": "https://www.linkedin.com/company/17888541/",
       "scholarUrl": "https://scholar.google.com/citations?user=tYazD-8AAAAJ&hl=en",
-      "pubCount": 3
+      "pubCount": 6
     }
   },
-  "searchIndex": "{\"documentCount\":3,\"nextId\":3,\"documentIds\":{\"0\":\"automatic-speaker-characterization-gender-age-language-accent\",\"1\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"2\":\"intelligent-fading-memory-high-maneuvering-target-tracking\"},\"fieldIds\":{\"title\":0,\"abstract\":1,\"authorsText\":2,\"tagsText\":3,\"venue\":4},\"fieldLength\":{\"0\":[13,13,3,10,5],\"1\":[14,91,5,14,12],\"2\":[8,89,9,10,13]},\"averageFieldLength\":[11.666666666666666,64.33333333333333,5.666666666666667,11.333333333333334,10],\"storedFields\":{\"0\":{\"id\":\"automatic-speaker-characterization-gender-age-language-accent\",\"title\":\"Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals\",\"areaId\":\"audio-speech\",\"year\":2014},\"1\":{\"id\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"title\":\"High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor\",\"areaId\":\"ai-ml\",\"year\":2009},\"2\":{\"id\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"title\":\"Intelligent fading memory for high maneuvering target tracking\",\"areaId\":\"ai-ml\",\"year\":2009}},\"dirtCount\":0,\"index\":[[\"554\",{\"4\":{\"2\":1}}],[\"548\",{\"4\":{\"2\":1}}],[\"journal\",{\"4\":{\"2\":1}}],[\"jerking\",{\"1\":{\"2\":1}}],[\"uncertainties\",{\"1\":{\"2\":1}}],[\"using\",{\"0\":{\"1\":1}}],[\"945\",{\"4\":{\"1\":1}}],[\"936\",{\"4\":{\"1\":1}}],[\"10\",{\"4\":{\"1\":1,\"2\":1}}],[\"4\",{\"4\":{\"1\":1,\"2\":1}}],[\"naghibi\",{\"2\":{\"2\":1}}],[\"naser\",{\"2\":{\"1\":1,\"2\":1}}],[\"non\",{\"1\":{\"2\":1}}],[\"no\",{\"4\":{\"1\":1,\"2\":1}}],[\"not\",{\"1\":{\"1\":1,\"2\":1}}],[\"new\",{\"1\":{\"1\":1,\"2\":1}}],[\"vol\",{\"4\":{\"1\":1,\"2\":1}}],[\"visualize\",{\"1\":{\"1\":1}}],[\"velocity\",{\"1\":{\"1\":1}}],[\"compensation\",{\"1\":{\"2\":1}}],[\"conventional\",{\"1\":{\"2\":1}}],[\"cope\",{\"1\":{\"2\":1}}],[\"cases\",{\"1\":{\"1\":1}}],[\"characterization\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"well\",{\"1\":{\"2\":1}}],[\"we\",{\"1\":{\"1\":1}}],[\"with\",{\"0\":{\"1\":1},\"1\":{\"2\":1}}],[\"represent\",{\"1\":{\"2\":1}}],[\"research\",{\"4\":{\"1\":1}}],[\"results\",{\"1\":{\"1\":1,\"2\":1}}],[\"reasonably\",{\"1\":{\"1\":1}}],[\"recently\",{\"1\":{\"1\":1,\"2\":1}}],[\"recognition\",{\"3\":{\"0\":1}}],[\"bagher\",{\"2\":{\"2\":1}}],[\"based\",{\"1\":{\"1\":1}}],[\"bahari\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"be\",{\"1\":{\"1\":1}}],[\"become\",{\"1\":{\"1\":1}}],[\"been\",{\"1\":{\"1\":1,\"2\":1}}],[\"effective\",{\"1\":{\"2\":1}}],[\"efficiency\",{\"1\":{\"1\":1,\"2\":1}}],[\"essay\",{\"4\":{\"1\":1}}],[\"estimation\",{\"0\":{\"1\":1},\"1\":{\"1\":2,\"2\":1},\"3\":{\"1\":1,\"2\":1}}],[\"emphasize\",{\"1\":{\"1\":1}}],[\"enjoy\",{\"1\":{\"1\":1}}],[\"enhance\",{\"1\":{\"1\":1,\"2\":1}}],[\"overcome\",{\"1\":{\"2\":1}}],[\"originated\",{\"1\":{\"2\":1}}],[\"or\",{\"1\":{\"2\":2}}],[\"order\",{\"1\":{\"1\":2,\"2\":1}}],[\"on\",{\"1\":{\"1\":2}}],[\"of\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"1\":3,\"2\":1},\"4\":{\"2\":1}}],[\"performs\",{\"1\":{\"2\":1}}],[\"performance\",{\"1\":{\"1\":2,\"2\":1}}],[\"pp\",{\"4\":{\"1\":1,\"2\":1}}],[\"pariz\",{\"2\":{\"1\":1,\"2\":1}}],[\"paper\",{\"1\":{\"1\":1,\"2\":2}}],[\"processing\",{\"3\":{\"2\":1}}],[\"prove\",{\"1\":{\"2\":1}}],[\"proposed\",{\"1\":{\"1\":2,\"2\":1}}],[\"presented\",{\"1\":{\"2\":1}}],[\"present\",{\"1\":{\"1\":1}}],[\"presenting\",{\"1\":{\"1\":1}}],[\"presence\",{\"1\":{\"1\":1}}],[\"physical\",{\"4\":{\"2\":1}}],[\"ph\",{\"4\":{\"0\":1}}],[\"ffm\",{\"1\":{\"2\":1}}],[\"fff\",{\"1\":{\"1\":1}}],[\"for\",{\"0\":{\"2\":1}}],[\"forgetting\",{\"0\":{\"1\":1},\"1\":{\"1\":2},\"3\":{\"1\":1}}],[\"fact\",{\"1\":{\"2\":1}}],[\"factor\",{\"0\":{\"1\":1},\"1\":{\"1\":2},\"3\":{\"1\":1}}],[\"fading\",{\"0\":{\"2\":1},\"1\":{\"2\":5},\"3\":{\"2\":1}}],[\"furthermore\",{\"1\":{\"1\":1}}],[\"fuzzy\",{\"0\":{\"1\":1},\"1\":{\"1\":2,\"2\":1},\"3\":{\"1\":1,\"2\":1}}],[\"from\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"2\":1}}],[\"illustrate\",{\"1\":{\"1\":1}}],[\"iteration\",{\"1\":{\"1\":1}}],[\"its\",{\"1\":{\"1\":3,\"2\":1}}],[\"is\",{\"1\":{\"1\":2,\"2\":4}}],[\"incomplete\",{\"1\":{\"2\":1}}],[\"information\",{\"1\":{\"2\":1}}],[\"international\",{\"4\":{\"2\":1}}],[\"intelligent\",{\"0\":{\"2\":1},\"1\":{\"1\":1,\"2\":1}}],[\"introduced\",{\"1\":{\"1\":1,\"2\":1}}],[\"in\",{\"1\":{\"1\":10,\"2\":11}}],[\"input\",{\"0\":{\"1\":1},\"1\":{\"1\":1,\"2\":1},\"3\":{\"1\":1,\"2\":1}}],[\"identification\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"trouble\",{\"1\":{\"2\":1}}],[\"trajectory\",{\"1\":{\"1\":1}}],[\"tracking\",{\"0\":{\"1\":1,\"2\":1},\"1\":{\"1\":4,\"2\":4},\"3\":{\"1\":1,\"2\":1}}],[\"time\",{\"1\":{\"1\":1}}],[\"tuning\",{\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"that\",{\"1\":{\"1\":1}}],[\"these\",{\"1\":{\"2\":1}}],[\"the\",{\"1\":{\"1\":6,\"2\":3}}],[\"this\",{\"1\":{\"1\":2,\"2\":4}}],[\"to\",{\"1\":{\"1\":4,\"2\":5}}],[\"technique\",{\"0\":{\"1\":1},\"1\":{\"1\":1,\"2\":1}}],[\"targets\",{\"1\":{\"1\":2,\"2\":4}}],[\"target\",{\"0\":{\"1\":1,\"2\":1},\"1\":{\"1\":3,\"2\":1},\"3\":{\"1\":1,\"2\":1}}],[\"memory\",{\"0\":{\"2\":1},\"1\":{\"2\":4},\"3\":{\"2\":1}}],[\"method\",{\"1\":{\"1\":2,\"2\":3}}],[\"medium\",{\"1\":{\"1\":1,\"2\":1}}],[\"maneuver\",{\"3\":{\"1\":1}}],[\"maneuvers\",{\"1\":{\"1\":1}}],[\"maneuvering\",{\"0\":{\"1\":1,\"2\":1},\"1\":{\"1\":4,\"2\":6}}],[\"may\",{\"1\":{\"1\":1}}],[\"mismodeling\",{\"1\":{\"2\":1}}],[\"mild\",{\"1\":{\"1\":1}}],[\"mie\",{\"1\":{\"1\":2,\"2\":2},\"3\":{\"1\":1}}],[\"mohammad\",{\"2\":{\"2\":1}}],[\"mohamad\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"mode\",{\"1\":{\"2\":1}}],[\"modeling\",{\"1\":{\"2\":1}}],[\"modified\",{\"1\":{\"1\":1,\"2\":1},\"3\":{\"1\":1}}],[\"however\",{\"1\":{\"1\":1,\"2\":2}}],[\"has\",{\"1\":{\"1\":1,\"2\":1}}],[\"hasan\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"high\",{\"0\":{\"1\":1,\"2\":1},\"1\":{\"1\":4,\"2\":4},\"3\":{\"1\":1}}],[\"leading\",{\"1\":{\"2\":1}}],[\"leuven\",{\"4\":{\"0\":1}}],[\"logic\",{\"3\":{\"1\":1,\"2\":1}}],[\"low\",{\"1\":{\"1\":2,\"2\":1}}],[\"language\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"ku\",{\"4\":{\"0\":1}}],[\"difficulties\",{\"1\":{\"2\":1}}],[\"different\",{\"1\":{\"2\":1}}],[\"dissertation\",{\"4\":{\"0\":1}}],[\"dynamics\",{\"1\":{\"2\":1}}],[\"does\",{\"1\":{\"2\":1}}],[\"deficiencies\",{\"1\":{\"2\":1}}],[\"desirable\",{\"1\":{\"2\":1}}],[\"degraded\",{\"1\":{\"1\":1}}],[\"developed\",{\"1\":{\"1\":1,\"2\":1}}],[\"due\",{\"1\":{\"1\":1}}],[\"d\",{\"4\":{\"0\":1}}],[\"sciences\",{\"4\":{\"2\":1}}],[\"scientific\",{\"4\":{\"1\":1}}],[\"surplus\",{\"1\":{\"2\":1}}],[\"suffers\",{\"1\":{\"2\":1}}],[\"succeeds\",{\"1\":{\"1\":1}}],[\"sampling\",{\"1\":{\"1\":1}}],[\"satisfactory\",{\"1\":{\"1\":1}}],[\"sensitive\",{\"1\":{\"1\":1}}],[\"self\",{\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"seriously\",{\"1\":{\"1\":1}}],[\"study\",{\"1\":{\"1\":1}}],[\"steps\",{\"1\":{\"1\":2}}],[\"small\",{\"1\":{\"1\":2}}],[\"some\",{\"1\":{\"1\":1,\"2\":1}}],[\"signal\",{\"3\":{\"2\":1}}],[\"signals\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"sistani\",{\"2\":{\"2\":1}}],[\"simulation\",{\"1\":{\"1\":1,\"2\":1}}],[\"simulations\",{\"1\":{\"1\":1}}],[\"situations\",{\"1\":{\"1\":1,\"2\":1}}],[\"speech\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"speaker\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"approach\",{\"1\":{\"1\":1,\"2\":1}}],[\"after\",{\"1\":{\"1\":1}}],[\"accuracy\",{\"1\":{\"1\":2,\"2\":1}}],[\"accurate\",{\"1\":{\"1\":1}}],[\"acceleration\",{\"1\":{\"1\":1,\"2\":1}}],[\"accent\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"aid\",{\"1\":{\"1\":1,\"2\":1}}],[\"a\",{\"1\":{\"1\":3,\"2\":2}}],[\"associated\",{\"0\":{\"1\":1}}],[\"an\",{\"0\":{\"1\":1},\"1\":{\"1\":1,\"2\":2}}],[\"and\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"1\":6,\"2\":3},\"4\":{\"1\":1}}],[\"age\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"automatic\",{\"0\":{\"0\":2},\"1\":{\"0\":2}}],[\"gender\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}]],\"serializationVersion\":2}"
+  "searchIndex": "{\"documentCount\":6,\"nextId\":6,\"documentIds\":{\"0\":\"height-estimation-speech-signals-ivectors-lssvr\",\"1\":\"automatic-speaker-characterization-gender-age-language-accent\",\"2\":\"high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic\",\"3\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"4\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"5\":\"high-maneuver-target-tracking-combined-kalman-fuzzy\"},\"fieldIds\":{\"title\":0,\"abstract\":1,\"authorsText\":2,\"tagsText\":3,\"venue\":4},\"fieldLength\":{\"0\":[14,70,8,9,13],\"1\":[13,13,3,10,5],\"2\":[13,119,7,10,16],\"3\":[14,91,5,14,12],\"4\":[8,89,9,10,13],\"5\":[12,71,7,10,10]},\"averageFieldLength\":[12.333333333333334,75.5,6.5,10.5,11.5],\"storedFields\":{\"0\":{\"id\":\"height-estimation-speech-signals-ivectors-lssvr\",\"title\":\"Height estimation from speech signals using i-vectors and least-squares support vector regression\",\"areaId\":\"audio-speech\",\"year\":2015},\"1\":{\"id\":\"automatic-speaker-characterization-gender-age-language-accent\",\"title\":\"Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals\",\"areaId\":\"audio-speech\",\"year\":2014},\"2\":{\"id\":\"high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic\",\"title\":\"High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture\",\"areaId\":\"ai-ml\",\"year\":2011},\"3\":{\"id\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"title\":\"High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor\",\"areaId\":\"ai-ml\",\"year\":2009},\"4\":{\"id\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"title\":\"Intelligent fading memory for high maneuvering target tracking\",\"areaId\":\"ai-ml\",\"year\":2009},\"5\":{\"id\":\"high-maneuver-target-tracking-combined-kalman-fuzzy\",\"title\":\"High maneuver target tracking based on combined Kalman filter and fuzzy logic\",\"areaId\":\"ai-ml\",\"year\":2007}},\"dirtCount\":0,\"index\":[[\"64\",{\"4\":{\"5\":1}}],[\"jerking\",{\"1\":{\"4\":1}}],[\"journal\",{\"4\":{\"2\":1,\"4\":1}}],[\"945\",{\"4\":{\"3\":1}}],[\"936\",{\"4\":{\"3\":1}}],[\"4\",{\"4\":{\"3\":1,\"4\":1}}],[\"2\",{\"4\":{\"2\":1}}],[\"2007\",{\"4\":{\"5\":1}}],[\"2008\",{\"1\":{\"0\":1}}],[\"2015\",{\"4\":{\"0\":1}}],[\"2010\",{\"1\":{\"0\":1}}],[\"7\",{\"4\":{\"2\":1}}],[\"yield\",{\"1\":{\"2\":1}}],[\"we\",{\"1\":{\"3\":1}}],[\"well\",{\"1\":{\"2\":1,\"4\":1}}],[\"which\",{\"1\":{\"5\":1}}],[\"while\",{\"1\":{\"2\":1}}],[\"whereas\",{\"1\":{\"2\":1}}],[\"when\",{\"1\":{\"2\":2}}],[\"words\",{\"1\":{\"2\":1}}],[\"was\",{\"1\":{\"2\":1}}],[\"with\",{\"0\":{\"3\":1},\"1\":{\"2\":3,\"4\":1,\"5\":1}}],[\"khaloozadeh\",{\"2\":{\"5\":1}}],[\"karsaz\",{\"2\":{\"2\":1,\"5\":1}}],[\"kalman\",{\"0\":{\"2\":1,\"5\":1},\"1\":{\"2\":2,\"5\":1},\"3\":{\"2\":1,\"5\":1}}],[\"kf\",{\"1\":{\"2\":2}}],[\"ku\",{\"4\":{\"1\":1}}],[\"drawbacks\",{\"1\":{\"5\":1}}],[\"dynamics\",{\"1\":{\"2\":1,\"4\":1}}],[\"difference\",{\"1\":{\"5\":1}}],[\"different\",{\"1\":{\"2\":1,\"4\":1}}],[\"difficulties\",{\"1\":{\"4\":1}}],[\"dissertation\",{\"4\":{\"1\":1}}],[\"decision\",{\"4\":{\"5\":1}}],[\"deficiencies\",{\"1\":{\"4\":1}}],[\"desirable\",{\"1\":{\"4\":1}}],[\"desired\",{\"1\":{\"2\":1}}],[\"developed\",{\"1\":{\"3\":1,\"4\":1}}],[\"degraded\",{\"1\":{\"2\":1,\"3\":1}}],[\"detection\",{\"1\":{\"2\":2}}],[\"does\",{\"1\":{\"4\":1}}],[\"do\",{\"1\":{\"2\":1}}],[\"due\",{\"1\":{\"2\":1,\"3\":1}}],[\"d\",{\"4\":{\"1\":1}}],[\"gender\",{\"0\":{\"1\":1},\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"given\",{\"1\":{\"0\":1}}],[\"59\",{\"4\":{\"5\":1}}],[\"554\",{\"4\":{\"4\":1}}],[\"548\",{\"4\":{\"4\":1}}],[\"510\",{\"4\":{\"2\":1}}],[\"501\",{\"4\":{\"2\":1}}],[\"5\",{\"4\":{\"0\":1}}],[\"10\",{\"4\":{\"3\":1,\"4\":1}}],[\"1\",{\"4\":{\"0\":1}}],[\"38th\",{\"4\":{\"0\":1}}],[\"cases\",{\"1\":{\"3\":1}}],[\"capabilities\",{\"1\":{\"2\":1}}],[\"course\",{\"1\":{\"5\":2}}],[\"cope\",{\"1\":{\"4\":1}}],[\"combined\",{\"0\":{\"5\":1},\"1\":{\"5\":2}}],[\"combines\",{\"1\":{\"2\":1}}],[\"compared\",{\"1\":{\"5\":1}}],[\"compensation\",{\"1\":{\"4\":1}}],[\"computing\",{\"4\":{\"2\":1}}],[\"consist\",{\"1\":{\"5\":1}}],[\"constant\",{\"1\":{\"2\":2}}],[\"control\",{\"4\":{\"2\":1,\"5\":1}}],[\"conventional\",{\"1\":{\"2\":2,\"4\":1}}],[\"conference\",{\"4\":{\"0\":1}}],[\"corpora\",{\"1\":{\"0\":1}}],[\"corresponding\",{\"1\":{\"0\":1}}],[\"characterization\",{\"0\":{\"1\":1},\"1\":{\"1\":1},\"3\":{\"0\":1,\"1\":1}}],[\"value\",{\"1\":{\"5\":2}}],[\"vasilakakis\",{\"2\":{\"0\":1}}],[\"vasileios\",{\"2\":{\"0\":1}}],[\"visualize\",{\"1\":{\"3\":1}}],[\"vol\",{\"4\":{\"2\":1,\"3\":1,\"4\":1}}],[\"velocity\",{\"1\":{\"2\":2,\"3\":1}}],[\"vector\",{\"0\":{\"0\":1},\"1\":{\"0\":3}}],[\"vectors\",{\"0\":{\"0\":1},\"3\":{\"0\":1}}],[\"however\",{\"1\":{\"3\":1,\"4\":2}}],[\"hossein\",{\"2\":{\"0\":1}}],[\"ht\",{\"1\":{\"2\":1}}],[\"hamid\",{\"2\":{\"5\":1}}],[\"has\",{\"1\":{\"3\":1,\"4\":1}}],[\"hasan\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"have\",{\"1\":{\"2\":1,\"5\":1}}],[\"hybrid\",{\"0\":{\"2\":1},\"1\":{\"2\":2},\"3\":{\"2\":1}}],[\"high\",{\"0\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1},\"1\":{\"2\":1,\"3\":4,\"4\":4,\"5\":3},\"3\":{\"2\":1,\"3\":1,\"5\":1}}],[\"height\",{\"0\":{\"0\":1},\"1\":{\"0\":3},\"3\":{\"0\":1}}],[\"reported\",{\"1\":{\"5\":1}}],[\"represent\",{\"1\":{\"2\":1,\"4\":1}}],[\"reasonably\",{\"1\":{\"3\":1}}],[\"reasonable\",{\"1\":{\"2\":1}}],[\"reach\",{\"1\":{\"2\":1}}],[\"recently\",{\"1\":{\"2\":1,\"3\":1,\"4\":1}}],[\"recognition\",{\"1\":{\"0\":1},\"3\":{\"1\":1}}],[\"residual\",{\"1\":{\"5\":1}}],[\"research\",{\"1\":{\"2\":1},\"4\":{\"3\":1}}],[\"results\",{\"1\":{\"0\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":2}}],[\"respectively\",{\"1\":{\"0\":1}}],[\"regression\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}],[\"observation\",{\"1\":{\"5\":1}}],[\"overcome\",{\"1\":{\"4\":1,\"5\":1}}],[\"originated\",{\"1\":{\"4\":1}}],[\"or\",{\"1\":{\"4\":2}}],[\"order\",{\"1\":{\"3\":2,\"4\":1}}],[\"other\",{\"1\":{\"2\":1}}],[\"of\",{\"0\":{\"1\":1},\"1\":{\"0\":4,\"1\":1,\"2\":4,\"3\":3,\"4\":1,\"5\":6},\"4\":{\"2\":1,\"4\":1}}],[\"one\",{\"1\":{\"2\":1}}],[\"on\",{\"0\":{\"5\":1},\"1\":{\"0\":2,\"2\":1,\"3\":2},\"4\":{\"0\":1}}],[\"trouble\",{\"1\":{\"4\":1}}],[\"trajectory\",{\"1\":{\"3\":1}}],[\"tracker\",{\"1\":{\"2\":1}}],[\"trackers\",{\"1\":{\"2\":1}}],[\"tracking\",{\"0\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1},\"1\":{\"2\":6,\"3\":4,\"4\":4,\"5\":2},\"3\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"trained\",{\"1\":{\"0\":1}}],[\"time\",{\"1\":{\"3\":1}}],[\"tuning\",{\"1\":{\"3\":1},\"3\":{\"3\":1}}],[\"two\",{\"1\":{\"2\":1,\"5\":1}}],[\"targets\",{\"1\":{\"2\":1,\"3\":2,\"4\":4,\"5\":1}}],[\"target\",{\"0\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1},\"1\":{\"2\":8,\"3\":3,\"4\":1,\"5\":3},\"3\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"tsp\",{\"4\":{\"0\":1}}],[\"technique\",{\"0\":{\"3\":1},\"1\":{\"2\":1,\"3\":1,\"4\":1}}],[\"technology\",{\"1\":{\"0\":1}}],[\"telecommunications\",{\"4\":{\"0\":1}}],[\"telephone\",{\"1\":{\"0\":1}}],[\"tested\",{\"1\":{\"0\":1}}],[\"to\",{\"1\":{\"0\":1,\"2\":3,\"3\":4,\"4\":5,\"5\":1}}],[\"that\",{\"1\":{\"2\":1,\"3\":1}}],[\"these\",{\"1\":{\"2\":1,\"4\":1}}],[\"their\",{\"1\":{\"2\":2}}],[\"then\",{\"1\":{\"0\":1}}],[\"the\",{\"1\":{\"0\":6,\"2\":10,\"3\":6,\"4\":3,\"5\":9}}],[\"this\",{\"1\":{\"0\":2,\"2\":2,\"3\":2,\"4\":4,\"5\":3}}],[\"literature\",{\"1\":{\"5\":1}}],[\"last\",{\"1\":{\"5\":1}}],[\"language\",{\"0\":{\"1\":1},\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"low\",{\"1\":{\"3\":2,\"4\":1}}],[\"logic\",{\"0\":{\"2\":1,\"5\":1},\"1\":{\"2\":2,\"5\":2},\"3\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"leading\",{\"1\":{\"4\":1}}],[\"least\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}],[\"leuven\",{\"4\":{\"1\":1}}],[\"lssvr\",{\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"naghibi\",{\"2\":{\"4\":1}}],[\"naser\",{\"2\":{\"2\":1,\"3\":1,\"4\":1}}],[\"national\",{\"1\":{\"0\":1}}],[\"no\",{\"4\":{\"2\":1,\"3\":1,\"4\":1}}],[\"non\",{\"1\":{\"2\":1,\"4\":1}}],[\"not\",{\"1\":{\"2\":2,\"3\":1,\"4\":1}}],[\"novel\",{\"0\":{\"2\":1},\"1\":{\"0\":1}}],[\"nist\",{\"1\":{\"0\":1}}],[\"new\",{\"1\":{\"2\":2,\"3\":1,\"4\":1,\"5\":1}}],[\"networks\",{\"1\":{\"0\":1}}],[\"neural\",{\"1\":{\"0\":1}}],[\"between\",{\"1\":{\"5\":1}}],[\"become\",{\"1\":{\"3\":1}}],[\"been\",{\"1\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"be\",{\"1\":{\"2\":1,\"3\":1}}],[\"bagher\",{\"2\":{\"4\":1}}],[\"bahari\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"based\",{\"0\":{\"5\":1},\"1\":{\"0\":1,\"2\":2,\"3\":1}}],[\"by\",{\"1\":{\"0\":1,\"5\":1}}],[\"measurement\",{\"1\":{\"5\":1}}],[\"memory\",{\"0\":{\"4\":1},\"1\":{\"4\":4},\"3\":{\"4\":1}}],[\"medium\",{\"1\":{\"3\":1,\"4\":1}}],[\"methodologies\",{\"1\":{\"2\":1}}],[\"methods\",{\"1\":{\"2\":1}}],[\"method\",{\"1\":{\"0\":3,\"2\":1,\"3\":2,\"4\":3,\"5\":3}}],[\"mixed\",{\"1\":{\"5\":1}}],[\"mismodeling\",{\"1\":{\"4\":1}}],[\"mild\",{\"1\":{\"3\":1}}],[\"mie\",{\"1\":{\"3\":2,\"4\":2},\"3\":{\"3\":1}}],[\"may\",{\"1\":{\"2\":1,\"3\":1}}],[\"maneuvers\",{\"1\":{\"2\":1,\"3\":1}}],[\"maneuver\",{\"0\":{\"5\":1},\"1\":{\"2\":4},\"3\":{\"2\":1,\"3\":1,\"5\":1}}],[\"maneuvering\",{\"0\":{\"2\":1,\"3\":1,\"4\":1},\"1\":{\"2\":2,\"3\":4,\"4\":6,\"5\":2}}],[\"mohammad\",{\"2\":{\"4\":1}}],[\"mohamad\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"modified\",{\"1\":{\"3\":1,\"4\":1},\"3\":{\"3\":1}}],[\"modeling\",{\"1\":{\"4\":1}}],[\"modeled\",{\"1\":{\"0\":1}}],[\"mode\",{\"1\":{\"2\":1,\"4\":1}}],[\"most\",{\"1\":{\"2\":1}}],[\"uncertainties\",{\"1\":{\"4\":1}}],[\"used\",{\"1\":{\"2\":2}}],[\"use\",{\"1\":{\"2\":1}}],[\"using\",{\"0\":{\"0\":1,\"2\":1,\"3\":1},\"1\":{\"5\":1}}],[\"utterance\",{\"1\":{\"0\":2}}],[\"essay\",{\"4\":{\"3\":1}}],[\"estimator\",{\"1\":{\"2\":1}}],[\"estimate\",{\"1\":{\"0\":1}}],[\"estimation\",{\"0\":{\"0\":1,\"3\":1},\"1\":{\"0\":2,\"3\":2,\"4\":1},\"3\":{\"0\":1,\"3\":1,\"4\":1}}],[\"emphasize\",{\"1\":{\"3\":1}}],[\"employed\",{\"1\":{\"0\":1}}],[\"effective\",{\"1\":{\"4\":1}}],[\"effectiveness\",{\"1\":{\"0\":1,\"5\":1}}],[\"efficiency\",{\"1\":{\"3\":1,\"4\":1}}],[\"enjoy\",{\"1\":{\"3\":1}}],[\"enhance\",{\"1\":{\"3\":1,\"4\":1}}],[\"environment\",{\"1\":{\"2\":2}}],[\"existing\",{\"1\":{\"2\":1,\"5\":1}}],[\"evaluation\",{\"1\":{\"0\":2}}],[\"each\",{\"1\":{\"0\":1}}],[\"first\",{\"1\":{\"5\":1}}],[\"filters\",{\"1\":{\"2\":1}}],[\"filter\",{\"0\":{\"2\":1,\"5\":1},\"1\":{\"2\":1,\"5\":1},\"3\":{\"2\":1,\"5\":1}}],[\"ffm\",{\"1\":{\"4\":1}}],[\"fff\",{\"1\":{\"3\":1}}],[\"furthermore\",{\"1\":{\"3\":1}}],[\"fuzzy\",{\"0\":{\"2\":1,\"3\":1,\"5\":1},\"1\":{\"2\":3,\"3\":2,\"4\":1,\"5\":2},\"3\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"fact\",{\"1\":{\"4\":1}}],[\"factor\",{\"0\":{\"3\":1},\"1\":{\"3\":2},\"3\":{\"3\":1}}],[\"fading\",{\"0\":{\"4\":1},\"1\":{\"4\":5},\"3\":{\"4\":1}}],[\"fast\",{\"1\":{\"2\":1}}],[\"framework\",{\"1\":{\"0\":1}}],[\"from\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":1,\"1\":1,\"4\":1}}],[\"forgetting\",{\"0\":{\"3\":1},\"1\":{\"3\":2},\"3\":{\"3\":1}}],[\"for\",{\"0\":{\"4\":1},\"1\":{\"0\":1}}],[\"augmented\",{\"1\":{\"5\":1}}],[\"automatic\",{\"0\":{\"1\":2},\"1\":{\"0\":1,\"1\":2}}],[\"absolute\",{\"1\":{\"5\":2}}],[\"about\",{\"1\":{\"2\":1}}],[\"at\",{\"1\":{\"5\":1}}],[\"after\",{\"1\":{\"3\":1}}],[\"aid\",{\"1\":{\"3\":1,\"4\":1}}],[\"approximately\",{\"1\":{\"2\":1}}],[\"approaches\",{\"1\":{\"2\":1}}],[\"approach\",{\"1\":{\"0\":1,\"3\":1,\"4\":1}}],[\"ali\",{\"2\":{\"2\":1,\"5\":1}}],[\"algorithm\",{\"1\":{\"2\":1}}],[\"algorithms\",{\"1\":{\"2\":1}}],[\"although\",{\"1\":{\"2\":1}}],[\"adaptation\",{\"1\":{\"2\":1}}],[\"aspect\",{\"1\":{\"5\":1}}],[\"aspects\",{\"1\":{\"5\":1}}],[\"associated\",{\"0\":{\"3\":1}}],[\"as\",{\"1\":{\"2\":1}}],[\"acceleration\",{\"1\":{\"3\":1,\"4\":1}}],[\"accent\",{\"0\":{\"1\":1},\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"accuracy\",{\"1\":{\"2\":2,\"3\":2,\"4\":1}}],[\"accurate\",{\"1\":{\"2\":2,\"3\":1}}],[\"age\",{\"0\":{\"1\":1},\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"amir\",{\"2\":{\"0\":1}}],[\"architecture\",{\"0\":{\"2\":1},\"1\":{\"2\":2},\"3\":{\"2\":1}}],[\"are\",{\"1\":{\"0\":1}}],[\"artificial\",{\"1\":{\"0\":1}}],[\"another\",{\"1\":{\"5\":1}}],[\"an\",{\"0\":{\"3\":1},\"1\":{\"2\":1,\"3\":1,\"4\":2}}],[\"anns\",{\"1\":{\"0\":1}}],[\"and\",{\"0\":{\"0\":1,\"1\":1,\"5\":1},\"1\":{\"0\":4,\"1\":1,\"2\":2,\"3\":6,\"4\":3,\"5\":5},\"4\":{\"0\":1,\"2\":1,\"3\":1,\"5\":1}}],[\"a\",{\"0\":{\"2\":1},\"1\":{\"0\":3,\"2\":5,\"3\":3,\"4\":2,\"5\":2}}],[\"pariz\",{\"2\":{\"2\":1,\"3\":1,\"4\":1}}],[\"paper\",{\"1\":{\"0\":1,\"2\":1,\"3\":1,\"4\":2,\"5\":1}}],[\"performs\",{\"1\":{\"4\":1}}],[\"perform\",{\"1\":{\"2\":1}}],[\"performance\",{\"1\":{\"2\":3,\"3\":2,\"4\":1,\"5\":1}}],[\"presented\",{\"1\":{\"4\":1,\"5\":1}}],[\"present\",{\"1\":{\"3\":1,\"5\":1}}],[\"presenting\",{\"1\":{\"3\":1}}],[\"presence\",{\"1\":{\"2\":1,\"3\":1}}],[\"practice\",{\"1\":{\"2\":1}}],[\"prove\",{\"1\":{\"4\":1}}],[\"problems\",{\"1\":{\"5\":2}}],[\"problem\",{\"1\":{\"2\":1}}],[\"processing\",{\"3\":{\"0\":1,\"4\":1,\"5\":1},\"4\":{\"0\":1}}],[\"proposed\",{\"1\":{\"0\":2,\"2\":3,\"3\":2,\"4\":1,\"5\":1}}],[\"proposes\",{\"1\":{\"0\":1}}],[\"physical\",{\"4\":{\"4\":1}}],[\"ph\",{\"4\":{\"1\":1}}],[\"pp\",{\"4\":{\"0\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"poorjam\",{\"2\":{\"0\":1}}],[\"idc\",{\"4\":{\"5\":1}}],[\"identification\",{\"0\":{\"1\":1},\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"ieee\",{\"4\":{\"5\":1}}],[\"important\",{\"1\":{\"5\":1}}],[\"illustrate\",{\"1\":{\"3\":1}}],[\"iteration\",{\"1\":{\"3\":1}}],[\"its\",{\"1\":{\"0\":1,\"3\":3,\"4\":1}}],[\"issued\",{\"1\":{\"2\":1}}],[\"is\",{\"1\":{\"0\":2,\"2\":6,\"3\":2,\"4\":4,\"5\":3}}],[\"innovation\",{\"1\":{\"5\":1}}],[\"innovative\",{\"4\":{\"2\":1}}],[\"incomplete\",{\"1\":{\"4\":1}}],[\"input\",{\"0\":{\"3\":1},\"1\":{\"3\":1,\"4\":1},\"3\":{\"3\":1,\"4\":1}}],[\"into\",{\"1\":{\"2\":1}}],[\"introduced\",{\"1\":{\"2\":1,\"3\":1,\"4\":1}}],[\"intelligent\",{\"0\":{\"4\":1},\"1\":{\"2\":1,\"3\":1,\"4\":1}}],[\"international\",{\"4\":{\"0\":1,\"2\":1,\"4\":1}}],[\"information\",{\"1\":{\"2\":1,\"4\":1},\"4\":{\"2\":1,\"5\":1}}],[\"inaccurate\",{\"1\":{\"2\":1}}],[\"institute\",{\"1\":{\"0\":1}}],[\"in\",{\"1\":{\"0\":2,\"2\":11,\"3\":10,\"4\":11,\"5\":3}}],[\"i\",{\"0\":{\"0\":1},\"1\":{\"0\":2},\"3\":{\"0\":1}}],[\"sciences\",{\"4\":{\"4\":1}}],[\"scientific\",{\"4\":{\"3\":1}}],[\"scheme\",{\"1\":{\"2\":1,\"5\":3}}],[\"sampling\",{\"1\":{\"3\":1}}],[\"satisfactory\",{\"1\":{\"2\":1,\"3\":1}}],[\"second\",{\"1\":{\"5\":1}}],[\"sensitive\",{\"1\":{\"3\":1}}],[\"self\",{\"1\":{\"3\":1},\"3\":{\"3\":1}}],[\"seriously\",{\"1\":{\"2\":1,\"3\":1}}],[\"small\",{\"1\":{\"3\":2}}],[\"some\",{\"1\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"synergistically\",{\"1\":{\"2\":1}}],[\"system\",{\"1\":{\"2\":1}}],[\"sistani\",{\"2\":{\"4\":1}}],[\"simulations\",{\"1\":{\"3\":1}}],[\"simulation\",{\"1\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"situations\",{\"1\":{\"2\":1,\"3\":1,\"4\":1}}],[\"signal\",{\"3\":{\"4\":1,\"5\":1},\"4\":{\"0\":1}}],[\"signals\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":1,\"1\":1},\"3\":{\"1\":1}}],[\"surplus\",{\"1\":{\"4\":1}}],[\"suffers\",{\"1\":{\"4\":1}}],[\"succeeds\",{\"1\":{\"3\":1}}],[\"such\",{\"1\":{\"2\":2}}],[\"superior\",{\"1\":{\"2\":1}}],[\"support\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}],[\"standard\",{\"1\":{\"5\":1}}],[\"standards\",{\"1\":{\"0\":1}}],[\"study\",{\"1\":{\"3\":1}}],[\"steps\",{\"1\":{\"3\":2}}],[\"stressful\",{\"1\":{\"2\":2}}],[\"show\",{\"1\":{\"0\":1,\"2\":1,\"5\":1}}],[\"sre\",{\"1\":{\"0\":1}}],[\"speaker\",{\"0\":{\"1\":1},\"1\":{\"0\":4,\"1\":1},\"3\":{\"0\":1,\"1\":1}}],[\"speech\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":1,\"1\":1},\"3\":{\"0\":1,\"1\":1}}],[\"squares\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}]],\"serializationVersion\":2}"
 }
