@@ -97,7 +97,7 @@ export function ResearcherDetailPage() {
               </div>
 
               {/* Bio & Key Metrics */}
-              <div className="lg:col-span-8 space-y-6">
+              <div className="lg:col-span-8 space-y-6 text-center lg:text-left">
                 
                 <div>
                   <h2 className="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Biography & Research Focus</h2>
@@ -107,7 +107,7 @@ export function ResearcherDetailPage() {
                 </div>
 
                 {/* Metrics Row */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-100">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-zinc-100 text-center sm:text-left">
                   <div className="space-y-0.5">
                     <div className="text-2xl font-black text-zinc-950">
                       <NumberTicker value={authoredPublications.length} />
@@ -115,21 +115,21 @@ export function ResearcherDetailPage() {
                     <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Publications</div>
                   </div>
 
-                  <div className="space-y-0.5 border-l border-zinc-100 pl-4">
+                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4">
                     <div className="text-2xl font-black text-indigo-600">
                       <NumberTicker value={researcher.citations || totalCitations} />
                     </div>
                     <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Citations</div>
                   </div>
 
-                  <div className="space-y-0.5 border-l border-zinc-100 pl-4">
+                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4 border-t sm:border-t-0 pt-4 sm:pt-0 border-zinc-100 col-span-1">
                     <div className="text-2xl font-black text-[#5c8a00]">
                       <NumberTicker value={researcher.hIndex || 0} />
                     </div>
                     <div className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">h-index</div>
                   </div>
 
-                  <div className="space-y-0.5 border-l border-zinc-100 pl-4">
+                  <div className="space-y-0.5 sm:border-l sm:border-zinc-100 sm:pl-4 border-t sm:border-t-0 pt-4 sm:pt-0 border-zinc-100 col-span-1">
                     <div className="text-2xl font-black text-purple-600">
                       <NumberTicker value={researcher.i10Index || 0} />
                     </div>
@@ -138,7 +138,7 @@ export function ResearcherDetailPage() {
                 </div>
 
                 {/* All Social & Academic Icons in 1 Uniform Row */}
-                <div className="flex items-center gap-2.5 pt-2">
+                <div className="flex items-center justify-center lg:justify-start gap-2.5 pt-2">
                   {(researcher.githubUrl || researcher.github) && (
                     <a
                       href={researcher.githubUrl || researcher.github}
@@ -244,15 +244,30 @@ export function ResearcherDetailPage() {
                     </div>
 
                     <div className="flex items-center justify-between border-t border-zinc-100 pt-4 mt-6">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setSelectedPaperForPdf(paper)}
-                        className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
-                      >
-                        <Eye className="h-3 w-3 text-indigo-600" />
-                        Show Publication
-                      </Button>
+                      {paper.pdfUrl ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => setSelectedPaperForPdf(paper)}
+                          className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                        >
+                          <Eye className="h-3 w-3 text-indigo-600" />
+                          Show Publication
+                        </Button>
+                      ) : paper.journalUrl ? (
+                        <a href={paper.journalUrl} target="_blank" rel="noreferrer">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="h-7 px-2.5 text-[11px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                          >
+                            <ExternalLink className="h-3 w-3 text-emerald-600" />
+                            Publisher
+                          </Button>
+                        </a>
+                      ) : (
+                        <div></div>
+                      )}
 
                       <Button
                         variant="ghost"

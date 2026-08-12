@@ -44,12 +44,24 @@ export function PdfPreviewDialog({ paper, isOpen, onClose }) {
         </div>
 
         {/* Modal Body - Embedded PDF Frame */}
-        <div className="flex-1 bg-zinc-100 p-2 overflow-hidden">
+        <div className="flex-1 bg-zinc-100 p-2 overflow-hidden flex flex-col items-center justify-center">
           <iframe
             src={`${paper.pdfUrl}#toolbar=0`}
             title={`PDF Preview for ${paper.title}`}
-            className="w-full h-full border-0 rounded-lg bg-white shadow-inner"
+            className="hidden sm:block w-full h-full border-0 rounded-lg bg-white shadow-inner"
           />
+          <div className="sm:hidden flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <FileText className="h-16 w-16 text-zinc-300" />
+            <p className="text-sm font-medium text-zinc-600">
+              PDF preview is not available on mobile browsers.
+            </p>
+            <a href={paper.pdfUrl} target="_blank" rel="noreferrer">
+              <Button size="lg" className="bg-indigo-600 text-white font-bold rounded-full gap-2 shadow-md hover:bg-indigo-700">
+                <ExternalLink className="h-4 w-4" />
+                Open PDF in New Tab
+              </Button>
+            </a>
+          </div>
         </div>
 
         {/* Modal Footer */}

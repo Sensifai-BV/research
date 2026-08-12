@@ -92,6 +92,11 @@ export function HeroVisualizer() {
     let time = 0;
 
     const render = () => {
+      if (width === 0 || height === 0) {
+        animationFrameId = requestAnimationFrame(render);
+        return;
+      }
+
       time += 0.015;
       ctx.clearRect(0, 0, width, height);
 

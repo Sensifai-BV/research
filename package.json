@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run build:content && vite",
     "build:content": "node scripts/build-content-data.js",
-    "build": "npm run build:content && vite build && node scripts/prerender.js",
+    "build": "npm run build:content && vite build && node scripts/prerender.js && node scripts/generate-llms.js",
     "lint": "oxlint",
     "preview": "vite preview"
   },

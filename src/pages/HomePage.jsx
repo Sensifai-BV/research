@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Eye, Quote, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Eye, Quote, CheckCircle2, ExternalLink } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PAPERS, TEAM, CONTENT_STATS } from '../data/papersData';
 import { Button } from '../components/ui/Button';
@@ -62,7 +62,7 @@ export function HomePage() {
       {/* Magic UI Hero Section */}
       <section className="relative border-b border-zinc-200/80 bg-white py-14 lg:py-20 overflow-hidden">
         {/* Magic UI Particles background */}
-        <Particles className="absolute inset-0 z-0 opacity-60" quantity={65} color="#6366f1" size={0.7} />
+        <Particles className="hidden lg:block absolute inset-0 z-0 opacity-60" quantity={65} color="#6366f1" size={0.7} />
         
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
           
@@ -73,14 +73,14 @@ export function HomePage() {
               
               {/* Sparkles Headline */}
               <BlurFade delay={0.15}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.1]">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-zinc-950 leading-[1.1] text-center lg:text-left">
                   <SparklesText text="Sensifai Research Labs" colors={{ first: "#93d500", second: "#6366f1" }} className="inline-block" />
                 </h1>
               </BlurFade>
 
               {/* Typing Animation Subhead */}
               <BlurFade delay={0.2}>
-                <div className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-2xl">
+                <div className="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
                   <TypingAnimation
                     text="Our mission is to drive breakthroughs in multimodal AI that benefit society, industry, and Sensifai products."
                     duration={20}
@@ -90,7 +90,7 @@ export function HomePage() {
 
               {/* Call to Actions */}
               <BlurFade delay={0.25}>
-                <div className="pt-2 flex flex-wrap items-center gap-4">
+                <div className="pt-2 flex flex-wrap justify-center lg:justify-start items-center gap-4">
                   <Link to="/publications">
                     <ShimmerButton className="font-extrabold text-xs px-6 py-3 shadow-md">
                       Explore {CONTENT_STATS?.totalPublicationsCount || PAPERS.length} Publications Library &rarr;
@@ -107,10 +107,10 @@ export function HomePage() {
 
               {/* Metrics Stats Grid directly under Call to Actions */}
               <BlurFade delay={0.3}>
-                <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 border-t border-zinc-100/80 mt-6">
+                <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 border-t border-zinc-100/80 mt-6 text-center lg:text-left">
                   
                   <div className="space-y-0.5">
-                    <div className="text-xl font-black tracking-tight text-zinc-950 flex items-center gap-0.5">
+                    <div className="text-xl font-black tracking-tight text-zinc-950 flex justify-center lg:justify-start items-center gap-0.5">
                       <NumberTicker value={CONTENT_STATS?.totalPublicationsCount || 6} className="text-zinc-950" />
                       <span>+</span>
                     </div>
@@ -118,7 +118,7 @@ export function HomePage() {
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-200/60 sm:pl-3">
-                    <div className="text-xl font-black tracking-tight text-indigo-600 flex items-center gap-0.5">
+                    <div className="text-xl font-black tracking-tight text-indigo-600 flex justify-center lg:justify-start items-center gap-0.5">
                       <NumberTicker value={CONTENT_STATS?.totalCitations || 1961} className="text-indigo-600" />
                       <span>+</span>
                     </div>
@@ -126,14 +126,14 @@ export function HomePage() {
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-200/60 sm:pl-3">
-                    <div className="text-xl font-black tracking-tight text-emerald-600 flex items-center">
+                    <div className="text-xl font-black tracking-tight text-emerald-600 flex justify-center lg:justify-start items-center">
                       <NumberTicker value={CONTENT_STATS?.averageCitationsPerPaper || 327} className="text-emerald-600" />
                     </div>
                     <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">Avg Citations</div>
                   </div>
 
                   <div className="space-y-0.5 sm:border-l sm:border-zinc-200/60 sm:pl-3">
-                    <div className="text-xl font-black tracking-tight text-sky-600 flex items-center">
+                    <div className="text-xl font-black tracking-tight text-sky-600 flex justify-center lg:justify-start items-center">
                       <NumberTicker value={CONTENT_STATS?.totalResearchAreasCount || 5} className="text-sky-600" />
                     </div>
                     <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider whitespace-nowrap">Domains</div>
@@ -145,7 +145,7 @@ export function HomePage() {
             </div>
 
             {/* Right Column: Hero Visualizer */}
-            <div className="lg:col-span-5">
+            <div className="hidden lg:block lg:col-span-5">
               <BlurFade delay={0.35}>
                 <HeroVisualizer />
               </BlurFade>
@@ -206,15 +206,30 @@ export function HomePage() {
 
                   {/* Action Buttons */}
                   <div className="flex items-center justify-between gap-1.5 border-t border-zinc-100 pt-3 mt-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      onClick={() => setSelectedPaperForPdf(paper)}
-                      className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
-                    >
-                      <Eye className="h-3 w-3 text-indigo-600" />
-                      Show
-                    </Button>
+                    {paper.pdfUrl ? (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setSelectedPaperForPdf(paper)}
+                        className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                      >
+                        <Eye className="h-3 w-3 text-indigo-600" />
+                        Show
+                      </Button>
+                    ) : paper.journalUrl ? (
+                      <a href={paper.journalUrl} target="_blank" rel="noreferrer">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 border-zinc-300 hover:border-indigo-300"
+                        >
+                          <ExternalLink className="h-3 w-3 text-emerald-600" />
+                          Publisher
+                        </Button>
+                      </a>
+                    ) : (
+                      <div></div>
+                    )}
 
                     <Button
                       variant="ghost"

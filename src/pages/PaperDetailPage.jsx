@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Eye, Download, Quote, Copy, Check, Share2, Mail, CheckCircle2, ExternalLink, ZoomIn, X } from 'lucide-react';
-import { TwitterIcon, LinkedinIcon, FacebookIcon, GithubIcon } from '../components/ui/SocialIcons';
+import { TwitterIcon, LinkedinIcon, FacebookIcon, GithubIcon, ScholarIcon } from '../components/ui/SocialIcons';
 import { PAPERS, TEAM } from '../data/papersData';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -145,24 +145,25 @@ export function PaperDetailPage() {
             </div>
 
             {/* Action Bar */}
-            <div className="flex flex-wrap items-center gap-3 pt-4">
-              <Button size="lg" onClick={() => setIsPdfOpen(true)} className="gap-2 rounded-full bg-zinc-950 text-white font-bold text-xs shadow-md">
-                <Eye className="h-4 w-4 text-[#93d500]" />
-                View Full Publication PDF
-              </Button>
-
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-4 w-full">
               {paper.pdfUrl && (
-                <a href={paper.pdfUrl} download target="_blank" rel="noreferrer">
-                  <Button variant="outline" size="lg" className="gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
-                    <Download className="h-4 w-4 text-indigo-600" />
-                    Download
+                <>
+                  <Button size="lg" onClick={() => setIsPdfOpen(true)} className="w-full sm:w-auto justify-center gap-2 rounded-full bg-zinc-950 text-white font-bold text-xs shadow-md">
+                    <Eye className="h-4 w-4 text-[#93d500]" />
+                    View Full Publication PDF
                   </Button>
-                </a>
+                  <a href={paper.pdfUrl} download target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                    <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
+                      <Download className="h-4 w-4 text-indigo-600" />
+                      Download
+                    </Button>
+                  </a>
+                </>
               )}
 
               {paper.codeUrl && (
-                <a href={paper.codeUrl} target="_blank" rel="noreferrer">
-                  <Button variant="outline" size="lg" className="gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
+                <a href={paper.codeUrl} target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                  <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                     <GithubIcon className="h-4 w-4 text-zinc-950" />
                     Code & Models
                   </Button>
@@ -170,15 +171,24 @@ export function PaperDetailPage() {
               )}
 
               {paper.journalUrl && (
-                <a href={paper.journalUrl} target="_blank" rel="noreferrer">
-                  <Button variant="outline" size="lg" className="gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
+                <a href={paper.journalUrl} target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                  <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                     <ExternalLink className="h-4 w-4 text-emerald-600" />
                     Publisher Page
                   </Button>
                 </a>
               )}
 
-              <Button variant="secondary" size="lg" onClick={() => setIsCitationOpen(true)} className="gap-2 ml-auto rounded-full font-bold text-xs bg-zinc-200/80 hover:bg-zinc-200">
+              {paper.scholarUrl && (
+                <a href={paper.scholarUrl} target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                  <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
+                    <ScholarIcon className="h-4 w-4 text-blue-600" />
+                    Google Scholar
+                  </Button>
+                </a>
+              )}
+
+              <Button variant="secondary" size="lg" onClick={() => setIsCitationOpen(true)} className="w-full sm:w-auto justify-center gap-2 sm:ml-auto rounded-full font-bold text-xs bg-zinc-200/80 hover:bg-zinc-200">
                 <Quote className="h-4 w-4 text-zinc-700" />
                 Cite Publication
               </Button>
