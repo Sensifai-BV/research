@@ -52,8 +52,9 @@ function runPrerender() {
   (contentData.authors || []).forEach(author => {
     const authorTitle = `${author.name} - ${author.role} | ${defaultTitle}`;
     const authorDesc = author.headline || author.bio || author.name;
-    if (author.id) routes.push({ url: `/researcher/${author.id}`, title: authorTitle, description: authorDesc });
-    if (author.orcidId && author.orcidId !== author.id) routes.push({ url: `/researcher/${author.orcidId}`, title: authorTitle, description: authorDesc });
+    const authorImage = author.avatar;
+    if (author.id) routes.push({ url: `/researcher/${author.id}`, title: authorTitle, description: authorDesc, image: authorImage });
+    if (author.orcidId && author.orcidId !== author.id) routes.push({ url: `/researcher/${author.orcidId}`, title: authorTitle, description: authorDesc, image: authorImage });
   });
 
   // Add individual tag routes
@@ -80,6 +81,9 @@ function runPrerender() {
   routes.forEach(route => {
     let routeHtml = templateHtml;
 
+    const routeUrl = `https://research.sensifai.com${route.url === '/' ? '' : route.url}`;
+    const routeImage = route.image ? (route.image.startsWith('http') ? route.image : `https://research.sensifai.com${route.image}`) : 'https://research.sensifai.com/sensifai-logo.png';
+
     // Inject custom page title & meta description for SEO
     routeHtml = routeHtml.replace(/<title>.*?<\/title>/i, `<title>${escapeXml(route.title)}</title>`);
     
@@ -89,6 +93,20 @@ function runPrerender() {
     } else {
       routeHtml = routeHtml.replace('</head>', `  ${metaDescTag}\n</head>`);
     }
+
+    // Inject Open Graph / Twitter / Canonical tags with absolute URLs for external resources & scrapers
+    routeHtml = routeHtml.replace(/<meta property="og:url" content="[^"]*"/i, `<meta property="og:url" content="${escapeXml(routeUrl)}"`);
+    routeHtml = routeHtml.replace(/<meta property="twitter:url" content="[^"]*"/i, `<meta property="twitter:url" content="${escapeXml(routeUrl)}"`);
+    routeHtml = routeHtml.replace(/<link rel="canonical" href="[^"]*"/i, `<link rel="canonical" href="${escapeXml(routeUrl)}"`);
+    
+    routeHtml = routeHtml.replace(/<meta property="og:title" content="[^"]*"/i, `<meta property="og:title" content="${escapeXml(route.title)}"`);
+    routeHtml = routeHtml.replace(/<meta property="twitter:title" content="[^"]*"/i, `<meta property="twitter:title" content="${escapeXml(route.title)}"`);
+    
+    routeHtml = routeHtml.replace(/<meta property="og:description" content="[^"]*"/i, `<meta property="og:description" content="${escapeXml(route.description)}"`);
+    routeHtml = routeHtml.replace(/<meta property="twitter:description" content="[^"]*"/i, `<meta property="twitter:description" content="${escapeXml(route.description)}"`);
+
+    routeHtml = routeHtml.replace(/<meta property="og:image" content="[^"]*"/i, `<meta property="og:image" content="${escapeXml(routeImage)}"`);
+    routeHtml = routeHtml.replace(/<meta property="twitter:image" content="[^"]*"/i, `<meta property="twitter:image" content="${escapeXml(routeImage)}"`);
 
     // Determine output path
     let outFilePath;
