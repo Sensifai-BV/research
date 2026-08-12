@@ -77,8 +77,8 @@ function run() {
   console.log('✅ Created public/llms.txt');
 
   // Generate robots.txt
-  // Allow all standard crawlers, and specifically point to llms.txt
-  const robotsTxtContent = `User-agent: *\nAllow: /\n\n# LLM context file\n# This file provides a markdown-formatted summary of our site for LLM consumption\n# See: https://sensifai.com/llms.txt\n`;
+  // Allow all standard crawlers, and specifically point to llms.txt and sitemap.xml
+  const robotsTxtContent = `User-agent: *\nAllow: /\n\n# LLM context file\n# This file provides a markdown-formatted summary of our site for LLM consumption\n# See: https://sensifai.com/llms.txt\n\nSitemap: https://research.sensifai.com/sitemap.xml\n`;
   fs.writeFileSync(outputRobots, robotsTxtContent);
   console.log('✅ Created public/robots.txt');
 }
