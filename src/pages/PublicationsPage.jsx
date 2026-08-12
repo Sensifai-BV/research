@@ -121,16 +121,16 @@ export function PublicationsPage() {
                 </button>
               )}
             </div>
-            <div className="flex flex-wrap items-center justify-between gap-3 pt-2.5 border-t border-zinc-100 dark:border-zinc-800">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2.5 border-t border-zinc-100 dark:border-zinc-800">
               {/* Dropdown Filters (Domain & Year) */}
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 min-w-0">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 {/* Domain Select */}
-                <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0">Domain:</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-14 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0">Domain:</span>
                   <select
                     value={selectedArea}
                     onChange={(e) => setSelectedArea(e.target.value)}
-                    className="text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-md px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer transition-colors max-w-[210px] sm:max-w-xs truncate"
+                    className="flex-1 sm:flex-none text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer transition-colors max-w-full sm:max-w-xs truncate"
                   >
                     <option value="all">All Domains</option>
                     {RESEARCH_AREAS.map(area => (
@@ -142,12 +142,12 @@ export function PublicationsPage() {
                 </div>
 
                 {/* Year Select */}
-                <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0">Year:</span>
+                <div className="flex items-center gap-2">
+                  <span className="w-14 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0">Year:</span>
                   <select
                     value={selectedYear}
                     onChange={(e) => setSelectedYear(e.target.value)}
-                    className="text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-md px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer transition-colors"
+                    className="flex-1 sm:flex-none text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-lg px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer transition-colors"
                   >
                     <option value="all">All Years</option>
                     {availableYears.map(yr => (
@@ -158,7 +158,7 @@ export function PublicationsPage() {
               </div>
 
               {/* View Mode Toggle */}
-              <div className="flex items-center gap-2 shrink-0 ml-auto">
+              <div className="flex items-center justify-end gap-2 shrink-0 ml-auto pt-1 sm:pt-0">
                 <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 p-0.5 rounded-lg border border-zinc-200 dark:border-zinc-800">
                   <button
                     onClick={() => setViewMode('grid')}

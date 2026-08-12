@@ -3,7 +3,7 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function Badge({ children, variant = 'default', className, ...props }) {
-  const baseStyles = 'inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[11px] font-semibold tracking-tight transition-colors focus:outline-none shrink-0';
+  const baseStyles = 'inline-flex items-center gap-1 rounded-md border px-2 py-0.5 text-[11px] font-semibold tracking-tight transition-colors focus:outline-none max-w-full whitespace-normal text-left';
 
   const variants = {
     default: 'border-zinc-950 dark:border-zinc-50 bg-zinc-950 dark:bg-zinc-50 text-white dark:text-zinc-900 shadow-2xs dark:shadow-none',

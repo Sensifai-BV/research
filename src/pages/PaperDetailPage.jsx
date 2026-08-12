@@ -65,12 +65,12 @@ export function PaperDetailPage() {
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="indigo">{paper.areaBadge || paper.areaName}</Badge>
               {paper.isPublished && (
-                <Badge variant="published">
-                  <CheckCircle2 className="h-3 w-3 text-emerald-600" />
-                  Published in {paper.venue}
+                <Badge variant="published" className="max-w-full leading-tight">
+                  <CheckCircle2 className="h-3 w-3 text-emerald-600 shrink-0" />
+                  <span>Published in {paper.publishedBadge || paper.venue}</span>
                 </Badge>
               )}
-              <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 ml-auto">{paper.month} {paper.year}</span>
+              <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 sm:ml-auto">{paper.month} {paper.year}</span>
             </div>
 
             {/* Title */}
