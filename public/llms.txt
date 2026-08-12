@@ -1,0 +1,47 @@
+# Sensifai Research Labs - LLM Context
+
+> This file provides structured information about Sensifai Research Labs publications, researchers, and domains for LLMs and AI crawlers.
+
+## Research Areas
+
+- Artificial Intelligence & ML
+- Computer Vision & Video AI
+- Audio & Speech Intelligence
+- Medical AI & Healthcare
+- Efficient AI & Edge Computing
+
+## Researchers
+
+### Mohamad Hasan Bahari
+- Profile: https://research.sensifai.com/researcher/0009-0002-9777-8881
+- Role: CEO Sensifai
+- Focus: AI & Multimodal Intelligence
+- Headline: CEO at Sensifai Labs. Leading innovations in real-time artificial intelligence, target tracking, and multimodal perception.
+- Bio: Mohamad Hasan Bahari is the CEO of Sensifai. His research encompasses intelligent target tracking, fuzzy adaptive signal processing, real-time video understanding, and edge AI perception systems.
+
+## Publications
+
+### Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
+- URL: https://research.sensifai.com/publication/automatic-speaker-characterization-gender-age-language-accent
+- Authors: Mohamad Hasan Bahari
+- Year: 2014
+- Venue: Ph.D. Dissertation, KU Leuven
+- Area: Audio & Speech Intelligence
+- Abstract: Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
+
+### High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor
+- URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-fuzzy-forgetting-factor
+- Authors: Mohamad Hasan Bahari, Naser Pariz
+- Year: 2009
+- Venue: Scientific Research and Essay (Vol. 4, No. 10, pp. 936-945)
+- Area: Artificial Intelligence & ML
+- Abstract: Abstract In this paper, a new fuzzy forgetting factor (FFF) is developed in order to aid a modified input estimation (MIE) technique and enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and succeeds in presenting reasonably accurate target trajectory, velocity and acceleration estimation in low and mild maneuvering situations. However, after some iteration its steps become small. Due to small steps, the accuracy of target tracking may be seriously degraded in the presence of high maneuvers. In this study we present an intelligent self-tuning approach based on a fuzzy forgetting factor in order to enjoy satisfactory tracking performance in low, Medium and high maneuvering target cases. Simulations visualize the efficiency of the proposed method and emphasize on its accuracy in tracking high maneuvering targets. Furthermore, simulation results illustrate that proposed method is not sensitive to the sampling time.
+
+### Intelligent fading memory for high maneuvering target tracking
+- URL: https://research.sensifai.com/publication/intelligent-fading-memory-high-maneuvering-target-tracking
+- Authors: Mohamad Hasan Bahari, Mohammad Bagher Naghibi Sistani, Naser Pariz
+- Year: 2009
+- Venue: International Journal of Physical Sciences (Vol. 4, No. 10, pp. 548-554)
+- Area: Artificial Intelligence & ML
+- Abstract: In this paper, a new fuzzy fading memory (FFM) is developed in order to aid a modified input estimation (MIE) technique and to enhance its performance in tracking high maneuvering targets. The MIE has been introduced recently and performs well in tracking low and medium maneuvering targets. However, this method does not represent desirable accuracy in tracking high maneuvering or jerking targets. In fact, this trouble is originated in mismodeling the target acceleration dynamics. An effective approach to cope with different modeling uncertainties is fading memory. However, conventional fading memory method suffers from some deficiencies leading to surplus fading information in non-maneuvering mode or incomplete compensation in high maneuvering situations. To overcome these difficulties, an intelligent fading memory is presented in this paper. Simulation results prove the efficiency of proposed method in tracking high maneuvering targets.
+
