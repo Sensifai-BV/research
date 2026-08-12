@@ -10,7 +10,7 @@
     }
   },
   "meta": {
-    "generatedAt": "2026-08-12T14:38:37.964Z",
+    "generatedAt": "2026-08-12T14:46:18.516Z",
     "generator": "SQLite Production Store & MiniSearch Content Engine",
     "sqliteFile": "src/data/content.db"
   },
@@ -86,7 +86,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -150,7 +150,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -207,7 +207,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -264,7 +264,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -306,7 +306,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         }
       ],
@@ -348,7 +348,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         }
       ],
@@ -385,7 +385,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -457,7 +457,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -514,7 +514,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -571,7 +571,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -629,7 +629,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -671,7 +671,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -722,7 +722,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -772,7 +772,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -824,7 +824,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -867,7 +867,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -917,7 +917,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -974,7 +974,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1003,7 +1003,7 @@
       "name": "Mohamad Hasan Bahari",
       "role": "CEO Sensifai",
       "area": "AI & Multimodal Intelligence",
-      "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+      "avatar": "/images/authors/mh-bahari.jpg",
       "headline": "CEO at Sensifai Labs. Leading innovations in real-time artificial intelligence, target tracking, and multimodal perception.",
       "scholar": "https://scholar.google.com/citations?user=tYazD-8AAAAJ&hl=en",
       "github": "https://github.com/bahari-sensifai",
@@ -1050,7 +1050,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1114,7 +1114,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1171,7 +1171,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1228,7 +1228,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1270,7 +1270,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         }
       ],
@@ -1312,7 +1312,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         }
       ],
@@ -1349,7 +1349,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1421,7 +1421,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1478,7 +1478,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1535,7 +1535,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1593,7 +1593,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1635,7 +1635,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1686,7 +1686,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1736,7 +1736,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1788,7 +1788,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1831,7 +1831,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1881,7 +1881,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1938,7 +1938,7 @@
           "id": "bahari",
           "orcidId": "0009-0002-9777-8881",
           "name": "Mohamad Hasan Bahari",
-          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "avatar": "/images/authors/mh-bahari.jpg",
           "role": "CEO Sensifai"
         },
         {
@@ -1967,7 +1967,7 @@
       "name": "Mohamad Hasan Bahari",
       "role": "CEO Sensifai",
       "area": "AI & Multimodal Intelligence",
-      "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+      "avatar": "/images/authors/mh-bahari.jpg",
       "headline": "CEO at Sensifai Labs. Leading innovations in real-time artificial intelligence, target tracking, and multimodal perception.",
       "scholar": "https://scholar.google.com/citations?user=tYazD-8AAAAJ&hl=en",
       "github": "https://github.com/bahari-sensifai",

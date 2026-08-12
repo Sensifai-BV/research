@@ -142,6 +142,33 @@ function getBaseResearchAreas() {
   return [];
 }
 
+async function ensureLocalAvatar(avatarUrl, authorId) {
+  if (!avatarUrl || typeof avatarUrl !== 'string') return avatarUrl;
+  if (!avatarUrl.startsWith('http://') && !avatarUrl.startsWith('https://')) {
+    return avatarUrl;
+  }
+  try {
+    const imagesDir = path.join(rootDir, 'public', 'images', 'authors');
+    if (!fs.existsSync(imagesDir)) {
+      fs.mkdirSync(imagesDir, { recursive: true });
+    }
+    const filename = `${authorId || 'avatar'}.jpg`;
+    const localPath = path.join(imagesDir, filename);
+    if (!fs.existsSync(localPath)) {
+      const res = await fetch(avatarUrl);
+      if (res.ok) {
+        const buffer = Buffer.from(await res.arrayBuffer());
+        fs.writeFileSync(localPath, buffer);
+        console.log(`  📥 Localized author avatar for ${authorId} -> public/images/authors/${filename}`);
+      }
+    }
+    return `/images/authors/${filename}`;
+  } catch (err) {
+    console.warn(`  ⚠️ Failed to localize avatar from ${avatarUrl}:`, err.message);
+    return avatarUrl;
+  }
+}
+
 async function buildContentData() {
   console.log('⚡ Compiling SQLite Production Store & MiniSearch Index from Content Engine...');
 
@@ -149,7 +176,7 @@ async function buildContentData() {
   const authors = [];
   if (fs.existsSync(authorsDir)) {
     const authorFiles = fs.readdirSync(authorsDir).filter(f => f.endsWith('.md'));
-    authorFiles.forEach(file => {
+    for (const file of authorFiles) {
       const fullPath = path.join(authorsDir, file);
       const content = fs.readFileSync(fullPath, 'utf8');
       const parsed = parseMarkdownContent(content, fullPath);
@@ -164,8 +191,12 @@ async function buildContentData() {
       data.linkedin = data.linkedin || data.linkedinUrl || '';
       data.scholar = data.scholar || data.scholarUrl || '';
       data.orcid = data.orcid || data.orcidId || '';
+
+      if (data.avatar) {
+        data.avatar = await ensureLocalAvatar(data.avatar, data.id || file.replace(/\.md$/, ''));
+      }
       authors.push(data);
-    });
+    }
   }
 
   // 2. Load Publications
