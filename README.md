@@ -1,16 +1,12 @@
-# React + Vite
+# Sensifai Research Labs
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Sensifai Research Labs is an open research portal showcasing state-of-the-art breakthroughs, publications, and scientific contributions in real-time video, audio, and multimodal artificial intelligence.
 
-Currently, two official plugins are available:
+## Abstract
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This platform serves as the central digital archive and publication repository for research developed at Sensifai Labs. Designed for performance, accessibility, and discoverability, the site provides researchers, engineers, and academics with direct access to published papers, open datasets, researcher profiles, and interactive mathematical visualizers.
 
-## React Compiler
+### Core Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **Publications Repository**: Interactive catalog of research papers complete with full-text search, domain tags, BibTeX citations, PDF previews, and download links.
+- **Researchers Directory**: Detailed profiles highlighting faculty, lead scientists, and research contributors across multimodal AI fields.

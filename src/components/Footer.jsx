@@ -20,7 +20,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed font-normal">
-              Sensifai Labs pioneering real-time video, audio, and multimodal artificial intelligence.
+              Sensifai Research Labs drives breakthroughs in multimodal AI. Explore our latest publications, research areas, and meet our top scientists.
             </p>
           </div>
 
@@ -38,16 +38,13 @@ export function Footer() {
             <ul className="space-y-2 text-xs text-zinc-500 dark:text-zinc-400 font-medium">
               <li><Link to="/researchers" className="hover:text-indigo-600 transition-colors">Researchers Directory</Link></li>
               <li><a href="https://sensifai.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Sensifai Corporate Site</a></li>
-              <li><a href="#" className="hover:text-indigo-600 transition-colors">Careers & Fellowships</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-950 dark:text-zinc-50 mb-3">Connect</h4>
             <ul className="space-y-2 text-xs text-zinc-500 dark:text-zinc-400 font-medium">
-              <li><a href="https://scholar.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">Google Scholar Profile</a></li>
               <li><a href="https://www.linkedin.com/company/17888541/" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">LinkedIn Company Page</a></li>
-              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">X / Twitter Updates</a></li>
             </ul>
           </div>
 
