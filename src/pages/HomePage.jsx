@@ -8,6 +8,8 @@ import { CitationDialog } from '../components/ui/CitationDialog';
 import { PdfPreviewDialog } from '../components/ui/PdfPreviewDialog';
 import { HeroVisualizer } from '../components/HeroVisualizer';
 import { GithubIcon, LinkedinIcon, ScholarIcon, OrcidIcon } from '../components/ui/SocialIcons';
+import { SmartCarousel } from '../components/ui/SmartCarousel';
+import { ScrollToTop } from '../components/ui/ScrollToTop';
 
 // Magic UI Components
 import { Particles } from '../components/magicui/Particles';
@@ -173,10 +175,10 @@ export function HomePage() {
             </Link>
           </div>
 
-          {/* Responsive Layout: Mobile = All same size | Desktop = 1st paper featured bigger + remaining 4 same size */}
-          <div className="space-y-6">
+          {/* Responsive Layout with Smart Carousel */}
+          <div className="space-y-8">
             
-            {/* Top 1 Latest Paper (Mobile = same size as others | Desktop = Bigger featured card) */}
+            {/* Top 1 Latest Featured Paper */}
             {latestFivePapers.length > 0 && (() => {
               const featuredPaper = latestFivePapers[0];
               return (
@@ -189,7 +191,7 @@ export function HomePage() {
                     <div>
                       <div className="flex flex-wrap items-center gap-2 mb-2.5 sm:mb-3">
                         <span className="inline-flex items-center gap-1 bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 font-extrabold text-[11px] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
-                          ⭐ Latest Research
+                          ⭐ Featured Research
                         </span>
                         <Badge variant="indigo" className="text-xs px-2.5 py-0.5 sm:py-1 font-semibold">{featuredPaper.areaBadge || featuredPaper.areaName}</Badge>
                         {featuredPaper.isPublished && (
@@ -274,10 +276,16 @@ export function HomePage() {
               );
             })()}
 
-            {/* Remaining 4 Papers in 2-Column Grid (Mobile = 1 col same size, Desktop = 2 col equal cards) */}
-            <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+            {/* Smart Scroll Carousel for Remaining Recent Papers */}
+            <SmartCarousel
+              showControls={true}
+              showIndicators={true}
+              badge="More Recent Work"
+              title=""
+              itemClassName="w-[88vw] sm:w-[420px] md:w-[480px]"
+            >
               {latestFivePapers.slice(1).map((paper, index) => (
-                <BlurFade key={paper.id} delay={0.1 * (index + 1)}>
+                <BlurFade key={paper.id} delay={0.1 * (index + 1)} className="h-full">
                   <MagicCard
                     shine={false}
                     className="relative group hover:border-indigo-300 flex flex-col justify-between h-full p-5 sm:p-6"
@@ -363,7 +371,7 @@ export function HomePage() {
                   </MagicCard>
                 </BlurFade>
               ))}
-            </div>
+            </SmartCarousel>
 
           </div>
 
@@ -443,6 +451,9 @@ export function HomePage() {
         isOpen={!!selectedPaperForPdf}
         onClose={() => setSelectedPaperForPdf(null)}
       />
+
+      {/* Floating Smart Scroll to Top Button */}
+      <ScrollToTop />
 
     </div>
   );
