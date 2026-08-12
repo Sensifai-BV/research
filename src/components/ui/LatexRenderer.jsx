@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import katex from 'katex';
 import 'katex/dist/katex.min.css';
 
 function renderInlineMarkdown(text, parentElement) {
@@ -18,14 +17,20 @@ export function LatexRenderer({ content, className = "" }) {
   useEffect(() => {
     if (!containerRef.current || !content) return;
 
-    const container = containerRef.current;
-    container.innerHTML = '';
+    let isMounted = true;
 
-    // Regex matching block math ($$...$$ or \[...\]) and inline math (\(...` or $...$)
-    const regex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$[^$\n]+\$))/g;
-    const parts = content.split(regex);
+    import('katex').then((module) => {
+      if (!isMounted) return;
+      const katex = module.default;
+      
+      const container = containerRef.current;
+      container.innerHTML = '';
 
-    parts.forEach(part => {
+      // Regex matching block math ($$...$$ or \[...\]) and inline math (\(...` or $...$)
+      const regex = /(\$\$[\s\S]*?\$\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|(?:\$[^$\n]+\$))/g;
+      const parts = content.split(regex);
+
+      parts.forEach(part => {
       if (!part) return;
 
       if ((part.startsWith('$$') && part.endsWith('$$')) || (part.startsWith('\\[') && part.endsWith('\\]'))) {
@@ -111,6 +116,11 @@ export function LatexRenderer({ content, className = "" }) {
         });
       }
     });
+    });
+
+    return () => {
+      isMounted = false;
+    };
   }, [content]);
 
   return <div ref={containerRef} className={className} />;

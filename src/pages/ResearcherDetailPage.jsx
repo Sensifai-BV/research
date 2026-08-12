@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, CheckCircle2, Eye, Quote } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { TEAM, PAPERS } from '../data/papersData';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -45,10 +44,13 @@ export function ResearcherDetailPage() {
 
   const triggerCiteConfetti = (paper) => {
     setSelectedPaperForCite(paper);
-    confetti({
-      particleCount: 50,
-      spread: 65,
-      origin: { y: 0.75 }
+    import('canvas-confetti').then((module) => {
+      const confetti = module.default;
+      confetti({
+        particleCount: 50,
+        spread: 65,
+        origin: { y: 0.75 }
+      });
     });
   };
 

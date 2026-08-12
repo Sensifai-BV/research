@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Eye, Quote, CheckCircle2, ExternalLink } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { PAPERS, TEAM, CONTENT_STATS } from '../data/papersData';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -49,10 +48,13 @@ export function HomePage() {
 
   const triggerCiteConfetti = (paper) => {
     setSelectedPaperForCite(paper);
-    confetti({
-      particleCount: 50,
-      spread: 65,
-      origin: { y: 0.75 }
+    import('canvas-confetti').then((module) => {
+      const confetti = module.default;
+      confetti({
+        particleCount: 50,
+        spread: 65,
+        origin: { y: 0.75 }
+      });
     });
   };
 
@@ -276,6 +278,10 @@ export function HomePage() {
                       <img
                         src={member.avatar}
                         alt={member.name}
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                        decoding="async"
                         className="h-16 w-16 rounded-full mx-auto object-cover border-2 border-zinc-950 shadow-xs group-hover:scale-105 transition-transform"
                       />
                     </Link>

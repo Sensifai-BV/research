@@ -118,7 +118,8 @@ export function PaperDetailPage() {
                             <a
                               href={author.orcid}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
+                              aria-label={`${author.name} ORCID Profile`}
                               className="hover:text-indigo-600 transition-colors underline decoration-zinc-300 underline-offset-4"
                             >
                               {author.name}
@@ -152,7 +153,7 @@ export function PaperDetailPage() {
                     <Eye className="h-4 w-4 text-[#93d500]" />
                     View Full Publication PDF
                   </Button>
-                  <a href={paper.pdfUrl} download target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                  <a href={paper.pdfUrl} download target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto block">
                     <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                       <Download className="h-4 w-4 text-indigo-600" />
                       Download
@@ -162,7 +163,7 @@ export function PaperDetailPage() {
               )}
 
               {paper.codeUrl && (
-                <a href={paper.codeUrl} target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                <a href={paper.codeUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto block">
                   <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                     <GithubIcon className="h-4 w-4 text-zinc-950" />
                     Code & Models
@@ -171,7 +172,7 @@ export function PaperDetailPage() {
               )}
 
               {paper.journalUrl && (
-                <a href={paper.journalUrl} target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                <a href={paper.journalUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto block">
                   <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                     <ExternalLink className="h-4 w-4 text-emerald-600" />
                     Publisher Page
@@ -180,7 +181,7 @@ export function PaperDetailPage() {
               )}
 
               {paper.scholarUrl && (
-                <a href={paper.scholarUrl} target="_blank" rel="noreferrer" className="w-full sm:w-auto block">
+                <a href={paper.scholarUrl} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto block">
                   <Button variant="outline" size="lg" className="w-full justify-center gap-2 rounded-full border-zinc-300 text-zinc-800 font-bold text-xs bg-white shadow-2xs">
                     <ScholarIcon className="h-4 w-4 text-blue-600" />
                     Google Scholar
@@ -201,19 +202,19 @@ export function PaperDetailPage() {
               </span>
 
               <div className="flex items-center gap-2">
-                <a href={twitterShare} target="_blank" rel="noreferrer" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share on X (Twitter)">
+                <a href={twitterShare} target="_blank" rel="noopener noreferrer" aria-label="Share on X (Twitter)" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share on X (Twitter)">
                   <TwitterIcon className="h-4 w-4 text-zinc-800" />
                 </a>
-                <a href={linkedinShare} target="_blank" rel="noreferrer" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share on LinkedIn">
+                <a href={linkedinShare} target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share on LinkedIn">
                   <LinkedinIcon className="h-4 w-4 text-blue-600" />
                 </a>
-                <a href={facebookShare} target="_blank" rel="noreferrer" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share on Facebook">
+                <a href={facebookShare} target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share on Facebook">
                   <FacebookIcon className="h-4 w-4 text-blue-700" />
                 </a>
-                <a href={mailShare} className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share via Email">
+                <a href={mailShare} aria-label="Share via Email" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs" title="Share via Email">
                   <Mail className="h-4 w-4 text-zinc-700" />
                 </a>
-                <button onClick={handleCopyShareLink} className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs cursor-pointer" title="Copy Direct Link">
+                <button onClick={handleCopyShareLink} aria-label="Copy Direct Link" className="p-2 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 transition-colors shadow-2xs cursor-pointer" title="Copy Direct Link">
                   {copiedLink ? <Check className="h-4 w-4 text-emerald-600" /> : <Copy className="h-4 w-4 text-zinc-700" />}
                 </button>
               </div>

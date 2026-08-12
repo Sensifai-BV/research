@@ -1,11 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export function HeroVisualizer() {
   const canvasRef = useRef(null);
+  const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas || !isVisible) return;
     const ctx = canvas.getContext('2d');
     let animationFrameId;
 
@@ -215,10 +228,10 @@ export function HeroVisualizer() {
       canvas.removeEventListener('mousemove', handleMouseMove);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [isVisible]);
 
   return (
-    <div className="relative w-full h-[380px] sm:h-[420px] lg:h-[450px] overflow-visible bg-transparent">
+    <div ref={containerRef} className="relative w-full h-[380px] sm:h-[420px] lg:h-[450px] overflow-visible bg-transparent">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full cursor-pointer" />
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { X, Copy, Check, Download, Quote } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { Button } from './Button';
 
 export function CitationDialog({ paper, isOpen, onClose }) {
@@ -9,10 +8,13 @@ export function CitationDialog({ paper, isOpen, onClose }) {
 
   useEffect(() => {
     if (isOpen) {
-      confetti({
-        particleCount: 60,
-        spread: 70,
-        origin: { y: 0.7 }
+      import('canvas-confetti').then((module) => {
+        const confetti = module.default;
+        confetti({
+          particleCount: 60,
+          spread: 70,
+          origin: { y: 0.7 }
+        });
       });
     }
   }, [isOpen]);
@@ -43,10 +45,13 @@ export function CitationDialog({ paper, isOpen, onClose }) {
   const handleCopy = () => {
     navigator.clipboard.writeText(getCitationText());
     setCopied(true);
-    confetti({
-      particleCount: 40,
-      spread: 50,
-      origin: { y: 0.6 }
+    import('canvas-confetti').then((module) => {
+      const confetti = module.default;
+      confetti({
+        particleCount: 40,
+        spread: 50,
+        origin: { y: 0.6 }
+      });
     });
     setTimeout(() => setCopied(false), 2000);
   };

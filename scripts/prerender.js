@@ -19,6 +19,10 @@ function runPrerender() {
   }
 
   const templateHtml = fs.readFileSync(templatePath, 'utf8');
+  
+  const defaultTitleMatch = templateHtml.match(/<title>(.*?)<\/title>/i);
+  const defaultTitle = defaultTitleMatch ? defaultTitleMatch[1] : 'Sensifai Research Labs';
+
   let contentData = { publications: [], authors: [], stats: {} };
 
   if (fs.existsSync(dataPath)) {
@@ -30,15 +34,15 @@ function runPrerender() {
   }
 
   const routes = [
-    { url: '/', title: 'Sensifai AI Research Library | Cutting-Edge Research', description: 'Explore cutting-edge artificial intelligence, real-time video understanding, audio speech processing, and lightweight edge models by Sensifai Labs.' },
-    { url: '/publications', title: 'Publications & Research Papers | Sensifai Research', description: 'Browse peer-reviewed publications, arXiv preprints, code implementations, and datasets in AI and computer vision.' },
-    { url: '/researchers', title: 'Researchers & AI Scientists | Sensifai Research', description: 'Meet the scientists, engineers, and researchers pioneering multimodal intelligence at Sensifai Labs.' },
-    { url: '/people', title: 'Our Team & Researchers | Sensifai Research', description: 'Meet the scientists, engineers, and researchers pioneering multimodal intelligence at Sensifai Labs.' }
+    { url: '/', title: defaultTitle, description: 'Explore cutting-edge artificial intelligence, real-time video understanding, audio speech processing, and lightweight edge models by Sensifai Labs.' },
+    { url: '/publications', title: `Publications & Research Papers | ${defaultTitle}`, description: 'Browse peer-reviewed publications, arXiv preprints, code implementations, and datasets in AI and computer vision.' },
+    { url: '/researchers', title: `Researchers & AI Scientists | ${defaultTitle}`, description: 'Meet the scientists, engineers, and researchers pioneering multimodal intelligence at Sensifai Labs.' },
+    { url: '/people', title: `Our Team & Researchers | ${defaultTitle}`, description: 'Meet the scientists, engineers, and researchers pioneering multimodal intelligence at Sensifai Labs.' }
   ];
 
   // Add individual publication pages
   (contentData.publications || []).forEach(paper => {
-    const paperTitle = `${paper.title} | Sensifai Research`;
+    const paperTitle = `${paper.title} | ${defaultTitle}`;
     const paperDesc = paper.abstract ? paper.abstract.substring(0, 160) + '...' : paper.title;
     routes.push({ url: `/publication/${paper.id}`, title: paperTitle, description: paperDesc });
     routes.push({ url: `/paper/${paper.id}`, title: paperTitle, description: paperDesc });
@@ -46,7 +50,7 @@ function runPrerender() {
 
   // Add individual author pages
   (contentData.authors || []).forEach(author => {
-    const authorTitle = `${author.name} - ${author.role} | Sensifai Research`;
+    const authorTitle = `${author.name} - ${author.role} | ${defaultTitle}`;
     const authorDesc = author.headline || author.bio || author.name;
     if (author.id) routes.push({ url: `/researcher/${author.id}`, title: authorTitle, description: authorDesc });
     if (author.orcidId && author.orcidId !== author.id) routes.push({ url: `/researcher/${author.orcidId}`, title: authorTitle, description: authorDesc });
@@ -62,7 +66,7 @@ function runPrerender() {
 
   allTags.forEach(tag => {
     const slug = encodeURIComponent(tag.toLowerCase().trim().replace(/\s+/g, '-'));
-    const tagTitle = `Publications tagged "${tag}" | Sensifai Research`;
+    const tagTitle = `Publications tagged "${tag}" | ${defaultTitle}`;
     const tagDesc = `Browse all peer-reviewed research papers and publications tagged with ${tag} at Sensifai Labs.`;
     routes.push({ url: `/tag/${slug}`, title: tagTitle, description: tagDesc });
     routes.push({ url: `/tags/${slug}`, title: tagTitle, description: tagDesc });

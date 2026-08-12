@@ -78,6 +78,9 @@ export function Navbar() {
             <img
               src={sensifaiLogo}
               alt="Sensifai Labs Logo"
+              width="150"
+              height="32"
+              decoding="async"
               className="h-8 w-auto object-contain transition-transform group-hover:scale-105"
             />
             <span className="font-extrabold text-base tracking-tight text-zinc-950 transition-colors">
@@ -122,8 +125,9 @@ export function Navbar() {
               <a
                 href="https://github.com/Sensifai-BV"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="p-1.5 text-zinc-500 hover:text-zinc-950 transition-colors"
+                aria-label="Sensifai GitHub"
                 title="Sensifai GitHub"
               >
                 <GithubIcon className="h-4 w-4" />
@@ -131,8 +135,9 @@ export function Navbar() {
               <a
                 href="https://www.linkedin.com/company/17888541/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="p-1.5 text-zinc-500 hover:text-[#0A66C2] transition-colors"
+                aria-label="Sensifai LinkedIn"
                 title="Sensifai LinkedIn"
               >
                 <LinkedinIcon className="h-4 w-4" />
@@ -140,8 +145,9 @@ export function Navbar() {
               <a
                 href="https://zenodo.org/communities/sensifai-bv"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="p-1.5 text-zinc-500 hover:text-[#15B3E6] transition-colors"
+                aria-label="Sensifai Zenodo Community"
                 title="Sensifai Zenodo Community"
               >
                 <ZenodoIcon className="h-4 w-4" />
@@ -233,7 +239,7 @@ export function Navbar() {
                     >
                       <div className="flex items-center gap-3">
                         {author.avatar ? (
-                          <img src={author.avatar} alt={author.name} className="h-8 w-8 rounded-full object-cover border border-zinc-200" />
+                          <img src={author.avatar} alt={author.name} width="32" height="32" loading="lazy" decoding="async" className="h-8 w-8 rounded-full object-cover border border-zinc-200" />
                         ) : (
                           <div className="h-8 w-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs">
                             {author.name.charAt(0)}
