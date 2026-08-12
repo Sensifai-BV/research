@@ -219,8 +219,9 @@ export function HomePage() {
                         </h3>
                       </Link>
 
-                      <div className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-2 sm:mt-2.5 font-semibold line-clamp-1">
-                        By {featuredPaper.authors ? featuredPaper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
+                      <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1.5 font-normal line-clamp-1">
+                        <span className="font-semibold text-zinc-400 dark:text-zinc-500">By </span>
+                        {featuredPaper.authors ? featuredPaper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
                       </div>
 
                       <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 line-clamp-3 sm:line-clamp-4">
@@ -318,8 +319,9 @@ export function HomePage() {
                         </h3>
                       </Link>
 
-                      <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 font-semibold line-clamp-1">
-                        By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
+                      <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-1.5 font-normal line-clamp-1">
+                        <span className="font-semibold text-zinc-400 dark:text-zinc-500">By </span>
+                        {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
                       </div>
 
                       <p className="mt-3 text-xs sm:text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">

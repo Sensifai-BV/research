@@ -222,8 +222,9 @@ export function PublicationsPage() {
                         </h3>
                       </Link>
 
-                      <div className="text-xs text-zinc-600 dark:text-zinc-400 font-medium mt-2">
-                        By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Research'}
+                      <div className="text-[11px] text-zinc-500 dark:text-zinc-400 font-normal mt-1.5 line-clamp-1">
+                        <span className="font-semibold text-zinc-400 dark:text-zinc-500">By </span>
+                        {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Research'}
                       </div>
 
                       <div className="mt-3 text-xs text-zinc-500 dark:text-zinc-400 line-clamp-3 leading-relaxed">
@@ -299,8 +300,9 @@ export function PublicationsPage() {
                         {paper.title}
                       </Link>
                       
-                      <div className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">
-                        By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Research'}
+                      <div className="text-[11px] text-zinc-500 dark:text-zinc-400 font-normal line-clamp-1 mt-0.5">
+                        <span className="font-semibold text-zinc-400 dark:text-zinc-500">By </span>
+                        {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Research'}
                       </div>
 
                       <div className="text-xs text-zinc-600 dark:text-zinc-400 line-clamp-2 leading-relaxed pt-1">

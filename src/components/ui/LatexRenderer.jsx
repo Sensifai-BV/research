@@ -36,7 +36,7 @@ export function LatexRenderer({ content, className = "" }) {
       if ((part.startsWith('$$') && part.endsWith('$$')) || (part.startsWith('\\[') && part.endsWith('\\]'))) {
         const math = part.startsWith('$$') ? part.slice(2, -2).trim() : part.slice(2, -2).trim();
         const el = document.createElement('div');
-        el.className = 'my-5 text-center overflow-x-auto py-3 px-4 rounded-xl border border-indigo-100 bg-indigo-50/40 font-serif text-lg text-zinc-950 dark:text-zinc-50 shadow-2xs dark:shadow-none';
+        el.className = 'my-4 text-center overflow-x-auto py-3 px-4 rounded-xl border border-indigo-100 dark:border-indigo-900/50 bg-indigo-50/40 dark:bg-indigo-950/30 font-serif text-sm sm:text-base text-zinc-950 dark:text-zinc-50 shadow-2xs dark:shadow-none';
         try {
           katex.render(math, el, { displayMode: true, throwOnError: false });
         } catch {
@@ -96,7 +96,7 @@ export function LatexRenderer({ content, className = "" }) {
 
           if (isOrderedList || isUnorderedList) {
             const listDiv = document.createElement('div');
-            listDiv.className = 'my-1.5 pl-2 sm:pl-4 flex items-start gap-2 text-zinc-800 dark:text-zinc-200 font-normal leading-relaxed text-sm sm:text-base';
+            listDiv.className = 'my-1.5 pl-2 sm:pl-4 flex items-start gap-2 text-zinc-800 dark:text-zinc-200 font-normal leading-relaxed text-sm';
             const bullet = document.createElement('span');
             bullet.className = 'font-extrabold text-indigo-600 shrink-0';
             bullet.textContent = isOrderedList ? trimmedLine.match(/^\d+\./)[0] : '•';
@@ -110,7 +110,7 @@ export function LatexRenderer({ content, className = "" }) {
           }
 
           const p = document.createElement('p');
-          p.className = 'my-2 text-zinc-800 dark:text-zinc-200 leading-relaxed font-normal text-base sm:text-lg';
+          p.className = 'my-2 text-zinc-800 dark:text-zinc-200 leading-relaxed font-normal text-sm';
           renderInlineMarkdown(line, p);
           container.appendChild(p);
         });

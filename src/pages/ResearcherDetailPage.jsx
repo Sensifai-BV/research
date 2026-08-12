@@ -248,8 +248,9 @@ export function ResearcherDetailPage() {
                         </h3>
                       </Link>
 
-                      <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 font-medium">
-                        By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
+                      <div className="text-[11px] text-zinc-500 dark:text-zinc-400 font-normal mt-1.5 line-clamp-1">
+                        <span className="font-semibold text-zinc-400 dark:text-zinc-500">By </span>
+                        {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
                       </div>
 
                       <p className="mt-4 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
