@@ -35,6 +35,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: ssg
-          force_orphan: true
           cname: research.sensifai.com
           commit_message: "deploy: SSG static build from ${{ github.sha }}"
