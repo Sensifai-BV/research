@@ -121,39 +121,33 @@ export function PublicationsPage() {
                 </button>
               )}
             </div>
-            <div className="flex items-center justify-between gap-3 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-              {/* Scrollable Domain Filters */}
-              <div className="flex items-center gap-1.5 min-w-0 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden py-0.5 pr-2">
-                <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0 mr-1">Domain:</span>
-                <Button
-                  variant={selectedArea === 'all' ? 'indigo' : 'ghost'}
-                  size="sm"
-                  onClick={() => setSelectedArea('all')}
-                  className="text-xs h-7 px-3 rounded-full font-bold shrink-0 whitespace-nowrap"
-                >
-                  All Domains
-                </Button>
-                {RESEARCH_AREAS.map(area => (
-                  <Button
-                    key={area.id}
-                    variant={selectedArea === area.id ? 'indigo' : 'ghost'}
-                    size="sm"
-                    onClick={() => setSelectedArea(area.id)}
-                    className="text-xs h-7 px-3 rounded-full font-bold shrink-0 whitespace-nowrap"
-                  >
-                    {area.badge}
-                  </Button>
-                ))}
-              </div>
-
-              {/* Year Select & View Mode Toggle */}
-              <div className="flex items-center gap-3 shrink-0 ml-auto pl-3 border-l border-zinc-200 dark:border-zinc-800">
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2.5 border-t border-zinc-100 dark:border-zinc-800">
+              {/* Dropdown Filters (Domain & Year) */}
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 min-w-0">
+                {/* Domain Select */}
                 <div className="flex items-center gap-1.5">
-                  <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">Year:</span>
+                  <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0">Domain:</span>
+                  <select
+                    value={selectedArea}
+                    onChange={(e) => setSelectedArea(e.target.value)}
+                    className="text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-md px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer transition-colors max-w-[210px] sm:max-w-xs truncate"
+                  >
+                    <option value="all">All Domains</option>
+                    {RESEARCH_AREAS.map(area => (
+                      <option key={area.id} value={area.id}>
+                        {area.name || area.badge}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Year Select */}
+                <div className="flex items-center gap-1.5">
+                  <span className="text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider shrink-0">Year:</span>
                   <select
                     value={selectedYear}
                     onChange={(e) => setSelectedYear(e.target.value)}
-                    className="text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
+                    className="text-xs font-bold text-zinc-800 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-md px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 cursor-pointer transition-colors"
                   >
                     <option value="all">All Years</option>
                     {availableYears.map(yr => (
@@ -161,9 +155,10 @@ export function PublicationsPage() {
                     ))}
                   </select>
                 </div>
+              </div>
 
-                <div className="h-4 w-px bg-zinc-200 dark:bg-zinc-700" />
-
+              {/* View Mode Toggle */}
+              <div className="flex items-center gap-2 shrink-0 ml-auto">
                 <div className="flex items-center gap-1 bg-zinc-100 dark:bg-zinc-800 p-0.5 rounded-lg border border-zinc-200 dark:border-zinc-800">
                   <button
                     onClick={() => setViewMode('grid')}

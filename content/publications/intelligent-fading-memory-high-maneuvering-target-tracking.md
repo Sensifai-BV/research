@@ -12,7 +12,7 @@ areaBadge: "AI / ML"
 tags: ["Target Tracking", "Fading Memory", "Fuzzy Logic", "Input Estimation", "Signal Processing"]
 citations: 25
 featured: true
-pdfUrl: "https://lirias.kuleuven.be/retrieve/4b327abc-afc4-4779-afbb-21e2b643ee56"
+pdfUrl: "/pdfs/intelligent-fading-memory-high-maneuvering-target-tracking.pdf"
 scholarUrl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:kzcrU_BdoSEC"
 journalUrl: "https://academicjournals.org/journal/IJPS"
 sourceFile: "content/publications/intelligent-fading-memory-high-maneuvering-target-tracking.md"
