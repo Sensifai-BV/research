@@ -9,6 +9,7 @@ const rootDir = path.resolve(__dirname, '..');
 const inputJson = path.join(rootDir, 'src', 'data', 'generatedContentData.json');
 const outputLlms = path.join(rootDir, 'public', 'llms.txt');
 const outputRobots = path.join(rootDir, 'public', 'robots.txt');
+const distDir = path.join(rootDir, 'dist');
 
 function generateLlmsTxt(data) {
   let content = '# Sensifai Research Labs - LLM Context\n\n';
@@ -60,6 +61,14 @@ function generateLlmsTxt(data) {
   return content;
 }
 
+function writeToBoth(targetPublicPath, content, filename) {
+  fs.writeFileSync(targetPublicPath, content, 'utf8');
+  if (fs.existsSync(distDir)) {
+    const targetDistPath = path.join(distDir, filename);
+    fs.writeFileSync(targetDistPath, content, 'utf8');
+  }
+}
+
 function run() {
   console.log('⚡ Generating llms.txt and robots.txt...');
 
@@ -73,13 +82,13 @@ function run() {
 
   // Generate llms.txt
   const llmsTxtContent = generateLlmsTxt(data);
-  fs.writeFileSync(outputLlms, llmsTxtContent);
+  writeToBoth(outputLlms, llmsTxtContent, 'llms.txt');
   console.log('✅ Created public/llms.txt');
 
   // Generate robots.txt
   // Allow all standard crawlers, and specifically point to llms.txt and sitemap.xml
-  const robotsTxtContent = `User-agent: *\nAllow: /\n\n# LLM context file\n# This file provides a markdown-formatted summary of our site for LLM consumption\n# See: https://sensifai.com/llms.txt\n\nSitemap: https://research.sensifai.com/sitemap.xml\n`;
-  fs.writeFileSync(outputRobots, robotsTxtContent);
+  const robotsTxtContent = `User-agent: *\nAllow: /\n\n# LLM context file\n# This file provides a markdown-formatted summary of our site for LLM consumption\n# See: https://research.sensifai.com/llms.txt\n\nSitemap: https://research.sensifai.com/sitemap.xml\n`;
+  writeToBoth(outputRobots, robotsTxtContent, 'robots.txt');
   console.log('✅ Created public/robots.txt');
 }
 

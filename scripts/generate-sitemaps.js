@@ -68,6 +68,17 @@ function buildSitemapIndex(sitemaps) {
   return xml;
 }
 
+const distDir = path.join(rootDir, 'dist');
+
+function writeToBoth(filename, content) {
+  const publicPath = path.join(publicDir, filename);
+  fs.writeFileSync(publicPath, content, 'utf8');
+  if (fs.existsSync(distDir)) {
+    const distPath = path.join(distDir, filename);
+    fs.writeFileSync(distPath, content, 'utf8');
+  }
+}
+
 function generateSitemaps() {
   console.log('🌐 Generating sitemaps in public/...');
 
@@ -94,8 +105,7 @@ function generateSitemaps() {
   });
 
   const pubSitemapXml = buildUrlSet(pubUrls);
-  const pubSitemapPath = path.join(publicDir, 'sitemap-publications.xml');
-  fs.writeFileSync(pubSitemapPath, pubSitemapXml, 'utf8');
+  writeToBoth('sitemap-publications.xml', pubSitemapXml);
   console.log(`✅ Created public/sitemap-publications.xml (${pubUrls.length} publications)`);
 
   // 2. Authors / Researchers Sitemap (sitemap-authors.xml)
@@ -127,8 +137,7 @@ function generateSitemaps() {
 
   const authorUrls = Array.from(authorUrlMap.values());
   const authorSitemapXml = buildUrlSet(authorUrls);
-  const authorSitemapPath = path.join(publicDir, 'sitemap-authors.xml');
-  fs.writeFileSync(authorSitemapPath, authorSitemapXml, 'utf8');
+  writeToBoth('sitemap-authors.xml', authorSitemapXml);
   console.log(`✅ Created public/sitemap-authors.xml (${authorUrls.length} author routes)`);
 
   // 3. Main Static & Category Pages Sitemap (sitemap-main.xml)
@@ -158,8 +167,7 @@ function generateSitemaps() {
   });
 
   const mainSitemapXml = buildUrlSet(mainUrls);
-  const mainSitemapPath = path.join(publicDir, 'sitemap-main.xml');
-  fs.writeFileSync(mainSitemapPath, mainSitemapXml, 'utf8');
+  writeToBoth('sitemap-main.xml', mainSitemapXml);
   console.log(`✅ Created public/sitemap-main.xml (${mainUrls.length} static & tag routes)`);
 
   // 4. Root Sitemap Index (sitemap.xml)
@@ -170,8 +178,7 @@ function generateSitemaps() {
   ];
 
   const sitemapIndexXml = buildSitemapIndex(sitemapIndexList);
-  const sitemapIndexPath = path.join(publicDir, 'sitemap.xml');
-  fs.writeFileSync(sitemapIndexPath, sitemapIndexXml, 'utf8');
+  writeToBoth('sitemap.xml', sitemapIndexXml);
   console.log(`✅ Created public/sitemap.xml (Sitemap Index)`);
 
   // 5. Update public/robots.txt with Sitemap directive if not already present
@@ -179,7 +186,7 @@ function generateSitemaps() {
   let robotsTxt = fs.existsSync(robotsPath) ? fs.readFileSync(robotsPath, 'utf8') : 'User-agent: *\nAllow: /\n';
   if (!robotsTxt.includes('Sitemap:')) {
     robotsTxt = robotsTxt.trimEnd() + `\n\nSitemap: ${BASE_URL}/sitemap.xml\n`;
-    fs.writeFileSync(robotsPath, robotsTxt, 'utf8');
+    writeToBoth('robots.txt', robotsTxt);
     console.log('✅ Updated public/robots.txt with Sitemap URL');
   }
 }
