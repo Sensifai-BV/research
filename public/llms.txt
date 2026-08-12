@@ -45,6 +45,14 @@
 - Area: Audio & Speech Intelligence
 - Abstract: Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals
 
+### Multitask speaker profiling for estimating age, height, weight and smoking habits from spontaneous telephone speech signals
+- URL: https://research.sensifai.com/publication/multitask-speaker-profiling-age-height-weight-smoking
+- Authors: Amir Hossein Poorjam, Mohamad Hasan Bahari
+- Year: 2014
+- Venue: 2014 4th International Conference on Computer and Knowledge Engineering (ICCKE), pp. 7-12
+- Area: Audio & Speech Intelligence
+- Abstract: This paper proposes a novel approach for automatic estimation of four important traits of speakers, namely age, height, weight and smoking habit, from speech signals. In this method, each utterance is modeled using the i-vector framework which is based on the factor analysis on Gaussian Mixture Model (GMM) mean supervectors, and the Non-negative Factor Analysis (NFA) framework which is based on a constrained factor analysis on GMM weights. Then, Artificial Neural Networks (ANNs) and Least Squares Support Vector Regression (LSSVR) are employed to estimate age, height and weight of speakers from given utterances, and ANNs and logistic regression (LR) are utilized to perform smoking habit detection. Since GMM weights provide complementary information to GMM means, a score-level fusion of the i-vector-based and the NFA-based recognizers is considered for age and smoking habit estimation.
+
 ### High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture
 - URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic
 - Authors: Mohamad Hasan Bahari, Ali Karsaz, Naser Pariz
