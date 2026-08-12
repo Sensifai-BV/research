@@ -173,91 +173,198 @@ export function HomePage() {
             </Link>
           </div>
 
-          <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {latestFivePapers.map((paper, index) => (
-              <BlurFade key={paper.id} delay={0.08 * index}>
-                <MagicCard
-                  shine={index === 0}
-                  shineColor={["#93d500", "#6366f1", "#0284c7"]}
-                  className="relative group hover:border-indigo-300 flex flex-col justify-between h-full p-4"
-                >
-                  <div>
-                    <div className="flex flex-wrap items-center gap-1.5 mb-2.5">
-                      <Badge variant="indigo" className="text-[10px] px-2 py-0.5">{paper.areaBadge || paper.areaName}</Badge>
-                      {paper.isPublished && (
-                        <Badge variant="published" className="text-[10px] px-1.5 py-0.5" title={`Published in ${paper.venue}`}>
-                          <CheckCircle2 className="h-3 w-3 text-emerald-600" /> {paper.year}
-                        </Badge>
-                      )}
-                      {paper.citations !== undefined && paper.citations !== null && (
-                        <a
-                          href={paper.scholarUrl || '#'}
-                          target={paper.scholarUrl ? "_blank" : "_self"}
-                          rel="noopener noreferrer"
-                          title={`Cited by ${paper.citations} on Google Scholar`}
-                          className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 px-1.5 py-0.5 text-[9px] font-bold text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-colors"
-                        >
-                          <ScholarIcon className="h-2.5 w-2.5 text-blue-600 dark:text-blue-400 shrink-0" />
-                          <span>{paper.citations}</span>
-                        </a>
-                      )}
+          {/* Responsive Layout: Mobile = All same size | Desktop = 1st paper featured bigger + remaining 4 same size */}
+          <div className="space-y-6">
+            
+            {/* Top 1 Latest Paper (Mobile = same size as others | Desktop = Bigger featured card) */}
+            {latestFivePapers.length > 0 && (() => {
+              const featuredPaper = latestFivePapers[0];
+              return (
+                <BlurFade delay={0.08}>
+                  <MagicCard
+                    shine={true}
+                    shineColor={["#93d500", "#6366f1", "#0284c7"]}
+                    className="relative group hover:border-indigo-400 p-5 sm:p-8 flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2 mb-2.5 sm:mb-3">
+                        <span className="inline-flex items-center gap-1 bg-amber-500/10 border border-amber-500/30 text-amber-600 dark:text-amber-400 font-extrabold text-[11px] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
+                          ⭐ Latest Research
+                        </span>
+                        <Badge variant="indigo" className="text-xs px-2.5 py-0.5 sm:py-1 font-semibold">{featuredPaper.areaBadge || featuredPaper.areaName}</Badge>
+                        {featuredPaper.isPublished && (
+                          <Badge variant="published" className="text-xs px-2 py-0.5 sm:py-1 font-semibold" title={`Published in ${featuredPaper.venue}`}>
+                            <CheckCircle2 className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-emerald-600" /> {featuredPaper.year} {featuredPaper.venue ? <span className="hidden sm:inline">• {featuredPaper.venue}</span> : ''}
+                          </Badge>
+                        )}
+                        {featuredPaper.citations !== undefined && featuredPaper.citations !== null && (
+                          <a
+                            href={featuredPaper.scholarUrl || '#'}
+                            target={featuredPaper.scholarUrl ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            title={`Cited by ${featuredPaper.citations} on Google Scholar`}
+                            className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 px-2 sm:px-2.5 py-0.5 sm:py-1 text-[11px] sm:text-xs font-extrabold text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-colors"
+                          >
+                            <ScholarIcon className="h-2.5 sm:h-3 w-2.5 sm:w-3 text-blue-600 dark:text-blue-400 shrink-0" />
+                            <span>{featuredPaper.citations} <span className="hidden sm:inline">Citations</span></span>
+                          </a>
+                        )}
+                      </div>
+
+                      <Link to={`/publication/${featuredPaper.id}`} className="block group-hover:text-indigo-600 transition-colors">
+                        <h3 className="text-base sm:text-xl lg:text-2xl font-bold sm:font-black text-zinc-950 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors leading-snug line-clamp-2 sm:line-clamp-none">
+                          {featuredPaper.title}
+                        </h3>
+                      </Link>
+
+                      <div className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-2 sm:mt-2.5 font-semibold line-clamp-1">
+                        By {featuredPaper.authors ? featuredPaper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
+                      </div>
+
+                      <p className="mt-3 sm:mt-4 text-xs sm:text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 line-clamp-3 sm:line-clamp-4">
+                        {featuredPaper.abstract}
+                      </p>
                     </div>
 
-                    <Link to={`/publication/${paper.id}`} className="hover:text-indigo-600 transition-colors">
-                      <h3 className="text-sm leading-snug font-bold text-zinc-950 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
-                        {paper.title}
-                      </h3>
-                    </Link>
+                    {/* Action Buttons */}
+                    <div className="flex items-center justify-between gap-2 border-t border-zinc-100 dark:border-zinc-800/80 pt-3.5 sm:pt-4 mt-5 sm:mt-6">
+                      <div className="flex items-center gap-2">
+                        {featuredPaper.pdfUrl ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setSelectedPaperForPdf(featuredPaper)}
+                            className="h-7.5 sm:h-8 px-3 sm:px-3.5 text-xs font-bold gap-1 sm:gap-1.5 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-400"
+                          >
+                            <Eye className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-indigo-600" />
+                            Show PDF
+                          </Button>
+                        ) : featuredPaper.journalUrl ? (
+                          <a href={featuredPaper.journalUrl} target="_blank" rel="noreferrer">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="h-7.5 sm:h-8 px-3 sm:px-3.5 text-xs font-bold gap-1 sm:gap-1.5 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-400"
+                            >
+                              <ExternalLink className="h-3 sm:h-3.5 w-3 sm:w-3.5 text-emerald-600" />
+                              Publisher
+                            </Button>
+                          </a>
+                        ) : null}
 
-                    <div className="text-[11px] text-zinc-500 dark:text-zinc-400 mt-2 font-medium line-clamp-1">
-                      By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
-                    </div>
-
-                    <p className="mt-3 text-[11px] leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
-                      {paper.abstract}
-                    </p>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex items-center justify-between gap-1.5 border-t border-zinc-100 dark:border-zinc-800 pt-3 mt-4">
-                    {paper.pdfUrl ? (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => setSelectedPaperForPdf(paper)}
-                        className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
-                      >
-                        <Eye className="h-3 w-3 text-indigo-600" />
-                        Show
-                      </Button>
-                    ) : paper.journalUrl ? (
-                      <a href={paper.journalUrl} target="_blank" rel="noreferrer">
                         <Button
-                          variant="outline"
+                          variant="ghost"
                           size="sm"
-                          className="h-6 px-2 text-[10px] font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
+                          onClick={() => triggerCiteConfetti(featuredPaper)}
+                          className="h-7.5 sm:h-8 px-2.5 sm:px-3 text-xs font-bold text-zinc-500 dark:text-zinc-400 gap-1 sm:gap-1.5 hover:text-zinc-900 dark:hover:text-zinc-100"
                         >
-                          <ExternalLink className="h-3 w-3 text-emerald-600" />
-                          Publisher
+                          <Quote className="h-3 sm:h-3.5 w-3 sm:w-3.5" />
+                          Cite
                         </Button>
-                      </a>
-                    ) : (
-                      <div></div>
-                    )}
+                      </div>
 
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => triggerCiteConfetti(paper)}
-                      className="h-6 px-1.5 text-[10px] text-zinc-500 dark:text-zinc-400 gap-1 hover:text-zinc-900 dark:hover:text-zinc-100"
-                    >
-                      <Quote className="h-3 w-3" />
-                      Cite
-                    </Button>
-                  </div>
-                </MagicCard>
-              </BlurFade>
-            ))}
+                      <Link to={`/publication/${featuredPaper.id}`}>
+                        <Button variant="outline" size="sm" className="h-7.5 sm:h-8 px-3 sm:px-3.5 text-xs font-bold gap-1 sm:gap-1.5 text-indigo-600 dark:text-indigo-400 border-indigo-200 dark:border-indigo-800/60 hover:bg-indigo-50 dark:hover:bg-indigo-950/40">
+                          Details <ArrowRight className="h-3 sm:h-3.5 w-3 sm:w-3.5" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </MagicCard>
+                </BlurFade>
+              );
+            })()}
+
+            {/* Remaining 4 Papers in 2-Column Grid (Mobile = 1 col same size, Desktop = 2 col equal cards) */}
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+              {latestFivePapers.slice(1).map((paper, index) => (
+                <BlurFade key={paper.id} delay={0.1 * (index + 1)}>
+                  <MagicCard
+                    shine={false}
+                    className="relative group hover:border-indigo-300 flex flex-col justify-between h-full p-5 sm:p-6"
+                  >
+                    <div>
+                      <div className="flex flex-wrap items-center gap-2 mb-2.5">
+                        <Badge variant="indigo" className="text-xs px-2.5 py-0.5 font-semibold">{paper.areaBadge || paper.areaName}</Badge>
+                        {paper.isPublished && (
+                          <Badge variant="published" className="text-xs px-2 py-0.5 font-semibold" title={`Published in ${paper.venue}`}>
+                            <CheckCircle2 className="h-3 w-3 text-emerald-600" /> {paper.year}
+                          </Badge>
+                        )}
+                        {paper.citations !== undefined && paper.citations !== null && (
+                          <a
+                            href={paper.scholarUrl || '#'}
+                            target={paper.scholarUrl ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            title={`Cited by ${paper.citations} on Google Scholar`}
+                            className="inline-flex items-center gap-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-800/80 px-2 py-0.5 text-[11px] font-extrabold text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/80 transition-colors"
+                          >
+                            <ScholarIcon className="h-2.5 w-2.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                            <span>{paper.citations}</span>
+                          </a>
+                        )}
+                      </div>
+
+                      <Link to={`/publication/${paper.id}`} className="hover:text-indigo-600 transition-colors">
+                        <h3 className="text-base sm:text-lg leading-snug font-bold text-zinc-950 dark:text-zinc-50 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+                          {paper.title}
+                        </h3>
+                      </Link>
+
+                      <div className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 font-semibold line-clamp-1">
+                        By {paper.authors ? paper.authors.map(a => a?.name || '').filter(Boolean).join(', ') : 'Sensifai Labs'}
+                      </div>
+
+                      <p className="mt-3 text-xs sm:text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+                        {paper.abstract}
+                      </p>
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex items-center justify-between gap-2 border-t border-zinc-100 dark:border-zinc-800/80 pt-3.5 mt-5">
+                      <div className="flex items-center gap-2">
+                        {paper.pdfUrl ? (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={() => setSelectedPaperForPdf(paper)}
+                            className="h-7.5 px-3 text-xs font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
+                          >
+                            <Eye className="h-3 w-3 text-indigo-600" />
+                            Show PDF
+                          </Button>
+                        ) : paper.journalUrl ? (
+                          <a href={paper.journalUrl} target="_blank" rel="noreferrer">
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="h-7.5 px-3 text-xs font-bold gap-1 text-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700 hover:border-indigo-300"
+                            >
+                              <ExternalLink className="h-3 w-3 text-emerald-600" />
+                              Publisher
+                            </Button>
+                          </a>
+                        ) : null}
+
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => triggerCiteConfetti(paper)}
+                          className="h-7.5 px-2.5 text-xs text-zinc-500 dark:text-zinc-400 gap-1 hover:text-zinc-900 dark:hover:text-zinc-100 font-semibold"
+                        >
+                          <Quote className="h-3 w-3" />
+                          Cite
+                        </Button>
+                      </div>
+
+                      <Link to={`/publication/${paper.id}`} className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline">
+                        Details &rarr;
+                      </Link>
+                    </div>
+                  </MagicCard>
+                </BlurFade>
+              ))}
+            </div>
+
           </div>
 
         </div>
