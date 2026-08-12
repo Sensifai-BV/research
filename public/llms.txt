@@ -53,6 +53,14 @@
 - Area: Audio & Speech Intelligence
 - Abstract: This paper proposes a novel approach for automatic estimation of four important traits of speakers, namely age, height, weight and smoking habit, from speech signals. In this method, each utterance is modeled using the i-vector framework which is based on the factor analysis on Gaussian Mixture Model (GMM) mean supervectors, and the Non-negative Factor Analysis (NFA) framework which is based on a constrained factor analysis on GMM weights. Then, Artificial Neural Networks (ANNs) and Least Squares Support Vector Regression (LSSVR) are employed to estimate age, height and weight of speakers from given utterances, and ANNs and logistic regression (LR) are utilized to perform smoking habit detection. Since GMM weights provide complementary information to GMM means, a score-level fusion of the i-vector-based and the NFA-based recognizers is considered for age and smoking habit estimation.
 
+### Speaker age estimation using Hidden Markov Model weight supervectors
+- URL: https://research.sensifai.com/publication/speaker-age-estimation-hmm-weight-supervectors
+- Authors: Mohamad Hasan Bahari, Hugo Van hamme
+- Year: 2012
+- Venue: 2012 11th International Conference on Information Science, Signal Processing and their Applications (ISSPA), pp. 517-521
+- Area: Audio & Speech Intelligence
+- Abstract: This paper proposes a new approach for speaker age estimation. In this method, speakers are modeled by their corresponding Hidden Markov Model (HMM) weight supervectors. Then, Weighted Supervised Non-Negative Matrix Factorization (WSNMF) is applied to reduce the dimension of the input space. Finally, a Least Squares Support Vector Regressor (LS-SVR) is employed to estimate the age of speakers using the obtained low-dimensional vectors. Evaluation results on a corpus of read and spontaneous speech in Dutch confirms the effectiveness of the proposed scheme.
+
 ### High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture
 - URL: https://research.sensifai.com/publication/high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic
 - Authors: Mohamad Hasan Bahari, Ali Karsaz, Naser Pariz
