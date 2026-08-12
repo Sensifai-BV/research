@@ -21,6 +21,14 @@
 
 ## Publications
 
+### Unsupervised diffusion-based LMS for node-specific parameter estimation over wireless sensor networks
+- URL: https://research.sensifai.com/publication/unsupervised-diffusion-lms-wireless-sensor-networks
+- Authors: Jorge Plata-Chaves, Mohamad Hasan Bahari, Marc Moonen, Alexander Bertrand
+- Year: 2016
+- Venue: 2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 4159-4163
+- Area: Efficient AI & Edge Computing
+- Abstract: We study a distributed node-specific parameter estimation problem where each node in a wireless sensor network is interested in the simultaneous estimation of different vectors of parameters that can be of local interest, of common interest to a subset of nodes, or of global interest to the whole network. We assume a setting where the nodes do not know which other nodes share the same estimation interests. First, we conduct a theoretical analysis on the asymptotic bias that results in case the nodes blindly process all the local estimates of all their neighbors to solve their own node-specific parameter estimation problem. Next, we propose an unsupervised diffusion-based LMS algorithm that allows each node to obtain unbiased estimates of its node-specific vector of parameters by continuously identifying which of the neighboring local estimates correspond to each of its own estimation tasks. Finally, simulation results demonstrate the superiority and effective performance of the proposed unsupervised diffusion LMS scheme.
+
 ### Height estimation from speech signals using i-vectors and least-squares support vector regression
 - URL: https://research.sensifai.com/publication/height-estimation-speech-signals-ivectors-lssvr
 - Authors: Amir Hossein Poorjam, Mohamad Hasan Bahari, Vasileios Vasilakakis
