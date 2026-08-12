@@ -1,16 +1,16 @@
 {
   "stats": {
-    "totalPublicationsCount": 12,
+    "totalPublicationsCount": 18,
     "totalAuthorsCount": 1,
-    "totalCitations": 391,
+    "totalCitations": 862,
     "totalResearchAreasCount": 5,
-    "averageCitationsPerPaper": 33,
+    "averageCitationsPerPaper": 48,
     "authorPaperCounts": {
-      "bahari": 12
+      "bahari": 18
     }
   },
   "meta": {
-    "generatedAt": "2026-08-12T13:28:13.918Z",
+    "generatedAt": "2026-08-12T13:57:06.182Z",
     "generator": "SQLite Production Store & MiniSearch Content Engine",
     "sqliteFile": "src/data/content.db"
   },
@@ -36,8 +36,8 @@
       "name": "Audio & Speech Intelligence",
       "badge": "Audio AI",
       "description": "Neural acoustic modeling, multi-speaker diarization, and sound event localization.",
-      "count": 5,
-      "totalCitations": 176
+      "count": 11,
+      "totalCitations": 647
     },
     {
       "id": "health-bio",
@@ -106,6 +106,70 @@
       ],
       "bibtex": "@article{bahari2017blind,\n  title={Blind sampling rate offset estimation for wireless acoustic sensor networks through weighted least-squares coherence drift estimation},\n  author={Bahari, Mohamad Hasan and Bertrand, Alexander and Moonen, Marc},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume={25},\n  number={3},\n  pages={674--686},\n  year={2017},\n  publisher={IEEE}\n}",
       "abstract": "Microphone arrays allow to exploit the spatial coherence between simultaneously recorded microphone signals, e.g., to perform speech enhancement, i.e., to extract a speech signal and reduce background noise. However, in systems where the microphones are not sampled in a synchronous fashion, as it is often the case in wireless acoustic sensor networks, a sampling rate offset (SRO) exists between signals recorded in different nodes, which severely affects the speech enhancement performance. To avoid this performance reduction, the SRO should be estimated and compensated for. In this paper, we propose a new approach to blind SRO estimation for an asynchronous wireless acoustic sensor network, which exploits the phase drift of the coherence between the asynchronous microphones signals. We utilize the fact that the SRO causes a linearly increasing time delay between two signals and hence a phase drift in the frequency domain. Simulation results and real-data evaluations demonstrate the robustness and precision of the proposed weighted least-squares coherence drift estimation technique."
+    },
+    {
+      "id": "multitask-wireless-sensor-network-lcmv-doa",
+      "title": "Multi-Task Wireless Sensor Network for Joint Distributed Node-Specific Signal Enhancement, LCMV Beamforming and DOA Estimation",
+      "year": 2017,
+      "month": "April",
+      "venue": "IEEE Journal of Selected Topics in Signal Processing (Vol. 11, No. 3, pp. 518-533)",
+      "isPublished": true,
+      "publishedBadge": "IEEE JSTSP 2017",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Wireless Sensor Networks",
+        "Distributed Signal Processing",
+        "LCMV Beamforming",
+        "DOA Estimation",
+        "Wiener Filtering"
+      ],
+      "citations": 55,
+      "featured": true,
+      "pdfUrl": "/pdfs/multitask-wireless-sensor-network-lcmv-doa.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:8d8msizDQcsC",
+      "journalUrl": "https://ieeexplore.ieee.org/document/7867824",
+      "sourceFile": "content/publications/multitask-wireless-sensor-network-lcmv-doa.md",
+      "authors": [
+        {
+          "id": "amin-hassani",
+          "name": "Amin Hassani",
+          "affiliation": "KU Leuven",
+          "isLead": true,
+          "is_external": true
+        },
+        {
+          "id": "jorge-plata-chaves",
+          "name": "Jorge Plata-Chaves",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "marc-moonen",
+          "name": "Marc Moonen",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "alexander-bertrand",
+          "name": "Alexander Bertrand",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{Hassani2017MultiTask,\n  title={Multi-Task Wireless Sensor Network for Joint Distributed Node-Specific Signal Enhancement, LCMV Beamforming and DOA Estimation},\n  author={Hassani, Amin and Plata-Chaves, Jorge and Bahari, Mohamad Hasan and Moonen, Marc and Bertrand, Alexander},\n  journal={IEEE Journal of Selected Topics in Signal Processing},\n  volume={11},\n  number={3},\n  pages={518--533},\n  year={2017},\n  publisher={IEEE}\n}",
+      "abstract": "We consider a multi-task wireless sensor network (WSN) where some of the nodes aim at applying a multi-channel Wiener filter to denoise their local sensor signals, whereas others aim at implementing a linearly constrained minimum variance beamformer to extract node-specific desired signals and cancel interfering signals, and again others aim at estimating the node-specific direction-of-arrival of a set of desired sources. For this multi-task WSN, by relying on distributed signal estimation techniques that incorporate a low-rank approximation of the desired signals correlation matrix, we design a distributed algorithm under which the nodes cooperate with reduced communication resources even though they are solving different signal processing tasks and do not know the tasks of the other nodes. Convergence and optimality results show that the proposed algorithm lets all the nodes achieve the network-wide optimal performance under mild condition on the network topology and task allocation."
     },
     {
       "id": "unsupervised-diffusion-lms-wireless-sensor-networks",
@@ -292,6 +356,250 @@
       "abstract": "This paper proposes a novel approach for automatic estimation of four important traits of speakers, namely age, height, weight and smoking habit, from speech signals. In this method, each utterance is modeled using the i-vector framework which is based on the factor analysis on Gaussian Mixture Model (GMM) mean supervectors, and the Non-negative Factor Analysis (NFA) framework which is based on a constrained factor analysis on GMM weights. Then, Artificial Neural Networks (ANNs) and Least Squares Support Vector Regression (LSSVR) are employed to estimate age, height and weight of speakers from given utterances, and ANNs and logistic regression (LR) are utilized to perform smoking habit detection. Since GMM weights provide complementary information to GMM means, a score-level fusion of the i-vector-based and the NFA-based recognizers is considered for age and smoking habit estimation."
     },
     {
+      "id": "non-negative-factor-analysis-gmm-weight-adaptation",
+      "title": "Non-negative Factor Analysis of Gaussian Mixture Model Weight Adaptation for Language and Dialect Recognition",
+      "year": 2014,
+      "month": "July",
+      "venue": "IEEE/ACM Transactions on Audio, Speech, and Language Processing (Vol. 22, No. 7, pp. 1117-1129)",
+      "isPublished": true,
+      "publishedBadge": "IEEE/ACM TASLP 2014",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Non-negative Factor Analysis",
+        "Gaussian Mixture Models",
+        "Language Recognition",
+        "Dialect Recognition",
+        "i-vectors",
+        "Weight Adaptation"
+      ],
+      "citations": 50,
+      "featured": true,
+      "pdfUrl": "/pdfs/non-negative-factor-analysis-gmm-weight-adaptation.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:hMsQuOkrut0C",
+      "journalUrl": "https://ieeexplore.ieee.org/document/6810831",
+      "sourceFile": "content/publications/non-negative-factor-analysis-gmm-weight-adaptation.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "najim-dehak",
+          "name": "Najim Dehak",
+          "affiliation": "Johns Hopkins University",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "lukas-burget",
+          "name": "Lukáš Burget",
+          "affiliation": "Brno University of Technology",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "ahmed-ali",
+          "name": "Ahmed Ali",
+          "affiliation": "Qatar Computing Research Institute",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "jim-glass",
+          "name": "Jim Glass",
+          "affiliation": "MIT CSAIL",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{bahari2014nonnegative,\n  title={Non-negative Factor Analysis of Gaussian Mixture Model Weight Adaptation for Language and Dialect Recognition},\n  author={Bahari, Mohamad Hasan and Dehak, Najim and Van hamme, Hugo and Burget, Luk{\\'a}{\\v{s}} and Ali, Ahmed and Glass, Jim},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume={22},\n  number={7},\n  pages={1117--1129},\n  year={2014},\n  publisher={IEEE}\n}",
+      "abstract": "Recent studies show that Gaussian mixture model (GMM) weights carry less, yet complimentary, information to GMM means for language and dialect recognition. However, state-of-the-art language recognition systems usually do not use this information. In this research, a non-negative factor analysis (NFA) approach is developed for GMM weight decomposition and adaptation. This modeling, which is conceptually simple and computationally inexpensive, suggests a new low-dimensional utterance representation method using a factor analysis similar to that of the i-vector framework. The obtained subspace vectors are then applied in conjunction with i-vectors to the language/dialect recognition problem. The suggested approach is evaluated on the NIST 2011 and RATS language recognition evaluation (LRE) corpora and on the QCRI Arabic dialect recognition evaluation (DRE) corpus. The assessment results show that fusing i-vectors with the proposed NFA subspace vectors leads to improvements over the standard i-vector system, particularly for short utterances."
+    },
+    {
+      "id": "speaker-age-estimation-using-ivectors",
+      "title": "Speaker age estimation using i-vectors",
+      "year": 2014,
+      "month": "September",
+      "venue": "Engineering Applications of Artificial Intelligence (Vol. 34, pp. 99-108)",
+      "isPublished": true,
+      "publishedBadge": "EAAI 2014",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Speaker Age Estimation",
+        "i-vectors",
+        "WCCN",
+        "LSSVR",
+        "Speech Processing"
+      ],
+      "citations": 103,
+      "featured": true,
+      "pdfUrl": "/pdfs/speaker-age-estimation-using-ivectors.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:fFSKOagxvKUC",
+      "journalUrl": "https://doi.org/10.1016/j.engappai.2014.05.003",
+      "sourceFile": "content/publications/speaker-age-estimation-using-ivectors.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "mitchell-mclaren",
+          "name": "Mitchell McLaren",
+          "affiliation": "SRI International",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "david-van-leeuwen",
+          "name": "David A. van Leeuwen",
+          "affiliation": "Radboud University / TNO",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{bahari2014speaker,\n  title={Speaker age estimation using i-vectors},\n  author={Bahari, Mohamad Hasan and McLaren, Mitchell and Van hamme, Hugo and van Leeuwen, David A},\n  journal={Engineering Applications of Artificial Intelligence},\n  volume={34},\n  pages={99--108},\n  year={2014},\n  publisher={Elsevier}\n}",
+      "abstract": "In this paper, a new approach for age estimation from speech signals based on i-vectors is proposed. In this method, each utterance is modeled by its corresponding i-vector. Then, a Within-Class Covariance Normalization technique is used for session variability compensation. Finally, a least squares support vector regression (LSSVR) is applied to estimate the age of speakers. The proposed method is trained and tested on telephone conversations of the National Institute for Standard and Technology (NIST) 2010 and 2008 speaker recognition evaluation databases. Evaluation results show that the proposed method yields significantly lower mean absolute error and higher Pearson correlation coefficient between chronological speaker age and estimated speaker age compared to different conventional schemes."
+    },
+    {
+      "id": "accent-recognition-ivector-supervector-telephone-speech",
+      "title": "Accent recognition using i-vector, gaussian mean supervector and gaussian posterior probability supervector for spontaneous telephone speech",
+      "year": 2013,
+      "month": "May",
+      "venue": "2013 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 7344-7348",
+      "isPublished": true,
+      "publishedBadge": "IEEE ICASSP 2013",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Accent Recognition",
+        "Speech Processing",
+        "i-vectors",
+        "Gaussian Mean Supervector",
+        "GPPS",
+        "SVM"
+      ],
+      "citations": 117,
+      "featured": true,
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:uJ-U7cs_P_0C",
+      "journalUrl": "https://ieeexplore.ieee.org/document/6639089",
+      "sourceFile": "content/publications/accent-recognition-ivector-supervector-telephone-speech.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "rahim-saeidi",
+          "name": "Rahim Saeidi",
+          "affiliation": "Radboud University",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "david-van-leeuwen",
+          "name": "David A. van Leeuwen",
+          "affiliation": "Radboud University / TNO",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2013accent,\n  title={Accent recognition using i-vector, Gaussian mean supervector and Gaussian posterior probability supervector for spontaneous telephone speech},\n  author={Bahari, Mohamad Hasan and Saeidi, Rahim and Van hamme, Hugo and van Leeuwen, David A},\n  booktitle={2013 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={7344--7348},\n  year={2013},\n  organization={IEEE}\n}",
+      "abstract": "In this paper, three utterance modelling approaches, namely Gaussian Mean Supervector (GMS), i-vector and Gaussian Posterior Probability Supervector (GPPS), are applied to the accent recognition problem. For each utterance modeling method, three different classifiers, namely the Support Vector Machine (SVM), the Naive Bayesian Classifier (NBC) and the Sparse Representation Classifier (SRC), are employed to find out suitable matches between the utterance modelling schemes and the classifiers. The evaluation database is formed by using English utterances of speakers whose native languages are Russian, Hindi, American English, Thai, Vietnamese and Cantonese. These utterances are drawn from the National Institute of Standards and Technology (NIST) 2008 Speaker Recognition Evaluation (SRE) database. The study results show that GPPS and i-vector are more effective than GMS in this accent recognition task."
+    },
+    {
+      "id": "age-estimation-telephone-speech-ivectors",
+      "title": "Age Estimation from Telephone Speech using i-vectors",
+      "year": 2012,
+      "month": "September",
+      "venue": "Proceedings of the 13th Annual Conference of the International Speech Communication Association (Interspeech 2012), pp. 506-509",
+      "isPublished": true,
+      "publishedBadge": "Interspeech 2012",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Speaker Age Estimation",
+        "Telephone Speech",
+        "i-vectors",
+        "Support Vector Regression"
+      ],
+      "citations": 83,
+      "featured": true,
+      "pdfUrl": "/pdfs/age-estimation-telephone-speech-ivectors.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:KbBQZpvPDL4C",
+      "journalUrl": "https://doi.org/10.21437/Interspeech.2012-169",
+      "sourceFile": "content/publications/age-estimation-telephone-speech-ivectors.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "mitchell-mclaren",
+          "name": "Mitchell McLaren",
+          "affiliation": "SRI International",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "david-van-leeuwen",
+          "name": "David A. van Leeuwen",
+          "affiliation": "Radboud University / TNO",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2012age,\n  author    = {Mohamad Hasan Bahari and Mitchell McLaren and Hugo Van hamme and David A. van Leeuwen},\n  title     = {Age Estimation from Telephone Speech using i-vectors},\n  booktitle = {Proceedings of the 13th Annual Conference of the International Speech Communication Association (Interspeech 2012)},\n  pages     = {506--509},\n  year      = {2012},\n  month     = {September}\n}",
+      "abstract": "Motivated by the success of i-vectors in the field of speaker recognition, this paper proposes a new approach for age estimation from telephone speech patterns based on i-vectors. In this method, each utterance is modeled by its corresponding i-vector. Then, Support Vector Regression (SVR) is applied to estimate the age of speakers. The proposed method is trained and tested on telephone conversations of the National Institute for Standard in Technology (NIST) 2010 and 2008 Speaker Recognition Evaluation databases. Evaluation results show that the proposed method outperforms different conventional methods in speaker age estimation."
+    },
+    {
       "id": "speaker-age-estimation-hmm-weight-supervectors",
       "title": "Speaker age estimation using Hidden Markov Model weight supervectors",
       "year": 2012,
@@ -383,6 +691,50 @@
       ],
       "bibtex": "@article{bahari2011high,\n  title={High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture},\n  author={Bahari, Mohamad Hasan and Karsaz, Ali and Pariz, Naser},\n  journal={International Journal of Innovative Computing, Information and Control},\n  volume={7},\n  number={2},\n  pages={501--510},\n  year={2011},\n  publisher={ICIC International}\n}",
       "abstract": "In this paper, a fast target maneuver detection technique and high accurate tracking scheme is proposed with the use of a new hybrid Kalman filter-fuzzy logic architecture. Due to the stressful environment of target tracking problem such as inaccurate detection and target maneuver, most of existing trackers do not represent desired performance in different situations. In practice, while the conventional Kalman filters (KF) perform well in tracking a target with constant velocity, their performance may be seriously degraded in the presence of maneuver. To reach an accurate target tracking system in such a stressful environment, fuzzy logic-based algorithms with intelligent adaptation capabilities have recently been issued. Although these methods yield reasonable performance in tracking maneuvering targets, their accuracy in non-maneuvering mode was not satisfactory. In this research, based on information about the target maneuver dynamics, a new hybrid tracker (HT) is introduced. The proposed algorithm combines two methodologies into one architecture synergistically. In other words, the KF is used when the target velocity is approximately constant, whereas fuzzy estimator is used when the target maneuvers. Simulation results show that the proposed method is superior to some conventional approaches in tracking accuracy."
+    },
+    {
+      "id": "speaker-age-estimation-gender-detection-wsnmf",
+      "title": "Speaker age estimation and gender detection based on supervised non-negative matrix factorization",
+      "year": 2011,
+      "month": "September",
+      "venue": "2011 IEEE Workshop on Biometric Measurements and Systems for Security and Medical Applications (BIOMS), pp. 1-6",
+      "isPublished": true,
+      "publishedBadge": "IEEE BIOMS 2011",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Speaker Age Estimation",
+        "Gender Detection",
+        "Speech Processing",
+        "WSNMF",
+        "GRNN"
+      ],
+      "citations": 63,
+      "featured": true,
+      "pdfUrl": "/pdfs/speaker-age-estimation-gender-detection-wsnmf.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:j8SEvjWlNXcC",
+      "journalUrl": "https://ieeexplore.ieee.org/document/6048252",
+      "sourceFile": "content/publications/speaker-age-estimation-gender-detection-wsnmf.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2011speaker,\n  title={Speaker age estimation and gender detection based on supervised non-negative matrix factorization},\n  author={Bahari, Mohamad Hasan and Van hamme, Hugo},\n  booktitle={2011 IEEE Workshop on Biometric Measurements and Systems for Security and Medical Applications (BIOMS)},\n  pages={1--6},\n  year={2011},\n  organization={IEEE}\n}",
+      "abstract": "In many criminal cases, evidence might be in the form of telephone conversations or tape recordings. Therefore, law enforcement agencies have been concerned about accurate methods to profile different characteristics of a speaker from recorded voice patterns, which facilitate the identification of a criminal. This paper proposes a new approach for speaker gender detection and age estimation, based on a hybrid architecture of Weighted Supervised Non-Negative Matrix Factorization (WSNMF) and General Regression Neural Network (GRNN). Evaluation results on a corpus of read and spontaneous speech in Dutch confirms the effectiveness of the proposed scheme."
     },
     {
       "id": "drilling-rate-prediction-innovative-soft-computing",
@@ -665,7 +1017,7 @@
       "githubUrl": "https://github.com/bahari-sensifai",
       "linkedinUrl": "https://www.linkedin.com/company/17888541/",
       "scholarUrl": "https://scholar.google.com/citations?user=tYazD-8AAAAJ&hl=en",
-      "pubCount": 12
+      "pubCount": 18
     }
   ],
   "publicationMap": {
@@ -718,6 +1070,70 @@
       ],
       "bibtex": "@article{bahari2017blind,\n  title={Blind sampling rate offset estimation for wireless acoustic sensor networks through weighted least-squares coherence drift estimation},\n  author={Bahari, Mohamad Hasan and Bertrand, Alexander and Moonen, Marc},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume={25},\n  number={3},\n  pages={674--686},\n  year={2017},\n  publisher={IEEE}\n}",
       "abstract": "Microphone arrays allow to exploit the spatial coherence between simultaneously recorded microphone signals, e.g., to perform speech enhancement, i.e., to extract a speech signal and reduce background noise. However, in systems where the microphones are not sampled in a synchronous fashion, as it is often the case in wireless acoustic sensor networks, a sampling rate offset (SRO) exists between signals recorded in different nodes, which severely affects the speech enhancement performance. To avoid this performance reduction, the SRO should be estimated and compensated for. In this paper, we propose a new approach to blind SRO estimation for an asynchronous wireless acoustic sensor network, which exploits the phase drift of the coherence between the asynchronous microphones signals. We utilize the fact that the SRO causes a linearly increasing time delay between two signals and hence a phase drift in the frequency domain. Simulation results and real-data evaluations demonstrate the robustness and precision of the proposed weighted least-squares coherence drift estimation technique."
+    },
+    "multitask-wireless-sensor-network-lcmv-doa": {
+      "id": "multitask-wireless-sensor-network-lcmv-doa",
+      "title": "Multi-Task Wireless Sensor Network for Joint Distributed Node-Specific Signal Enhancement, LCMV Beamforming and DOA Estimation",
+      "year": 2017,
+      "month": "April",
+      "venue": "IEEE Journal of Selected Topics in Signal Processing (Vol. 11, No. 3, pp. 518-533)",
+      "isPublished": true,
+      "publishedBadge": "IEEE JSTSP 2017",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Wireless Sensor Networks",
+        "Distributed Signal Processing",
+        "LCMV Beamforming",
+        "DOA Estimation",
+        "Wiener Filtering"
+      ],
+      "citations": 55,
+      "featured": true,
+      "pdfUrl": "/pdfs/multitask-wireless-sensor-network-lcmv-doa.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:8d8msizDQcsC",
+      "journalUrl": "https://ieeexplore.ieee.org/document/7867824",
+      "sourceFile": "content/publications/multitask-wireless-sensor-network-lcmv-doa.md",
+      "authors": [
+        {
+          "id": "amin-hassani",
+          "name": "Amin Hassani",
+          "affiliation": "KU Leuven",
+          "isLead": true,
+          "is_external": true
+        },
+        {
+          "id": "jorge-plata-chaves",
+          "name": "Jorge Plata-Chaves",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "marc-moonen",
+          "name": "Marc Moonen",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "alexander-bertrand",
+          "name": "Alexander Bertrand",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{Hassani2017MultiTask,\n  title={Multi-Task Wireless Sensor Network for Joint Distributed Node-Specific Signal Enhancement, LCMV Beamforming and DOA Estimation},\n  author={Hassani, Amin and Plata-Chaves, Jorge and Bahari, Mohamad Hasan and Moonen, Marc and Bertrand, Alexander},\n  journal={IEEE Journal of Selected Topics in Signal Processing},\n  volume={11},\n  number={3},\n  pages={518--533},\n  year={2017},\n  publisher={IEEE}\n}",
+      "abstract": "We consider a multi-task wireless sensor network (WSN) where some of the nodes aim at applying a multi-channel Wiener filter to denoise their local sensor signals, whereas others aim at implementing a linearly constrained minimum variance beamformer to extract node-specific desired signals and cancel interfering signals, and again others aim at estimating the node-specific direction-of-arrival of a set of desired sources. For this multi-task WSN, by relying on distributed signal estimation techniques that incorporate a low-rank approximation of the desired signals correlation matrix, we design a distributed algorithm under which the nodes cooperate with reduced communication resources even though they are solving different signal processing tasks and do not know the tasks of the other nodes. Convergence and optimality results show that the proposed algorithm lets all the nodes achieve the network-wide optimal performance under mild condition on the network topology and task allocation."
     },
     "unsupervised-diffusion-lms-wireless-sensor-networks": {
       "id": "unsupervised-diffusion-lms-wireless-sensor-networks",
@@ -903,6 +1319,250 @@
       "bibtex": "@inproceedings{poorjam2014multitask,\n  title={Multitask speaker profiling for estimating age, height, weight and smoking habits from spontaneous telephone speech signals},\n  author={Poorjam, Amir Hossein and Bahari, Mohamad Hasan},\n  booktitle={2014 4th International Conference on Computer and Knowledge Engineering (ICCKE)},\n  pages={7--12},\n  year={2014},\n  organization={IEEE}\n}",
       "abstract": "This paper proposes a novel approach for automatic estimation of four important traits of speakers, namely age, height, weight and smoking habit, from speech signals. In this method, each utterance is modeled using the i-vector framework which is based on the factor analysis on Gaussian Mixture Model (GMM) mean supervectors, and the Non-negative Factor Analysis (NFA) framework which is based on a constrained factor analysis on GMM weights. Then, Artificial Neural Networks (ANNs) and Least Squares Support Vector Regression (LSSVR) are employed to estimate age, height and weight of speakers from given utterances, and ANNs and logistic regression (LR) are utilized to perform smoking habit detection. Since GMM weights provide complementary information to GMM means, a score-level fusion of the i-vector-based and the NFA-based recognizers is considered for age and smoking habit estimation."
     },
+    "non-negative-factor-analysis-gmm-weight-adaptation": {
+      "id": "non-negative-factor-analysis-gmm-weight-adaptation",
+      "title": "Non-negative Factor Analysis of Gaussian Mixture Model Weight Adaptation for Language and Dialect Recognition",
+      "year": 2014,
+      "month": "July",
+      "venue": "IEEE/ACM Transactions on Audio, Speech, and Language Processing (Vol. 22, No. 7, pp. 1117-1129)",
+      "isPublished": true,
+      "publishedBadge": "IEEE/ACM TASLP 2014",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Non-negative Factor Analysis",
+        "Gaussian Mixture Models",
+        "Language Recognition",
+        "Dialect Recognition",
+        "i-vectors",
+        "Weight Adaptation"
+      ],
+      "citations": 50,
+      "featured": true,
+      "pdfUrl": "/pdfs/non-negative-factor-analysis-gmm-weight-adaptation.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:hMsQuOkrut0C",
+      "journalUrl": "https://ieeexplore.ieee.org/document/6810831",
+      "sourceFile": "content/publications/non-negative-factor-analysis-gmm-weight-adaptation.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "najim-dehak",
+          "name": "Najim Dehak",
+          "affiliation": "Johns Hopkins University",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "lukas-burget",
+          "name": "Lukáš Burget",
+          "affiliation": "Brno University of Technology",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "ahmed-ali",
+          "name": "Ahmed Ali",
+          "affiliation": "Qatar Computing Research Institute",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "jim-glass",
+          "name": "Jim Glass",
+          "affiliation": "MIT CSAIL",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{bahari2014nonnegative,\n  title={Non-negative Factor Analysis of Gaussian Mixture Model Weight Adaptation for Language and Dialect Recognition},\n  author={Bahari, Mohamad Hasan and Dehak, Najim and Van hamme, Hugo and Burget, Luk{\\'a}{\\v{s}} and Ali, Ahmed and Glass, Jim},\n  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},\n  volume={22},\n  number={7},\n  pages={1117--1129},\n  year={2014},\n  publisher={IEEE}\n}",
+      "abstract": "Recent studies show that Gaussian mixture model (GMM) weights carry less, yet complimentary, information to GMM means for language and dialect recognition. However, state-of-the-art language recognition systems usually do not use this information. In this research, a non-negative factor analysis (NFA) approach is developed for GMM weight decomposition and adaptation. This modeling, which is conceptually simple and computationally inexpensive, suggests a new low-dimensional utterance representation method using a factor analysis similar to that of the i-vector framework. The obtained subspace vectors are then applied in conjunction with i-vectors to the language/dialect recognition problem. The suggested approach is evaluated on the NIST 2011 and RATS language recognition evaluation (LRE) corpora and on the QCRI Arabic dialect recognition evaluation (DRE) corpus. The assessment results show that fusing i-vectors with the proposed NFA subspace vectors leads to improvements over the standard i-vector system, particularly for short utterances."
+    },
+    "speaker-age-estimation-using-ivectors": {
+      "id": "speaker-age-estimation-using-ivectors",
+      "title": "Speaker age estimation using i-vectors",
+      "year": 2014,
+      "month": "September",
+      "venue": "Engineering Applications of Artificial Intelligence (Vol. 34, pp. 99-108)",
+      "isPublished": true,
+      "publishedBadge": "EAAI 2014",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Speaker Age Estimation",
+        "i-vectors",
+        "WCCN",
+        "LSSVR",
+        "Speech Processing"
+      ],
+      "citations": 103,
+      "featured": true,
+      "pdfUrl": "/pdfs/speaker-age-estimation-using-ivectors.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:fFSKOagxvKUC",
+      "journalUrl": "https://doi.org/10.1016/j.engappai.2014.05.003",
+      "sourceFile": "content/publications/speaker-age-estimation-using-ivectors.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "mitchell-mclaren",
+          "name": "Mitchell McLaren",
+          "affiliation": "SRI International",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "david-van-leeuwen",
+          "name": "David A. van Leeuwen",
+          "affiliation": "Radboud University / TNO",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@article{bahari2014speaker,\n  title={Speaker age estimation using i-vectors},\n  author={Bahari, Mohamad Hasan and McLaren, Mitchell and Van hamme, Hugo and van Leeuwen, David A},\n  journal={Engineering Applications of Artificial Intelligence},\n  volume={34},\n  pages={99--108},\n  year={2014},\n  publisher={Elsevier}\n}",
+      "abstract": "In this paper, a new approach for age estimation from speech signals based on i-vectors is proposed. In this method, each utterance is modeled by its corresponding i-vector. Then, a Within-Class Covariance Normalization technique is used for session variability compensation. Finally, a least squares support vector regression (LSSVR) is applied to estimate the age of speakers. The proposed method is trained and tested on telephone conversations of the National Institute for Standard and Technology (NIST) 2010 and 2008 speaker recognition evaluation databases. Evaluation results show that the proposed method yields significantly lower mean absolute error and higher Pearson correlation coefficient between chronological speaker age and estimated speaker age compared to different conventional schemes."
+    },
+    "accent-recognition-ivector-supervector-telephone-speech": {
+      "id": "accent-recognition-ivector-supervector-telephone-speech",
+      "title": "Accent recognition using i-vector, gaussian mean supervector and gaussian posterior probability supervector for spontaneous telephone speech",
+      "year": 2013,
+      "month": "May",
+      "venue": "2013 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 7344-7348",
+      "isPublished": true,
+      "publishedBadge": "IEEE ICASSP 2013",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Accent Recognition",
+        "Speech Processing",
+        "i-vectors",
+        "Gaussian Mean Supervector",
+        "GPPS",
+        "SVM"
+      ],
+      "citations": 117,
+      "featured": true,
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:uJ-U7cs_P_0C",
+      "journalUrl": "https://ieeexplore.ieee.org/document/6639089",
+      "sourceFile": "content/publications/accent-recognition-ivector-supervector-telephone-speech.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "rahim-saeidi",
+          "name": "Rahim Saeidi",
+          "affiliation": "Radboud University",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "david-van-leeuwen",
+          "name": "David A. van Leeuwen",
+          "affiliation": "Radboud University / TNO",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2013accent,\n  title={Accent recognition using i-vector, Gaussian mean supervector and Gaussian posterior probability supervector for spontaneous telephone speech},\n  author={Bahari, Mohamad Hasan and Saeidi, Rahim and Van hamme, Hugo and van Leeuwen, David A},\n  booktitle={2013 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={7344--7348},\n  year={2013},\n  organization={IEEE}\n}",
+      "abstract": "In this paper, three utterance modelling approaches, namely Gaussian Mean Supervector (GMS), i-vector and Gaussian Posterior Probability Supervector (GPPS), are applied to the accent recognition problem. For each utterance modeling method, three different classifiers, namely the Support Vector Machine (SVM), the Naive Bayesian Classifier (NBC) and the Sparse Representation Classifier (SRC), are employed to find out suitable matches between the utterance modelling schemes and the classifiers. The evaluation database is formed by using English utterances of speakers whose native languages are Russian, Hindi, American English, Thai, Vietnamese and Cantonese. These utterances are drawn from the National Institute of Standards and Technology (NIST) 2008 Speaker Recognition Evaluation (SRE) database. The study results show that GPPS and i-vector are more effective than GMS in this accent recognition task."
+    },
+    "age-estimation-telephone-speech-ivectors": {
+      "id": "age-estimation-telephone-speech-ivectors",
+      "title": "Age Estimation from Telephone Speech using i-vectors",
+      "year": 2012,
+      "month": "September",
+      "venue": "Proceedings of the 13th Annual Conference of the International Speech Communication Association (Interspeech 2012), pp. 506-509",
+      "isPublished": true,
+      "publishedBadge": "Interspeech 2012",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Speaker Age Estimation",
+        "Telephone Speech",
+        "i-vectors",
+        "Support Vector Regression"
+      ],
+      "citations": 83,
+      "featured": true,
+      "pdfUrl": "/pdfs/age-estimation-telephone-speech-ivectors.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:KbBQZpvPDL4C",
+      "journalUrl": "https://doi.org/10.21437/Interspeech.2012-169",
+      "sourceFile": "content/publications/age-estimation-telephone-speech-ivectors.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "mitchell-mclaren",
+          "name": "Mitchell McLaren",
+          "affiliation": "SRI International",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        },
+        {
+          "id": "david-van-leeuwen",
+          "name": "David A. van Leeuwen",
+          "affiliation": "Radboud University / TNO",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2012age,\n  author    = {Mohamad Hasan Bahari and Mitchell McLaren and Hugo Van hamme and David A. van Leeuwen},\n  title     = {Age Estimation from Telephone Speech using i-vectors},\n  booktitle = {Proceedings of the 13th Annual Conference of the International Speech Communication Association (Interspeech 2012)},\n  pages     = {506--509},\n  year      = {2012},\n  month     = {September}\n}",
+      "abstract": "Motivated by the success of i-vectors in the field of speaker recognition, this paper proposes a new approach for age estimation from telephone speech patterns based on i-vectors. In this method, each utterance is modeled by its corresponding i-vector. Then, Support Vector Regression (SVR) is applied to estimate the age of speakers. The proposed method is trained and tested on telephone conversations of the National Institute for Standard in Technology (NIST) 2010 and 2008 Speaker Recognition Evaluation databases. Evaluation results show that the proposed method outperforms different conventional methods in speaker age estimation."
+    },
     "speaker-age-estimation-hmm-weight-supervectors": {
       "id": "speaker-age-estimation-hmm-weight-supervectors",
       "title": "Speaker age estimation using Hidden Markov Model weight supervectors",
@@ -995,6 +1655,50 @@
       ],
       "bibtex": "@article{bahari2011high,\n  title={High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture},\n  author={Bahari, Mohamad Hasan and Karsaz, Ali and Pariz, Naser},\n  journal={International Journal of Innovative Computing, Information and Control},\n  volume={7},\n  number={2},\n  pages={501--510},\n  year={2011},\n  publisher={ICIC International}\n}",
       "abstract": "In this paper, a fast target maneuver detection technique and high accurate tracking scheme is proposed with the use of a new hybrid Kalman filter-fuzzy logic architecture. Due to the stressful environment of target tracking problem such as inaccurate detection and target maneuver, most of existing trackers do not represent desired performance in different situations. In practice, while the conventional Kalman filters (KF) perform well in tracking a target with constant velocity, their performance may be seriously degraded in the presence of maneuver. To reach an accurate target tracking system in such a stressful environment, fuzzy logic-based algorithms with intelligent adaptation capabilities have recently been issued. Although these methods yield reasonable performance in tracking maneuvering targets, their accuracy in non-maneuvering mode was not satisfactory. In this research, based on information about the target maneuver dynamics, a new hybrid tracker (HT) is introduced. The proposed algorithm combines two methodologies into one architecture synergistically. In other words, the KF is used when the target velocity is approximately constant, whereas fuzzy estimator is used when the target maneuvers. Simulation results show that the proposed method is superior to some conventional approaches in tracking accuracy."
+    },
+    "speaker-age-estimation-gender-detection-wsnmf": {
+      "id": "speaker-age-estimation-gender-detection-wsnmf",
+      "title": "Speaker age estimation and gender detection based on supervised non-negative matrix factorization",
+      "year": 2011,
+      "month": "September",
+      "venue": "2011 IEEE Workshop on Biometric Measurements and Systems for Security and Medical Applications (BIOMS), pp. 1-6",
+      "isPublished": true,
+      "publishedBadge": "IEEE BIOMS 2011",
+      "areaId": "audio-speech",
+      "areaName": "Audio & Speech Intelligence",
+      "areaBadge": "Audio AI",
+      "tags": [
+        "Speaker Characterization",
+        "Speaker Age Estimation",
+        "Gender Detection",
+        "Speech Processing",
+        "WSNMF",
+        "GRNN"
+      ],
+      "citations": 63,
+      "featured": true,
+      "pdfUrl": "/pdfs/speaker-age-estimation-gender-detection-wsnmf.pdf",
+      "scholarUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=tYazD-8AAAAJ&citation_for_view=tYazD-8AAAAJ:j8SEvjWlNXcC",
+      "journalUrl": "https://ieeexplore.ieee.org/document/6048252",
+      "sourceFile": "content/publications/speaker-age-estimation-gender-detection-wsnmf.md",
+      "authors": [
+        {
+          "id": "bahari",
+          "orcidId": "0009-0002-9777-8881",
+          "name": "Mohamad Hasan Bahari",
+          "avatar": "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=tYazD-8AAAAJ&citpid=7",
+          "role": "CEO Sensifai"
+        },
+        {
+          "id": "hugo-van-hamme",
+          "name": "Hugo Van hamme",
+          "affiliation": "KU Leuven",
+          "isLead": false,
+          "is_external": true
+        }
+      ],
+      "bibtex": "@inproceedings{bahari2011speaker,\n  title={Speaker age estimation and gender detection based on supervised non-negative matrix factorization},\n  author={Bahari, Mohamad Hasan and Van hamme, Hugo},\n  booktitle={2011 IEEE Workshop on Biometric Measurements and Systems for Security and Medical Applications (BIOMS)},\n  pages={1--6},\n  year={2011},\n  organization={IEEE}\n}",
+      "abstract": "In many criminal cases, evidence might be in the form of telephone conversations or tape recordings. Therefore, law enforcement agencies have been concerned about accurate methods to profile different characteristics of a speaker from recorded voice patterns, which facilitate the identification of a criminal. This paper proposes a new approach for speaker gender detection and age estimation, based on a hybrid architecture of Weighted Supervised Non-Negative Matrix Factorization (WSNMF) and General Regression Neural Network (GRNN). Evaluation results on a corpus of read and spontaneous speech in Dutch confirms the effectiveness of the proposed scheme."
     },
     "drilling-rate-prediction-innovative-soft-computing": {
       "id": "drilling-rate-prediction-innovative-soft-computing",
@@ -1277,8 +1981,8 @@
       "githubUrl": "https://github.com/bahari-sensifai",
       "linkedinUrl": "https://www.linkedin.com/company/17888541/",
       "scholarUrl": "https://scholar.google.com/citations?user=tYazD-8AAAAJ&hl=en",
-      "pubCount": 12
+      "pubCount": 18
     }
   },
-  "searchIndex": "{\"documentCount\":12,\"nextId\":12,\"documentIds\":{\"0\":\"blind-sampling-rate-offset-estimation-wasn\",\"1\":\"unsupervised-diffusion-lms-wireless-sensor-networks\",\"2\":\"height-estimation-speech-signals-ivectors-lssvr\",\"3\":\"automatic-speaker-characterization-gender-age-language-accent\",\"4\":\"multitask-speaker-profiling-age-height-weight-smoking\",\"5\":\"speaker-age-estimation-hmm-weight-supervectors\",\"6\":\"high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic\",\"7\":\"drilling-rate-prediction-innovative-soft-computing\",\"8\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"9\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"10\":\"bourgoyne-young-model-genetic-algorithm-drilling-rate\",\"11\":\"high-maneuver-target-tracking-combined-kalman-fuzzy\"},\"fieldIds\":{\"title\":0,\"abstract\":1,\"authorsText\":2,\"tagsText\":3,\"venue\":4},\"fieldLength\":{\"0\":[16,107,7,13,17],\"1\":[13,92,10,11,14],\"2\":[14,70,8,9,13],\"3\":[13,13,3,10,5],\"4\":[16,88,6,9,13],\"5\":[9,72,6,12,16],\"6\":[13,119,7,10,16],\"7\":[9,98,10,11,12],\"8\":[14,91,5,14,12],\"9\":[8,89,9,10,13],\"10\":[13,80,11,10,12],\"11\":[12,71,7,10,10]},\"averageFieldLength\":[12.5,82.5,7.416666666666667,10.75,12.75],\"storedFields\":{\"0\":{\"id\":\"blind-sampling-rate-offset-estimation-wasn\",\"title\":\"Blind sampling rate offset estimation for wireless acoustic sensor networks through weighted least-squares coherence drift estimation\",\"areaId\":\"audio-speech\",\"year\":2017},\"1\":{\"id\":\"unsupervised-diffusion-lms-wireless-sensor-networks\",\"title\":\"Unsupervised diffusion-based LMS for node-specific parameter estimation over wireless sensor networks\",\"areaId\":\"edge-systems\",\"year\":2016},\"2\":{\"id\":\"height-estimation-speech-signals-ivectors-lssvr\",\"title\":\"Height estimation from speech signals using i-vectors and least-squares support vector regression\",\"areaId\":\"audio-speech\",\"year\":2015},\"3\":{\"id\":\"automatic-speaker-characterization-gender-age-language-accent\",\"title\":\"Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals\",\"areaId\":\"audio-speech\",\"year\":2014},\"4\":{\"id\":\"multitask-speaker-profiling-age-height-weight-smoking\",\"title\":\"Multitask speaker profiling for estimating age, height, weight and smoking habits from spontaneous telephone speech signals\",\"areaId\":\"audio-speech\",\"year\":2014},\"5\":{\"id\":\"speaker-age-estimation-hmm-weight-supervectors\",\"title\":\"Speaker age estimation using Hidden Markov Model weight supervectors\",\"areaId\":\"audio-speech\",\"year\":2012},\"6\":{\"id\":\"high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic\",\"title\":\"High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture\",\"areaId\":\"ai-ml\",\"year\":2011},\"7\":{\"id\":\"drilling-rate-prediction-innovative-soft-computing\",\"title\":\"Drilling rate prediction using an innovative soft computing approach\",\"areaId\":\"ai-ml\",\"year\":2010},\"8\":{\"id\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"title\":\"High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor\",\"areaId\":\"ai-ml\",\"year\":2009},\"9\":{\"id\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"title\":\"Intelligent fading memory for high maneuvering target tracking\",\"areaId\":\"ai-ml\",\"year\":2009},\"10\":{\"id\":\"bourgoyne-young-model-genetic-algorithm-drilling-rate\",\"title\":\"Determining Bourgoyne and Young Model Coefficients Using Genetic Algorithm to Predict Drilling Rate\",\"areaId\":\"ai-ml\",\"year\":2008},\"11\":{\"id\":\"high-maneuver-target-tracking-combined-kalman-fuzzy\",\"title\":\"High maneuver target tracking based on combined Kalman filter and fuzzy logic\",\"areaId\":\"ai-ml\",\"year\":2007}},\"dirtCount\":0,\"index\":[[\"8\",{\"4\":{\"10\":1}}],[\"jerking\",{\"1\":{\"9\":1}}],[\"journal\",{\"4\":{\"6\":1,\"9\":1,\"10\":1}}],[\"jorge\",{\"2\":{\"1\":1}}],[\"945\",{\"4\":{\"8\":1}}],[\"936\",{\"4\":{\"8\":1}}],[\"young\",{\"0\":{\"10\":1},\"1\":{\"7\":1,\"10\":1},\"3\":{\"7\":1,\"10\":1}}],[\"yield\",{\"1\":{\"6\":1,\"10\":1}}],[\"7\",{\"4\":{\"4\":1,\"6\":1}}],[\"4\",{\"4\":{\"8\":1,\"9\":1}}],[\"4th\",{\"4\":{\"4\":1}}],[\"4163\",{\"4\":{\"1\":1}}],[\"4159\",{\"4\":{\"1\":1}}],[\"khaloozadeh\",{\"2\":{\"11\":1}}],[\"khangiran\",{\"1\":{\"7\":1,\"10\":1}}],[\"karsaz\",{\"2\":{\"6\":1,\"11\":1}}],[\"kalman\",{\"0\":{\"6\":1,\"11\":1},\"1\":{\"6\":2,\"11\":1},\"3\":{\"6\":1,\"11\":1}}],[\"kf\",{\"1\":{\"6\":2}}],[\"ku\",{\"4\":{\"3\":1}}],[\"knowledge\",{\"4\":{\"4\":1}}],[\"know\",{\"1\":{\"1\":1}}],[\"59\",{\"4\":{\"11\":1}}],[\"554\",{\"4\":{\"9\":1}}],[\"548\",{\"4\":{\"9\":1}}],[\"510\",{\"4\":{\"6\":1}}],[\"517\",{\"4\":{\"5\":1}}],[\"501\",{\"4\":{\"6\":1}}],[\"521\",{\"4\":{\"5\":1}}],[\"5\",{\"4\":{\"2\":1,\"7\":1}}],[\"17\",{\"4\":{\"10\":1}}],[\"10\",{\"4\":{\"8\":1,\"9\":1}}],[\"1588\",{\"4\":{\"7\":1}}],[\"1583\",{\"4\":{\"7\":1}}],[\"13\",{\"4\":{\"7\":1}}],[\"11th\",{\"4\":{\"5\":1}}],[\"12\",{\"4\":{\"4\":1}}],[\"1\",{\"4\":{\"2\":1}}],[\"2\",{\"4\":{\"6\":1}}],[\"2007\",{\"4\":{\"11\":1}}],[\"2008\",{\"1\":{\"2\":1}}],[\"2012\",{\"4\":{\"5\":1}}],[\"2014\",{\"4\":{\"4\":1}}],[\"2015\",{\"4\":{\"2\":1}}],[\"2010\",{\"1\":{\"2\":1}}],[\"2016\",{\"4\":{\"1\":1}}],[\"25\",{\"4\":{\"0\":1}}],[\"visualize\",{\"1\":{\"8\":1}}],[\"velocity\",{\"1\":{\"6\":2,\"8\":1}}],[\"vector\",{\"0\":{\"2\":1},\"1\":{\"1\":1,\"2\":3,\"4\":3,\"5\":1}}],[\"vectors\",{\"0\":{\"2\":1},\"1\":{\"1\":1,\"5\":1},\"3\":{\"2\":1,\"4\":1}}],[\"value\",{\"1\":{\"11\":2}}],[\"van\",{\"2\":{\"5\":1}}],[\"vasilakakis\",{\"2\":{\"2\":1}}],[\"vasileios\",{\"2\":{\"2\":1}}],[\"vol\",{\"4\":{\"0\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1}}],[\"used\",{\"1\":{\"6\":2,\"7\":1,\"10\":1}}],[\"use\",{\"1\":{\"6\":1}}],[\"using\",{\"0\":{\"2\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"10\":1},\"1\":{\"4\":1,\"5\":1,\"7\":1,\"10\":1,\"11\":1}}],[\"utterances\",{\"1\":{\"4\":1}}],[\"utterance\",{\"1\":{\"2\":2,\"4\":1}}],[\"utilized\",{\"1\":{\"4\":1}}],[\"utilize\",{\"1\":{\"0\":1}}],[\"unknown\",{\"1\":{\"10\":1}}],[\"uncertainties\",{\"1\":{\"9\":1}}],[\"unforeseen\",{\"1\":{\"7\":1}}],[\"unbiased\",{\"1\":{\"1\":1}}],[\"unsupervised\",{\"0\":{\"1\":1},\"1\":{\"1\":2}}],[\"64\",{\"4\":{\"11\":1}}],[\"686\",{\"4\":{\"0\":1}}],[\"674\",{\"4\":{\"0\":1}}],[\"3054\",{\"4\":{\"10\":1}}],[\"3050\",{\"4\":{\"10\":1}}],[\"38th\",{\"4\":{\"2\":1}}],[\"3\",{\"4\":{\"0\":1}}],[\"observation\",{\"1\":{\"11\":1}}],[\"obtained\",{\"1\":{\"5\":1}}],[\"obtain\",{\"1\":{\"1\":1}}],[\"operations\",{\"1\":{\"10\":1}}],[\"optimization\",{\"3\":{\"7\":1,\"10\":1}}],[\"our\",{\"1\":{\"7\":1}}],[\"own\",{\"1\":{\"1\":2}}],[\"other\",{\"1\":{\"1\":1,\"6\":1}}],[\"original\",{\"1\":{\"10\":1}}],[\"originated\",{\"1\":{\"9\":1}}],[\"order\",{\"1\":{\"8\":2,\"9\":1}}],[\"or\",{\"1\":{\"1\":1,\"9\":2}}],[\"overcome\",{\"1\":{\"9\":1,\"11\":1}}],[\"over\",{\"0\":{\"1\":1},\"1\":{\"7\":1}}],[\"one\",{\"1\":{\"6\":1}}],[\"on\",{\"0\":{\"11\":1},\"1\":{\"1\":1,\"2\":2,\"4\":4,\"5\":1,\"6\":1,\"8\":2,\"10\":2},\"4\":{\"0\":1,\"1\":1,\"2\":1,\"4\":1,\"5\":1}}],[\"of\",{\"0\":{\"3\":1},\"1\":{\"0\":2,\"1\":12,\"2\":4,\"3\":1,\"4\":4,\"5\":4,\"6\":4,\"7\":2,\"8\":3,\"9\":1,\"10\":1,\"11\":6},\"4\":{\"6\":1,\"9\":1,\"10\":1}}],[\"often\",{\"1\":{\"0\":1}}],[\"offset\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"multiple\",{\"1\":{\"10\":1}}],[\"multitask\",{\"0\":{\"4\":1},\"3\":{\"4\":1}}],[\"many\",{\"1\":{\"7\":1}}],[\"maneuvers\",{\"1\":{\"6\":1,\"8\":1}}],[\"maneuver\",{\"0\":{\"11\":1},\"1\":{\"6\":4},\"3\":{\"6\":1,\"8\":1,\"11\":1}}],[\"maneuvering\",{\"0\":{\"6\":1,\"8\":1,\"9\":1},\"1\":{\"6\":2,\"8\":4,\"9\":6,\"11\":2}}],[\"make\",{\"1\":{\"7\":1}}],[\"may\",{\"1\":{\"6\":1,\"8\":1}}],[\"matrix\",{\"1\":{\"5\":1}}],[\"markov\",{\"0\":{\"5\":1},\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"marc\",{\"2\":{\"0\":1,\"1\":1}}],[\"measurement\",{\"1\":{\"11\":1}}],[\"meaningful\",{\"1\":{\"10\":1}}],[\"meaningless\",{\"1\":{\"10\":1}}],[\"means\",{\"1\":{\"4\":1}}],[\"mean\",{\"1\":{\"4\":1}}],[\"memory\",{\"0\":{\"9\":1},\"1\":{\"9\":4},\"3\":{\"9\":1}}],[\"medium\",{\"1\":{\"8\":1,\"9\":1}}],[\"methodologies\",{\"1\":{\"6\":1}}],[\"methods\",{\"1\":{\"6\":1,\"7\":1,\"10\":1}}],[\"method\",{\"1\":{\"2\":3,\"4\":1,\"5\":1,\"6\":1,\"8\":2,\"9\":3,\"10\":2,\"11\":3}}],[\"mixed\",{\"1\":{\"11\":1}}],[\"mixture\",{\"1\":{\"4\":1}}],[\"mismodeling\",{\"1\":{\"9\":1}}],[\"mild\",{\"1\":{\"8\":1}}],[\"mie\",{\"1\":{\"8\":2,\"9\":2},\"3\":{\"8\":1}}],[\"minimizing\",{\"1\":{\"7\":1}}],[\"microphones\",{\"1\":{\"0\":2}}],[\"microphone\",{\"1\":{\"0\":2}}],[\"moharrami\",{\"2\":{\"10\":1}}],[\"mohammad\",{\"2\":{\"7\":1,\"9\":1,\"10\":1}}],[\"mohamad\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1}}],[\"more\",{\"1\":{\"10\":1}}],[\"moradi\",{\"2\":{\"7\":1}}],[\"modified\",{\"1\":{\"8\":1,\"9\":1},\"3\":{\"8\":1}}],[\"mode\",{\"1\":{\"6\":1,\"9\":1}}],[\"modeling\",{\"1\":{\"9\":1},\"3\":{\"10\":1}}],[\"model\",{\"0\":{\"5\":1,\"10\":1},\"1\":{\"4\":1,\"5\":1,\"7\":1,\"10\":1},\"3\":{\"5\":1,\"7\":1,\"10\":1}}],[\"modeled\",{\"1\":{\"2\":1,\"4\":1,\"5\":1}}],[\"most\",{\"1\":{\"6\":1}}],[\"moonen\",{\"2\":{\"0\":1,\"1\":1}}],[\"ht\",{\"1\":{\"6\":1}}],[\"hybrid\",{\"0\":{\"6\":1},\"1\":{\"6\":2},\"3\":{\"6\":1}}],[\"high\",{\"0\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1},\"1\":{\"6\":1,\"8\":4,\"9\":4,\"11\":3},\"3\":{\"6\":1,\"8\":1,\"11\":1}}],[\"hidden\",{\"0\":{\"5\":1},\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"hugo\",{\"2\":{\"5\":1}}],[\"hmm\",{\"1\":{\"5\":1}}],[\"has\",{\"1\":{\"8\":1,\"9\":1}}],[\"hasan\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1}}],[\"hamid\",{\"2\":{\"11\":1}}],[\"hamidreza\",{\"2\":{\"7\":1}}],[\"hamme\",{\"2\":{\"5\":1}}],[\"have\",{\"1\":{\"6\":1,\"7\":2,\"11\":1}}],[\"habit\",{\"1\":{\"4\":3}}],[\"habits\",{\"0\":{\"4\":1}}],[\"hossein\",{\"2\":{\"2\":1,\"4\":1}}],[\"however\",{\"1\":{\"0\":1,\"7\":2,\"8\":1,\"9\":2}}],[\"height\",{\"0\":{\"2\":1,\"4\":1},\"1\":{\"2\":3,\"4\":2},\"3\":{\"2\":1}}],[\"hence\",{\"1\":{\"0\":1}}],[\"literature\",{\"1\":{\"11\":1}}],[\"linearly\",{\"1\":{\"0\":1}}],[\"last\",{\"1\":{\"7\":1,\"11\":1}}],[\"large\",{\"1\":{\"7\":1}}],[\"language\",{\"0\":{\"3\":1},\"1\":{\"3\":1},\"3\":{\"3\":1},\"4\":{\"0\":1}}],[\"ls\",{\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"lssvr\",{\"1\":{\"2\":1,\"4\":1},\"3\":{\"2\":1,\"4\":1}}],[\"lr\",{\"1\":{\"4\":1}}],[\"logic\",{\"0\":{\"6\":1,\"11\":1},\"1\":{\"6\":2,\"11\":2},\"3\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1}}],[\"logistic\",{\"1\":{\"4\":1}}],[\"low\",{\"1\":{\"5\":1,\"8\":2,\"9\":1}}],[\"local\",{\"1\":{\"1\":3}}],[\"leading\",{\"1\":{\"9\":1}}],[\"learning\",{\"3\":{\"4\":1}}],[\"least\",{\"0\":{\"0\":1,\"2\":1},\"1\":{\"0\":1,\"2\":1,\"4\":1,\"5\":1}}],[\"level\",{\"1\":{\"4\":1}}],[\"leuven\",{\"4\":{\"3\":1}}],[\"lms\",{\"0\":{\"1\":1},\"1\":{\"1\":2},\"3\":{\"1\":1}}],[\"penetration\",{\"1\":{\"10\":1}}],[\"performs\",{\"1\":{\"9\":1}}],[\"performance\",{\"1\":{\"0\":2,\"1\":1,\"6\":3,\"8\":2,\"9\":1,\"11\":1}}],[\"perform\",{\"1\":{\"0\":1,\"4\":1,\"6\":1}}],[\"physically\",{\"1\":{\"10\":2}}],[\"physical\",{\"4\":{\"9\":1}}],[\"ph\",{\"4\":{\"3\":1}}],[\"phase\",{\"1\":{\"0\":2}}],[\"poorjam\",{\"2\":{\"2\":1,\"4\":1}}],[\"plata\",{\"2\":{\"1\":1}}],[\"pariz\",{\"2\":{\"6\":1,\"8\":1,\"9\":1}}],[\"parameters\",{\"1\":{\"1\":2,\"10\":1}}],[\"parameter\",{\"0\":{\"1\":1},\"1\":{\"1\":2},\"3\":{\"1\":1}}],[\"paper\",{\"1\":{\"0\":1,\"2\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":2,\"11\":1}}],[\"pp\",{\"4\":{\"0\":1,\"1\":1,\"2\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1}}],[\"practical\",{\"1\":{\"7\":1}}],[\"practice\",{\"1\":{\"6\":1}}],[\"presented\",{\"1\":{\"9\":1,\"11\":1}}],[\"present\",{\"1\":{\"8\":1,\"11\":1}}],[\"presenting\",{\"1\":{\"8\":1}}],[\"presence\",{\"1\":{\"6\":1,\"8\":1}}],[\"predictive\",{\"3\":{\"10\":1}}],[\"predicting\",{\"1\":{\"10\":1}}],[\"predictions\",{\"1\":{\"10\":1}}],[\"prediction\",{\"0\":{\"7\":1},\"1\":{\"7\":4},\"3\":{\"7\":1}}],[\"predicts\",{\"1\":{\"7\":1}}],[\"predict\",{\"0\":{\"10\":1},\"1\":{\"7\":1}}],[\"precision\",{\"1\":{\"0\":1}}],[\"produces\",{\"1\":{\"10\":1}}],[\"prove\",{\"1\":{\"9\":1}}],[\"provides\",{\"1\":{\"10\":1}}],[\"provide\",{\"1\":{\"4\":1,\"7\":1}}],[\"profiling\",{\"0\":{\"4\":1},\"3\":{\"4\":1}}],[\"process\",{\"1\":{\"1\":1,\"7\":1}}],[\"processing\",{\"3\":{\"0\":1,\"1\":1,\"2\":1,\"4\":1,\"9\":1,\"11\":1},\"4\":{\"0\":1,\"1\":1,\"2\":1,\"5\":1}}],[\"problems\",{\"1\":{\"11\":2}}],[\"problem\",{\"1\":{\"1\":2,\"6\":1,\"7\":1}}],[\"proposes\",{\"1\":{\"2\":1,\"4\":1,\"5\":1}}],[\"proposed\",{\"1\":{\"0\":1,\"1\":1,\"2\":2,\"5\":1,\"6\":3,\"7\":2,\"8\":2,\"9\":1,\"10\":1,\"11\":1}}],[\"propose\",{\"1\":{\"0\":1,\"1\":1}}],[\"drawbacks\",{\"1\":{\"11\":1}}],[\"drilling\",{\"0\":{\"7\":1,\"10\":1},\"1\":{\"7\":7,\"10\":1},\"3\":{\"7\":1,\"10\":1}}],[\"drift\",{\"0\":{\"0\":1},\"1\":{\"0\":3},\"3\":{\"0\":1}}],[\"dynamics\",{\"1\":{\"6\":1,\"9\":1}}],[\"during\",{\"1\":{\"7\":1}}],[\"due\",{\"1\":{\"6\":1,\"7\":1,\"8\":1}}],[\"dutch\",{\"1\":{\"5\":1}}],[\"d\",{\"4\":{\"3\":1}}],[\"does\",{\"1\":{\"9\":1}}],[\"do\",{\"1\":{\"1\":1,\"6\":1}}],[\"domain\",{\"1\":{\"0\":1}}],[\"did\",{\"1\":{\"7\":1}}],[\"dimensional\",{\"1\":{\"5\":1}}],[\"dimension\",{\"1\":{\"5\":1}}],[\"dissertation\",{\"4\":{\"3\":1}}],[\"distributed\",{\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"difference\",{\"1\":{\"11\":1}}],[\"different\",{\"1\":{\"0\":1,\"1\":1,\"6\":1,\"7\":1,\"9\":1}}],[\"difficulties\",{\"1\":{\"9\":1}}],[\"difficult\",{\"1\":{\"7\":1}}],[\"diffusion\",{\"0\":{\"1\":1},\"1\":{\"1\":2},\"3\":{\"1\":1}}],[\"decision\",{\"4\":{\"11\":1}}],[\"decades\",{\"1\":{\"7\":1}}],[\"depend\",{\"1\":{\"10\":1}}],[\"determine\",{\"1\":{\"10\":2}}],[\"determining\",{\"0\":{\"10\":1}}],[\"detection\",{\"1\":{\"4\":1,\"6\":2}}],[\"deficiencies\",{\"1\":{\"9\":1}}],[\"desirable\",{\"1\":{\"9\":1}}],[\"desired\",{\"1\":{\"6\":1}}],[\"developed\",{\"1\":{\"8\":1,\"9\":1}}],[\"degraded\",{\"1\":{\"6\":1,\"8\":1}}],[\"demonstrates\",{\"1\":{\"10\":1}}],[\"demonstrate\",{\"1\":{\"0\":1,\"1\":1}}],[\"delay\",{\"1\":{\"0\":1}}],[\"data\",{\"1\":{\"0\":1,\"7\":1,\"10\":1}}],[\"crucial\",{\"1\":{\"7\":1}}],[\"characterization\",{\"0\":{\"3\":1},\"1\":{\"3\":1},\"3\":{\"2\":1,\"3\":1}}],[\"chaves\",{\"2\":{\"1\":1}}],[\"called\",{\"1\":{\"7\":1}}],[\"capabilities\",{\"1\":{\"6\":1}}],[\"can\",{\"1\":{\"1\":1,\"10\":1}}],[\"causes\",{\"1\":{\"0\":1}}],[\"cases\",{\"1\":{\"8\":1}}],[\"case\",{\"1\":{\"0\":1,\"1\":1}}],[\"course\",{\"1\":{\"11\":2}}],[\"collected\",{\"1\":{\"10\":1}}],[\"coefficients\",{\"0\":{\"10\":1},\"1\":{\"10\":4}}],[\"cope\",{\"1\":{\"9\":1}}],[\"cost\",{\"1\":{\"7\":1}}],[\"corpus\",{\"1\":{\"5\":1}}],[\"corpora\",{\"1\":{\"2\":1}}],[\"corresponding\",{\"1\":{\"2\":1,\"5\":1}}],[\"correspond\",{\"1\":{\"1\":1}}],[\"control\",{\"4\":{\"6\":1,\"11\":1}}],[\"continuously\",{\"1\":{\"1\":1}}],[\"conventional\",{\"1\":{\"6\":2,\"7\":1,\"9\":1,\"10\":1}}],[\"confirms\",{\"1\":{\"5\":1}}],[\"conference\",{\"4\":{\"1\":1,\"2\":1,\"4\":1,\"5\":1}}],[\"consist\",{\"1\":{\"11\":1}}],[\"considered\",{\"1\":{\"4\":1}}],[\"consequently\",{\"1\":{\"7\":1}}],[\"constant\",{\"1\":{\"6\":2}}],[\"constrained\",{\"1\":{\"4\":1}}],[\"conduct\",{\"1\":{\"1\":1}}],[\"combined\",{\"0\":{\"11\":1},\"1\":{\"11\":2}}],[\"combines\",{\"1\":{\"6\":1}}],[\"compared\",{\"1\":{\"10\":1,\"11\":1}}],[\"compensation\",{\"1\":{\"9\":1}}],[\"compensated\",{\"1\":{\"0\":1}}],[\"complex\",{\"1\":{\"7\":1}}],[\"complementary\",{\"1\":{\"4\":1}}],[\"computing\",{\"0\":{\"7\":1},\"1\":{\"7\":2},\"3\":{\"7\":1},\"4\":{\"6\":1}}],[\"computer\",{\"4\":{\"4\":1}}],[\"common\",{\"1\":{\"1\":1}}],[\"coherence\",{\"0\":{\"0\":1},\"1\":{\"0\":3},\"3\":{\"0\":1}}],[\"f\",{\"2\":{\"10\":1}}],[\"ffm\",{\"1\":{\"9\":1}}],[\"fff\",{\"1\":{\"8\":1}}],[\"furthermore\",{\"1\":{\"8\":1}}],[\"fuzzy\",{\"0\":{\"6\":1,\"8\":1,\"11\":1},\"1\":{\"6\":3,\"8\":2,\"9\":1,\"11\":2},\"3\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1}}],[\"fusion\",{\"1\":{\"4\":1}}],[\"four\",{\"1\":{\"4\":1}}],[\"formation\",{\"1\":{\"10\":1}}],[\"forgetting\",{\"0\":{\"8\":1},\"1\":{\"8\":2},\"3\":{\"8\":1}}],[\"for\",{\"0\":{\"0\":1,\"1\":1,\"4\":1,\"9\":1},\"1\":{\"0\":2,\"2\":1,\"4\":2,\"5\":1,\"7\":2,\"10\":1}}],[\"framework\",{\"1\":{\"2\":1,\"4\":2}}],[\"from\",{\"0\":{\"2\":1,\"3\":1,\"4\":1},\"1\":{\"2\":1,\"3\":1,\"4\":2,\"9\":1,\"10\":1}}],[\"frequency\",{\"1\":{\"0\":1}}],[\"field\",{\"1\":{\"7\":1,\"10\":1}}],[\"filters\",{\"1\":{\"6\":1}}],[\"filter\",{\"0\":{\"6\":1,\"11\":1},\"1\":{\"6\":1,\"11\":1},\"3\":{\"6\":1,\"11\":1}}],[\"filtering\",{\"3\":{\"1\":1}}],[\"finally\",{\"1\":{\"1\":1,\"5\":1}}],[\"first\",{\"1\":{\"1\":1,\"11\":1}}],[\"fading\",{\"0\":{\"9\":1},\"1\":{\"9\":5},\"3\":{\"9\":1}}],[\"fast\",{\"1\":{\"6\":1}}],[\"fashion\",{\"1\":{\"0\":1}}],[\"factors\",{\"1\":{\"7\":1}}],[\"factorization\",{\"1\":{\"5\":1}}],[\"factor\",{\"0\":{\"8\":1},\"1\":{\"4\":3,\"8\":2},\"3\":{\"8\":1}}],[\"fact\",{\"1\":{\"0\":1,\"9\":1}}],[\"nine\",{\"1\":{\"7\":1,\"10\":1}}],[\"nist\",{\"1\":{\"2\":1}}],[\"number\",{\"1\":{\"7\":1}}],[\"nfa\",{\"1\":{\"4\":2}}],[\"naghibi\",{\"2\":{\"7\":1,\"9\":1,\"10\":1}}],[\"naser\",{\"2\":{\"6\":1,\"8\":1,\"9\":1}}],[\"namely\",{\"1\":{\"4\":1}}],[\"national\",{\"1\":{\"2\":1}}],[\"nejati\",{\"2\":{\"10\":1}}],[\"negative\",{\"1\":{\"4\":1,\"5\":1}}],[\"neural\",{\"1\":{\"2\":1,\"4\":1},\"3\":{\"7\":1}}],[\"neighboring\",{\"1\":{\"1\":1}}],[\"neighbors\",{\"1\":{\"1\":1}}],[\"next\",{\"1\":{\"1\":1}}],[\"network\",{\"1\":{\"0\":1,\"1\":2}}],[\"networks\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":1,\"2\":1,\"4\":1},\"3\":{\"0\":1,\"1\":1,\"7\":1}}],[\"new\",{\"1\":{\"0\":1,\"5\":1,\"6\":2,\"7\":2,\"8\":1,\"9\":1,\"11\":1}}],[\"non\",{\"1\":{\"4\":1,\"5\":1,\"6\":1,\"9\":1}}],[\"novel\",{\"0\":{\"6\":1},\"1\":{\"2\":1,\"4\":1}}],[\"node\",{\"0\":{\"1\":1},\"1\":{\"1\":5}}],[\"nodes\",{\"1\":{\"0\":1,\"1\":4}}],[\"no\",{\"4\":{\"0\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1}}],[\"not\",{\"1\":{\"0\":1,\"1\":1,\"6\":2,\"7\":1,\"8\":1,\"9\":1}}],[\"noise\",{\"1\":{\"0\":1}}],[\"idc\",{\"4\":{\"11\":1}}],[\"identification\",{\"0\":{\"3\":1},\"1\":{\"3\":1},\"3\":{\"3\":1}}],[\"identifying\",{\"1\":{\"1\":1}}],[\"illustrate\",{\"1\":{\"8\":1}}],[\"iranian\",{\"1\":{\"7\":1,\"10\":1}}],[\"iccke\",{\"4\":{\"4\":1}}],[\"icassp\",{\"4\":{\"1\":1}}],[\"important\",{\"1\":{\"4\":1,\"7\":1,\"11\":1}}],[\"ieee\",{\"4\":{\"0\":1,\"1\":1,\"11\":1}}],[\"issue\",{\"1\":{\"7\":1}}],[\"issued\",{\"1\":{\"6\":1}}],[\"isspa\",{\"4\":{\"5\":1}}],[\"is\",{\"1\":{\"0\":1,\"1\":1,\"2\":2,\"4\":4,\"5\":2,\"6\":6,\"7\":4,\"8\":2,\"9\":4,\"10\":2,\"11\":3}}],[\"iteration\",{\"1\":{\"8\":1}}],[\"its\",{\"1\":{\"1\":2,\"2\":1,\"7\":2,\"8\":3,\"9\":1}}],[\"it\",{\"1\":{\"0\":1,\"7\":1}}],[\"innovation\",{\"1\":{\"11\":1}}],[\"innovative\",{\"0\":{\"7\":1},\"4\":{\"6\":1}}],[\"incomplete\",{\"1\":{\"9\":1}}],[\"increasing\",{\"1\":{\"0\":1}}],[\"influence\",{\"1\":{\"7\":1}}],[\"information\",{\"1\":{\"4\":1,\"6\":1,\"9\":1},\"4\":{\"5\":1,\"6\":1,\"11\":1}}],[\"into\",{\"1\":{\"6\":1}}],[\"introduced\",{\"1\":{\"6\":1,\"7\":2,\"8\":1,\"9\":1}}],[\"intelligent\",{\"0\":{\"9\":1},\"1\":{\"6\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"international\",{\"4\":{\"1\":1,\"2\":1,\"4\":1,\"5\":1,\"6\":1,\"9\":1}}],[\"interests\",{\"1\":{\"1\":1}}],[\"interest\",{\"1\":{\"1\":3}}],[\"interested\",{\"1\":{\"1\":1}}],[\"inaccurate\",{\"1\":{\"6\":1}}],[\"input\",{\"0\":{\"8\":1},\"1\":{\"5\":1,\"8\":1,\"9\":1},\"3\":{\"8\":1,\"9\":1}}],[\"institute\",{\"1\":{\"2\":1}}],[\"in\",{\"1\":{\"0\":6,\"1\":3,\"2\":2,\"4\":1,\"5\":2,\"6\":11,\"7\":5,\"8\":10,\"9\":11,\"10\":3,\"11\":3}}],[\"i\",{\"0\":{\"2\":1},\"1\":{\"0\":1,\"2\":2,\"4\":2},\"3\":{\"2\":1,\"4\":1}}],[\"ground\",{\"1\":{\"10\":1}}],[\"genetic\",{\"0\":{\"10\":1},\"1\":{\"10\":1},\"3\":{\"10\":1}}],[\"gender\",{\"0\":{\"3\":1},\"1\":{\"3\":1},\"3\":{\"3\":1}}],[\"ga\",{\"1\":{\"10\":2}}],[\"gas\",{\"1\":{\"7\":1,\"10\":1}}],[\"gaussian\",{\"1\":{\"4\":1}}],[\"gmm\",{\"1\":{\"4\":4}}],[\"given\",{\"1\":{\"2\":1,\"4\":1}}],[\"global\",{\"1\":{\"1\":1}}],[\"g\",{\"1\":{\"0\":1}}],[\"rop\",{\"1\":{\"10\":2}}],[\"role\",{\"1\":{\"7\":1}}],[\"robustness\",{\"1\":{\"0\":1}}],[\"reported\",{\"1\":{\"11\":1}}],[\"represent\",{\"1\":{\"6\":1,\"9\":1}}],[\"relying\",{\"1\":{\"10\":1}}],[\"recently\",{\"1\":{\"6\":1,\"8\":1,\"9\":1}}],[\"recognizers\",{\"1\":{\"4\":1}}],[\"recognition\",{\"1\":{\"2\":1},\"3\":{\"3\":1}}],[\"recorded\",{\"1\":{\"0\":2}}],[\"reasonably\",{\"1\":{\"8\":1}}],[\"reasonable\",{\"1\":{\"6\":1}}],[\"reach\",{\"1\":{\"6\":1}}],[\"read\",{\"1\":{\"5\":1}}],[\"real\",{\"1\":{\"0\":1}}],[\"regressor\",{\"1\":{\"5\":1}}],[\"regression\",{\"0\":{\"2\":1},\"1\":{\"2\":1,\"4\":2,\"10\":2}}],[\"residual\",{\"1\":{\"11\":1}}],[\"research\",{\"1\":{\"6\":1,\"7\":1,\"10\":1},\"4\":{\"7\":1,\"8\":1}}],[\"respectively\",{\"1\":{\"2\":1}}],[\"results\",{\"1\":{\"0\":1,\"1\":2,\"2\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":2}}],[\"reduction\",{\"1\":{\"0\":1}}],[\"reduce\",{\"1\":{\"0\":1,\"5\":1}}],[\"rate\",{\"0\":{\"0\":1,\"7\":1,\"10\":1},\"1\":{\"0\":1,\"7\":6,\"10\":1},\"3\":{\"0\":1,\"7\":1,\"10\":1}}],[\"bourgoyne\",{\"0\":{\"10\":1},\"1\":{\"7\":1,\"10\":1},\"3\":{\"7\":1,\"10\":1}}],[\"bym\",{\"1\":{\"10\":1}}],[\"by\",{\"1\":{\"1\":1,\"2\":1,\"5\":1,\"10\":1,\"11\":1}}],[\"bias\",{\"1\":{\"1\":1}}],[\"bagher\",{\"2\":{\"7\":1,\"9\":1,\"10\":1}}],[\"based\",{\"0\":{\"1\":1,\"11\":1},\"1\":{\"1\":1,\"2\":1,\"4\":4,\"6\":2,\"8\":1}}],[\"bahari\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":2,\"8\":1,\"9\":1,\"10\":2,\"11\":1}}],[\"background\",{\"1\":{\"0\":1}}],[\"become\",{\"1\":{\"8\":1}}],[\"been\",{\"1\":{\"6\":1,\"7\":2,\"8\":1,\"9\":1,\"11\":1}}],[\"bertrand\",{\"2\":{\"0\":1,\"1\":1}}],[\"be\",{\"1\":{\"0\":1,\"1\":1,\"6\":1,\"8\":1}}],[\"between\",{\"1\":{\"0\":4,\"11\":1}}],[\"blindly\",{\"1\":{\"1\":1}}],[\"blind\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}],[\"eight\",{\"1\":{\"10\":1}}],[\"emphasize\",{\"1\":{\"8\":1}}],[\"employed\",{\"1\":{\"2\":1,\"4\":1,\"5\":1,\"10\":1}}],[\"efficiency\",{\"1\":{\"8\":1,\"9\":1}}],[\"effectiveness\",{\"1\":{\"2\":1,\"5\":1,\"11\":1}}],[\"effective\",{\"1\":{\"1\":1,\"9\":1}}],[\"essay\",{\"4\":{\"8\":1}}],[\"essays\",{\"4\":{\"7\":1}}],[\"estimator\",{\"1\":{\"6\":1}}],[\"estimating\",{\"0\":{\"4\":1}}],[\"estimation\",{\"0\":{\"0\":2,\"1\":1,\"2\":1,\"5\":1,\"8\":1},\"1\":{\"0\":2,\"1\":5,\"2\":2,\"4\":2,\"5\":1,\"8\":2,\"9\":1},\"3\":{\"1\":1,\"2\":1,\"5\":1,\"8\":1,\"9\":1}}],[\"estimate\",{\"1\":{\"2\":1,\"4\":1,\"5\":1}}],[\"estimates\",{\"1\":{\"1\":3}}],[\"estimated\",{\"1\":{\"0\":1}}],[\"events\",{\"1\":{\"7\":1}}],[\"evaluation\",{\"1\":{\"2\":2,\"5\":1}}],[\"evaluations\",{\"1\":{\"0\":1}}],[\"enjoy\",{\"1\":{\"8\":1}}],[\"enhance\",{\"1\":{\"8\":1,\"9\":1}}],[\"enhancement\",{\"1\":{\"0\":2},\"3\":{\"0\":1}}],[\"environment\",{\"1\":{\"6\":2}}],[\"engineering\",{\"4\":{\"4\":1}}],[\"each\",{\"1\":{\"1\":3,\"2\":1,\"4\":1}}],[\"extensions\",{\"1\":{\"7\":1}}],[\"extract\",{\"1\":{\"0\":1}}],[\"existing\",{\"1\":{\"6\":1,\"11\":1}}],[\"exists\",{\"1\":{\"0\":1}}],[\"exploits\",{\"1\":{\"0\":1}}],[\"exploit\",{\"1\":{\"0\":1}}],[\"e\",{\"1\":{\"0\":2}}],[\"trouble\",{\"1\":{\"9\":1}}],[\"trajectory\",{\"1\":{\"8\":1}}],[\"tracker\",{\"1\":{\"6\":1}}],[\"trackers\",{\"1\":{\"6\":1}}],[\"tracking\",{\"0\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1},\"1\":{\"6\":6,\"8\":4,\"9\":4,\"11\":2},\"3\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1}}],[\"traits\",{\"1\":{\"4\":1}}],[\"trained\",{\"1\":{\"2\":1}}],[\"transactions\",{\"4\":{\"0\":1}}],[\"tuning\",{\"1\":{\"8\":1},\"3\":{\"8\":1}}],[\"task\",{\"1\":{\"7\":1}}],[\"tasks\",{\"1\":{\"1\":1}}],[\"targets\",{\"1\":{\"6\":1,\"8\":2,\"9\":4,\"11\":1}}],[\"target\",{\"0\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1},\"1\":{\"6\":8,\"8\":3,\"9\":1,\"11\":3},\"3\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1}}],[\"tsp\",{\"4\":{\"2\":1}}],[\"telecommunications\",{\"4\":{\"2\":1}}],[\"telephone\",{\"0\":{\"4\":1},\"1\":{\"2\":1}}],[\"technology\",{\"1\":{\"2\":1}}],[\"techniques\",{\"1\":{\"7\":1}}],[\"technique\",{\"0\":{\"8\":1},\"1\":{\"0\":1,\"6\":1,\"8\":1,\"9\":1}}],[\"tested\",{\"1\":{\"2\":1}}],[\"two\",{\"1\":{\"0\":1,\"6\":1,\"11\":1}}],[\"time\",{\"1\":{\"0\":1,\"8\":1}}],[\"those\",{\"1\":{\"7\":1}}],[\"that\",{\"1\":{\"0\":1,\"1\":3,\"6\":1,\"7\":1,\"8\":1,\"10\":2}}],[\"this\",{\"1\":{\"0\":2,\"2\":2,\"4\":2,\"5\":2,\"6\":2,\"7\":4,\"8\":2,\"9\":4,\"10\":3,\"11\":3}}],[\"they\",{\"1\":{\"7\":1}}],[\"these\",{\"1\":{\"6\":1,\"9\":1,\"10\":2}}],[\"then\",{\"1\":{\"2\":1,\"4\":1,\"5\":1}}],[\"their\",{\"1\":{\"1\":2,\"5\":1,\"6\":2},\"4\":{\"5\":1}}],[\"theoretical\",{\"1\":{\"1\":1}}],[\"the\",{\"1\":{\"0\":13,\"1\":10,\"2\":6,\"4\":5,\"5\":6,\"6\":10,\"7\":4,\"8\":6,\"9\":3,\"10\":6,\"11\":9}}],[\"through\",{\"0\":{\"0\":1}}],[\"to\",{\"0\":{\"10\":1},\"1\":{\"0\":5,\"1\":5,\"2\":1,\"4\":3,\"5\":2,\"6\":3,\"7\":3,\"8\":4,\"9\":5,\"10\":4,\"11\":1}}],[\"absolute\",{\"1\":{\"11\":2}}],[\"aboozar\",{\"2\":{\"7\":1,\"10\":1}}],[\"about\",{\"1\":{\"6\":1}}],[\"at\",{\"1\":{\"11\":1}}],[\"after\",{\"1\":{\"8\":1}}],[\"affects\",{\"1\":{\"0\":1}}],[\"aid\",{\"1\":{\"8\":1,\"9\":1}}],[\"among\",{\"1\":{\"7\":1}}],[\"amir\",{\"2\":{\"2\":1,\"4\":1}}],[\"adaptation\",{\"1\":{\"6\":1}}],[\"applying\",{\"1\":{\"10\":1}}],[\"applications\",{\"4\":{\"5\":1}}],[\"applied\",{\"1\":{\"5\":1},\"4\":{\"10\":1}}],[\"approximately\",{\"1\":{\"6\":1}}],[\"approaches\",{\"1\":{\"6\":1}}],[\"approach\",{\"0\":{\"7\":1},\"1\":{\"0\":1,\"2\":1,\"4\":1,\"5\":1,\"7\":4,\"8\":1,\"9\":1,\"10\":1}}],[\"age\",{\"0\":{\"3\":1,\"4\":1,\"5\":1},\"1\":{\"3\":1,\"4\":3,\"5\":2},\"3\":{\"3\":1,\"5\":1}}],[\"augmented\",{\"1\":{\"11\":1}}],[\"authors\",{\"1\":{\"10\":1}}],[\"automatic\",{\"0\":{\"3\":2},\"1\":{\"2\":1,\"3\":2,\"4\":1}}],[\"audio\",{\"4\":{\"0\":1}}],[\"acceleration\",{\"1\":{\"8\":1,\"9\":1}}],[\"acceptable\",{\"1\":{\"7\":1}}],[\"accent\",{\"0\":{\"3\":1},\"1\":{\"3\":1},\"3\":{\"3\":1}}],[\"accuracy\",{\"1\":{\"6\":2,\"7\":3,\"8\":2,\"9\":1}}],[\"accurate\",{\"1\":{\"6\":2,\"7\":1,\"8\":1,\"10\":1}}],[\"acm\",{\"4\":{\"0\":1}}],[\"acoustics\",{\"4\":{\"1\":1}}],[\"acoustic\",{\"0\":{\"0\":1},\"1\":{\"0\":2},\"3\":{\"0\":1}}],[\"ali\",{\"2\":{\"6\":1,\"11\":1}}],[\"although\",{\"1\":{\"6\":1}}],[\"algorithms\",{\"1\":{\"6\":1}}],[\"algorithm\",{\"0\":{\"10\":1},\"1\":{\"1\":1,\"6\":1,\"10\":1},\"3\":{\"10\":1}}],[\"all\",{\"1\":{\"1\":2}}],[\"allows\",{\"1\":{\"1\":1}}],[\"allow\",{\"1\":{\"0\":1}}],[\"alexander\",{\"2\":{\"0\":1,\"1\":1}}],[\"another\",{\"1\":{\"11\":1}}],[\"anns\",{\"1\":{\"2\":1,\"4\":2}}],[\"analysis\",{\"1\":{\"1\":1,\"4\":3}}],[\"an\",{\"0\":{\"7\":1,\"8\":1},\"1\":{\"0\":1,\"1\":1,\"6\":1,\"7\":3,\"8\":1,\"9\":2}}],[\"and\",{\"0\":{\"2\":1,\"3\":1,\"4\":1,\"10\":1,\"11\":1},\"1\":{\"0\":5,\"1\":1,\"2\":4,\"3\":1,\"4\":8,\"5\":1,\"6\":2,\"7\":7,\"8\":6,\"9\":3,\"10\":2,\"11\":5},\"4\":{\"0\":1,\"1\":1,\"2\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"11\":1}}],[\"avoid\",{\"1\":{\"0\":1}}],[\"aspect\",{\"1\":{\"11\":1}}],[\"aspects\",{\"1\":{\"11\":1}}],[\"associated\",{\"0\":{\"8\":1}}],[\"assume\",{\"1\":{\"1\":1}}],[\"asymptotic\",{\"1\":{\"1\":1}}],[\"asynchronous\",{\"1\":{\"0\":2}}],[\"as\",{\"1\":{\"0\":1,\"6\":1}}],[\"architecture\",{\"0\":{\"6\":1},\"1\":{\"6\":2},\"3\":{\"6\":1}}],[\"artificial\",{\"1\":{\"2\":1,\"4\":1}}],[\"are\",{\"1\":{\"0\":1,\"2\":1,\"4\":2,\"5\":1,\"7\":1}}],[\"arrays\",{\"1\":{\"0\":1}}],[\"a\",{\"0\":{\"6\":1},\"1\":{\"0\":6,\"1\":5,\"2\":3,\"4\":3,\"5\":3,\"6\":5,\"7\":4,\"8\":3,\"9\":2,\"10\":2,\"11\":2}}],[\"words\",{\"1\":{\"6\":1}}],[\"was\",{\"1\":{\"6\":1}}],[\"widely\",{\"1\":{\"7\":1,\"10\":1}}],[\"with\",{\"0\":{\"8\":1},\"1\":{\"6\":3,\"7\":1,\"9\":1,\"11\":1}}],[\"wireless\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":2,\"1\":1},\"3\":{\"0\":1,\"1\":1}}],[\"wsnmf\",{\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"wells\",{\"1\":{\"7\":1,\"10\":1}}],[\"well\",{\"1\":{\"6\":1,\"9\":1}}],[\"weights\",{\"1\":{\"4\":2}}],[\"weight\",{\"0\":{\"4\":1,\"5\":1},\"1\":{\"4\":2,\"5\":1}}],[\"weighted\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"5\":1}}],[\"we\",{\"1\":{\"0\":2,\"1\":4,\"8\":1}}],[\"when\",{\"1\":{\"6\":2}}],[\"whereas\",{\"1\":{\"6\":1}}],[\"where\",{\"1\":{\"0\":1,\"1\":2}}],[\"while\",{\"1\":{\"6\":1,\"10\":1}}],[\"which\",{\"1\":{\"0\":2,\"1\":2,\"4\":2,\"11\":1}}],[\"whole\",{\"1\":{\"1\":1}}],[\"small\",{\"1\":{\"8\":2}}],[\"smoking\",{\"0\":{\"4\":1},\"1\":{\"4\":3}}],[\"soft\",{\"0\":{\"7\":1},\"1\":{\"7\":2},\"3\":{\"7\":1}}],[\"sometimes\",{\"1\":{\"10\":1}}],[\"some\",{\"1\":{\"6\":1,\"8\":1,\"9\":1,\"11\":1}}],[\"solve\",{\"1\":{\"1\":1}}],[\"satisfactory\",{\"1\":{\"6\":1,\"7\":1,\"8\":1}}],[\"same\",{\"1\":{\"1\":1}}],[\"sampled\",{\"1\":{\"0\":1}}],[\"sampling\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"8\":1},\"3\":{\"0\":1}}],[\"svr\",{\"1\":{\"5\":1},\"3\":{\"5\":1}}],[\"scientific\",{\"4\":{\"7\":1,\"8\":1}}],[\"sciences\",{\"4\":{\"9\":1,\"10\":1}}],[\"science\",{\"4\":{\"5\":1}}],[\"score\",{\"1\":{\"4\":1}}],[\"scheme\",{\"1\":{\"1\":1,\"5\":1,\"6\":1,\"11\":3}}],[\"sre\",{\"1\":{\"2\":1}}],[\"sro\",{\"1\":{\"0\":4}}],[\"standard\",{\"1\":{\"11\":1}}],[\"standards\",{\"1\":{\"2\":1}}],[\"steps\",{\"1\":{\"8\":2}}],[\"stochastic\",{\"1\":{\"7\":1}}],[\"stressful\",{\"1\":{\"6\":2}}],[\"study\",{\"1\":{\"1\":1,\"8\":1,\"10\":1}}],[\"surplus\",{\"1\":{\"9\":1}}],[\"suffers\",{\"1\":{\"9\":1}}],[\"succeeds\",{\"1\":{\"8\":1}}],[\"such\",{\"1\":{\"6\":2}}],[\"superior\",{\"1\":{\"6\":1,\"7\":1}}],[\"superiority\",{\"1\":{\"1\":1}}],[\"supervised\",{\"1\":{\"5\":1}}],[\"supervectors\",{\"0\":{\"5\":1},\"1\":{\"4\":1,\"5\":1},\"3\":{\"5\":1}}],[\"support\",{\"0\":{\"2\":1},\"1\":{\"2\":1,\"4\":1,\"5\":1}}],[\"subset\",{\"1\":{\"1\":1}}],[\"show\",{\"1\":{\"2\":1,\"6\":1,\"7\":1,\"11\":1}}],[\"should\",{\"1\":{\"0\":1}}],[\"share\",{\"1\":{\"1\":1}}],[\"second\",{\"1\":{\"11\":1}}],[\"sensitive\",{\"1\":{\"8\":1}}],[\"sensory\",{\"1\":{\"10\":1}}],[\"sensor\",{\"0\":{\"0\":1,\"1\":1},\"1\":{\"0\":2,\"1\":1},\"3\":{\"0\":1,\"1\":1}}],[\"self\",{\"1\":{\"8\":1},\"3\":{\"8\":1}}],[\"sets\",{\"1\":{\"7\":1}}],[\"setting\",{\"1\":{\"1\":1}}],[\"seriously\",{\"1\":{\"6\":1,\"8\":1}}],[\"severely\",{\"1\":{\"0\":1}}],[\"synergistically\",{\"1\":{\"6\":1}}],[\"synchronous\",{\"1\":{\"0\":1}}],[\"system\",{\"1\":{\"6\":1}}],[\"systems\",{\"1\":{\"0\":1}}],[\"space\",{\"1\":{\"5\":1}}],[\"spatial\",{\"1\":{\"0\":1}}],[\"spontaneous\",{\"0\":{\"4\":1},\"1\":{\"5\":1}}],[\"speakers\",{\"1\":{\"4\":2,\"5\":2}}],[\"speaker\",{\"0\":{\"3\":1,\"4\":1,\"5\":1},\"1\":{\"2\":4,\"3\":1,\"5\":1},\"3\":{\"2\":1,\"3\":1,\"4\":1,\"5\":1}}],[\"specific\",{\"0\":{\"1\":1},\"1\":{\"1\":3,\"10\":1}}],[\"speech\",{\"0\":{\"2\":1,\"3\":1,\"4\":1},\"1\":{\"0\":3,\"2\":1,\"3\":1,\"4\":1,\"5\":1},\"3\":{\"0\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1},\"4\":{\"0\":1,\"1\":1}}],[\"sistani\",{\"2\":{\"7\":1,\"9\":1,\"10\":1}}],[\"situations\",{\"1\":{\"6\":1,\"8\":1,\"9\":1}}],[\"since\",{\"1\":{\"4\":1}}],[\"simultaneous\",{\"1\":{\"1\":1}}],[\"simultaneously\",{\"1\":{\"0\":1}}],[\"simulations\",{\"1\":{\"8\":1}}],[\"simulation\",{\"1\":{\"0\":1,\"1\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"11\":1}}],[\"signal\",{\"1\":{\"0\":1},\"3\":{\"0\":1,\"1\":1,\"9\":1,\"11\":1},\"4\":{\"1\":1,\"2\":1,\"5\":1}}],[\"signals\",{\"0\":{\"2\":1,\"3\":1,\"4\":1},\"1\":{\"0\":4,\"2\":1,\"3\":1,\"4\":1},\"3\":{\"3\":1,\"5\":1}}],[\"squares\",{\"0\":{\"0\":1,\"2\":1},\"1\":{\"0\":1,\"2\":1,\"4\":1,\"5\":1}}]],\"serializationVersion\":2}"
+  "searchIndex": "{\"documentCount\":18,\"nextId\":18,\"documentIds\":{\"0\":\"blind-sampling-rate-offset-estimation-wasn\",\"1\":\"multitask-wireless-sensor-network-lcmv-doa\",\"2\":\"unsupervised-diffusion-lms-wireless-sensor-networks\",\"3\":\"height-estimation-speech-signals-ivectors-lssvr\",\"4\":\"automatic-speaker-characterization-gender-age-language-accent\",\"5\":\"multitask-speaker-profiling-age-height-weight-smoking\",\"6\":\"non-negative-factor-analysis-gmm-weight-adaptation\",\"7\":\"speaker-age-estimation-using-ivectors\",\"8\":\"accent-recognition-ivector-supervector-telephone-speech\",\"9\":\"age-estimation-telephone-speech-ivectors\",\"10\":\"speaker-age-estimation-hmm-weight-supervectors\",\"11\":\"high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic\",\"12\":\"speaker-age-estimation-gender-detection-wsnmf\",\"13\":\"drilling-rate-prediction-innovative-soft-computing\",\"14\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"15\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"16\":\"bourgoyne-young-model-genetic-algorithm-drilling-rate\",\"17\":\"high-maneuver-target-tracking-combined-kalman-fuzzy\"},\"fieldIds\":{\"title\":0,\"abstract\":1,\"authorsText\":2,\"tagsText\":3,\"venue\":4},\"fieldLength\":{\"0\":[16,107,7,13,17],\"1\":[17,100,12,12,16],\"2\":[13,92,10,11,14],\"3\":[14,70,8,9,13],\"4\":[13,13,3,10,5],\"5\":[16,88,6,9,13],\"6\":[15,102,14,14,17],\"7\":[6,87,12,10,11],\"8\":[15,92,12,11,14],\"9\":[8,69,12,11,15],\"10\":[9,72,6,12,16],\"11\":[13,119,7,10,16],\"12\":[13,78,6,10,16],\"13\":[9,98,10,11,12],\"14\":[14,91,5,14,12],\"15\":[8,89,9,10,13],\"16\":[13,80,11,10,12],\"17\":[12,71,7,10,10]},\"averageFieldLength\":[12.444444444444445,84.33333333333333,8.722222222222221,10.944444444444445,13.444444444444445],\"storedFields\":{\"0\":{\"id\":\"blind-sampling-rate-offset-estimation-wasn\",\"title\":\"Blind sampling rate offset estimation for wireless acoustic sensor networks through weighted least-squares coherence drift estimation\",\"areaId\":\"audio-speech\",\"year\":2017},\"1\":{\"id\":\"multitask-wireless-sensor-network-lcmv-doa\",\"title\":\"Multi-Task Wireless Sensor Network for Joint Distributed Node-Specific Signal Enhancement, LCMV Beamforming and DOA Estimation\",\"areaId\":\"audio-speech\",\"year\":2017},\"2\":{\"id\":\"unsupervised-diffusion-lms-wireless-sensor-networks\",\"title\":\"Unsupervised diffusion-based LMS for node-specific parameter estimation over wireless sensor networks\",\"areaId\":\"edge-systems\",\"year\":2016},\"3\":{\"id\":\"height-estimation-speech-signals-ivectors-lssvr\",\"title\":\"Height estimation from speech signals using i-vectors and least-squares support vector regression\",\"areaId\":\"audio-speech\",\"year\":2015},\"4\":{\"id\":\"automatic-speaker-characterization-gender-age-language-accent\",\"title\":\"Automatic Speaker Characterization: Automatic Identification of Gender, Age, Language and Accent from Speech Signals\",\"areaId\":\"audio-speech\",\"year\":2014},\"5\":{\"id\":\"multitask-speaker-profiling-age-height-weight-smoking\",\"title\":\"Multitask speaker profiling for estimating age, height, weight and smoking habits from spontaneous telephone speech signals\",\"areaId\":\"audio-speech\",\"year\":2014},\"6\":{\"id\":\"non-negative-factor-analysis-gmm-weight-adaptation\",\"title\":\"Non-negative Factor Analysis of Gaussian Mixture Model Weight Adaptation for Language and Dialect Recognition\",\"areaId\":\"audio-speech\",\"year\":2014},\"7\":{\"id\":\"speaker-age-estimation-using-ivectors\",\"title\":\"Speaker age estimation using i-vectors\",\"areaId\":\"audio-speech\",\"year\":2014},\"8\":{\"id\":\"accent-recognition-ivector-supervector-telephone-speech\",\"title\":\"Accent recognition using i-vector, gaussian mean supervector and gaussian posterior probability supervector for spontaneous telephone speech\",\"areaId\":\"audio-speech\",\"year\":2013},\"9\":{\"id\":\"age-estimation-telephone-speech-ivectors\",\"title\":\"Age Estimation from Telephone Speech using i-vectors\",\"areaId\":\"audio-speech\",\"year\":2012},\"10\":{\"id\":\"speaker-age-estimation-hmm-weight-supervectors\",\"title\":\"Speaker age estimation using Hidden Markov Model weight supervectors\",\"areaId\":\"audio-speech\",\"year\":2012},\"11\":{\"id\":\"high-maneuvering-target-tracking-hybrid-kalman-fuzzy-logic\",\"title\":\"High maneuvering target tracking using a novel hybrid Kalman filter-fuzzy logic architecture\",\"areaId\":\"ai-ml\",\"year\":2011},\"12\":{\"id\":\"speaker-age-estimation-gender-detection-wsnmf\",\"title\":\"Speaker age estimation and gender detection based on supervised non-negative matrix factorization\",\"areaId\":\"audio-speech\",\"year\":2011},\"13\":{\"id\":\"drilling-rate-prediction-innovative-soft-computing\",\"title\":\"Drilling rate prediction using an innovative soft computing approach\",\"areaId\":\"ai-ml\",\"year\":2010},\"14\":{\"id\":\"high-maneuvering-target-tracking-fuzzy-forgetting-factor\",\"title\":\"High maneuvering target tracking using an input estimation technique associated with fuzzy forgetting factor\",\"areaId\":\"ai-ml\",\"year\":2009},\"15\":{\"id\":\"intelligent-fading-memory-high-maneuvering-target-tracking\",\"title\":\"Intelligent fading memory for high maneuvering target tracking\",\"areaId\":\"ai-ml\",\"year\":2009},\"16\":{\"id\":\"bourgoyne-young-model-genetic-algorithm-drilling-rate\",\"title\":\"Determining Bourgoyne and Young Model Coefficients Using Genetic Algorithm to Predict Drilling Rate\",\"areaId\":\"ai-ml\",\"year\":2008},\"17\":{\"id\":\"high-maneuver-target-tracking-combined-kalman-fuzzy\",\"title\":\"High maneuver target tracking based on combined Kalman filter and fuzzy logic\",\"areaId\":\"ai-ml\",\"year\":2007}},\"dirtCount\":0,\"index\":[[\"8\",{\"4\":{\"16\":1}}],[\"945\",{\"4\":{\"14\":1}}],[\"936\",{\"4\":{\"14\":1}}],[\"99\",{\"4\":{\"7\":1}}],[\"young\",{\"0\":{\"16\":1},\"1\":{\"13\":1,\"16\":1},\"3\":{\"13\":1,\"16\":1}}],[\"yield\",{\"1\":{\"11\":1,\"16\":1}}],[\"yields\",{\"1\":{\"7\":1}}],[\"yet\",{\"1\":{\"6\":1}}],[\"jerking\",{\"1\":{\"15\":1}}],[\"jim\",{\"2\":{\"6\":1}}],[\"journal\",{\"4\":{\"1\":1,\"11\":1,\"15\":1,\"16\":1}}],[\"jorge\",{\"2\":{\"1\":1,\"2\":1}}],[\"joint\",{\"0\":{\"1\":1}}],[\"qcri\",{\"1\":{\"6\":1}}],[\"7348\",{\"4\":{\"8\":1}}],[\"7344\",{\"4\":{\"8\":1}}],[\"7\",{\"4\":{\"5\":1,\"6\":1,\"11\":1}}],[\"4\",{\"4\":{\"14\":1,\"15\":1}}],[\"4th\",{\"4\":{\"5\":1}}],[\"4163\",{\"4\":{\"2\":1}}],[\"4159\",{\"4\":{\"2\":1}}],[\"khaloozadeh\",{\"2\":{\"17\":1}}],[\"khangiran\",{\"1\":{\"13\":1,\"16\":1}}],[\"karsaz\",{\"2\":{\"11\":1,\"17\":1}}],[\"kalman\",{\"0\":{\"11\":1,\"17\":1},\"1\":{\"11\":2,\"17\":1},\"3\":{\"11\":1,\"17\":1}}],[\"kf\",{\"1\":{\"11\":2}}],[\"ku\",{\"4\":{\"4\":1}}],[\"knowledge\",{\"4\":{\"5\":1}}],[\"know\",{\"1\":{\"1\":1,\"2\":1}}],[\"17\",{\"4\":{\"16\":1}}],[\"10\",{\"4\":{\"14\":1,\"15\":1}}],[\"108\",{\"4\":{\"7\":1}}],[\"1588\",{\"4\":{\"13\":1}}],[\"1583\",{\"4\":{\"13\":1}}],[\"13\",{\"4\":{\"13\":1}}],[\"13th\",{\"4\":{\"9\":1}}],[\"12\",{\"4\":{\"5\":1}}],[\"1\",{\"4\":{\"3\":1,\"12\":1}}],[\"11th\",{\"4\":{\"10\":1}}],[\"1129\",{\"4\":{\"6\":1}}],[\"1117\",{\"4\":{\"6\":1}}],[\"11\",{\"4\":{\"1\":1}}],[\"2\",{\"4\":{\"11\":1}}],[\"22\",{\"4\":{\"6\":1}}],[\"2007\",{\"4\":{\"17\":1}}],[\"2008\",{\"1\":{\"3\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"2012\",{\"4\":{\"9\":1,\"10\":1}}],[\"2013\",{\"4\":{\"8\":1}}],[\"2011\",{\"1\":{\"6\":1},\"4\":{\"12\":1}}],[\"2014\",{\"4\":{\"5\":1}}],[\"2015\",{\"4\":{\"3\":1}}],[\"2010\",{\"1\":{\"3\":1,\"7\":1,\"9\":1}}],[\"2016\",{\"4\":{\"2\":1}}],[\"25\",{\"4\":{\"0\":1}}],[\"59\",{\"4\":{\"17\":1}}],[\"554\",{\"4\":{\"15\":1}}],[\"548\",{\"4\":{\"15\":1}}],[\"521\",{\"4\":{\"10\":1}}],[\"510\",{\"4\":{\"11\":1}}],[\"517\",{\"4\":{\"10\":1}}],[\"518\",{\"4\":{\"1\":1}}],[\"501\",{\"4\":{\"11\":1}}],[\"509\",{\"4\":{\"9\":1}}],[\"506\",{\"4\":{\"9\":1}}],[\"5\",{\"4\":{\"3\":1,\"13\":1}}],[\"533\",{\"4\":{\"1\":1}}],[\"used\",{\"1\":{\"7\":1,\"11\":2,\"13\":1,\"16\":1}}],[\"use\",{\"1\":{\"6\":1,\"11\":1}}],[\"usually\",{\"1\":{\"6\":1}}],[\"using\",{\"0\":{\"3\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"13\":1,\"14\":1,\"16\":1},\"1\":{\"5\":1,\"6\":1,\"8\":1,\"10\":1,\"13\":1,\"16\":1,\"17\":1}}],[\"utterances\",{\"1\":{\"5\":1,\"6\":1,\"8\":2}}],[\"utterance\",{\"1\":{\"3\":2,\"5\":1,\"6\":1,\"7\":1,\"8\":3,\"9\":1}}],[\"utilized\",{\"1\":{\"5\":1}}],[\"utilize\",{\"1\":{\"0\":1}}],[\"unknown\",{\"1\":{\"16\":1}}],[\"uncertainties\",{\"1\":{\"15\":1}}],[\"unforeseen\",{\"1\":{\"13\":1}}],[\"unbiased\",{\"1\":{\"2\":1}}],[\"unsupervised\",{\"0\":{\"2\":1},\"1\":{\"2\":2}}],[\"under\",{\"1\":{\"1\":2}}],[\"visualize\",{\"1\":{\"14\":1}}],[\"vietnamese\",{\"1\":{\"8\":1}}],[\"voice\",{\"1\":{\"12\":1}}],[\"vol\",{\"4\":{\"0\":1,\"1\":1,\"6\":1,\"7\":1,\"11\":1,\"13\":1,\"14\":1,\"15\":1,\"16\":1}}],[\"velocity\",{\"1\":{\"11\":2,\"14\":1}}],[\"vector\",{\"0\":{\"3\":1,\"8\":1},\"1\":{\"2\":1,\"3\":3,\"5\":3,\"6\":2,\"7\":2,\"8\":3,\"9\":2,\"10\":1},\"3\":{\"9\":1}}],[\"vectors\",{\"0\":{\"3\":1,\"7\":1,\"9\":1},\"1\":{\"2\":1,\"6\":4,\"7\":1,\"9\":2,\"10\":1},\"3\":{\"3\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"value\",{\"1\":{\"17\":2}}],[\"variability\",{\"1\":{\"7\":1}}],[\"variance\",{\"1\":{\"1\":1}}],[\"van\",{\"2\":{\"6\":1,\"7\":2,\"8\":2,\"9\":2,\"10\":1,\"12\":1}}],[\"vasilakakis\",{\"2\":{\"3\":1}}],[\"vasileios\",{\"2\":{\"3\":1}}],[\"64\",{\"4\":{\"17\":1}}],[\"6\",{\"4\":{\"12\":1}}],[\"686\",{\"4\":{\"0\":1}}],[\"674\",{\"4\":{\"0\":1}}],[\"3054\",{\"4\":{\"16\":1}}],[\"3050\",{\"4\":{\"16\":1}}],[\"34\",{\"4\":{\"7\":1}}],[\"38th\",{\"4\":{\"3\":1}}],[\"3\",{\"4\":{\"0\":1,\"1\":1}}],[\"observation\",{\"1\":{\"17\":1}}],[\"obtained\",{\"1\":{\"6\":1,\"10\":1}}],[\"obtain\",{\"1\":{\"2\":1}}],[\"operations\",{\"1\":{\"16\":1}}],[\"optimization\",{\"3\":{\"13\":1,\"16\":1}}],[\"optimal\",{\"1\":{\"1\":1}}],[\"optimality\",{\"1\":{\"1\":1}}],[\"our\",{\"1\":{\"13\":1}}],[\"outperforms\",{\"1\":{\"9\":1}}],[\"out\",{\"1\":{\"8\":1}}],[\"own\",{\"1\":{\"2\":2}}],[\"original\",{\"1\":{\"16\":1}}],[\"originated\",{\"1\":{\"15\":1}}],[\"order\",{\"1\":{\"14\":2,\"15\":1}}],[\"or\",{\"1\":{\"2\":1,\"12\":1,\"15\":2}}],[\"overcome\",{\"1\":{\"15\":1,\"17\":1}}],[\"over\",{\"0\":{\"2\":1},\"1\":{\"6\":1,\"13\":1}}],[\"other\",{\"1\":{\"1\":1,\"2\":1,\"11\":1}}],[\"others\",{\"1\":{\"1\":2}}],[\"one\",{\"1\":{\"11\":1}}],[\"on\",{\"0\":{\"12\":1,\"17\":1},\"1\":{\"1\":2,\"2\":1,\"3\":2,\"5\":4,\"6\":2,\"7\":2,\"9\":2,\"10\":1,\"11\":1,\"12\":2,\"14\":2,\"16\":2},\"4\":{\"0\":1,\"2\":1,\"3\":1,\"5\":1,\"6\":1,\"8\":1,\"10\":1,\"12\":1}}],[\"of\",{\"0\":{\"4\":1,\"6\":1},\"1\":{\"0\":2,\"1\":6,\"2\":12,\"3\":4,\"4\":1,\"5\":4,\"6\":2,\"7\":2,\"8\":2,\"9\":4,\"10\":4,\"11\":4,\"12\":6,\"13\":2,\"14\":3,\"15\":1,\"16\":1,\"17\":6},\"4\":{\"1\":1,\"7\":1,\"9\":2,\"11\":1,\"15\":1,\"16\":1}}],[\"often\",{\"1\":{\"0\":1}}],[\"offset\",{\"0\":{\"0\":1},\"1\":{\"0\":1},\"3\":{\"0\":1}}],[\"mclaren\",{\"2\":{\"7\":1,\"9\":1}}],[\"memory\",{\"0\":{\"15\":1},\"1\":{\"15\":4},\"3\":{\"15\":1}}],[\"medium\",{\"1\":{\"14\":1,\"15\":1}}],[\"medical\",{\"4\":{\"12\":1}}],[\"measurement\",{\"1\":{\"17\":1}}],[\"measurements\",{\"4\":{\"12\":1}}],[\"meaningful\",{\"1\":{\"16\":1}}],[\"meaningless\",{\"1\":{\"16\":1}}],[\"means\",{\"1\":{\"5\":1,\"6\":1}}],[\"mean\",{\"0\":{\"8\":1},\"1\":{\"5\":1,\"7\":1,\"8\":1},\"3\":{\"8\":1}}],[\"methodologies\",{\"1\":{\"11\":1}}],[\"methods\",{\"1\":{\"9\":1,\"11\":1,\"12\":1,\"13\":1,\"16\":1}}],[\"method\",{\"1\":{\"3\":3,\"5\":1,\"6\":1,\"7\":3,\"8\":1,\"9\":3,\"10\":1,\"11\":1,\"14\":2,\"15\":3,\"16\":2,\"17\":3}}],[\"make\",{\"1\":{\"13\":1}}],[\"many\",{\"1\":{\"12\":1,\"13\":1}}],[\"maneuvers\",{\"1\":{\"11\":1,\"14\":1}}],[\"maneuver\",{\"0\":{\"17\":1},\"1\":{\"11\":4},\"3\":{\"11\":1,\"14\":1,\"17\":1}}],[\"maneuvering\",{\"0\":{\"11\":1,\"14\":1,\"15\":1},\"1\":{\"11\":2,\"14\":4,\"15\":6,\"17\":2}}],[\"may\",{\"1\":{\"11\":1,\"14\":1}}],[\"markov\",{\"0\":{\"10\":1},\"1\":{\"10\":1},\"3\":{\"10\":1}}],[\"marc\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"matches\",{\"1\":{\"8\":1}}],[\"matrix\",{\"0\":{\"12\":1},\"1\":{\"1\":1,\"10\":1,\"12\":1}}],[\"machine\",{\"1\":{\"8\":1}}],[\"mixed\",{\"1\":{\"17\":1}}],[\"mixture\",{\"0\":{\"6\":1},\"1\":{\"5\":1,\"6\":1},\"3\":{\"6\":1}}],[\"mismodeling\",{\"1\":{\"15\":1}}],[\"mie\",{\"1\":{\"14\":2,\"15\":2},\"3\":{\"14\":1}}],[\"minimizing\",{\"1\":{\"13\":1}}],[\"minimum\",{\"1\":{\"1\":1}}],[\"might\",{\"1\":{\"12\":1}}],[\"mitchell\",{\"2\":{\"7\":1,\"9\":1}}],[\"mild\",{\"1\":{\"1\":1,\"14\":1}}],[\"microphones\",{\"1\":{\"0\":2}}],[\"microphone\",{\"1\":{\"0\":2}}],[\"multiple\",{\"1\":{\"16\":1}}],[\"multitask\",{\"0\":{\"5\":1},\"3\":{\"5\":1}}],[\"multi\",{\"0\":{\"1\":1},\"1\":{\"1\":3}}],[\"moharrami\",{\"2\":{\"16\":1}}],[\"mohammad\",{\"2\":{\"13\":1,\"15\":1,\"16\":1}}],[\"mohamad\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"12\":1,\"13\":1,\"14\":1,\"15\":1,\"16\":1,\"17\":1}}],[\"modified\",{\"1\":{\"14\":1,\"15\":1},\"3\":{\"14\":1}}],[\"mode\",{\"1\":{\"11\":1,\"15\":1}}],[\"modelling\",{\"1\":{\"8\":2}}],[\"models\",{\"3\":{\"6\":1}}],[\"modeling\",{\"1\":{\"6\":1,\"8\":1,\"15\":1},\"3\":{\"16\":1}}],[\"model\",{\"0\":{\"6\":1,\"10\":1,\"16\":1},\"1\":{\"5\":1,\"6\":1,\"10\":1,\"13\":1,\"16\":1},\"3\":{\"10\":1,\"13\":1,\"16\":1}}],[\"modeled\",{\"1\":{\"3\":1,\"5\":1,\"7\":1,\"9\":1,\"10\":1}}],[\"moradi\",{\"2\":{\"13\":1}}],[\"more\",{\"1\":{\"8\":1,\"16\":1}}],[\"most\",{\"1\":{\"11\":1}}],[\"motivated\",{\"1\":{\"9\":1}}],[\"moonen\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"ht\",{\"1\":{\"11\":1}}],[\"hybrid\",{\"0\":{\"11\":1},\"1\":{\"11\":2,\"12\":1},\"3\":{\"11\":1}}],[\"hmm\",{\"1\":{\"10\":1}}],[\"high\",{\"0\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1},\"1\":{\"11\":1,\"14\":4,\"15\":4,\"17\":3},\"3\":{\"11\":1,\"14\":1,\"17\":1}}],[\"higher\",{\"1\":{\"7\":1}}],[\"hidden\",{\"0\":{\"10\":1},\"1\":{\"10\":1},\"3\":{\"10\":1}}],[\"hindi\",{\"1\":{\"8\":1}}],[\"hugo\",{\"2\":{\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"12\":1}}],[\"hamid\",{\"2\":{\"17\":1}}],[\"hamidreza\",{\"2\":{\"13\":1}}],[\"hamme\",{\"2\":{\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"12\":1}}],[\"have\",{\"1\":{\"11\":1,\"12\":1,\"13\":2,\"17\":1}}],[\"habit\",{\"1\":{\"5\":3}}],[\"habits\",{\"0\":{\"5\":1}}],[\"has\",{\"1\":{\"14\":1,\"15\":1}}],[\"hassani\",{\"2\":{\"1\":1}}],[\"hasan\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"12\":1,\"13\":1,\"14\":1,\"15\":1,\"16\":1,\"17\":1}}],[\"hossein\",{\"2\":{\"3\":1,\"5\":1}}],[\"however\",{\"1\":{\"0\":1,\"6\":1,\"13\":2,\"14\":1,\"15\":2}}],[\"height\",{\"0\":{\"3\":1,\"5\":1},\"1\":{\"3\":3,\"5\":2},\"3\":{\"3\":1}}],[\"hence\",{\"1\":{\"0\":1}}],[\"literature\",{\"1\":{\"17\":1}}],[\"linearly\",{\"1\":{\"0\":1,\"1\":1}}],[\"last\",{\"1\":{\"13\":1,\"17\":1}}],[\"large\",{\"1\":{\"13\":1}}],[\"law\",{\"1\":{\"12\":1}}],[\"languages\",{\"1\":{\"8\":1}}],[\"language\",{\"0\":{\"4\":1,\"6\":1},\"1\":{\"4\":1,\"6\":4},\"3\":{\"4\":1,\"6\":1},\"4\":{\"0\":1,\"6\":1}}],[\"ls\",{\"1\":{\"10\":1},\"3\":{\"10\":1}}],[\"lssvr\",{\"1\":{\"3\":1,\"5\":1,\"7\":1},\"3\":{\"3\":1,\"5\":1,\"7\":1}}],[\"lukáš\",{\"2\":{\"6\":1}}],[\"lre\",{\"1\":{\"6\":1}}],[\"lr\",{\"1\":{\"5\":1}}],[\"lms\",{\"0\":{\"2\":1},\"1\":{\"2\":2},\"3\":{\"2\":1}}],[\"leeuwen\",{\"2\":{\"7\":1,\"8\":1,\"9\":1}}],[\"less\",{\"1\":{\"6\":1}}],[\"leading\",{\"1\":{\"15\":1}}],[\"leads\",{\"1\":{\"6\":1}}],[\"learning\",{\"3\":{\"5\":1}}],[\"least\",{\"0\":{\"0\":1,\"3\":1},\"1\":{\"0\":1,\"3\":1,\"5\":1,\"7\":1,\"10\":1}}],[\"level\",{\"1\":{\"5\":1}}],[\"leuven\",{\"4\":{\"4\":1}}],[\"lets\",{\"1\":{\"1\":1}}],[\"logic\",{\"0\":{\"11\":1,\"17\":1},\"1\":{\"11\":2,\"17\":2},\"3\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1}}],[\"logistic\",{\"1\":{\"5\":1}}],[\"lower\",{\"1\":{\"7\":1}}],[\"low\",{\"1\":{\"1\":1,\"6\":1,\"10\":1,\"14\":2,\"15\":1}}],[\"local\",{\"1\":{\"1\":1,\"2\":3}}],[\"lcmv\",{\"0\":{\"1\":1},\"3\":{\"1\":1}}],[\"posterior\",{\"0\":{\"8\":1},\"1\":{\"8\":1}}],[\"poorjam\",{\"2\":{\"3\":1,\"5\":1}}],[\"penetration\",{\"1\":{\"16\":1}}],[\"pearson\",{\"1\":{\"7\":1}}],[\"performs\",{\"1\":{\"15\":1}}],[\"performance\",{\"1\":{\"0\":2,\"1\":1,\"2\":1,\"11\":3,\"14\":2,\"15\":1,\"17\":1}}],[\"perform\",{\"1\":{\"0\":1,\"5\":1,\"11\":1}}],[\"physically\",{\"1\":{\"16\":2}}],[\"physical\",{\"4\":{\"15\":1}}],[\"ph\",{\"4\":{\"4\":1}}],[\"phase\",{\"1\":{\"0\":2}}],[\"patterns\",{\"1\":{\"9\":1,\"12\":1}}],[\"pariz\",{\"2\":{\"11\":1,\"14\":1,\"15\":1}}],[\"particularly\",{\"1\":{\"6\":1}}],[\"parameters\",{\"1\":{\"2\":2,\"16\":1}}],[\"parameter\",{\"0\":{\"2\":1},\"1\":{\"2\":2},\"3\":{\"2\":1}}],[\"paper\",{\"1\":{\"0\":1,\"3\":1,\"5\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"12\":1,\"13\":1,\"14\":1,\"15\":2,\"17\":1}}],[\"plata\",{\"2\":{\"1\":1,\"2\":1}}],[\"pp\",{\"4\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"12\":1,\"13\":1,\"14\":1,\"15\":1,\"16\":1,\"17\":1}}],[\"practical\",{\"1\":{\"13\":1}}],[\"practice\",{\"1\":{\"11\":1}}],[\"presented\",{\"1\":{\"15\":1,\"17\":1}}],[\"present\",{\"1\":{\"14\":1,\"17\":1}}],[\"presenting\",{\"1\":{\"14\":1}}],[\"presence\",{\"1\":{\"11\":1,\"14\":1}}],[\"predictive\",{\"3\":{\"16\":1}}],[\"predicting\",{\"1\":{\"16\":1}}],[\"predictions\",{\"1\":{\"16\":1}}],[\"prediction\",{\"0\":{\"13\":1},\"1\":{\"13\":4},\"3\":{\"13\":1}}],[\"predicts\",{\"1\":{\"13\":1}}],[\"predict\",{\"0\":{\"16\":1},\"1\":{\"13\":1}}],[\"precision\",{\"1\":{\"0\":1}}],[\"produces\",{\"1\":{\"16\":1}}],[\"prove\",{\"1\":{\"15\":1}}],[\"provides\",{\"1\":{\"16\":1}}],[\"provide\",{\"1\":{\"5\":1,\"13\":1}}],[\"profile\",{\"1\":{\"12\":1}}],[\"profiling\",{\"0\":{\"5\":1},\"3\":{\"5\":1}}],[\"proceedings\",{\"4\":{\"9\":1}}],[\"process\",{\"1\":{\"2\":1,\"13\":1}}],[\"processing\",{\"1\":{\"1\":1},\"3\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"5\":1,\"7\":1,\"8\":1,\"12\":1,\"15\":1,\"17\":1},\"4\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"6\":1,\"8\":1,\"10\":1}}],[\"probability\",{\"0\":{\"8\":1},\"1\":{\"8\":1}}],[\"problems\",{\"1\":{\"17\":2}}],[\"problem\",{\"1\":{\"2\":2,\"6\":1,\"8\":1,\"11\":1,\"13\":1}}],[\"proposes\",{\"1\":{\"3\":1,\"5\":1,\"9\":1,\"10\":1,\"12\":1}}],[\"proposed\",{\"1\":{\"0\":1,\"1\":1,\"2\":1,\"3\":2,\"6\":1,\"7\":3,\"9\":2,\"10\":1,\"11\":3,\"12\":1,\"13\":2,\"14\":2,\"15\":1,\"16\":1,\"17\":1}}],[\"propose\",{\"1\":{\"0\":1,\"2\":1}}],[\"dynamics\",{\"1\":{\"11\":1,\"15\":1}}],[\"during\",{\"1\":{\"13\":1}}],[\"due\",{\"1\":{\"11\":1,\"13\":1,\"14\":1}}],[\"dutch\",{\"1\":{\"10\":1,\"12\":1}}],[\"david\",{\"2\":{\"7\":1,\"8\":1,\"9\":1}}],[\"database\",{\"1\":{\"8\":2}}],[\"databases\",{\"1\":{\"7\":1,\"9\":1}}],[\"data\",{\"1\":{\"0\":1,\"13\":1,\"16\":1}}],[\"drawbacks\",{\"1\":{\"17\":1}}],[\"drawn\",{\"1\":{\"8\":1}}],[\"drilling\",{\"0\":{\"13\":1,\"16\":1},\"1\":{\"13\":7,\"16\":1},\"3\":{\"13\":1,\"16\":1}}],[\"drift\",{\"0\":{\"0\":1},\"1\":{\"0\":3},\"3\":{\"0\":1}}],[\"dre\",{\"1\":{\"6\":1}}],[\"d\",{\"4\":{\"4\":1}}],[\"does\",{\"1\":{\"15\":1}}],[\"do\",{\"1\":{\"1\":1,\"2\":1,\"6\":1,\"11\":1}}],[\"doa\",{\"0\":{\"1\":1},\"3\":{\"1\":1}}],[\"domain\",{\"1\":{\"0\":1}}],[\"did\",{\"1\":{\"13\":1}}],[\"dimension\",{\"1\":{\"10\":1}}],[\"dimensional\",{\"1\":{\"6\":1,\"10\":1}}],[\"dialect\",{\"0\":{\"6\":1},\"1\":{\"6\":3},\"3\":{\"6\":1}}],[\"dissertation\",{\"4\":{\"4\":1}}],[\"distributed\",{\"0\":{\"1\":1},\"1\":{\"1\":2,\"2\":1},\"3\":{\"1\":1,\"2\":1}}],[\"difference\",{\"1\":{\"17\":1}}],[\"different\",{\"1\":{\"0\":1,\"1\":1,\"2\":1,\"7\":1,\"8\":1,\"9\":1,\"11\":1,\"12\":1,\"13\":1,\"15\":1}}],[\"difficulties\",{\"1\":{\"15\":1}}],[\"difficult\",{\"1\":{\"13\":1}}],[\"diffusion\",{\"0\":{\"2\":1},\"1\":{\"2\":2},\"3\":{\"2\":1}}],[\"direction\",{\"1\":{\"1\":1}}],[\"depend\",{\"1\":{\"16\":1}}],[\"determine\",{\"1\":{\"16\":2}}],[\"determining\",{\"0\":{\"16\":1}}],[\"detection\",{\"0\":{\"12\":1},\"1\":{\"5\":1,\"11\":2,\"12\":1},\"3\":{\"12\":1}}],[\"deficiencies\",{\"1\":{\"15\":1}}],[\"decision\",{\"4\":{\"17\":1}}],[\"decades\",{\"1\":{\"13\":1}}],[\"decomposition\",{\"1\":{\"6\":1}}],[\"degraded\",{\"1\":{\"11\":1,\"14\":1}}],[\"dehak\",{\"2\":{\"6\":1}}],[\"developed\",{\"1\":{\"6\":1,\"14\":1,\"15\":1}}],[\"desirable\",{\"1\":{\"15\":1}}],[\"desired\",{\"1\":{\"1\":3,\"11\":1}}],[\"design\",{\"1\":{\"1\":1}}],[\"denoise\",{\"1\":{\"1\":1}}],[\"demonstrates\",{\"1\":{\"16\":1}}],[\"demonstrate\",{\"1\":{\"0\":1,\"2\":1}}],[\"delay\",{\"1\":{\"0\":1}}],[\"crucial\",{\"1\":{\"13\":1}}],[\"criminal\",{\"1\":{\"12\":2}}],[\"chronological\",{\"1\":{\"7\":1}}],[\"characteristics\",{\"1\":{\"12\":1}}],[\"characterization\",{\"0\":{\"4\":1},\"1\":{\"4\":1},\"3\":{\"3\":1,\"4\":1,\"7\":1,\"9\":1,\"12\":1}}],[\"chaves\",{\"2\":{\"1\":1,\"2\":1}}],[\"channel\",{\"1\":{\"1\":1}}],[\"classifier\",{\"1\":{\"8\":2}}],[\"classifiers\",{\"1\":{\"8\":2}}],[\"class\",{\"1\":{\"7\":1}}],[\"called\",{\"1\":{\"13\":1}}],[\"capabilities\",{\"1\":{\"11\":1}}],[\"carry\",{\"1\":{\"6\":1}}],[\"cantonese\",{\"1\":{\"8\":1}}],[\"can\",{\"1\":{\"2\":1,\"16\":1}}],[\"cancel\",{\"1\":{\"1\":1}}],[\"causes\",{\"1\":{\"0\":1}}],[\"cases\",{\"1\":{\"12\":1,\"14\":1}}],[\"case\",{\"1\":{\"0\":1,\"2\":1}}],[\"course\",{\"1\":{\"17\":2}}],[\"collected\",{\"1\":{\"16\":1}}],[\"cope\",{\"1\":{\"15\":1}}],[\"cost\",{\"1\":{\"13\":1}}],[\"coefficients\",{\"0\":{\"16\":1},\"1\":{\"16\":4}}],[\"coefficient\",{\"1\":{\"7\":1}}],[\"covariance\",{\"1\":{\"7\":1}}],[\"corpus\",{\"1\":{\"6\":1,\"10\":1,\"12\":1}}],[\"corpora\",{\"1\":{\"3\":1,\"6\":1}}],[\"corresponding\",{\"1\":{\"3\":1,\"7\":1,\"9\":1,\"10\":1}}],[\"correspond\",{\"1\":{\"2\":1}}],[\"correlation\",{\"1\":{\"1\":1,\"7\":1}}],[\"concerned\",{\"1\":{\"12\":1}}],[\"conceptually\",{\"1\":{\"6\":1}}],[\"control\",{\"4\":{\"11\":1,\"17\":1}}],[\"continuously\",{\"1\":{\"2\":1}}],[\"confirms\",{\"1\":{\"10\":1,\"12\":1}}],[\"conference\",{\"4\":{\"2\":1,\"3\":1,\"5\":1,\"8\":1,\"9\":1,\"10\":1}}],[\"conventional\",{\"1\":{\"7\":1,\"9\":1,\"11\":2,\"13\":1,\"15\":1,\"16\":1}}],[\"conversations\",{\"1\":{\"7\":1,\"9\":1,\"12\":1}}],[\"convergence\",{\"1\":{\"1\":1}}],[\"conjunction\",{\"1\":{\"6\":1}}],[\"conduct\",{\"1\":{\"2\":1}}],[\"condition\",{\"1\":{\"1\":1}}],[\"consist\",{\"1\":{\"17\":1}}],[\"considered\",{\"1\":{\"5\":1}}],[\"consider\",{\"1\":{\"1\":1}}],[\"consequently\",{\"1\":{\"13\":1}}],[\"constant\",{\"1\":{\"11\":2}}],[\"constrained\",{\"1\":{\"1\":1,\"5\":1}}],[\"combined\",{\"0\":{\"17\":1},\"1\":{\"17\":2}}],[\"combines\",{\"1\":{\"11\":1}}],[\"compared\",{\"1\":{\"7\":1,\"16\":1,\"17\":1}}],[\"compensation\",{\"1\":{\"7\":1,\"15\":1}}],[\"compensated\",{\"1\":{\"0\":1}}],[\"computing\",{\"0\":{\"13\":1},\"1\":{\"13\":2},\"3\":{\"13\":1},\"4\":{\"11\":1}}],[\"computationally\",{\"1\":{\"6\":1}}],[\"computer\",{\"4\":{\"5\":1}}],[\"complex\",{\"1\":{\"13\":1}}],[\"complementary\",{\"1\":{\"5\":1}}],[\"complimentary\",{\"1\":{\"6\":1}}],[\"common\",{\"1\":{\"2\":1}}],[\"communication\",{\"1\":{\"1\":1},\"4\":{\"9\":1}}],[\"cooperate\",{\"1\":{\"1\":1}}],[\"coherence\",{\"0\":{\"0\":1},\"1\":{\"0\":3},\"3\":{\"0\":1}}],[\"f\",{\"2\":{\"16\":1}}],[\"ffm\",{\"1\":{\"15\":1}}],[\"fff\",{\"1\":{\"14\":1}}],[\"furthermore\",{\"1\":{\"14\":1}}],[\"fuzzy\",{\"0\":{\"11\":1,\"14\":1,\"17\":1},\"1\":{\"11\":3,\"14\":2,\"15\":1,\"17\":2},\"3\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1}}],[\"fusing\",{\"1\":{\"6\":1}}],[\"fusion\",{\"1\":{\"5\":1}}],[\"four\",{\"1\":{\"5\":1}}],[\"forgetting\",{\"0\":{\"14\":1},\"1\":{\"14\":2},\"3\":{\"14\":1}}],[\"formation\",{\"1\":{\"16\":1}}],[\"form\",{\"1\":{\"12\":1}}],[\"formed\",{\"1\":{\"8\":1}}],[\"for\",{\"0\":{\"0\":1,\"1\":1,\"2\":1,\"5\":1,\"6\":1,\"8\":1,\"15\":1},\"1\":{\"0\":2,\"1\":1,\"3\":1,\"5\":2,\"6\":3,\"7\":3,\"8\":1,\"9\":2,\"10\":1,\"12\":1,\"13\":2,\"16\":1},\"4\":{\"12\":1}}],[\"framework\",{\"1\":{\"3\":1,\"5\":2,\"6\":1}}],[\"from\",{\"0\":{\"3\":1,\"4\":1,\"5\":1,\"9\":1},\"1\":{\"3\":1,\"4\":1,\"5\":2,\"7\":1,\"8\":1,\"9\":1,\"12\":1,\"15\":1,\"16\":1}}],[\"frequency\",{\"1\":{\"0\":1}}],[\"field\",{\"1\":{\"9\":1,\"13\":1,\"16\":1}}],[\"find\",{\"1\":{\"8\":1}}],[\"finally\",{\"1\":{\"2\":1,\"7\":1,\"10\":1}}],[\"first\",{\"1\":{\"2\":1,\"17\":1}}],[\"filters\",{\"1\":{\"11\":1}}],[\"filtering\",{\"3\":{\"1\":1,\"2\":1}}],[\"filter\",{\"0\":{\"11\":1,\"17\":1},\"1\":{\"1\":1,\"11\":1,\"17\":1},\"3\":{\"11\":1,\"17\":1}}],[\"fading\",{\"0\":{\"15\":1},\"1\":{\"15\":5},\"3\":{\"15\":1}}],[\"facilitate\",{\"1\":{\"12\":1}}],[\"factors\",{\"1\":{\"13\":1}}],[\"factorization\",{\"0\":{\"12\":1},\"1\":{\"10\":1,\"12\":1}}],[\"factor\",{\"0\":{\"6\":1,\"14\":1},\"1\":{\"5\":3,\"6\":2,\"14\":2},\"3\":{\"6\":1,\"14\":1}}],[\"fact\",{\"1\":{\"0\":1,\"15\":1}}],[\"fast\",{\"1\":{\"11\":1}}],[\"fashion\",{\"1\":{\"0\":1}}],[\"nine\",{\"1\":{\"13\":1,\"16\":1}}],[\"nist\",{\"1\":{\"3\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"number\",{\"1\":{\"13\":1}}],[\"nbc\",{\"1\":{\"8\":1}}],[\"nfa\",{\"1\":{\"5\":2,\"6\":2}}],[\"naghibi\",{\"2\":{\"13\":1,\"15\":1,\"16\":1}}],[\"naser\",{\"2\":{\"11\":1,\"14\":1,\"15\":1}}],[\"native\",{\"1\":{\"8\":1}}],[\"national\",{\"1\":{\"3\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"naive\",{\"1\":{\"8\":1}}],[\"najim\",{\"2\":{\"6\":1}}],[\"namely\",{\"1\":{\"5\":1,\"8\":2}}],[\"nejati\",{\"2\":{\"16\":1}}],[\"negative\",{\"0\":{\"6\":1,\"12\":1},\"1\":{\"5\":1,\"6\":1,\"10\":1,\"12\":1},\"3\":{\"6\":1}}],[\"neural\",{\"1\":{\"3\":1,\"5\":1,\"12\":1},\"3\":{\"13\":1}}],[\"neighboring\",{\"1\":{\"2\":1}}],[\"neighbors\",{\"1\":{\"2\":1}}],[\"next\",{\"1\":{\"2\":1}}],[\"network\",{\"0\":{\"1\":1},\"1\":{\"0\":1,\"1\":3,\"2\":2,\"12\":1}}],[\"networks\",{\"0\":{\"0\":1,\"2\":1},\"1\":{\"0\":1,\"3\":1,\"5\":1},\"3\":{\"0\":1,\"1\":1,\"2\":1,\"13\":1}}],[\"new\",{\"1\":{\"0\":1,\"6\":1,\"7\":1,\"9\":1,\"10\":1,\"11\":2,\"12\":1,\"13\":2,\"14\":1,\"15\":1,\"17\":1}}],[\"normalization\",{\"1\":{\"7\":1}}],[\"non\",{\"0\":{\"6\":1,\"12\":1},\"1\":{\"5\":1,\"6\":1,\"10\":1,\"11\":1,\"12\":1,\"15\":1},\"3\":{\"6\":1}}],[\"novel\",{\"0\":{\"11\":1},\"1\":{\"3\":1,\"5\":1}}],[\"node\",{\"0\":{\"1\":1,\"2\":1},\"1\":{\"1\":2,\"2\":5}}],[\"nodes\",{\"1\":{\"0\":1,\"1\":4,\"2\":4}}],[\"no\",{\"4\":{\"0\":1,\"1\":1,\"6\":1,\"11\":1,\"13\":1,\"14\":1,\"15\":1,\"16\":1}}],[\"not\",{\"1\":{\"0\":1,\"1\":1,\"2\":1,\"6\":1,\"11\":2,\"13\":1,\"14\":1,\"15\":1}}],[\"noise\",{\"1\":{\"0\":1}}],[\"idc\",{\"4\":{\"17\":1}}],[\"identification\",{\"0\":{\"4\":1},\"1\":{\"4\":1,\"12\":1},\"3\":{\"4\":1}}],[\"identifying\",{\"1\":{\"2\":1}}],[\"illustrate\",{\"1\":{\"14\":1}}],[\"iranian\",{\"1\":{\"13\":1,\"16\":1}}],[\"iccke\",{\"4\":{\"5\":1}}],[\"icassp\",{\"4\":{\"2\":1,\"8\":1}}],[\"improvements\",{\"1\":{\"6\":1}}],[\"important\",{\"1\":{\"5\":1,\"13\":1,\"17\":1}}],[\"implementing\",{\"1\":{\"1\":1}}],[\"ieee\",{\"4\":{\"0\":1,\"1\":1,\"2\":1,\"6\":1,\"8\":1,\"12\":1,\"17\":1}}],[\"issue\",{\"1\":{\"13\":1}}],[\"issued\",{\"1\":{\"11\":1}}],[\"isspa\",{\"4\":{\"10\":1}}],[\"is\",{\"1\":{\"0\":1,\"2\":1,\"3\":2,\"5\":4,\"6\":3,\"7\":5,\"8\":1,\"9\":3,\"10\":2,\"11\":6,\"13\":4,\"14\":2,\"15\":4,\"16\":2,\"17\":3}}],[\"iteration\",{\"1\":{\"14\":1}}],[\"its\",{\"1\":{\"2\":2,\"3\":1,\"7\":1,\"9\":1,\"13\":2,\"14\":3,\"15\":1}}],[\"it\",{\"1\":{\"0\":1,\"13\":1}}],[\"innovation\",{\"1\":{\"17\":1}}],[\"innovative\",{\"0\":{\"13\":1},\"4\":{\"11\":1}}],[\"influence\",{\"1\":{\"13\":1}}],[\"information\",{\"1\":{\"5\":1,\"6\":2,\"11\":1,\"15\":1},\"4\":{\"10\":1,\"11\":1,\"17\":1}}],[\"into\",{\"1\":{\"11\":1}}],[\"introduced\",{\"1\":{\"11\":1,\"13\":2,\"14\":1,\"15\":1}}],[\"intelligent\",{\"0\":{\"15\":1},\"1\":{\"11\":1,\"13\":1,\"14\":1,\"15\":1}}],[\"intelligence\",{\"4\":{\"7\":1}}],[\"interspeech\",{\"4\":{\"9\":1}}],[\"international\",{\"4\":{\"2\":1,\"3\":1,\"5\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"15\":1}}],[\"interests\",{\"1\":{\"2\":1}}],[\"interest\",{\"1\":{\"2\":3}}],[\"interested\",{\"1\":{\"2\":1}}],[\"interfering\",{\"1\":{\"1\":1}}],[\"inaccurate\",{\"1\":{\"11\":1}}],[\"input\",{\"0\":{\"14\":1},\"1\":{\"10\":1,\"14\":1,\"15\":1},\"3\":{\"14\":1,\"15\":1}}],[\"inexpensive\",{\"1\":{\"6\":1}}],[\"institute\",{\"1\":{\"3\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"incomplete\",{\"1\":{\"15\":1}}],[\"incorporate\",{\"1\":{\"1\":1}}],[\"increasing\",{\"1\":{\"0\":1}}],[\"in\",{\"1\":{\"0\":6,\"2\":3,\"3\":2,\"5\":1,\"6\":2,\"7\":2,\"8\":2,\"9\":4,\"10\":2,\"11\":11,\"12\":3,\"13\":5,\"14\":10,\"15\":11,\"16\":3,\"17\":3},\"4\":{\"1\":1}}],[\"i\",{\"0\":{\"3\":1,\"7\":1,\"8\":1,\"9\":1},\"1\":{\"0\":1,\"3\":2,\"5\":2,\"6\":4,\"7\":2,\"8\":2,\"9\":3},\"3\":{\"3\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"ground\",{\"1\":{\"16\":1}}],[\"grnn\",{\"1\":{\"12\":1},\"3\":{\"12\":1}}],[\"ga\",{\"1\":{\"16\":2}}],[\"gas\",{\"1\":{\"13\":1,\"16\":1}}],[\"gaussian\",{\"0\":{\"6\":1,\"8\":2},\"1\":{\"5\":1,\"6\":1,\"8\":2},\"3\":{\"6\":1,\"8\":1}}],[\"genetic\",{\"0\":{\"16\":1},\"1\":{\"16\":1},\"3\":{\"16\":1}}],[\"general\",{\"1\":{\"12\":1}}],[\"gender\",{\"0\":{\"4\":1,\"12\":1},\"1\":{\"4\":1,\"12\":1},\"3\":{\"4\":1,\"12\":1}}],[\"gpps\",{\"1\":{\"8\":2},\"3\":{\"8\":1}}],[\"gms\",{\"1\":{\"8\":2}}],[\"gmm\",{\"1\":{\"5\":4,\"6\":3}}],[\"glass\",{\"2\":{\"6\":1}}],[\"global\",{\"1\":{\"2\":1}}],[\"given\",{\"1\":{\"3\":1,\"5\":1}}],[\"g\",{\"1\":{\"0\":1}}],[\"rop\",{\"1\":{\"16\":2}}],[\"role\",{\"1\":{\"13\":1}}],[\"robustness\",{\"1\":{\"0\":1}}],[\"russian\",{\"1\":{\"8\":1}}],[\"rahim\",{\"2\":{\"8\":1}}],[\"rats\",{\"1\":{\"6\":1}}],[\"rate\",{\"0\":{\"0\":1,\"13\":1,\"16\":1},\"1\":{\"0\":1,\"13\":6,\"16\":1},\"3\":{\"0\":1,\"13\":1,\"16\":1}}],[\"rank\",{\"1\":{\"1\":1}}],[\"reported\",{\"1\":{\"17\":1}}],[\"represent\",{\"1\":{\"11\":1,\"15\":1}}],[\"representation\",{\"1\":{\"6\":1,\"8\":1}}],[\"reasonably\",{\"1\":{\"14\":1}}],[\"reasonable\",{\"1\":{\"11\":1}}],[\"reach\",{\"1\":{\"11\":1}}],[\"read\",{\"1\":{\"10\":1,\"12\":1}}],[\"real\",{\"1\":{\"0\":1}}],[\"regressor\",{\"1\":{\"10\":1}}],[\"regression\",{\"0\":{\"3\":1},\"1\":{\"3\":1,\"5\":2,\"7\":1,\"9\":1,\"12\":1,\"16\":2},\"3\":{\"9\":1}}],[\"recently\",{\"1\":{\"11\":1,\"14\":1,\"15\":1}}],[\"recent\",{\"1\":{\"6\":1}}],[\"recordings\",{\"1\":{\"12\":1}}],[\"recorded\",{\"1\":{\"0\":2,\"12\":1}}],[\"recognizers\",{\"1\":{\"5\":1}}],[\"recognition\",{\"0\":{\"6\":1,\"8\":1},\"1\":{\"3\":1,\"6\":5,\"7\":1,\"8\":3,\"9\":2},\"3\":{\"4\":1,\"6\":2,\"8\":1}}],[\"residual\",{\"1\":{\"17\":1}}],[\"research\",{\"1\":{\"6\":1,\"11\":1,\"13\":1,\"16\":1},\"4\":{\"13\":1,\"14\":1}}],[\"respectively\",{\"1\":{\"3\":1}}],[\"resources\",{\"1\":{\"1\":1}}],[\"results\",{\"1\":{\"0\":1,\"1\":1,\"2\":2,\"3\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"12\":1,\"13\":1,\"14\":1,\"15\":1,\"16\":1,\"17\":2}}],[\"relying\",{\"1\":{\"1\":1,\"16\":1}}],[\"reduction\",{\"1\":{\"0\":1}}],[\"reduced\",{\"1\":{\"1\":1}}],[\"reduce\",{\"1\":{\"0\":1,\"10\":1}}],[\"bourgoyne\",{\"0\":{\"16\":1},\"1\":{\"13\":1,\"16\":1},\"3\":{\"13\":1,\"16\":1}}],[\"bioms\",{\"4\":{\"12\":1}}],[\"biometric\",{\"4\":{\"12\":1}}],[\"bias\",{\"1\":{\"2\":1}}],[\"burget\",{\"2\":{\"6\":1}}],[\"bym\",{\"1\":{\"16\":1}}],[\"by\",{\"1\":{\"1\":1,\"2\":1,\"3\":1,\"7\":1,\"8\":1,\"9\":2,\"10\":1,\"16\":1,\"17\":1}}],[\"bagher\",{\"2\":{\"13\":1,\"15\":1,\"16\":1}}],[\"bayesian\",{\"1\":{\"8\":1}}],[\"based\",{\"0\":{\"2\":1,\"12\":1,\"17\":1},\"1\":{\"2\":1,\"3\":1,\"5\":4,\"7\":1,\"9\":1,\"11\":2,\"12\":1,\"14\":1}}],[\"bahari\",{\"2\":{\"0\":1,\"1\":1,\"2\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"11\":1,\"12\":1,\"13\":2,\"14\":1,\"15\":1,\"16\":2,\"17\":1}}],[\"background\",{\"1\":{\"0\":1}}],[\"become\",{\"1\":{\"14\":1}}],[\"been\",{\"1\":{\"11\":1,\"12\":1,\"13\":2,\"14\":1,\"15\":1,\"17\":1}}],[\"beamformer\",{\"1\":{\"1\":1}}],[\"beamforming\",{\"0\":{\"1\":1},\"3\":{\"1\":1}}],[\"bertrand\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"be\",{\"1\":{\"0\":1,\"2\":1,\"11\":1,\"12\":1,\"14\":1}}],[\"between\",{\"1\":{\"0\":4,\"7\":1,\"8\":1,\"17\":1}}],[\"blindly\",{\"1\":{\"2\":1}}],[\"blind\",{\"0\":{\"0\":1},\"1\":{\"0\":1}}],[\"eight\",{\"1\":{\"16\":1}}],[\"emphasize\",{\"1\":{\"14\":1}}],[\"employed\",{\"1\":{\"3\":1,\"5\":1,\"8\":1,\"10\":1,\"16\":1}}],[\"efficiency\",{\"1\":{\"14\":1,\"15\":1}}],[\"effectiveness\",{\"1\":{\"3\":1,\"10\":1,\"12\":1,\"17\":1}}],[\"effective\",{\"1\":{\"2\":1,\"8\":1,\"15\":1}}],[\"essay\",{\"4\":{\"14\":1}}],[\"essays\",{\"4\":{\"13\":1}}],[\"estimator\",{\"1\":{\"11\":1}}],[\"estimate\",{\"1\":{\"3\":1,\"5\":1,\"7\":1,\"9\":1,\"10\":1}}],[\"estimates\",{\"1\":{\"2\":3}}],[\"estimated\",{\"1\":{\"0\":1,\"7\":1}}],[\"estimating\",{\"0\":{\"5\":1},\"1\":{\"1\":1}}],[\"estimation\",{\"0\":{\"0\":2,\"1\":1,\"2\":1,\"3\":1,\"7\":1,\"9\":1,\"10\":1,\"12\":1,\"14\":1},\"1\":{\"0\":2,\"1\":1,\"2\":5,\"3\":2,\"5\":2,\"7\":1,\"9\":2,\"10\":1,\"12\":1,\"14\":2,\"15\":1},\"3\":{\"1\":1,\"2\":1,\"3\":1,\"7\":1,\"9\":1,\"10\":1,\"12\":1,\"14\":1,\"15\":1}}],[\"error\",{\"1\":{\"7\":1}}],[\"enjoy\",{\"1\":{\"14\":1}}],[\"enhance\",{\"1\":{\"14\":1,\"15\":1}}],[\"enhancement\",{\"0\":{\"1\":1},\"1\":{\"0\":2},\"3\":{\"0\":1}}],[\"enforcement\",{\"1\":{\"12\":1}}],[\"environment\",{\"1\":{\"11\":2}}],[\"english\",{\"1\":{\"8\":2}}],[\"engineering\",{\"4\":{\"5\":1,\"7\":1}}],[\"each\",{\"1\":{\"2\":3,\"3\":1,\"5\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"evidence\",{\"1\":{\"12\":1}}],[\"evaluated\",{\"1\":{\"6\":1}}],[\"evaluation\",{\"1\":{\"3\":2,\"6\":2,\"7\":2,\"8\":2,\"9\":2,\"10\":1,\"12\":1}}],[\"evaluations\",{\"1\":{\"0\":1}}],[\"events\",{\"1\":{\"13\":1}}],[\"even\",{\"1\":{\"1\":1}}],[\"extensions\",{\"1\":{\"13\":1}}],[\"extract\",{\"1\":{\"0\":1,\"1\":1}}],[\"existing\",{\"1\":{\"11\":1,\"17\":1}}],[\"exists\",{\"1\":{\"0\":1}}],[\"exploits\",{\"1\":{\"0\":1}}],[\"exploit\",{\"1\":{\"0\":1}}],[\"e\",{\"1\":{\"0\":2}}],[\"trouble\",{\"1\":{\"15\":1}}],[\"trajectory\",{\"1\":{\"14\":1}}],[\"tracker\",{\"1\":{\"11\":1}}],[\"trackers\",{\"1\":{\"11\":1}}],[\"tracking\",{\"0\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1},\"1\":{\"11\":6,\"14\":4,\"15\":4,\"17\":2},\"3\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1}}],[\"traits\",{\"1\":{\"5\":1}}],[\"trained\",{\"1\":{\"3\":1,\"7\":1,\"9\":1}}],[\"transactions\",{\"4\":{\"0\":1,\"6\":1}}],[\"tuning\",{\"1\":{\"14\":1},\"3\":{\"14\":1}}],[\"tape\",{\"1\":{\"12\":1}}],[\"targets\",{\"1\":{\"11\":1,\"14\":2,\"15\":4,\"17\":1}}],[\"target\",{\"0\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1},\"1\":{\"11\":8,\"14\":3,\"15\":1,\"17\":3},\"3\":{\"11\":1,\"14\":1,\"15\":1,\"17\":1}}],[\"tasks\",{\"1\":{\"1\":2,\"2\":1}}],[\"task\",{\"0\":{\"1\":1},\"1\":{\"1\":3,\"8\":1,\"13\":1}}],[\"tsp\",{\"4\":{\"3\":1}}],[\"telecommunications\",{\"4\":{\"3\":1}}],[\"telephone\",{\"0\":{\"5\":1,\"8\":1,\"9\":1},\"1\":{\"3\":1,\"7\":1,\"9\":2,\"12\":1},\"3\":{\"9\":1}}],[\"technology\",{\"1\":{\"3\":1,\"7\":1,\"8\":1,\"9\":1}}],[\"techniques\",{\"1\":{\"1\":1,\"13\":1}}],[\"technique\",{\"0\":{\"14\":1},\"1\":{\"0\":1,\"7\":1,\"11\":1,\"14\":1,\"15\":1}}],[\"tested\",{\"1\":{\"3\":1,\"7\":1,\"9\":1}}],[\"two\",{\"1\":{\"0\":1,\"11\":1,\"17\":1}}],[\"time\",{\"1\":{\"0\":1,\"14\":1}}],[\"those\",{\"1\":{\"13\":1}}],[\"though\",{\"1\":{\"1\":1}}],[\"than\",{\"1\":{\"8\":1}}],[\"thai\",{\"1\":{\"8\":1}}],[\"that\",{\"1\":{\"0\":1,\"1\":2,\"2\":3,\"6\":3,\"7\":1,\"8\":1,\"9\":1,\"11\":1,\"13\":1,\"14\":1,\"16\":2}}],[\"three\",{\"1\":{\"8\":2}}],[\"through\",{\"0\":{\"0\":1}}],[\"this\",{\"1\":{\"0\":2,\"1\":1,\"3\":2,\"5\":2,\"6\":3,\"7\":2,\"8\":2,\"9\":2,\"10\":2,\"11\":2,\"12\":1,\"13\":4,\"14\":2,\"15\":4,\"16\":3,\"17\":3}}],[\"therefore\",{\"1\":{\"12\":1}}],[\"these\",{\"1\":{\"8\":1,\"11\":1,\"15\":1,\"16\":2}}],[\"then\",{\"1\":{\"3\":1,\"5\":1,\"6\":1,\"7\":1,\"9\":1,\"10\":1}}],[\"theoretical\",{\"1\":{\"2\":1}}],[\"they\",{\"1\":{\"1\":1,\"13\":1}}],[\"their\",{\"1\":{\"1\":1,\"2\":2,\"10\":1,\"11\":2},\"4\":{\"10\":1}}],[\"the\",{\"1\":{\"0\":13,\"1\":10,\"2\":10,\"3\":6,\"5\":5,\"6\":10,\"7\":4,\"8\":9,\"9\":6,\"10\":6,\"11\":10,\"12\":4,\"13\":4,\"14\":6,\"15\":3,\"16\":6,\"17\":9},\"4\":{\"9\":2}}],[\"topics\",{\"4\":{\"1\":1}}],[\"topology\",{\"1\":{\"1\":1}}],[\"to\",{\"0\":{\"16\":1},\"1\":{\"0\":5,\"1\":2,\"2\":5,\"3\":1,\"5\":3,\"6\":4,\"7\":2,\"8\":2,\"9\":1,\"10\":2,\"11\":3,\"12\":1,\"13\":3,\"14\":4,\"15\":5,\"16\":4,\"17\":1}}],[\"after\",{\"1\":{\"14\":1}}],[\"affects\",{\"1\":{\"0\":1}}],[\"aid\",{\"1\":{\"14\":1,\"15\":1}}],[\"aim\",{\"1\":{\"1\":3}}],[\"aboozar\",{\"2\":{\"13\":1,\"16\":1}}],[\"about\",{\"1\":{\"11\":1,\"12\":1}}],[\"absolute\",{\"1\":{\"7\":1,\"17\":2}}],[\"among\",{\"1\":{\"13\":1}}],[\"american\",{\"1\":{\"8\":1}}],[\"amir\",{\"2\":{\"3\":1,\"5\":1}}],[\"amin\",{\"2\":{\"1\":1}}],[\"ahmed\",{\"2\":{\"6\":1}}],[\"adaptation\",{\"0\":{\"6\":1},\"1\":{\"6\":1,\"11\":1},\"3\":{\"6\":1}}],[\"agencies\",{\"1\":{\"12\":1}}],[\"age\",{\"0\":{\"4\":1,\"5\":1,\"7\":1,\"9\":1,\"10\":1,\"12\":1},\"1\":{\"4\":1,\"5\":3,\"7\":4,\"9\":3,\"10\":2,\"12\":1},\"3\":{\"4\":1,\"7\":1,\"9\":1,\"10\":1,\"12\":1}}],[\"again\",{\"1\":{\"1\":1}}],[\"augmented\",{\"1\":{\"17\":1}}],[\"authors\",{\"1\":{\"16\":1}}],[\"automatic\",{\"0\":{\"4\":2},\"1\":{\"3\":1,\"4\":2,\"5\":1}}],[\"audio\",{\"4\":{\"0\":1,\"6\":1}}],[\"applications\",{\"4\":{\"7\":1,\"10\":1,\"12\":1}}],[\"applied\",{\"1\":{\"6\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1},\"4\":{\"16\":1}}],[\"applying\",{\"1\":{\"1\":1,\"16\":1}}],[\"approximately\",{\"1\":{\"11\":1}}],[\"approximation\",{\"1\":{\"1\":1}}],[\"approaches\",{\"1\":{\"8\":1,\"11\":1}}],[\"approach\",{\"0\":{\"13\":1},\"1\":{\"0\":1,\"3\":1,\"5\":1,\"6\":2,\"7\":1,\"9\":1,\"10\":1,\"12\":1,\"13\":4,\"14\":1,\"15\":1,\"16\":1}}],[\"at\",{\"1\":{\"1\":3,\"17\":1}}],[\"acceleration\",{\"1\":{\"14\":1,\"15\":1}}],[\"acceptable\",{\"1\":{\"13\":1}}],[\"accent\",{\"0\":{\"4\":1,\"8\":1},\"1\":{\"4\":1,\"8\":2},\"3\":{\"4\":1,\"8\":1}}],[\"accuracy\",{\"1\":{\"11\":2,\"13\":3,\"14\":2,\"15\":1}}],[\"accurate\",{\"1\":{\"11\":2,\"12\":1,\"13\":1,\"14\":1,\"16\":1}}],[\"achieve\",{\"1\":{\"1\":1}}],[\"acm\",{\"4\":{\"0\":1,\"6\":1}}],[\"acoustics\",{\"4\":{\"2\":1,\"8\":1}}],[\"acoustic\",{\"0\":{\"0\":1},\"1\":{\"0\":2},\"3\":{\"0\":1}}],[\"although\",{\"1\":{\"11\":1}}],[\"ali\",{\"2\":{\"6\":1,\"11\":1,\"17\":1}}],[\"allocation\",{\"1\":{\"1\":1}}],[\"allows\",{\"1\":{\"2\":1}}],[\"allow\",{\"1\":{\"0\":1}}],[\"all\",{\"1\":{\"1\":1,\"2\":2}}],[\"algorithms\",{\"1\":{\"11\":1}}],[\"algorithm\",{\"0\":{\"16\":1},\"1\":{\"1\":2,\"2\":1,\"11\":1,\"16\":1},\"3\":{\"16\":1}}],[\"alexander\",{\"2\":{\"0\":1,\"1\":1,\"2\":1}}],[\"another\",{\"1\":{\"17\":1}}],[\"annual\",{\"4\":{\"9\":1}}],[\"anns\",{\"1\":{\"3\":1,\"5\":2}}],[\"analysis\",{\"0\":{\"6\":1},\"1\":{\"2\":1,\"5\":3,\"6\":2},\"3\":{\"6\":1}}],[\"an\",{\"0\":{\"13\":1,\"14\":1},\"1\":{\"0\":1,\"2\":1,\"11\":1,\"13\":3,\"14\":1,\"15\":2}}],[\"and\",{\"0\":{\"1\":1,\"3\":1,\"4\":1,\"5\":1,\"6\":1,\"8\":1,\"12\":1,\"16\":1,\"17\":1},\"1\":{\"0\":5,\"1\":5,\"2\":1,\"3\":4,\"4\":1,\"5\":8,\"6\":5,\"7\":5,\"8\":6,\"9\":2,\"10\":1,\"11\":2,\"12\":3,\"13\":7,\"14\":6,\"15\":3,\"16\":2,\"17\":5},\"4\":{\"0\":1,\"2\":1,\"3\":1,\"5\":1,\"6\":1,\"8\":1,\"10\":1,\"11\":1,\"12\":2,\"13\":1,\"14\":1,\"17\":1}}],[\"avoid\",{\"1\":{\"0\":1}}],[\"aspect\",{\"1\":{\"17\":1}}],[\"aspects\",{\"1\":{\"17\":1}}],[\"associated\",{\"0\":{\"14\":1}}],[\"association\",{\"4\":{\"9\":1}}],[\"assessment\",{\"1\":{\"6\":1}}],[\"assume\",{\"1\":{\"2\":1}}],[\"asymptotic\",{\"1\":{\"2\":1}}],[\"asynchronous\",{\"1\":{\"0\":2}}],[\"as\",{\"1\":{\"0\":1,\"11\":1}}],[\"architecture\",{\"0\":{\"11\":1},\"1\":{\"11\":2,\"12\":1},\"3\":{\"11\":1}}],[\"arabic\",{\"1\":{\"6\":1}}],[\"art\",{\"1\":{\"6\":1}}],[\"artificial\",{\"1\":{\"3\":1,\"5\":1},\"4\":{\"7\":1}}],[\"arrival\",{\"1\":{\"1\":1}}],[\"arrays\",{\"1\":{\"0\":1}}],[\"are\",{\"1\":{\"0\":1,\"1\":1,\"3\":1,\"5\":2,\"6\":1,\"8\":5,\"10\":1,\"13\":1}}],[\"a\",{\"0\":{\"11\":1},\"1\":{\"0\":6,\"1\":6,\"2\":5,\"3\":3,\"5\":3,\"6\":3,\"7\":3,\"9\":1,\"10\":3,\"11\":5,\"12\":5,\"13\":4,\"14\":3,\"15\":2,\"16\":2,\"17\":2},\"2\":{\"7\":1,\"8\":1,\"9\":1}}],[\"workshop\",{\"4\":{\"12\":1}}],[\"words\",{\"1\":{\"11\":1}}],[\"was\",{\"1\":{\"11\":1}}],[\"wccn\",{\"3\":{\"7\":1}}],[\"widely\",{\"1\":{\"13\":1,\"16\":1}}],[\"wide\",{\"1\":{\"1\":1}}],[\"within\",{\"1\":{\"7\":1}}],[\"with\",{\"0\":{\"14\":1},\"1\":{\"1\":1,\"6\":2,\"11\":3,\"13\":1,\"15\":1,\"17\":1}}],[\"wiener\",{\"1\":{\"1\":1},\"3\":{\"1\":1}}],[\"wireless\",{\"0\":{\"0\":1,\"1\":1,\"2\":1},\"1\":{\"0\":2,\"1\":1,\"2\":1},\"3\":{\"0\":1,\"1\":1,\"2\":1}}],[\"wsnmf\",{\"1\":{\"10\":1,\"12\":1},\"3\":{\"10\":1,\"12\":1}}],[\"wsn\",{\"1\":{\"1\":2}}],[\"wells\",{\"1\":{\"13\":1,\"16\":1}}],[\"well\",{\"1\":{\"11\":1,\"15\":1}}],[\"weights\",{\"1\":{\"5\":2,\"6\":1}}],[\"weight\",{\"0\":{\"5\":1,\"6\":1,\"10\":1},\"1\":{\"5\":2,\"6\":1,\"10\":1},\"3\":{\"6\":1}}],[\"weighted\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"10\":1,\"12\":1}}],[\"we\",{\"1\":{\"0\":2,\"1\":2,\"2\":4,\"14\":1}}],[\"when\",{\"1\":{\"11\":2}}],[\"whereas\",{\"1\":{\"1\":1,\"11\":1}}],[\"where\",{\"1\":{\"0\":1,\"1\":1,\"2\":2}}],[\"while\",{\"1\":{\"11\":1,\"16\":1}}],[\"which\",{\"1\":{\"0\":2,\"1\":1,\"2\":2,\"5\":2,\"6\":1,\"12\":1,\"17\":1}}],[\"whose\",{\"1\":{\"8\":1}}],[\"whole\",{\"1\":{\"2\":1}}],[\"small\",{\"1\":{\"14\":2}}],[\"smoking\",{\"0\":{\"5\":1},\"1\":{\"5\":3}}],[\"svr\",{\"1\":{\"9\":1,\"10\":1},\"3\":{\"10\":1}}],[\"svm\",{\"1\":{\"8\":1},\"3\":{\"8\":1}}],[\"satisfactory\",{\"1\":{\"11\":1,\"13\":1,\"14\":1}}],[\"saeidi\",{\"2\":{\"8\":1}}],[\"same\",{\"1\":{\"2\":1}}],[\"sampled\",{\"1\":{\"0\":1}}],[\"sampling\",{\"0\":{\"0\":1},\"1\":{\"0\":1,\"14\":1},\"3\":{\"0\":1}}],[\"scientific\",{\"4\":{\"13\":1,\"14\":1}}],[\"sciences\",{\"4\":{\"15\":1,\"16\":1}}],[\"science\",{\"4\":{\"10\":1}}],[\"score\",{\"1\":{\"5\":1}}],[\"schemes\",{\"1\":{\"7\":1,\"8\":1}}],[\"scheme\",{\"1\":{\"2\":1,\"10\":1,\"11\":1,\"12\":1,\"17\":3}}],[\"src\",{\"1\":{\"8\":1}}],[\"sre\",{\"1\":{\"3\":1,\"8\":1}}],[\"sro\",{\"1\":{\"0\":4}}],[\"steps\",{\"1\":{\"14\":2}}],[\"stochastic\",{\"1\":{\"13\":1}}],[\"stressful\",{\"1\":{\"11\":2}}],[\"standard\",{\"1\":{\"6\":1,\"7\":1,\"9\":1,\"17\":1}}],[\"standards\",{\"1\":{\"3\":1,\"8\":1}}],[\"state\",{\"1\":{\"6\":1}}],[\"studies\",{\"1\":{\"6\":1}}],[\"study\",{\"1\":{\"2\":1,\"8\":1,\"14\":1,\"16\":1}}],[\"surplus\",{\"1\":{\"15\":1}}],[\"suffers\",{\"1\":{\"15\":1}}],[\"succeeds\",{\"1\":{\"14\":1}}],[\"success\",{\"1\":{\"9\":1}}],[\"such\",{\"1\":{\"11\":2}}],[\"suitable\",{\"1\":{\"8\":1}}],[\"suggested\",{\"1\":{\"6\":1}}],[\"suggests\",{\"1\":{\"6\":1}}],[\"subspace\",{\"1\":{\"6\":2}}],[\"subset\",{\"1\":{\"2\":1}}],[\"superior\",{\"1\":{\"11\":1,\"13\":1}}],[\"superiority\",{\"1\":{\"2\":1}}],[\"supervised\",{\"0\":{\"12\":1},\"1\":{\"10\":1,\"12\":1}}],[\"supervector\",{\"0\":{\"8\":2},\"1\":{\"8\":2},\"3\":{\"8\":1}}],[\"supervectors\",{\"0\":{\"10\":1},\"1\":{\"5\":1,\"10\":1},\"3\":{\"10\":1}}],[\"support\",{\"0\":{\"3\":1},\"1\":{\"3\":1,\"5\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1},\"3\":{\"9\":1}}],[\"share\",{\"1\":{\"2\":1}}],[\"short\",{\"1\":{\"6\":1}}],[\"show\",{\"1\":{\"1\":1,\"3\":1,\"6\":2,\"7\":1,\"8\":1,\"9\":1,\"11\":1,\"13\":1,\"17\":1}}],[\"should\",{\"1\":{\"0\":1}}],[\"soft\",{\"0\":{\"13\":1},\"1\":{\"13\":2},\"3\":{\"13\":1}}],[\"solve\",{\"1\":{\"2\":1}}],[\"solving\",{\"1\":{\"1\":1}}],[\"sources\",{\"1\":{\"1\":1}}],[\"sometimes\",{\"1\":{\"16\":1}}],[\"some\",{\"1\":{\"1\":1,\"11\":1,\"14\":1,\"15\":1,\"17\":1}}],[\"second\",{\"1\":{\"17\":1}}],[\"security\",{\"4\":{\"12\":1}}],[\"sensitive\",{\"1\":{\"14\":1}}],[\"sensory\",{\"1\":{\"16\":1}}],[\"sensor\",{\"0\":{\"0\":1,\"1\":1,\"2\":1},\"1\":{\"0\":2,\"1\":2,\"2\":1},\"3\":{\"0\":1,\"1\":1,\"2\":1}}],[\"self\",{\"1\":{\"14\":1},\"3\":{\"14\":1}}],[\"selected\",{\"4\":{\"1\":1}}],[\"seriously\",{\"1\":{\"11\":1,\"14\":1}}],[\"session\",{\"1\":{\"7\":1}}],[\"sets\",{\"1\":{\"13\":1}}],[\"setting\",{\"1\":{\"2\":1}}],[\"set\",{\"1\":{\"1\":1}}],[\"severely\",{\"1\":{\"0\":1}}],[\"synergistically\",{\"1\":{\"11\":1}}],[\"synchronous\",{\"1\":{\"0\":1}}],[\"system\",{\"1\":{\"6\":1,\"11\":1}}],[\"systems\",{\"1\":{\"0\":1,\"6\":1},\"4\":{\"12\":1}}],[\"space\",{\"1\":{\"10\":1}}],[\"sparse\",{\"1\":{\"8\":1}}],[\"spatial\",{\"1\":{\"0\":1}}],[\"spontaneous\",{\"0\":{\"5\":1,\"8\":1},\"1\":{\"10\":1,\"12\":1}}],[\"speakers\",{\"1\":{\"5\":2,\"7\":1,\"8\":1,\"9\":1,\"10\":2}}],[\"speaker\",{\"0\":{\"4\":1,\"5\":1,\"7\":1,\"10\":1,\"12\":1},\"1\":{\"3\":4,\"4\":1,\"7\":3,\"8\":1,\"9\":3,\"10\":1,\"12\":2},\"3\":{\"3\":1,\"4\":1,\"5\":1,\"7\":2,\"9\":2,\"10\":1,\"12\":2}}],[\"specific\",{\"0\":{\"1\":1,\"2\":1},\"1\":{\"1\":2,\"2\":3,\"16\":1}}],[\"speech\",{\"0\":{\"3\":1,\"4\":1,\"5\":1,\"8\":1,\"9\":1},\"1\":{\"0\":3,\"3\":1,\"4\":1,\"5\":1,\"7\":1,\"9\":1,\"10\":1,\"12\":1},\"3\":{\"0\":1,\"3\":1,\"4\":1,\"5\":1,\"7\":1,\"8\":1,\"9\":1,\"10\":1,\"12\":1},\"4\":{\"0\":1,\"2\":1,\"6\":1,\"8\":1,\"9\":1}}],[\"sistani\",{\"2\":{\"13\":1,\"15\":1,\"16\":1}}],[\"situations\",{\"1\":{\"11\":1,\"14\":1,\"15\":1}}],[\"significantly\",{\"1\":{\"7\":1}}],[\"signal\",{\"0\":{\"1\":1},\"1\":{\"0\":1,\"1\":2},\"3\":{\"0\":1,\"1\":1,\"2\":1,\"15\":1,\"17\":1},\"4\":{\"1\":1,\"2\":1,\"3\":1,\"8\":1,\"10\":1}}],[\"signals\",{\"0\":{\"3\":1,\"4\":1,\"5\":1},\"1\":{\"0\":4,\"1\":4,\"3\":1,\"4\":1,\"5\":1,\"7\":1},\"3\":{\"4\":1,\"10\":1}}],[\"similar\",{\"1\":{\"6\":1}}],[\"simple\",{\"1\":{\"6\":1}}],[\"simultaneous\",{\"1\":{\"2\":1}}],[\"simultaneously\",{\"1\":{\"0\":1}}],[\"simulations\",{\"1\":{\"14\":1}}],[\"simulation\",{\"1\":{\"0\":1,\"2\":1,\"11\":1,\"13\":1,\"14\":1,\"15\":1,\"17\":1}}],[\"since\",{\"1\":{\"5\":1}}],[\"squares\",{\"0\":{\"0\":1,\"3\":1},\"1\":{\"0\":1,\"3\":1,\"5\":1,\"7\":1,\"10\":1}}]],\"serializationVersion\":2}"
 }
