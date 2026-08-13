@@ -10,7 +10,7 @@
     }
   },
   "meta": {
-    "generatedAt": "2026-08-12T15:08:46.959Z",
+    "generatedAt": "2026-08-13T11:50:08.238Z",
     "generator": "SQLite Production Store & MiniSearch Content Engine",
     "sqliteFile": "src/data/content.db"
   },
