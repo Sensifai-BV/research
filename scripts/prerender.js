@@ -34,7 +34,7 @@ function runPrerender() {
   }
 
   const routes = [
-    { url: '/', title: defaultTitle, description: 'Sensifai Research Labs drives breakthroughs in multimodal AI. Explore our latest publications, research areas, and meet our top scientists.' },
+    { url: '/', title: defaultTitle, description: 'Pushing the frontiers of science to build intelligent systems. Explore our research trajectory, publications, and scientific minds.' },
     { url: '/publications', title: `Publications & Research Papers | ${defaultTitle}`, description: 'Browse peer-reviewed publications, arXiv preprints, code implementations, and datasets in AI and computer vision.' },
     { url: '/researchers', title: `Researchers & AI Scientists | ${defaultTitle}`, description: 'Meet the scientists, engineers, and researchers pioneering multimodal intelligence at Sensifai Labs.' },
     { url: '/people', title: `Our Team & Researchers | ${defaultTitle}`, description: 'Meet the scientists, engineers, and researchers pioneering multimodal intelligence at Sensifai Labs.' }

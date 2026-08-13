@@ -8,10 +8,10 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 py-14 text-zinc-600 dark:text-zinc-400">
       <Particles className="absolute inset-0 opacity-40" quantity={40} color="#6366f1" />
-      
+
       <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          
+
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight text-zinc-950 dark:text-zinc-50 mb-3">
               <img src={sensifaiLogo} alt="Sensifai Labs Logo" width="150" height="28" loading="lazy" decoding="async" className="h-7 w-auto object-contain" />
@@ -20,7 +20,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed font-normal">
-              Sensifai Research Labs drives breakthroughs in multimodal AI. Explore our latest publications, research areas, and meet our top scientists.
+              Pushing the frontiers of science to build intelligent systems. Explore our research trajectory, publications, and scientific minds.
             </p>
           </div>
 

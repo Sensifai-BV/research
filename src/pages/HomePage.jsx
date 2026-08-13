@@ -86,7 +86,7 @@ export function HomePage() {
               <BlurFade delay={0.2}>
                 <div className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 font-normal leading-relaxed max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
                   <TypingAnimation
-                    text="Our mission is to drive breakthroughs in multimodal AI that benefit society, industry, and Sensifai products."
+                    text="Explore our research, publications, and the team driving our scientific journey."
                     duration={20}
                   />
                 </div>
