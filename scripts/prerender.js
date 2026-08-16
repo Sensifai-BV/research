@@ -125,6 +125,11 @@ function runPrerender() {
     generatedCount++;
   });
 
+  // Generate 404.html for GitHub Pages SPA routing fallback
+  const fallback404Path = path.join(distDir, '404.html');
+  fs.writeFileSync(fallback404Path, templateHtml, 'utf8');
+  console.log('✅ Generated dist/404.html for GitHub Pages SPA routing fallback');
+
   console.log(`✨ Vite SSG Prerendering complete! ${generatedCount} static routes written to dist/`);
 }
 

@@ -8,6 +8,7 @@ import { Badge } from '../components/ui/Badge';
 import { CitationDialog } from '../components/ui/CitationDialog';
 import { PdfPreviewDialog } from '../components/ui/PdfPreviewDialog';
 import { LatexRenderer } from '../components/ui/LatexRenderer';
+import { getTagSlug } from '../lib/utils';
 
 // Magic UI Components
 import { BlurFade } from '../components/magicui/BlurFade';
@@ -94,7 +95,7 @@ export function PaperDetailPage() {
             {/* Tags directly under Title (No "Linkable Tags:" label) */}
             <div className="flex flex-wrap items-center gap-2">
               {paper.tags.map(t => (
-                <Link key={t} to={`/tag/${encodeURIComponent(t.toLowerCase().trim().replace(/\s+/g, '-'))}`}>
+                <Link key={t} to={`/tag/${getTagSlug(t)}`}>
                   <Badge variant="secondary" className="text-xs font-bold hover:bg-indigo-50 hover:text-indigo-600 cursor-pointer">
                     {t}
                   </Badge>

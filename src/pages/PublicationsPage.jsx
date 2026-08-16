@@ -14,10 +14,8 @@ import { MagicCard } from '../components/magicui/MagicCard';
 import { BlurFade } from '../components/magicui/BlurFade';
 import { ProgressiveBlur } from '../components/magicui/ProgressiveBlur';
 
-export function getTagSlug(tag) {
-  if (!tag) return '';
-  return tag.toLowerCase().trim().replace(/\s+/g, '-');
-}
+import { getTagSlug } from '../lib/utils';
+
 
 export function PublicationsPage() {
   const { tagParam } = useParams();
